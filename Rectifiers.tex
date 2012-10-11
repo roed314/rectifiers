@@ -24,7 +24,7 @@
 \begin{document}
 \maketitle
 
-\section{Todo}
+\section{Questions}
 
 \begin{enumerate}
 \item Prove that the character $\chi$ of the coinvariants that Gross gives you, agrees with the cohomology class $c_L$ of the group of type $L$, when restricted to $\HT{-1}$.
@@ -38,7 +38,7 @@ We wrote down the following diagram.
   & \node (n11) {$\Hom(\HT{-3}(\Gamma, X_*(\T)), \CC^\times)$}; \\
   & \node (n21) {$\Hom(\HT{-1}(\Gamma, \T(M)), \CC^\times)$}; \\
   \node (n30) {$\HH^1(\Gal(\bar{M}/M), \Th)^{\Gamma}$}; & \node (n31) {$\Hom(\T(M)_{\Gamma}, \CC^\times)$}; \\
-  \node (n40) {$\HH^1(\Gal(\bar{M}/M), \Th)$}; & \node (n41) {$\Hom(\T(M), \CC^\times$}; \\
+  \node (n40) {$\HH^1(\Gal(\bar{M}/M), \Th)$}; & \node (n41) {$\Hom(\T(M), \CC^\times$)}; \\
 };
 \draw [->, iso] (n00) to (n01);
 \draw [->, iso] (n01) to (n11);
@@ -73,13 +73,27 @@ So if we want the diagram to commute then we would hope that $\HH^2(\Gal(\bar{M}
 
 \item Sending Frobenius to the Tits group element is natural because sending to other choices of lifts of the Weyl group element give you the wrong rectifier.
 
-\item Our rectifier agrees with $\GL_n(F)$ in the tame case and $n$ prime.  Does it agree with $\GL_n(F)$ in the tame case where $n$ is arbitrary?  That would be really great.  Start with $\GL_4(F)$, then move on to $\GL_6F)$ maybe.
+\item Our rectifier agrees with $\GL_n(F)$ in the tame case and $n$ prime.  Does it agree with $\GL_n(F)$ in the tame case where $n$ is arbitrary?  That would be really great.  Start with $\GL_4(F)$, then move on to $\GL_6(F)$ maybe.
 
 \item I have a write-up of various results about tori, unramified in particular.  In the notes $\HT{-1}$ and $\HT{0}$ are calculated in general, for compact unramified tori.  I know you have calculated $\HT{0}$ in your thesis, but I didn't see $\HT{-1}$.  I have a very nice write-up of both of this stuff, and I think we should include it in our paper.
 
 \item Suppose that $w \in W$ is an element of the Weyl group of order $n$, and suppose that $\sigma(w)$ is the Tits group element lifting $w$.  Then
 $$\sigma(w)^n = \exp\left(\pi i \sum_{j=0}^{n-1} w^j \cdot \rho^\vee\right),$$
 where $\rho^{\vee}$ is half the sum of positive roots.
+
+\end{enumerate}
+
+\section{Outline}
+
+\begin{enumerate}
+\item Introduction and summary (Gross's work, Bushnell-Henniart)
+\item Cohomology of tori (from Moshe and Gordan, David works on ramified tori)
+\item Our definition of rectifier
+\item Check that our definition is compatible with previous work
+\begin{enumerate}
+\item Debacker-Reeder (semisimple and maybe in general)
+\item Bushnell-Henniart ($\GL_n$)
+\end{enumerate}
 
 \end{enumerate}
 
