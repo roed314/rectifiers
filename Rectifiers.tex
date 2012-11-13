@@ -10,6 +10,7 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PGL}{PGL}
 \DeclareMathOperator{\PGSp}{PGSp}
+\DeclareMathOperator{\Res}{Res}
 
 
 \newcommand{\HT}[1]{\widehat{\HH}^{#1}}
@@ -108,6 +109,36 @@ where $\rho^{\vee}$ is half the sum of positive roots.
 \item Bushnell-Henniart ($\GL_n$)
 \end{enumerate}
 
+\end{enumerate}
+
+\section{Notes}
+
+\begin{enumerate}
+\item Can we use $R^\times$ instead of $R^*$?
+\item How is Gross' construction related to mine?
+\item Numbering in sections
+\item Be clearer about the difference between $T_0$ and $T(o_E)$
+\item We'll probably want to revise Section 9 once we know exactly what we need from DeBacker and Reeder.  In particular, we should mention the fact that $\chi_\phi$ is obtained via the local Langlands correspondence.
+\item  Restructure so that our construction comes first and a later section is devoted to compatibility with Reeder-DeBacker
+\end{enumerate}
+
+\subsection{Langlands' version of torus correspondence}
+
+$K$ is the splitting field of $T$.
+
+$K^\times \rightarrow W_{K/F}$, where $K^\times$ is playing the role of $W_K$.
+\begin{align*}
+H^1(W_F, \hat{T}) &\cong H^1(W_{K/F}, \hat{T}) \\
+&\cong \Hom(H_1(W_{K/F}, X_*(T)), \CC^\times) \\
+&\cong \Hom(H_1(K^\times, X_*(T))^{\Gal(K/F)}, \CC^\times) \\
+&\cong \Hom(T(F), \CC^\times)
+\end{align*}
+
+What are these isomorphisms?  Note that $\hat{L}$ in Langlands' paper is our $X_*(T)$ and $C_K$ is our $K^\times$.
+\begin{enumerate}
+\item $H^1(W_{K/F}, \hat{T}) \cong \Hom(H_1(W_{K/F}, X_*(T)), \CC^\times)$ is described at the bottom of page 11 of Langlands' paper.
+\item $H_1(W_{K/F}, X_*(T)) \cong H_1(K^\times, X_*(T))^{\Gal(K/F)}$ is $\Res$ at the bottom of page 3: this map is injective and the image is the Galois invariants.  Proving this statement takes a while.
+\item $H_1(K^\times, X_*(T))^{\Gal(K/F)} \cong T(F)$ is the middle of page 3.
 \end{enumerate}
 
 \end{document}
