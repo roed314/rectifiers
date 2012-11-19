@@ -60,6 +60,33 @@ The arrow $\HH^1(\Gal(\bar{M}/M), \Th)^{\Gamma} \rightarrow \HH^2(\Gamma, \Th)$ 
 
 So if we want the diagram to commute then we would hope that $\HH^2(\Gal(\bar{M}/K), \Th)$ would vanish....
 
+\begin{tikzpicture}[iso/.style={postaction={decorate,decoration={markings, mark=at position 0.45 with {\draw [-] (-4pt,2pt) .. controls (-2pt,5pt) and (2pt, 0pt) .. (4.5pt, 3.5pt);}}}}]
+\matrix [draw,nodes=draw,row sep=8mm,column sep=8mm,every node/.style={line width=0pt}]
+{
+  \node (n00) {$\HT{2}(\Gamma, \Th)$}; & \node (n01) {$\HT{2}(\Gamma, \Hom(X_*(\T), \CC^\times))$}; & \node (n02) {$\Hom(\HT{-3}(\Gamma, X_*(\T)), \CC^\times)$}; & \node (n03) {$\Hom(\HT{-1}(\Gamma, \T(M)), \CC^\times)$}; \\
+   \node (n10) {$\HH^1(W_M, \Th)^{\Gamma}$}; & \node (n11) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))^{\Gamma}$}; & \node (n12) {$(\Hom(\HT{-2}(W_M, X_*(\T)), \CC^\times))^{\Gamma}$}; & \node (n13) {$(\Hom(\HT{0}(W_M, T(M)), \CC^\times))^{\Gamma}$};\\
+  \node (n20) {$\HH^1(W_M, \Th)$}; & \node (n21) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))$}; & \node (n22) {$\Hom(\HH_{1}(W_M, X_*(\T)), \CC^\times)$}; & \node (n23) {$\Hom(\HH^{0}(W_M, T(M)), \CC^\times)$};\\
+};
+\draw [->, iso] (n00) to (n01);
+\draw [->, iso] (n01) to (n02);
+\draw [->, iso] (n02) to (n03);
+\draw [->] (n10) to (n00);
+\draw [->] (n11) to (n01);
+\draw [->] (n12) to (n02);
+\draw [->] (n13) to (n03);
+\draw [->, iso] (n10) to (n11);
+\draw [->, iso] (n11) to (n12);
+\draw [->, iso] (n12) to (n13);
+\draw [->] (n10) to (n20);
+\draw [->] (n11) to (n21);
+\draw [->] (n12) to (n22);
+\draw [->] (n13) to (n23);
+\draw [->, iso] (n20) to (n21);
+\draw [->, iso] (n21) to (n22);
+\draw [->, iso] (n22) to (n23);
+\end{tikzpicture}
+
+
 \item We have defined a base point Langlands parameter that we want to give the correct rectifier.  What difference does it make to send Frobenius to the Tits group element than to any other lift of the Weyl group element defining the group of type $L$?  Answer : We figured out that it doesn't matter if $G$ is semisimple.  But if $G = \GL_2$, then it does matter, we can't just pick any lift.  We have to pick Tits group element (up to a sign?)
 
 \item Let $w$ be an elliptic element of a Weyl group.  Let $\sigma_w$ be the Tits group lift.  Under what conditions is the order of $w$ equal to the order of $\sigma_w$?  This would say that the group of type $L$ splits.  But more generally, under what conditions is there a lift of $w$ that has the same order of $w$?  This would also say that the group of type $L$ splits, so we don't just want to look at the Tits group lift.  We just want to ask when can we lift $w$ to an element in the normalizer that has the same order as $w$. (right?)
