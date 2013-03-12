@@ -34,8 +34,88 @@
 In this note we compute the cohomology groups of $p$-adic tori.  This paper is motivated by recent work of Benedict Gross in which he gives a natural framework for understanding a general class of Langlands parameters for $p$-adic groups.  In his work, one is required to understand the cohomology groups of tori, hence the reason for our work here.
 
 \section{Introduction}
-Say something about how the tori over the reals are understood, and their cohomology groups are easy to compute.  Over $p$-adics, the answer is less clear, but we present the first case here.
+In this paper, we propose a natural generalization of the notion of a rectifier.  In particular, we define rectifiers for Langlands parameters of arbitrary connected reductive groups that map into a ``group of type L''.
+We then describe these rectifiers via their associated Langlands parameters, and show that they are compatible with the rectifiers of $GL(n,F)$ as in \cite{bushnellhenniart}.
 
+An irreducible smooth representation of the Weil group $W_F$ of $F$ is called \emph{essentially tame} if its restriction to wild inertia is a sum of characters.  Let us recall the classical construction of the essentially tame local Langlands correspondence for $GL(n,F)$.  In the essentially tame case, an irreducible representation $\varphi : W_F \rightarrow GL(n,\mathbb{C})$ naturally provides an \emph{admissible pair} $(E/F, \xi)$.  Here, $E/F$ is a degree $n$ separable extension and $\xi$ is a character (with certain conditions) of $E^{\times}$, which one can view as a maximal elliptic torus in $GL(n,F)$.  Howe constructs a map (see \cite{howe})
+\begin{equation*}
+\left\{
+\begin{array}{ll}
+isomorphism \ classes \ of \\
+admissible \ pairs
+\end{array}
+\right\} \rightarrow \left\{
+\begin{array}{ll}
+supercuspidal \ representations \\
+of \ GL(n,F)
+\end{array} \right\}
+\end{equation*}
+$$\hspace{-.5in} (E/F, \xi) \mapsto \pi_{\xi}$$
+The problem is that the obvious map, $$\varphi \mapsto \pi_{\xi},$$ the so-called ``naive correspondence'', is not the local Langlands correspondence because $\pi_{\xi}$ has the wrong central character.  Instead, the local Langlands correspondence is given by $$\varphi \mapsto \pi_{\xi \cdot {}_F \mu_{\xi}}$$ for some subtle finite order character ${}_F \mu_{\xi}$ of $E^{\times}$.  The function $${}_F \boldsymbol\mu : (E/F, \xi) \mapsto {}_F \mu_{\xi}$$ is called the \emph{rectifier} associated to $E/F$.  Both the description of and the intuition behind the rectifiers ${}_F \boldsymbol\mu$ have been studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
+
+One may ask whether rectifiers exist for groups apart from $GL(n,F)$, and even moreso, how does one define the notion of rectifier for groups apart from $GL(n,F)$.  The answer can be gleamed from a recent construction of Benedict Gross, which we briefly describe now (for more details, see \S\ref{groupsoftypeL}).
+
+Suppose that $G$ is a connected reductive group defined over a $p$-adic field $F$.  Let
+$\phi : W_F \rightarrow {}^L G$ be a Langlands parameter for $G(F)$, and suppose that $\phi$ factors through the
+normalizer of a maximal torus. To $\phi$, one can associate a maximal $F$-torus $T$ in $G$, the twisted $F$-torus associated to $\phi(\Phi)$, where $\Phi$ is the geometric Frobenius \MAxxx{geometric or arithmetic?  does it even make sense to say ``the geometric Frobenius of $W_F$''?} of $W_F$.  Suppose that $T$
+splits over the separable \MAxxx{separable or Galois?  What about the non-Galois case for $GL(n)$?  Then we wouldn't be able to define $\Gamma = Gal(E/F)$??} extension $E$ of $F$, and set $\Gamma = \Gal(E/F)$.  Restricting $\phi$ to $W_E$, by the local Langlands correspondence for tori,
+one can canonically associate to $\phi$ a character $\xi$ of $T(E)_{\Gamma}$,
+the group of coinvariants of $T(E)$ with respect to $\Gamma$ (see~\S\ref{groupsoftypeL}).  We will denote the association of $\xi$ to $\phi$ by the map $$G : \phi \mapsto \xi.$$
+Invariants and coinvariants are related by the norm map
+$$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
+in the cohomology sequence
+$$1 \rightarrow \hat{H}^{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
+= T(E)^{\Gamma} \rightarrow \hat{H}^0(\Gamma,T(E)) \rightarrow 1,$$ where $\hat{H}$ denotes Tate cohomology.
+
+Suppose that $\hat{H}^0(\Gamma, T(E)) = 0$, in which case $T(E)_{\Gamma}$ is then a cover of $T(F)$.  Let us also suppose that $\phi$ does not factor through a proper Levi subgroup, so that the representations in the $L$-packet associated to $\phi$ are conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).  If $G$ happens to be $GL(n)$, one can compute that $\hat{H}^{0}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, T(E)) = 0$, so that $T(E)_{\Gamma} \cong T(F)$ can be identified with $E^{\times}$, and $(E/F, \xi)$ is an admissible pair.  To construct the local Langlands correspondence, one would then proceed (as explained earlier) to attach the supercuspidal representation $\pi_{\xi \cdot {}_F \mu_{\xi}}$ to $\xi$, via the construction of Howe.
+
+If $G$ were arbitrary, then in analogy to the case of $GL(n,F)$, there exist in certain cases constructions of supercuspidal $L$-packets $L(\xi)$ associated to characters $\xi$ of tori $T(F)$ in $G(F)$ (see \cite{debackerreeder}, \cite{kaletha}, \cite{reeder}).  However, as we have seen, a Langlands parameter $\phi$ as above does not naturally provide a character of $T(F)$, but rather a character of $T(E)_{\Gamma}$.
+
+\begin{definition}\label{rectifierdefinition}
+Let $T$ be a torus, defined over $F$, that splits over an unramified extension $E$.  A \emph{rectifier} for $T$ is a function $${}_F \boldsymbol\mu : (T, \xi) \mapsto {}_F \mu_{\xi}$$
+which attaches, to each (admissible pair?)\MAxxx{Define notion of regular pair via Adler?  Look in Reeder's positive depth paper.  Adler I think might only be positive depth, so we would have to make a definition that includes characters of tori that are needed in depth zero supercuspidals} $(T, \xi)$, a character ${}_F \mu_{\xi}$ of $T(E)_{\Gamma}$ satisfying the following conditions.
+
+(1) $\xi {}_F \mu_{\xi} \in \widehat{T(F)}$
+
+(2) The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on $T(\mathfrak{o}_E)_{\Gamma}$)
+
+(3) $\phi \mapsto \xi \mapsto L(\xi {}_F \mu_{\xi})$ is the local Langlands correspondence.
+
+(4) If $(T, \xi_i), i = 1,2$ are (admissible pairs?) \MAxxx{Fix this when we know how.} such that $\xi_1^{-1} \xi_2$ is unramified, then ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
+\end{definition}
+
+We prove:
+
+\begin{theorem} Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$ admits a unique rectifier ${}_F \boldsymbol\mu : (T, \xi) \mapsto {}_F \mu_{\xi}$.
+\end{theorem}
+
+Once phrased in this manner, uniqueness is a straightforward matter (see \S\ref{}) \MAxxx{Fix when we can.}.  The existence of a rectifier will be proven by interpreting the rectifier in terms of a canonical Langlands parameter.  More explicitly, we will exhibit a canonical \MAxxx{Canonical?  Is the Tits group lift canonical?} Langlands parameter $\phi_{o}$, such that if $\xi_o = G(\phi_o)$, then the function $$(T, \xi) \mapsto \xi_o$$ is a rectifier.
+
+Let $\phi, T, E, \xi$ as before, assuming that $\phi$ is TRSELP. \MAxxx{Do we need to assume tame?  That is, does our paper work for Reeder's positive depth paper as well or not?  I think the $\phi_o$ we have works for Reeder's paper as well.  That is, we don't need to change $\phi_o$ on inertia. The same proofs work.  If so, let's change TRSELP to RSELP.}  The projection of $\phi(\Phi)$ onto the connected component of ${}^L G$ is a lift of some Weyl group element $\hat{w}$ to the normalizer of the dual torus.  Associated to $\phi$, DeBacker/Reeder construct a character $\chi_{\phi}$ of $T(F)$, to which they associate a conjectural $L$-packet of representations $L(\chi_{\phi})$ (see \S \ref{preliminaries}).
+
+\begin{definition}
+Given $\phi$, we define a homomorphism $\phi_o : W_F \rightarrow {}^L G$ by
+\begin{enumerate}
+\item $\phi_o|_{I_F} \equiv 1$
+\item $\phi_o(\Phi) = \hat{\theta} \tilde{w}$
+\end{enumerate}
+\end{definition}
+
+where $\hat{\theta}$ is the geometric \MAxxx{geometric or arithmetic?  or neither?} Frobenius element generating the action of Galois on the dual group, and where $\tilde{w}$ is the canonical lift \MAxxx{Is this lift really canonical?} of $\hat{w}$ to the Tits group (see \S\ref{mainresults}). Let $\xi_o = G(\phi_o)$.  Our main theorem is the following.
+
+\begin{theorem}
+If $G$ is semisimple, then $${}_F \boldsymbol\mu : (T, \xi) \mapsto \xi_o$$ is a rectifier for $T$.
+\end{theorem}
+
+In the case that $G$ is semisimple, there was nothing special about $\phi_o$.  In fact, by the same arguments that we will make, a rectifier is obtained from any Langlands parameter $\phi'$ such that $\phi'|_{I_F} \equiv 1$ and $\phi'(\Phi) = w'$, where $w'$ was any lift of $\hat{w}$ to the normalizer of the dual torus.  However, the following theorem (which we will prove) will show that $\phi_o$ is forced upon us. \MAxxx{Up to a sign, or something like that?}
+
+\begin{theorem}
+If $G = GL(n,F)$, the character ${}_F \boldsymbol\mu$ agrees with the rectifier of Bushnell/Henniart.  Moreover, $\phi_o$ is the unique \MAxxx{up to a sign, or something like that} Langlands parameter such that $G(\phi_o) = {}_F \mu_{\xi}$.
+\end{theorem}
+
+We would like to note that in the case that $\hat{H}^0(\Gamma, T(E)) \neq 0$, the situation seems more difficult $\xi$ is defined on the image of $T(E)_{\Gamma}$ under the norm map.  However, one might be able to remedy this with a prediction of central character, as in \cite{grossreeder}, for example.
+
+Acknowledgements: Part of this paper was heavily influenced by conversations with Gordan Savin.  We wish to thank him for these conversations.  We would also like to thank Jeffrey Adams and Geo Kam Fai for helpful conversations as well.
 \section{Notation and Definitions}
 
 Throughout, $\mathfrak{f}$ will denote a finite field, and $\mathfrak{f}_n$ will denote the degree $n$ extension of $\mathfrak{f}$.  $k$ will denote a nonarchimedean local field of charcteristic zero, and $\mathfrak{f}$ will be its residue field.  Fix a uniformizer $\varpi$ of $k$.  Let $k^u$ denote the maximal unramified extension of $k$, and fix a valuation $val : (k^u)^* \rightarrow \mathbb{Z}$ normalized so that $val(\varpi) = 1$.
