@@ -354,7 +354,7 @@ Moreover, one can show using a profinite version of Lang's theorem and various r
 The restriction to $T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{\sim} T(\mathfrak{o}_F)$ of the genuine character arising from the Gross construction coincides with the character of $T(\mathfrak{o}_F)$ that is constructed from $\phi$ via the construction of DeBacker--Reeder construction.
 \end{lemma}
 
-\section{Rectifiers and DeBacker/Reeder}
+\section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
 Recall that we have fixed a splitting $(\hat{T}, \hat{B}, \{x_{\alpha} \})$ for the dual group $\hat{G}$ and that $\hat{N} = N_{\hat{G}}(\hat{T})$.  For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$ be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$ and $\phi_{\alpha}\mat{1}{1}{0}{1} = x_{\alpha}$. Let $\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
 
@@ -382,21 +382,35 @@ Given $\phi$, we define a homomorphism $\phi_o : W_F \rightarrow {}^L G$ by
 \end{enumerate}
 \end{definition}
 
-By the theory in section \ref{preliminaries}, $\phi$ and $\chi_{\phi_o}$ give rise to a character $\chi_{\phi}$ and $\chi_{\phi_o}$ of $T(F) = T^{\Phi_{\sigma}}$, respectively.  By the theory in section \ref{groupsoftypeL}, $\phi$ and $\phi_o$ gives rise to  characters $\chi$ and $\chi_o$ of $T(E)_{\Gamma}$, respectively.
+By the theory in section \ref{preliminaries}, $\phi$ and $\phi_o$ give rise to a character $\chi_{\phi}$ and $\chi_{\phi_o}$ of $T(F) = T^{\Phi_{\sigma}}$, respectively.  By the theory in section \ref{groupsoftypeL}, $\phi$ and $\phi_o$ gives rise to  characters $\chi$ and $\chi_o$ of $T(E)_{\Gamma}$, respectively.
 
 \begin{proposition}
-$\chi \otimes \chi_o = \chi_{\phi}$.
+If $G$ is semisimple, then $\chi \otimes \chi_o^{-1} = \chi_{\phi}$.
 \end{proposition}
 
 \proof
-We first note that the claim $\chi \otimes \chi_o = \chi_{\phi}$ is equivalent to showing that $\chi_{\phi_o} \equiv 1$.  But $\phi_o$ is trivial on $I_F$, so $\chi_{\phi_o}$ is trivial on ${}^0 T^{\Phi_{\sigma}}$ (see equation \ref{chitau}).
+Since $G$ is semisimple, $T(F)$ is compact.  In particular, $\hat{H}^0(\Gamma, T(E)) = 0$, so we have the following exact sequence:
+$$1 \rightarrow \hat{H}^{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
+Note that $T(F) = T(\mathfrak{o}_F)$, and so in particular $T(\mathfrak{o}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map $N$.  This, together with the fact that $\hat{H}^{-1}(\Gamma, T(E)) \neq 0$, gives us that $\hat{H}^{-1}(\Gamma,T(E))$ and $T(\mathfrak{o}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
 
-We claim that $\tilde{w} \in \hat{G}'$, where $\hat{G}'$ is the derived group of $\hat{G}$.  But $\sigma_{\alpha_i} = \phi_{\alpha_i}\mat{0}{1}{-1}{0}$ for $i = 1, 2, ..., n$.  Moreover, $\mat{0}{1}{-1}{0}$ is a commutator since $\mat{0}{1}{-1}{0} \in SL(2)$ (and in particular $SL(2)$ is its own derived group).  Therefore, $\sigma_{\alpha_i}$ is a commutator for all $i$, so $\tilde{w}$ is also a commutator.
-
-Therefore, we may take $\tau = 1$ for $\phi_o$, as in section \ref{preliminaries}.  In particular, together with $\phi|_{I_F} \equiv 1$, this says that $\chi_{\phi_o} \equiv 1$.
+Since $\phi_o|_{I_F} \equiv 1$, $\chi_o$ is trivial on $T(\mathfrak{o}_E)_{\Gamma}$.  By lemma \ref{grossanddebackerreedercompatibility}, we have that $(\chi \otimes \chi_o^{-1})|_{T(\mathfrak{o}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mathfrak{o}_F)}$.  Therefore, $\chi \otimes \chi_o^{-1}$ is correct on $T(\mathfrak{o}_E)_{\Gamma}$.  Moreover, by Lemma \ref{toralmodification}, we also have that $\chi$ and $\chi_o$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(E))$.  Therefore, $\chi \otimes \chi_o^{-1}$ is a character of $T(F)$.  Since $\chi \otimes \chi_o^{-1}$ is correct on $T(\mathfrak{o}_E)_{\Gamma}$, and since $T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{N} T(F)$ is surjective, we are done.  (Do we need at some point that $\hat{H}^{-1}(\Gamma, T(E)) \bigcap T(\mathfrak{o}_E)_{\Gamma} = 1$?  It's true, because otherwise, there would be a nontrivial element in $T(\mathfrak{o}_E)_{\Gamma}$ that mapped to the trivial element in $T(F)$ via the norm map.  But this can't be, because $T(\mathfrak{o}_E)_{\Gamma}$ is isomorphic to $T(\mathfrak{o}_F)$ via the norm map.)
 \qed
 
+In the case that $G$ is semisimple, there was nothing special about $\phi_o$.  In fact, by the same arguments, the rectifier is obtained from any Langlands parameter $\phi'$ such that $\phi'|_{I_F} \equiv 1$ and $\phi'(\Phi) = w'$, where $w'$ was any lift of $\hat{w}$ to $N$.  However, we will see that the Tits group lift is forced on us when we consider groups that are not necessarily semisimple, such as $GL(n,F)$.
 
+\section{Rectifiers for $GL(n,F)$}\label{GL(n)}
+
+We first recall the structure of the rectifiers for $GL(n,F)$ in our setting (see \cite{bushnellhenniart}).
+
+\begin{lemma}
+Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is unramified of degree $n$ and $\xi|_{\mathfrak{o}_E} \equiv 1$.  Let ${}_F \nu_{\xi}$ be the associated rectifier, as defined in \cite{bushnellhenniart}.  Then ${}_F \nu_{\xi}$ is unramified and ${}_F \nu_{\xi}(\varpi) = (-1)^{n-1}$.
+\end{lemma}
+
+\proof
+See \cite[Proposition 21]{bushnellhenniart}.
+\qed
+
+\MAxxx{In this section somewhere, should we calculate $\hat{H}^0$ and $\hat{H}^{-1}$ for unramified tori of $GL(n)$? We have done this already, and it's easy.  Maybe we can use it for something, or explain something with it (like Gross's construction, together with our rectifiers, for $GL(n)$.  That would be nice)}
 
 
 
