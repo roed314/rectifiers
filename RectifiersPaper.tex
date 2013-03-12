@@ -21,8 +21,8 @@
 \end{array} \right)}
 
 \begin{document}
-\title{Rectifiers and the Tame Local Langlands Correspondence}
-%\author{Gordan Savin}
+\title{Rectifiers and the local Langlands Correspondence : the unramified case}
+\author{Moshe Adrian and David Roe}
 %\address{Department of Mathematics, University of Utah, Salt Lake City, UT 84112, U.S.A.}
 
 %\email{savin@math.utah.edu}
@@ -34,7 +34,7 @@
 
 \section{Abstract}
 
-In this note we compute the cohomology groups of $p$-adic tori.  This paper is motivated by recent work of Benedict Gross in which he gives a natural framework for understanding a general class of Langlands parameters for $p$-adic groups.  In his work, one is required to understand the cohomology groups of tori, hence the reason for our work here.
+In this paper we propose a natural generalization of rectifiers, the character twists that appear in the local Langlands correspondence for $GL(n,F)$.  Our generalization is to arbitrary connected reductive groups, with certain classes of Langlands parameters.
 
 \section{Introduction}
 In this paper, we propose a natural generalization of the notion of a rectifier.  In particular, we define rectifiers for Langlands parameters of arbitrary connected reductive groups that map into a ``group of type L''.
@@ -119,7 +119,6 @@ If $G = GL(n,F)$, the character ${}_F \boldsymbol\mu$ agrees with the rectifier 
 We would like to note that in the case that $\hat{H}^0(\Gamma, T(E)) \neq 0$, the situation seems more difficult $\xi$ is defined on the image of $T(E)_{\Gamma}$ under the norm map.  However, one might be able to remedy this with a prediction of central character, as in \cite{grossreeder}, for example.
 
 Acknowledgements: Part of this paper was heavily influenced by conversations with Gordan Savin.  We wish to thank him for these conversations.  We would also like to thank Jeffrey Adams and Geo Kam Fai for helpful conversations as well.
-
 
 \section{Notation and Definitions}
 
@@ -217,65 +216,6 @@ Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$ is not an
 It is known by standard lattice theory that the cardinality of $X / (Id - g)X$ is equal to the volume of a fundamental domain for the lattice $(Id - g)X$.  It is also known that the volume of a fundamental domain for the lattice $(Id - g)X$ is equal to $|det(Id - g)|$.  But $|det(Id - g)|$ is just $|\Phi(1)|$.  But $|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since $1 + g + g^2 + ... + g^{n-1} = 0$, $\Phi$ divides a power of $1 + x + x^2 + ... + x^{n-1}$ (since the minimal polynomial of $g$ divides $1 + x + x^2 + ... + x^{n-1}$).  Since $1 + 1 + 1^2 + ... + 1^{n-1} > 0$, we have that $\Phi(1) > 0$, so that $|\Phi(1)| = \Phi(1)$.
 \qed
 
-\section{Totally (not necessarily tamely?) ramified tori with splitting field of prime degree, the anisotropic case - Gordan's section}
-
-Let $k$ be a $p$-adic field and $K$ a cylic extension of degree $n$, and $G=G(K/k)$ the
-Galois group. Let $g$ be a generator of $G$.
- Let $X$ be a lattice (i.e. a finitely generated, torsion-free, abelian group) with
-an action of $G$. Every such $X$ defines a torus  $T_X$ over $k$ such that
-\[
-T_X(k)=(X\otimes K^{\times})^G.
-\]
-We would like to compute Tate cohomology groups $H^i(G, X\otimes K^{\times})$. Recall that, since $G$ is
-cyclic, $\hat{H}^{i}(G,A)\cong \hat{H}^{i+2}(G,A)$ for all $i$, and all $G$-modules $A$.
-
-
-
-Let $\ell$ be a prime, and assume that $n=\ell$. Then we have an exact sequence
-\[
-0 \rightarrow \mathbb Z \rightarrow \mathbb Z[G]\rightarrow R \rightarrow 0
-\]
-where $R$ is the ring of integers in the cyclotomic field obtained by attaching $\ell$-th roots
-of $1$ to $\mathbb Q$. Since $\mathbb Z[G]\otimes K^{\times}$ is a projective $G$-module, the exact sequence
-gives an isomorphism of Tate cohomology
-groups $H^i(G, R\otimes K^{\times})\cong H^{i+1}(G,K^{\times})$ for all integers $i$. Since
-$H^1(G,K^{\times})=0$ (Hilbert Theorem 90) and $H^{0}(G,K^{\times})=k^{\times}/N(K^{\times})
-\cong \mathbb Z/\ell\mathbb Z$, we have proved a special case $(I=R)$ of the following
-proposition:
-
-\begin{proposition} Let $I\subseteq R$ be a non-zero ideal. Then $H^0(G,I\otimes K^{\times})=0$
-and $H^1(G,I\otimes K^{\times})\cong \mathbb Z/\ell\mathbb Z$.
-\end{proposition}
-\begin{proof} The natural map $I\otimes K^{\times}\rightarrow R\otimes K^{\times}$ has a
-finite kernel and co-kernel. Thus the Herbrand quotient of
-$I\otimes K^{\times}$ is equal to the Herbrand quotient of $R \otimes K^{\times}$. Let
-$J\subseteq R$ be an ideal belonging to the inverse class of $I$. Then the $R$-module
-$I\oplus J$ is isomorphic to $R\oplus R$. It follows that $H^0(G,I\otimes K^{\times})=0$
-so $H^1(G,I\otimes K^{\times})$ must be of order $\ell$. The proposition is proved.
-\end{proof}
-
-Now it is easy to determine cohomology groups if $T_X(k)$ is compact. In that case $1$ is not
-an eigenvalue of $g$ acting on $X$. Thus $X$ is an $R$-module. Since $R$ is a Dedekind
-domain, $X\cong I_1\oplus \ldots \oplus I_m$ where $I_1, \ldots, I_m$ are ideals in $R$, and
-the proposition implies that $H^0(G,X\otimes K^{\times})=0$
-and $H^1(G,X\otimes K^{\times})\cong (\mathbb Z/\ell\mathbb Z)^m$.
-
-\vskip 10pt
-
-\section{Totally (not necessarily tamely?) ramified tori with splitting field of prime degree, the non-anisotropic case}
-
-\begin{theorem}
-Let $T$ be a torus defined over $k$ that splits over $K$, a totally ramified extension of prime degree $q$ of $k$.  Then $\hat{H}^i(G, T_0^K) = 0 \ \forall i$.
-\end{theorem}
-
-\proof
-See \cite[Theorem 3]{amano}.
-\qed
-
-\begin{corollary}
-$\hat{H}^i(G, T(K)) = \hat{H}^i(G,X)$.
-\end{corollary}
-
 \section{Review of Construction of DeBacker and Reeder}\label{preliminaries}
 
 We first review some of the basic theory from \cite{debackerreeder}.  We first fix a pinning $(\hat{T}, \hat{B}, \{x_{\alpha} \})$ for the dual group $\hat{G}$.  The operator $\hat{\theta}$ dual to $\theta$ extends to an automorphism of $\hat{T}$.  There is a unique extension of $\hat{\theta}$ to an automorphism of $\hat{G}$, satisfying $\hat{\theta}(x_{\alpha}) = x_{\theta \cdot \alpha}$ (see \cite[section 3.2]{debackerreeder}).  Following \cite{debackerreeder}, we may form the semidirect product ${}^L G := \ <\hat{\theta}> \ltimes \hat{G}$.
@@ -314,11 +254,7 @@ Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the character group
 \chi_{\phi} := \chi_s \otimes \chi_{\tau} \in \mathrm{Irr}(T^{\Phi_{\sigma}}) \ \ \label{chitau}
 \end{equation}
 
-\noindent where $s := \phi|_{I_t}$, $\phi(\Phi) = \hat{\sigma} \ltimes \tau$, and where we have inflated $\chi_s$ to ${}^0 T^{\Phi_{\sigma}}$.
-
-\
-
-To get the depth-zero $L$-packet associated to $\phi$, one implements the component group $$\mathrm{Irr}(C_{\phi}) \cong [X / (1 - w \theta) X]_{\mathrm{tor}}$$ as follows. We set $X_w$ to be the preimage of $[X / (1 - w \theta) X]_{\mathrm{tor}}$ in $X$.  To $\lambda \in X_w$, DeBacker and Reeder associate a 1-cocycle $u_{\lambda}$, hence a twisted Frobenius $\Phi_{\lambda} = Ad(u_{\lambda}) \circ \Phi$.  Moreover, to $\lambda$, they associate a facet $J_{\lambda}$, and hence a parahoric subgroup $G_{\lambda}$ associated to $J_{\lambda}$.  Let $\mathbb{G}_{\lambda} := G_{\lambda} / G_{\lambda}^+$.  Let $W_{\lambda}$ be the subgroup of $W^o$ generated by reflections in the hyperplanes containing $J_{\lambda}$.  Then to $\lambda$, DeBacker--Reeder also associate an element $w_{\lambda} \in W_{\lambda}$. Fix once and for all a lift $\dot{w}$ of $w$ to $N$.  Using this lift, DeBacker and Reeder also associate a lift $\dot{w}_{\lambda}$ of $w_{\lambda}$ to $N$. By Lang's theorem, there exists $p_{\lambda} \in G_{\lambda}$ such that $p_{\lambda}^{-1} \Phi_{\lambda} (p_{\lambda}) = \dot{w}_{\lambda}$.  We then define $T_{\lambda} := Ad(p_{\lambda}) T$, and set $\chi_{\lambda} := \chi_{\phi} \circ Ad(p_{\lambda})^{-1}$.  Since $\chi_{\lambda}$ is depth-zero, its restriction to ${}^0 T_{\lambda}^{\Phi_{\lambda}}$ factors through a character $\chi_{\lambda}^0$ of $\mathbb{T}_{\lambda}^{\Phi_{\lambda}}$, where $\mathbb{T}_{\lambda}^{\Phi_{\lambda}}$ is the projection of ${}^0 T^{\Phi_{\lambda}}$ in $\mathbb{G}_{\lambda}$.  Therefore, $\chi_{\lambda}^0$ gives rise to an irreducible cuspidal Deligne-Lusztig representation $\kappa_{\lambda}^0$ of $\mathbb{G}_{\lambda}^{\Phi_{\lambda}}$.  Inflate $\kappa_{\lambda}^0$ to a representation of $G_{\lambda}^{\Phi_{\lambda}}$, and define an extension to $Z^{\Phi_{\lambda}} G_{\lambda}^{\Phi_{\lambda}}$ by $$\kappa_{\lambda} := \chi_{\lambda} \otimes \kappa_{\lambda}^0$$ where $Z$ denotes the center of $G$.  This makes sense since $(Z \cap G_{\lambda})^{\Phi_{\lambda}}$ acts on $\kappa_{\lambda}^0$ via the restriction of $\chi_{\lambda}^0$.  Finally, form the representation $$\pi_{\lambda} := \mathrm{Ind}_{Z^{\Phi_{\lambda}} G_{\lambda}^{\Phi_{\lambda}}}^{G^{\Phi_{\lambda}}} \kappa_{\lambda}$$ where Ind denotes smooth induction.  Then DeBacker--Reeder construct a packet $\Pi(\phi)$ of representations on the pure inner forms of $G$, parameterized by $\mathrm{Irr}(C_{\phi})$, using the above construction, where $C_{\phi}$ is the component group of $\phi$.
+\noindent where $s := \phi|_{I_t}$, $\phi(\Phi) = \hat{\sigma} \ltimes \tau$, and where we have inflated $\chi_s$ to ${}^0 T^{\Phi_{\sigma}}$.  To $\chi_{\phi}$, DeBacker and Reeder construct an $L$-packet of supercuspidal representations, which we denote $L(\chi_{\phi})$.
 
 \section{Groups of type L}\label{groupsoftypeL}
 We now review the theory of ``groups of type L'' due to Benedict Gross.  Let $F$ be a field, $F^{\mathrm s}$ a separable closure, and $T$ a torus defined over $F$ that splits over an extension $E \subset F^s$.
@@ -332,15 +268,45 @@ A \emph{group of type L} is a group extension of $\Gamma$ by $\hat{T}$.
 
 Let $D$ be such a group.  Then we have an exact sequence
 $$1 \rightarrow \hat{T} \rightarrow D \rightarrow \Gamma \rightarrow 1$$
-We now describe how, given a Langlands parameter $$\phi : W_F \rightarrow D,$$ where $D$ is a group of type L, we can naturally attach a character of $T(E)_{\Gamma} := T(E) / I_{\Gamma}(T(E))$, where $I_{\Gamma}(T(E)) = \{(1 - \xi)t \ : t \in T(E), \xi \in \Gamma \}$.
+We now describe how, given a Langlands parameter $$\phi : W_F \rightarrow D,$$ where $D$ is a group of type L, we can naturally attach a character of $T(E)_{\Gamma} := T(E) / I_{\Gamma}(T(E))$, where $I_{\Gamma}(T(E)) = \{(1 - \sigma)t \ : t \in T(E), \sigma \in \Gamma \}$.
 Restricting $\phi$ to $W_E$ we get a homomorphism $$\phi|_{W_E} : W_E \rightarrow \hat{T}$$
 By the Langlands correspondence for tori, this gives us a character $\chi : T(E) \rightarrow \mathbb{C}^*$.  Since $\phi|_{W_E}$ extends to $\phi$, one can see that
 $$\chi(t^{\sigma}) = \chi(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
 Therefore, $\chi(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.  Thus, $\chi$ is trivial on the augmentation ideal $I_{\Gamma}(T(E))$
 and gives $$\chi : T(E)_\Gamma \rightarrow \mathbb{C}^*$$
-Invariants and coinvariants are related by the norm map $$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\xi \in \Gamma} \xi(t)$$ in the Tate cohomology sequence
+Invariants and coinvariants are related by the norm map $$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$ in the Tate cohomology sequence
 $$1 \rightarrow \hat{H}^{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F) = T(E)^{\Gamma} \rightarrow \hat{H}^0(\Gamma,T(E)) \rightarrow 1$$ (note that the norm map $N$ factors to $T(E)_{\Gamma}$).
 We have thus constructed a character $\chi$ of $T(E)_{\Gamma}$ from a Langlands parameter $\phi$. We note that $T(E)_{\Gamma}$ is a cover of $N(T(E)_{\Gamma})$, which is a subgroup of $T(F)$.  It is sometimes the case that $N$ is surjective, in which case $\chi$ is then a character of $T(E)_{\Gamma}$, which is a cover of $T(F)$.
+
+We will need the following structural result about Langlands parameters mapping to groups of type $L$ later.  First let $E,F,T, \hat{T}$ be as above, with $E/F$ unramified.  Let $\varphi_1 : W_F \rightarrow D$ be a Langlands parameter mapping to a group of type $L$.  $\varphi_1$ gives rise to a character $\chi_1$ of $T(E)_{\Gamma}$.  Let $\varphi_2 : W_F \rightarrow D$ be defined with the only condition that $\varphi_2(\Phi_F) = t \varphi_1(\Phi_F)$ for some $t \in \hat{T}$.  $\varphi_2$ gives rise to a character $\chi_2$ of $T(E)_{\Gamma}$.
+
+\begin{lemma}\label{toralmodification}
+$\chi_1$ and $\chi_2$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(E))$.
+\end{lemma}
+
+\proof
+I want to explicitly describe the character $\chi$ restricted to $\hat{H}^{-1}(\Gamma, T(E))$ that is attached to a Langlands parameter $\phi$.  Here, $T$ is defined over $F$, splits over unramified $E$, where the degree of $E/F$ is $r$.  Let $\Gamma = Gal(E/F)$, generated by an element $\sigma$.
+
+We restrict $\phi$ to $W_E$.  Then $\phi(Frob_E) = \phi(Frob_F)^r$.  Suppose $\phi(Frob_F) = n$, where $n$ is an element of the normalizer of the dual torus.  Then $n^r$ is an element in the dual torus $\hat{T}$.
+
+What is $\chi$ restricted to $\hat{H}^{-1}(\Gamma, T(E))$?  Well, by stuff that Gordan and I did, and stuff that you have probably done as well, we know that $\hat{H}^{-1}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, X_*(T))$, since $E/F$ is unramified.  This latter group is some quotient of $ker(N : X_*(T) \rightarrow X_*(T))$, where $ker$ denotes kernel, and $N$ denotes norm.
+
+Let's describe $\chi$ on $\hat{H}^{-1}$.  Well, let $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us think of $\lambda$ as living in $X^*(\hat{T})$ instead.
+
+Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and $z \in \mathbb{C}^*$.  What is $\chi(\lambda)$?  Most likely it is just $z^{<\mu, \lambda>}$  (where $< , >$ denotes the canonical pairing on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
+
+Now let's modify our Langlands parameter.  Suppose $\phi'(Frob_F) = tn$, for some element $t \in \hat{T}$, and suppose $\phi'$ has the same restriction to inertia as $\phi$.  Then we get an associated $\chi'$.  What is $\chi'$ restricted to $\hat{H}^{-1}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, X_*(T))$?
+
+Well, let $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us think of $\lambda$ as living in $X^*(\hat{T})$ instead.  We need to compute $(tn)^r$.  This is $t ntn^{-1} n^2 t n^{-2} .... n^{r-1} t n^{1-r} n^r$.
+
+But $t ntn^{-1} n^2 t n^{-2} .... n^{r-1} t n^{1-r} = t w(t) w^2(t) ... w^{r-1}(t)$, where $w$ is the Weyl group element associated to $n$.  If we write $t = \mu' \otimes z'$, then $t w(t) w^2(t) ... w^{r-1}(t) = N(\mu' ) \otimes z'$, since $w$ acts as Galois on the character lattices, and since Galois acts holomorphically on the dual group rather than antiholomorphically (i.e. Galois acts trivially on $\mathbb{C}^*$).  But now one checks: We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<N(\mu'), \lambda>}$.  But
+
+$$<N(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda> = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
+
+Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> = <\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum becomes $$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', N(\lambda)>.$$
+
+But $\lambda$ is assumed to be in the kernel of the norm map!  So we get $<\mu', N(\lambda)> = <\mu', 0> = 0$.  So $\chi'(\lambda) = z^{<\mu, \lambda>} = \chi(\lambda)$.  Done.
+\qed
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
 
@@ -411,8 +377,6 @@ See \cite[Proposition 21]{bushnellhenniart}.
 \qed
 
 \MAxxx{In this section somewhere, should we calculate $\hat{H}^0$ and $\hat{H}^{-1}$ for unramified tori of $GL(n)$? We have done this already, and it's easy.  Maybe we can use it for something, or explain something with it (like Gross's construction, together with our rectifiers, for $GL(n)$.  That would be nice)}
-
-
 
 \begin{thebibliography}{9}
 
