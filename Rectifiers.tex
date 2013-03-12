@@ -65,10 +65,10 @@ So if we want the diagram to commute then we would hope that $\HH^2(\Gal(\bar{M}
 \begin{tikzpicture}[iso/.style={postaction={decorate,decoration={markings, mark=at position 0.45 with {\draw [-] (-4pt,2pt) .. controls (-2pt,5pt) and (2pt, 0pt) .. (4.5pt, 3.5pt);}}}}]
 \matrix [draw,nodes=draw,row sep=8mm,column sep=8mm,every node/.style={line width=0pt}]
 {
-  \node (n00) {$\HH^2(\Gamma, \Th)$}; & \node (n10) {$\HH^1(W_M, \Th)^{\Gamma}$}; & \node (n20) {$\HH^1(W_M, \Th)$};  \\
-   \node (n01) {$\HH^2(\Gamma, \Hom(X_*(\T), \CC^\times))$}; & \node (n11) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))^{\Gamma}$}; & \node (n21) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))$}; \\
-  \node (n02) {$\Hom(\HH_2(\Gamma, X_*(\T)), \CC^\times)$};& \node (n12) {$(\Hom(\HH_1(W_M, X_*(\T)), \CC^\times))^{\Gamma}$}; & \node (n22) {$\Hom(\HH_{1}(W_M, X_*(\T)), \CC^\times)$}; \\
-  \node (n03) {$\Hom(\HT{-1}(\Gamma, \T(M)), \CC^\times)$}; & \node (n13) {$(\Hom(\HH^0(W_M, T(M)), \CC^\times))^{\Gamma}$}; & \node (n23) {$\Hom(\HH^{0}(W_M, T(M)), \CC^\times)$}; \\
+  \node (n00) {$\HT{2}(\Gamma, \Th)$}; & \node (n10) {$\HH^1(W_M, \Th)^{\Gamma}$}; & \node (n20) {$\HH^1(W_M, \Th)$};  \\
+   \node (n01) {$\HT{2}(\Gamma, \Hom(X_*(\T), \CC^\times))$}; & \node (n11) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))^{\Gamma}$}; & \node (n21) {$\HH^1(W_M, \Hom(X_*(\T), \CC^\times))$}; \\
+  \node (n02) {$\Hom(\HH_{2}(\Gamma, X_*(\T)), \CC^\times)$};& \node (n12) {$(\Hom(\HH_{1}(W_M, X_*(\T)), \CC^\times))^{\Gamma}$}; & \node (n22) {$\Hom(\HH_{1}(W_M, X_*(\T)), \CC^\times)$}; \\
+  \node (n03) {$\Hom(\HT{-1}(\Gamma, \T(M)), \CC^\times)$}; & \node (n13) {$(\Hom(\HH^{0}(W_M, T(M)), \CC^\times))^{\Gamma}$}; & \node (n23) {$\Hom(\HH^{0}(W_M, T(M)), \CC^\times)$}; \\
 };
 \draw [->, iso] (n00) to (n01);
 \draw [->, iso] (n01) to (n02);
