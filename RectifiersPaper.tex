@@ -1,17 +1,26 @@
 \documentclass[11pt]{amsart}
 \usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
 \theoremstyle{plain}
-\newtheorem{theorem}[enumi]{Theorem}
-\newtheorem{corollary}[enumi]{Corollary}
-\newtheorem{proposition}[enumi]{Proposition}
-\newtheorem{lemma}[enumi]{Lemma}
-\newtheorem{Main}{Main Theorem}
-\newtheorem{definition}[enumi]{Definition}
+\newtheorem{iassumption}{Assumption}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{statement}[theorem]{Statement}
+\newtheorem{example}[theorem]{Example}
 
 \newcommand{\MAxxx}[1]{$\clubsuit$\footnote{#1}}
 \newcommand{\DRxxx}[1]{$\spadesuit$\footnote{#1}}
 
-\renewcommand{\theMain}{}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
 \setlength{\oddsidemargin}{0.2in}
 \setlength{\evensidemargin}{0.2in}
 \setlength{\textwidth}{6.1in}
@@ -131,7 +140,7 @@ $T(E)_{\Gamma}$.
 \begin{definition}
 Let $T$ be a torus, defined over $F$, that splits over an unramified
   extension $E$.  Suppose $\xi$ is a character of $T(E)_{\Gamma}$.
-The pair $(T, \xi)$ is called \emph{regular} if $\xi$ is not fixed
+The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any element of $(N(G,T)/T)(F)$ (see Lemma \ref{weylgroups}).
 \end{definition}
 
@@ -139,7 +148,7 @@ by any element of $(N(G,T)/T)(F)$ (see Lemma \ref{weylgroups}).
   Let $T$ be a torus, defined over $F$, that splits over an unramified
   extension $E$.  A \emph{rectifier} for $T$ is a function $${}_F
   \boldsymbol\mu : (T, \xi) \mapsto {}_F \mu_{\xi}$$ which attaches,
-  to each regular pair $(T, \xi)$, a character ${}_F
+  to each admissible pair $(T, \xi)$, a character ${}_F
   \mu_{\xi}$ of $T(E)_{\Gamma}$ satisfying the following conditions.
 
 \begin{enumerate}
@@ -151,37 +160,59 @@ by any element of $(N(G,T)/T)(F)$ (see Lemma \ref{weylgroups}).
 \item $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   is the local Langlands correspondence.
 
-\item If $(T, \xi_i), i = 1,2$ are regular pairs  such that 
+\item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
 $\xi_1^{-1} \xi_2$ is tamely ramified, then 
 ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 \end{enumerate}
 
 \end{definition}
 
-We prove:
+As the local Langlands correspondence is not known in general, we must restrict 
+ourselves to cases where general supercuspidal $L$-packets have been constructed.  
+Since we are in the present paper considering the situation when $T$ is unramified, 
+we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.  
+We will show that the characters ${}_F \mu_{\xi}$ that arise are actually unramified 
+(i.e. trivial on $T(\mathfrak{o}_E)_{\Gamma}$).  In particular, the setting 
+of \cite{debackerreeder} and \cite{reeder} do not include all possible admissible 
+pairs $(T, \xi)$.  In particular, because of condition (3) above, we cannot hope 
+to say anything at present about the situation where ${}_F \mu_{\xi}$ is ramified, 
+except possibly in the case where $G = GL(n)$ (note that for 
+$G = GL(n)$, ${}_F \mu_{\xi}$ can be ramified even if $T$ is unramified).  
+We return to this case in another paper.
 
-\begin{theorem}
+\begin{conjecture}
   Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
   admits a unique rectifier ${}_F \boldsymbol\mu : (T, \xi) \mapsto
   {}_F \mu_{\xi}$.\MAxxx{Should we assume that the Langlands parameters
   are ``regular''?  Since this is what we know for LLC.  Then we might
   as well assume that the rectifiers are unramified as well.}
+\end{conjecture}
+
+Let $Reg(T, \xi)$ denote the set of admissible pairs that arise from RSELPs,
+as in \cite{debackerreeder} and \cite{reeder}.  We can prove:
+
+\begin{theorem}
+Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.  
+If ${}_F \boldsymbol\mu$ is a rectifier for $T$, then
+${}_F \boldsymbol\mu|_{Reg(T,\xi)}$ is uniquely determined.
 \end{theorem}
 
 Once phrased in this manner, uniqueness is a straightforward matter
-(see \S\ref{}) \MAxxx{Fix when we can.}.  The existence of a rectifier
-will be proven by interpreting the rectifier in terms of a canonical
-Langlands parameter.  More explicitly, we will exhibit a canonical
+(see \S\ref{}) \MAxxx{Fix when we can.}. 
+
+Moreover, we construct a function on $Reg(T,\xi)$ that satisfies conditions
+(1)-(4) above.  As explained earlier, this is all that we can hope to do, 
+as more general $L$-packets in the case of $T$ unramified have not been
+constructed.  Once $L$-packets are constructed more generally, we hope to 
+construct the rectifier in general.  The existence of this function
+will be proven by interpreting the characters ${}_F \mu_{\xi}$ 
+in terms of a canonical Langlands parameter.  More explicitly, 
+we will exhibit a canonical
 \MAxxx{Canonical?  Is the Tits group lift canonical?} Langlands
 parameter $\phi_{o}$, such that if $\xi_o = \xi_{\phi_o}$, then the
-function $$(T, \xi) \mapsto \xi_o$$ is a rectifier.
+function $$(T, \xi) \mapsto \xi_o$$ is satisfies conditions (1)-(4).
 
-Let $\phi, T, E, \xi$ as before, assuming that $\phi$ is TRSELP.
-\MAxxx{Do we need to assume tame?  That is, does our paper work for
-  Reeder's positive depth paper as well or not?  I think the $\phi_o$
-  we have works for Reeder's paper as well.  That is, we don't need to
-  change $\phi_o$ on inertia. The same proofs work.  If so, let's
-  change TRSELP to RSELP.}
+Let $\phi, T, E, \xi$ as before, assuming that $\phi$ is RSELP.
 The projection of $\phi(\Phi)$ onto the connected component of ${}^L
 G$ is a lift of some Weyl group element $\hat{w}$ to the normalizer of
 the dual torus.  Associated to $\phi$, DeBacker/Reeder construct a
@@ -207,7 +238,7 @@ Let $\xi_o = \xi_{\phi_o}$.  Our main theorem is the following.
 
 \begin{theorem}
   If $G$ is semisimple, then $${}_F \boldsymbol\mu : (T, \xi) \mapsto
-  \xi_o$$ is a rectifier for $T$.
+  \xi_o$$ satisfies conditions (1)-(4) of Definition \ref{rectifierdefinition}.
 \end{theorem}
 
 In the case that $G$ is semisimple, there was nothing special about
@@ -611,7 +642,7 @@ $N(T(E)_{\Gamma})$, which is a subgroup of $T(F)$.  It is sometimes
 the case that $N$ is surjective, in which case $\chi$ is then a
 character of $T(E)_{\Gamma}$, which is a cover of $T(F)$.
 
-We now give meaning to the definition of \emph{regular pair} in the introduction.
+We now give meaning to the definition of \emph{admissible pair} in the introduction.
 
 \begin{lemma}\label{weylgroups}
 Let $G$ be a connected reductive $F$-group and let $T$ be a maximal
