@@ -130,36 +130,30 @@ $T(E)_{\Gamma}$.
 
 \begin{definition}
 Let $T$ be a torus, defined over $F$, that splits over an unramified
-  extension $E$.  Suppose $\xi$ is a character of $T(E)_{\Gamma}$.  
+  extension $E$.  Suppose $\xi$ is a character of $T(E)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{regular} if $\xi$ is not fixed
 by any element of $(N(G,T)/T)(F)$ (see Lemma \ref{weylgroups}).
 \end{definition}
-  
+
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $F$, that splits over an unramified
   extension $E$.  A \emph{rectifier} for $T$ is a function $${}_F
   \boldsymbol\mu : (T, \xi) \mapsto {}_F \mu_{\xi}$$ which attaches,
-  to each regular pair \MAxxx{Define notion of regular pair via
-    Adler?  Look in Reeder's positive depth paper.  Adler I think
-    might only be positive depth, so we would have to make a
-    definition that includes characters of tori that are needed in
-    depth zero supercuspidals} $(T, \xi)$, a character ${}_F
+  to each regular pair $(T, \xi)$, a character ${}_F
   \mu_{\xi}$ of $T(E)_{\Gamma}$ satisfying the following conditions.
 
 \begin{enumerate}
 \item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$
 
-\item The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on
-  $T(\mathfrak{o}_E)_{\Gamma}$) \MAxxx{Should be tamely ramified, as in
-  BH}
+\item The character ${}_F \mu_{\xi}$ is tamely ramified (i.e. trivial on
+  $T(1 + \mathfrak{p}_E)_{\Gamma}$) 
 
-\item $\phi \mapsto \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
+\item $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   is the local Langlands correspondence.
 
-\item If $(T, \xi_i), i = 1,2$ are regular pairs \MAxxx{Fix this
-    when we know how.} such that $\xi_1^{-1} \xi_2$ is unramified,
-    \MAxxx{Should be tamely ramified, as in BH}
-  then ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
+\item If $(T, \xi_i), i = 1,2$ are regular pairs  such that 
+$\xi_1^{-1} \xi_2$ is tamely ramified, then 
+${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 \end{enumerate}
 
 \end{definition}
@@ -620,48 +614,48 @@ character of $T(E)_{\Gamma}$, which is a cover of $T(F)$.
 We now give meaning to the definition of \emph{regular pair} in the introduction.
 
 \begin{lemma}\label{weylgroups}
-Let $G$ be a connected reductive $F$-group and let $T$ be a maximal 
-$F$-torus of $G$.  Let $E$ be the splitting field of $T$, and set 
+Let $G$ be a connected reductive $F$-group and let $T$ be a maximal
+$F$-torus of $G$.  Let $E$ be the splitting field of $T$, and set
 $\Gamma = \Gal(E/F)$.
 \begin{enumerate}
 \item $N(G(E), T(F)) / T(E) \cong (N(G,T)/T)(F)$.
-\item The standard action of $N(G(E),T(E)) / T(E)$ on $T(E)$ determines 
-well-defined actions of $N(G(E), T(E))^{\Gamma} / T(F)$ and $(N(G,T)/T)(F)$ 
+\item The standard action of $N(G(E),T(E)) / T(E)$ on $T(E)$ determines
+well-defined actions of $N(G(E), T(E))^{\Gamma} / T(F)$ and $(N(G,T)/T)(F)$
 on $T(E)$, which factor naturally to actions on $T(E)_{\Gamma}$.
 \end{enumerate}
 \end{lemma}
 
 \proof
-We first prove (1).  Let $nT(E)\in N(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.  
-Then $ntn^{-1}\in T(F)$, so for $\gamma\in\Gamma$, 
-$\gamma(n)t\gamma(n)^{-1} =  \gamma (ntn^{-1}) = ntn^{-1}$.  
-Thus $n^{-1}\gamma(n)$ centralizes $T(F)$, hence centralizes the centralizer 
-of $T(F)$ in $G(E)$, which is $T(E)$. Thus $n^{-1}\gamma(n)\in T(E)$ so 
-$\gamma(n T(E)) = \gamma (n) T(E) = n T(E)$. Thus the elements of 
-$N(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so 
+We first prove (1).  Let $nT(E)\in N(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.
+Then $ntn^{-1}\in T(F)$, so for $\gamma\in\Gamma$,
+$\gamma(n)t\gamma(n)^{-1} =  \gamma (ntn^{-1}) = ntn^{-1}$.
+Thus $n^{-1}\gamma(n)$ centralizes $T(F)$, hence centralizes the centralizer
+of $T(F)$ in $G(E)$, which is $T(E)$. Thus $n^{-1}\gamma(n)\in T(E)$ so
+$\gamma(n T(E)) = \gamma (n) T(E) = n T(E)$. Thus the elements of
+$N(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so
 $N(G(E), T(F)) / T(E) \subset (N(G,T)/T)(F)$.
 
-Conversely, since $T$ splits over $E$, any coset in $(N(G,T)/T)(F)$ 
-has a representative in the normalizer $N(G(E), T(E))$. Then $\gamma(n) = nt'$ 
+Conversely, since $T$ splits over $E$, any coset in $(N(G,T)/T)(F)$
+has a representative in the normalizer $N(G(E), T(E))$. Then $\gamma(n) = nt'$
 for some $t'\in T(E)$ since $nT$ is $F$-rational.  Let $t\in T(F)$.
-Then for $\gamma\in\Gamma$, 
+Then for $\gamma\in\Gamma$,
 $\gamma(ntn^{-1}) = \gamma(n) t \gamma(n)^{-1} = (nt')t(nt')^{-1} = ntn^{-1}$.
 Thus $ntn^{-1}\in T(F)$, so $n\in N(G(E),T(F))$, as desired.
 
 We now prove (2).
-The group $N(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(N(G,T)/T)(F)$.  
-Thus it suffices to to prove the statement for 
+The group $N(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(N(G,T)/T)(F)$.
+Thus it suffices to to prove the statement for
 $(N(G,T)/T)(F) = N(G(E), T(F)) / T(E)$.  Let $n \in N(G(E),T(F))$.  Then since $n$
 normalizes $T(F)$, $n$ also normalizes $T(E)$.  Therefore, we have that
 $N(G(E), T(F)) / T(E)$ acts on $T(E)$.
 
 We now have to show that $N(G(E), T(F)) / T(E)$
-sends the augmentation ideal 
+sends the augmentation ideal
 $\{ t\sigma(t)^{-1} : t \in T(E), \sigma \in \Gamma \}$ to itself.
 Let $t \in T(E), \sigma \in \Gamma$ and let $w \in  (N(G,T)/T)(F)$.  Then $$w\left(\frac{t}{\sigma(t)}\right)
 = \frac{wt}{w \sigma(t)} = \frac{w(t)}{\sigma (\sigma^{-1}(w(\sigma(t))))} =
 \frac{wt}{\sigma ({}^{\sigma^{-1}} w) (t)} = \frac{wt}{\sigma(wt)},$$
-the last equality coming from the fact that $w \in (N(G,T)/T)(F)$, so $w$ 
+the last equality coming from the fact that $w \in (N(G,T)/T)(F)$, so $w$
 is fixed by $\Gamma$.
 \qed
 
