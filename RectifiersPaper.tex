@@ -305,7 +305,7 @@ $\mathfrak{f}_n$ will denote the degree $n$ extension of
 $\mathfrak{f}$.  $k$ will denote a nonarchimedean local field of
 charcteristic zero, and $\mathfrak{f}$ will be its residue field.  Fix
 a uniformizer $\varpi$ of $k$.  Let $k^u$ denote the maximal
-unramified extension of $k$, and fix a valuation $val : (k^u)^*
+unramified extension of $k$, and fix a valuation $val : (k^u)^\times
 \rightarrow \mathbb{Z}$ normalized so that $val(\varpi) = 1$.
 
 \section{Preliminaries}
@@ -427,7 +427,7 @@ We claim that the natural maps
 $$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 
 are surjective for $r \geq 0$.  First let $r \geq 1$.  First note that
-$T_0^L = X \otimes \mathfrak{o}_L^*$ and
+$T_0^L = X \otimes \mathfrak{o}_L^\times$ and
 $T_r^L = X \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
 $$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 becomes
@@ -453,7 +453,7 @@ which is surjective since the trace map $\mathfrak{f}_n \rightarrow \mathfrak{f}
 is surjective.  Now let $r = 0$.  We wish to show that
 $$N_{K/k} : T_0^K / T_1^K \rightarrow T_0^k / T_1^k$$
 is surjective.  But this map becomes
-$$N_{K/k} : X \otimes \left( \mathfrak{o}_K^* / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathfrak{o}_K^* / (1 + \mathfrak{p}_K) \right) )^G$$
+$$N_{K/k} : X \otimes \left( \mathfrak{o}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathfrak{o}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
 which is just
 $$N_{K/k} : \mathbb{T}(\mathfrak{f}_n) \rightarrow \mathbb{T}(\mathfrak{f}).$$
 This last map is surjective by Lemma \ref{normtorifinitefields}.
@@ -461,13 +461,13 @@ Finally, by \cite[Lemma 2, p. 81]{serre1}, we have our result.
 \qed
 
 \begin{corollary}\label{reductiontori}
-$\hat{H}^i(G, X \otimes K^*) = \hat{H}^i(G, T(K)) = \hat{H}^i(G,X_*(T))$ for $i=0,1$.
+$\hat{H}^i(G, X \otimes K^\times) = \hat{H}^i(G, T(K)) = \hat{H}^i(G,X_*(T))$ for $i=0,1$.
 \end{corollary}
 
 \proof
 
-Recall that $X \otimes K^* \xrightarrow{\sim} T(K)$ given by
-evaluation, restricting to an isomorphism $X \otimes \mathfrak{o}_K^*
+Recall that $X \otimes K^\times \xrightarrow{\sim} T(K)$ given by
+evaluation, restricting to an isomorphism $X \otimes \mathfrak{o}_K^\times
 \xrightarrow{\sim} T_0^K$.  We may thus identify $X$ with the quotient
 $T(K) / T_0^K$, giving rise to the short exact sequence
 $$1 \rightarrow T_0^K \rightarrow T(K) \rightarrow X \rightarrow 1.$$
@@ -575,7 +575,7 @@ canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
 characers of $T^{\Phi_{\sigma}}$ where
 $\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
-this construction. Let $\mathbb{T} := X \otimes \mathfrak{F}^*$.
+this construction. Let $\mathbb{T} := X \otimes \mathfrak{F}^\times$.
 Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
 respectively, let $Hom_{\alpha, \beta}(A,B)$ denote the set of
 homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
@@ -585,25 +585,25 @@ given by
 $N_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
 induces isomorphisms
 $$\mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^*) \stackrel{\sim}{\rightarrow}
+  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
   \mathrm{Hom}_{\Phi_{\sigma}, Id}(\mathbb{T}^{\Phi_{\sigma}^n},
-  \mathbb{C}^*) \stackrel{\sim}{\rightarrow}
-  \mathrm{Hom}_{\Phi_{\sigma}, Id}(X \otimes \mathfrak{f}_n^*, \mathbb{C}^*)$$
+  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
+  \mathrm{Hom}_{\Phi_{\sigma}, Id}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
-$$\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^*, \hat{T})
+$$\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times, \hat{T})
   \stackrel{\sim}{\rightarrow} \mathrm{Hom}_{\Phi_{\sigma},
-  Id}(X \otimes \mathfrak{f}_n^*, \mathbb{C}^*)$$
+  Id}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
-projection $I_t \rightarrow \mathfrak{f}_m^*$ induces an isomorphism
+projection $I_t \rightarrow \mathfrak{f}_m^\times$ induces an isomorphism
 as $\Phi$-modules
-$I_t / (1 - Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} \mathfrak{f}_m^*$
+$I_t / (1 - Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} \mathfrak{f}_m^\times$
 where $Ad$ denotes the adjoint action.  Since $\hat{\sigma}$ has order
-$n$, we have $\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^*,
+$n$, we have $\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times,
 \hat{T}) \cong \mathrm{Hom}_{Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
 Therefore, the map $s \mapsto \chi_s$ is a canonical bijection
 $$\mathrm{Hom}_{Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
   \stackrel{\sim}{\rightarrow} \mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^*)$$
+  \mathbb{C}^\times)$$
 Moreover, we have an isomorphism
 $${}^0T^{\Phi_{\sigma}} \times X^{\sigma} \stackrel{\sim}{\rightarrow}
   T^{\Phi_{\sigma}}$$ $$(\gamma, \lambda) \mapsto \gamma \lambda(\varpi)$$
@@ -612,7 +612,7 @@ where ${}^0 T$ is the group of $\mathfrak{o}_{F^u}$-points of $\mathbf{T}$.
 Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
 character group of $X^{\sigma}$, whereby
 $\tau \in \hat{T} / (1 - \hat{\sigma}) \hat{T}$ corresponds to
-$\chi_{\tau} \in \mathrm{Hom}(X^{\sigma}, \mathbb{C}^*),$ where
+$\chi_{\tau} \in \mathrm{Hom}(X^{\sigma}, \mathbb{C}^\times),$ where
 $\chi_{\tau}(\lambda) := \lambda(\tau)$.  Therefore, we have a
 canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
@@ -633,7 +633,7 @@ Gross.  Let $F$ be a field, $F^{\mathrm s}$ a separable closure, and
 $T$ a torus defined over $F$ that splits over an extension $E \subset
 F^s$.  Let $\Gamma = \Gal(E/F)$.  Let $X^*(T)$ be the character module
 of $T$ and $X_*(T)$ the cocharacter module of $T$.  Define
-$\hat{T} = X^*(T) \otimes \mathbb{C}^*$.  The group $\Gamma$ acts on
+$\hat{T} = X^*(T) \otimes \mathbb{C}^\times$.  The group $\Gamma$ acts on
 $\hat{T}$ via its action on $X^*(T)$.
 
 \begin{definition}
@@ -651,12 +651,12 @@ $I_{\Gamma}(T(E)) = \{(1 - \sigma)t \ : t \in T(E), \sigma \in \Gamma \}$.
 Restricting $\phi$ to $W_E$ we get a homomorphism
 $$\phi|_{W_E} : W_E \rightarrow \hat{T}.$$
 By the Langlands correspondence for tori, this gives us a character
-$\chi : T(E) \rightarrow \mathbb{C}^*$.  Since $\phi|_{W_E}$ extends
+$\chi : T(E) \rightarrow \mathbb{C}^\times$.  Since $\phi|_{W_E}$ extends
 to $\phi$, one can see that
 $$\chi(t^{\sigma}) = \chi(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
 Therefore, $\chi(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
 Thus, $\chi$ is trivial on the augmentation ideal $I_{\Gamma}(T(E))$
-and gives $$\chi : T(E)_\Gamma \rightarrow \mathbb{C}^*$$ Invariants
+and gives $$\chi : T(E)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
 and coinvariants are related by the norm map
 $$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
@@ -754,7 +754,7 @@ $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us think of
 $\lambda$ as living in $X^*(\hat{T})$ instead.
 
 Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
-$z \in \mathbb{C}^*$.  What is $\chi(\lambda)$?  Most likely it is
+$z \in \mathbb{C}^\times$.  What is $\chi(\lambda)$?  Most likely it is
 just $z^{<\mu, \lambda>}$ (where $< , >$ denotes the canonical pairing
 on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
 
@@ -773,7 +773,7 @@ where $w$ is the Weyl group element associated to $n$.  If we write
 $t = \mu' \otimes z'$, then $t w(t) w^2(t) \cdots w^{r-1}(t) = N(\mu' ) \otimes z'$,
 since $w$ acts as Galois on the character lattices, and since Galois
 acts holomorphically on the dual group rather than antiholomorphically
-(i.e. Galois acts trivially on $\mathbb{C}^*$).  But now one checks:
+(i.e. Galois acts trivially on $\mathbb{C}^\times$).  But now one checks:
 We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<N(\mu'), \lambda>}$.  But
 
 $$<N(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
