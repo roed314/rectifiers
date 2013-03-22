@@ -10,3 +10,4 @@ _*.tex
 *.synctex.gz
 tori5.tex
 mathoverflow.tex
+*~
