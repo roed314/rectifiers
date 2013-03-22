@@ -16,6 +16,7 @@
 
 \newcommand{\MAxxx}[1]{$\clubsuit$\footnote{#1}}
 \newcommand{\DRxxx}[1]{$\spadesuit$\footnote{#1}}
+\newcommand{\HT}[1]{\hat{\HH}{}^{#1}}
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
@@ -27,6 +28,8 @@
 
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\HH}{H}
+
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
 
@@ -38,11 +41,9 @@
 %\email{savin@math.utah.edu}
 
 
-
+\begin{abstract}
 
 \maketitle
-
-\begin{abstract}
 
 In this paper we propose a natural generalization of rectifiers, the
 character twists that appear in the local Langlands correspondence for
@@ -115,17 +116,17 @@ to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
 are related by the norm map
 $$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the cohomology sequence
-$$1 \rightarrow \hat{H}^{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
-= T(E)^{\Gamma} \rightarrow \hat{H}^0(\Gamma,T(E)) \rightarrow 1,$$
+$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
+= T(E)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(E)) \rightarrow 1,$$
 where $\hat{H}$denotes Tate cohomology.
 
-Suppose that $\hat{H}^0(\Gamma, T(E)) = 0$, in which case
+Suppose that $\HT{0}(\Gamma, T(E)) = 0$, in which case
 $T(E)_{\Gamma}$ is then a cover of $T(F)$.  Let us also suppose that
 $\phi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\phi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
 If $G$ happens to be $GL(n)$, one can compute that
-$\hat{H}^{0}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, T(E)) = 0$, so that
+$\HT{0}(\Gamma, T(E)) = \HT{-1}(\Gamma, T(E)) = 0$, so that
 $T(E)_{\Gamma} \cong T(F)$ can be identified with $E^{\times}$, and
 $(E/F, \xi)$ is an admissible pair.  To construct the local Langlands
 correspondence, one would then proceed (as explained earlier) to
@@ -288,7 +289,7 @@ our Langlands parameters, like maybe conditions 1 and 3 of Reeder's positive dep
 that. It's clearly not a definition for all rectifiers of unramified tori. Just in the case of at least
 DeBacker/Reeder and Reeder}
 
-We would like to note that in the case that $\hat{H}^0(\Gamma, T(E))
+We would like to note that in the case that $\HT{0}(\Gamma, T(E))
 \neq 0$, the situation seems more difficult $\xi$ is defined on the
 image of $T(E)_{\Gamma}$ under the norm map.  However, one might be
 able to remedy this with a prediction of central character, as in
@@ -322,11 +323,11 @@ Let $\mathbb{T}$ be a torus that is defined over a finite field
 $\mathfrak{f}$.  Suppose $\mathbb{T}$ splits over an extension
 $\mathfrak{f}_n$ and set $G_n := Gal(\mathfrak{f}_n/\mathfrak{f})$.
 We wish to compute $\hat{H}^i(G_n,\mathbb{T}(\mathfrak{f}_n))$.
-Recall that, since $G_n$ is cyclic, $\hat{H}^{i}(G_n,A)\cong
-\hat{H}^{i+2}(G_n,A)$ for all $i$, and all $G_n$-modules $A$.
+Recall that, since $G_n$ is cyclic, $\HT{i}(G_n,A)\cong
+\HT{i+2}(G_n,A)$ for all $i$, and all $G_n$-modules $A$.
 
 \begin{proposition}\label{trivialH1finitefields}
-$\hat{H}^1(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
+$\HT{1}(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
 \end{proposition}
 
 \proof
@@ -334,7 +335,7 @@ This is Lang's theorem for connected algebraic groups over finite fields.
 \qed
 
 \begin{corollary}
-$\hat{H}^0(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
+$\HT{0}(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
 \end{corollary}
 
 \proof
@@ -348,7 +349,7 @@ that the Herbrand quotient of a finite group is trivial.  Hence, the result foll
 Let $T$ be a torus defined over $k$ that splits over an unramified
 extension $K/k$ of degree $n$, set $G := Gal(K/k)$, and let $g$ be a
 generator of $G$.  Recall that, since $G$ is cyclic,
-$\hat{H}^{i}(G,A)\cong \hat{H}^{i+2}(G,A)$ for all $i$, and all
+$\HT{i}(G,A)\cong \HT{i+2}(G,A)$ for all $i$, and all
 $G$-modules $A$.  Let $X$ denote the cocharacter lattice of $T$ and
 $Y$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
 we define $T_0$ to be the maximal bounded subgroup of
@@ -365,7 +366,7 @@ $$N_{K/k} : T_s^K / T_{r}^K \rightarrow T_s^k / T_{r}^k$$
 for all $r > s \geq 0$.
 
 \begin{lemma}\label{H1compactpart}
-$\hat{H}^1(G, T_{s}^K) = 0 \ \forall s \geq 0$.
+$\HT{1}(G, T_{s}^K) = 0 \ \forall s \geq 0$.
 \end{lemma}
 
 \proof
@@ -378,26 +379,26 @@ need the following Lemma:
   a sequence of $G$-invariant subgroups $M = M_0 \supset M_1 \supset
   M_2 \supset ...$, so $\cap M_i = 0$.  Thus,
   $M = \underleftarrow{\mathrm{lim}} \ M / M_i$.
-  If $H^1(G, M_i / M_{i+1}) = 0 \ \forall i \geq 0$,
-  then $H^1(G, M_j) = 0 \forall j \geq 0$.
+  If $\HH^1(G, M_i / M_{i+1}) = 0 \ \forall i \geq 0$,
+  then $\HH^1(G, M_j) = 0 \forall j \geq 0$.
 \end{lemma}
 
 \proof
 
 We do the case $j = 0$.  The argument for $j \geq 1$ is similar.  Let
-$f : G \rightarrow M$ be an element in $H^1(G,M)$.  We have a natural
-map $H^1(G, M ) \rightarrow H^1(G, M / M_1) = 0$.  Thus, there exists
+$f : G \rightarrow M$ be an element in $\HH^1(G,M)$.  We have a natural
+map $\HH^1(G, M ) \rightarrow \HH^1(G, M / M_1) = 0$.  Thus, there exists
 $m_0 \in M$ such that $f(\sigma) = (\sigma(m_0) - m_0) (\mathrm{mod} \
 M_1)$.  Then define $f_1 := f - (\sigma(m_0) - m_0)$.  This is in
-$H^1(G, M_1)$. But then again we have the natural map
-$H^1(G, M_1) \rightarrow H^1(G, M_1 / M_2) = 0$.  Thus, again, there
+$\HH^1(G, M_1)$. But then again we have the natural map
+$\HH^1(G, M_1) \rightarrow \HH^1(G, M_1 / M_2) = 0$.  Thus, again, there
 exists $m_1 \in M_1$ such that $f_1(\sigma) = (\sigma(m_1) - m_1) (\mathrm{mod} \ M_2)$.
 So define $f_2 = f - (\sigma(m) - m) - (\sigma(m_1) - m_1)$.  Continue
 this process indefinitely.  Then define
 $\tilde{m} := (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
 + m_3, \ldots) \in \underleftarrow{\mathrm{lim}} \ M / M_i = M$.  Then,
 $f(\sigma) = \sigma(\tilde{m}) - \tilde{m}$, so we get finally that
-$H^1(G,M) = 0$.  \qed
+$\HH^1(G,M) = 0$.  \qed
 
 Let $r \geq 1$.  Note that $T_r^K / T_{r+1}^K = X \otimes (1 +
 \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) = X \otimes
@@ -407,20 +408,20 @@ are equivalent.  Therefore, the vector space $X \otimes
 \mathfrak{f}_n$ with the above Galois action is equivalent to $X
 \otimes \mathfrak{f}_n$ with the standard action, i.e. $g \in G$ acts
 on $x \otimes z$ by $x \otimes gz$.  Thus, we wish to calculate
-$\hat{H}^1(G, X \otimes \mathfrak{f}_n)$ where $X \otimes
+$\HT{1}(G, X \otimes \mathfrak{f}_n)$ where $X \otimes
 \mathfrak{f}_n$ is given the standard action.  Since $X \otimes
 \mathfrak{f}_n$ is just a direct sum of copies of $\mathfrak{f}_n$, we
-are reduced to calculating $\hat{H}^1(G, \mathfrak{f}_n)$.  But since
+are reduced to calculating $\HT{1}(G, \mathfrak{f}_n)$.  But since
 the trace map over finite fields is surjective, we get that
-$\hat{H}^0(G, \mathfrak{f}_n) = 0$.  Therefore, since the Herbrand
-quotient of a finite group is trivial, we get that $\hat{H}^1(G,
-\mathfrak{f}_n) = 0$.  Finally, $\hat{H}^1(G, T_0^K / T_1^K) = 0$ by
+$\HT{0}(G, \mathfrak{f}_n) = 0$.  Therefore, since the Herbrand
+quotient of a finite group is trivial, we get that $\HT{1}(G,
+\mathfrak{f}_n) = 0$.  Finally, $\HT{1}(G, T_0^K / T_1^K) = 0$ by
 Lang's theorem since $T_0^K / T_1^K$ is a connected algebraic group
 over a finite field.  By Lemma \ref{abstractcohomology}, we have
 concluded the proof of Lemma \ref{H1compactpart}.  \qed
 
 \begin{lemma}\label{H0compactpart}
-$\hat{H}^0(G,T_0^K) = 0$.
+$\HT{0}(G,T_0^K) = 0$.
 \end{lemma}
 
 \proof
@@ -436,7 +437,7 @@ $$N_{K/k} : X \otimes \left( (1 + \mathfrak{p}_K^r) / (1 +
   \mathfrak{p}_K^{r+1}) \right) \rightarrow (X \otimes \left( (1 +
   \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \right) )^G$$
 since $T_r^k / T_{r+1}^k = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
-$H^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
+$\HH^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
 $(1 + \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \cong \mathfrak{o}_K / \mathfrak{p}_K \cong \mathfrak{f}_n$.
 Thus, we get
 $$N_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
@@ -473,15 +474,15 @@ evaluation, restricting to an isomorphism $X \otimes \mathfrak{o}_K^\times
 $T(K) / T_0^K$, giving rise to the short exact sequence
 $$1 \rightarrow T_0^K \rightarrow T(K) \rightarrow X \rightarrow 1.$$
 We therefore have the long exact sequence
-$$... \rightarrow \hat{H}^0(G, T_0^K) \rightarrow \hat{H}^0(G, T(K)) \rightarrow \hat{H}^0(G, X)
-\rightarrow \hat{H}^1(G, T_0^K) \rightarrow $$ $$\hat{H}^1(G, T(K))
-\rightarrow \hat{H}^1(G, X) \rightarrow \hat{H}^0(G, T_0^K)
+$$... \rightarrow \HT{0}(G, T_0^K) \rightarrow \HT{0}(G, T(K)) \rightarrow \HT{0}(G, X)
+\rightarrow \HT{1}(G, T_0^K) \rightarrow $$ $$\HT{1}(G, T(K))
+\rightarrow \HT{1}(G, X) \rightarrow \HT{0}(G, T_0^K)
 \rightarrow ...$$
 By corollary \ref{H0compactpart} and Lemma \ref{H1compactpart}, we get the result.
 \qed
 
 \begin{corollary}
-If $T(k)$ is compact, we have $\hat{H}^0(G, T(K)) = 0$.
+If $T(k)$ is compact, we have $\HT{0}(G, T(K)) = 0$.
 \end{corollary}
 
 \proof
@@ -490,8 +491,8 @@ $T(k)$ being compact means that $X^G = 0$, hence the result follows by corollary
 
 \begin{corollary}
   Let $\Phi$ be the characteristic polynomial of $g$ acting on $X$. If
-  $\Phi(1)\neq 0$, i.e. $T_X(k)$ is compact, then $H^0(G, X\otimes
-  K^{\times})=0$ and the order of $H^1(G, X\otimes K^{\times})$ is
+  $\Phi(1)\neq 0$, i.e. $T_X(k)$ is compact, then $\HH^0(G, X\otimes
+  K^{\times})=0$ and the order of $\HH^1(G, X\otimes K^{\times})$ is
   $\Phi(1)$.
 \end{corollary}
 
@@ -500,10 +501,10 @@ $T(k)$ being compact means that $X^G = 0$, hence the result follows by corollary
 Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
 is not an eigenvalue of $g$ on $X$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
 is the zero map on $X$.  Now, we have that
-$H^1(G, X\otimes K^{\times}) = H^1(G, X) = ker(N_{K/k}) / (Id - g)X$
+$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = ker(N_{K/k}) / (Id - g)X$
 where $N_{K/k}$ is the norm map $N_{K/k} : X \rightarrow X$ on $X$.
 Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X$,
-we get that $H^1(G, X) = X / (Id - g)X$.  It is known by standard lattice
+we get that $\HH^1(G, X) = X / (Id - g)X$.  It is known by standard lattice
 theory that the cardinality of $X / (Id - g)X$ is equal to the volume of
 a fundamental domain for the lattice $(Id - g)X$.  It is also known that
 the volume of a fundamental domain for the lattice $(Id - g)X$ is equal to
@@ -661,8 +662,8 @@ and gives $$\chi : T(E)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
 and coinvariants are related by the norm map
 $$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
-$$1 \rightarrow \hat{H}^{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
-  = T(E)^{\Gamma} \rightarrow \hat{H}^0(\Gamma,T(E)) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
+  = T(E)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(E)) \rightarrow 1$$
 (note that the norm map $N$ factors to $T(E)_{\Gamma}$).
 We have thus constructed a character $\chi$ of $T(E)_{\Gamma}$ from a
 Langlands parameter $\phi$. We note that $T(E)_{\Gamma}$ is a cover of
@@ -728,12 +729,12 @@ $\varphi_2(\Phi_F) = t \varphi_1(\Phi_F)$ for some $t \in \hat{T}$.
 $\varphi_2$ gives rise to a character $\chi_2$ of $T(E)_{\Gamma}$.
 
 \begin{lemma}\label{toralmodification}
-$\chi_1$ and $\chi_2$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(E))$.
+$\chi_1$ and $\chi_2$ have the same restriction to $\HT{-1}(\Gamma, T(E))$.
 \end{lemma}
 
 \proof
 I want to explicitly describe the character $\chi$ restricted to
-$\hat{H}^{-1}(\Gamma, T(E))$ that is attached to a Langlands parameter
+$\HT{-1}(\Gamma, T(E))$ that is attached to a Langlands parameter
 $\phi$.  Here, $T$ is defined over $F$, splits over unramified $E$,
 where the degree of $E/F$ is $r$.  Let $\Gamma = Gal(E/F)$, generated
 by an element $\sigma$.
@@ -743,14 +744,14 @@ Suppose $\phi(Frob_F) = n$, where $n$ is an element of the normalizer
 of the dual torus.  Then $n^r$ is an element in the dual torus
 $\hat{T}$.
 
-What is $\chi$ restricted to $\hat{H}^{-1}(\Gamma, T(E))$?  Well, by
+What is $\chi$ restricted to $\HT{-1}(\Gamma, T(E))$?  Well, by
 stuff that Gordan and I did, and stuff that you have probably done as
-well, we know that $\hat{H}^{-1}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, X_*(T))$,
+well, we know that $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
 since $E/F$ is unramified.  This latter group is some quotient of
 $ker(N : X_*(T) \rightarrow X_*(T))$, where $ker$ denotes kernel, and
 $N$ denotes norm.
 
-Let's describe $\chi$ on $\hat{H}^{-1}$.  Well, let
+Let's describe $\chi$ on $\HT{-1}$.  Well, let
 $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us think of
 $\lambda$ as living in $X^*(\hat{T})$ instead.
 
@@ -763,7 +764,7 @@ Now let's modify our Langlands parameter.  Suppose
 $\phi'(Frob_F) = tn$, for some element $t \in \hat{T}$, and suppose
 $\phi'$ has the same restriction to inertia as $\phi$.  Then we get an
 associated $\chi'$.  What is $\chi'$ restricted to
-$\hat{H}^{-1}(\Gamma, T(E)) = \hat{H}^{-1}(\Gamma, X_*(T))$?
+$\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$?
 
 Well, let $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us
 think of $\lambda$ as living in $X^*(\hat{T})$ instead.  We need to
@@ -802,20 +803,20 @@ DeBacker and Reeder attach to $\phi$ (see section
 
 We have the exact sequence
 
-$$1 \rightarrow \hat{H}^{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F)
-  \rightarrow \hat{H}^0(\Gamma, T(E)) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F)
+  \rightarrow \HT{0}(\Gamma, T(E)) \rightarrow 1$$
 
 where $\Gamma = \Gal(E/F)$.  Recall that $\phi$ canonically gives
 rise to a character $\chi$ of $T(E)_{\Gamma}$, by local Langlands
 for tori (see section \ref{groupsoftypeL}).  Note that the above
 exact sequence restricts to an exact sequence
 
-$$1 \rightarrow \hat{H}^{-1}(\Gamma, T(\mathfrak{o}_E)) \rightarrow T(\mathfrak{o}_E)_{\Gamma}
-  \rightarrow T(\mathfrak{o}_F) \rightarrow \hat{H}^0(\Gamma, T(\mathfrak{o}_E)) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma, T(\mathfrak{o}_E)) \rightarrow T(\mathfrak{o}_E)_{\Gamma}
+  \rightarrow T(\mathfrak{o}_F) \rightarrow \HT{0}(\Gamma, T(\mathfrak{o}_E)) \rightarrow 1$$
 
 Moreover, one can show using a profinite version of Lang's theorem and
 various results about tori over finite fields, that since $T$ is unramified,
-$\hat{H}^{-1}(\Gamma, T(\mathfrak{o}_E)) = \hat{H}^0(\Gamma, T(\mathfrak{o}_E)) = 1$.
+$\HT{-1}(\Gamma, T(\mathfrak{o}_E)) = \HT{0}(\Gamma, T(\mathfrak{o}_E)) = 1$.
 Therefore, the map
 $$T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{N} T(\mathfrak{o}_F)$$
 is an isomorphism, and we may view
@@ -890,13 +891,13 @@ If $G$ is semisimple, then $\chi \otimes \chi_o^{-1} = \chi_{\phi}$.
 
 \proof
 Since $G$ is semisimple, $T(F)$ is compact.  In particular,
-$\hat{H}^0(\Gamma, T(E)) = 0$, so we have the following exact
+$\HT{0}(\Gamma, T(E)) = 0$, so we have the following exact
 sequence:
-$$1 \rightarrow \hat{H}^{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
 Note that $T(F) = T(\mathfrak{o}_F)$, and so in particular
 $T(\mathfrak{o}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
-$N$.  This, together with the fact that $\hat{H}^{-1}(\Gamma, T(E)) \neq 0$,
-gives us that $\hat{H}^{-1}(\Gamma,T(E))$ and
+$N$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
+gives us that $\HT{-1}(\Gamma,T(E))$ and
 $T(\mathfrak{o}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
 
 Since $\phi_o|_{I_F} \equiv 1$, $\chi_o$ is trivial on
@@ -906,12 +907,12 @@ $(\chi \otimes \chi_o^{-1})|_{T(\mathfrak{o}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mat
 Therefore, $\chi \otimes \chi_o^{-1}$ is correct on
 $T(\mathfrak{o}_E)_{\Gamma}$.  Moreover, by Lemma
 \ref{toralmodification}, we also have that $\chi$ and $\chi_o$ have
-the same restriction to $\hat{H}^{-1}(\Gamma, T(E))$.  Therefore,
+the same restriction to $\HT{-1}(\Gamma, T(E))$.  Therefore,
 $\chi \otimes \chi_o^{-1}$ is a character of $T(F)$.  Since
 $\chi \otimes \chi_o^{-1}$ is correct on $T(\mathfrak{o}_E)_{\Gamma}$, and
 since $T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{N} T(F)$ is surjective,
 we are done.  (Do we need at some point that
-$\hat{H}^{-1}(\Gamma, T(E)) \bigcap T(\mathfrak{o}_E)_{\Gamma} = 1$?
+$\HT{-1}(\Gamma, T(E)) \bigcap T(\mathfrak{o}_E)_{\Gamma} = 1$?
 It's true, because otherwise, there would be a nontrivial element in
 $T(\mathfrak{o}_E)_{\Gamma}$ that mapped to the trivial element in
 $T(F)$ via the norm map.  But this can't be, because
@@ -943,8 +944,8 @@ setting (see \cite{bushnellhenniart}).
 See \cite[Proposition 21]{bushnellhenniart}.
 \qed
 
-\MAxxx{In this section somewhere, should we calculate $\hat{H}^0$ and
-  $\hat{H}^{-1}$ for unramified tori of $GL(n)$? We have done this
+\MAxxx{In this section somewhere, should we calculate $\HT{0}$ and
+  $\HT{-1}$ for unramified tori of $GL(n)$? We have done this
   already, and it's easy.  Maybe we can use it for something, or
   explain something with it (like Gross's construction, together with
   our rectifiers, for $GL(n)$.  That would be nice)}
