@@ -29,6 +29,8 @@
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\val}{val}
 \DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Nm}{Nm}
 
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
@@ -114,9 +116,9 @@ tori, one can canonically associate to $\phi$ a character $\xi_{\phi}$
 of $T(E)_{\Gamma}$, the group of coinvariants of $T(E)$ with respect
 to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
 are related by the norm map
-$$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
+$$\Nm : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the cohomology sequence
-$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
+$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{\Nm} T(F)
 = T(E)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(E)) \rightarrow 1,$$
 where $\hat{H}$denotes Tate cohomology.
 
@@ -314,7 +316,7 @@ unramified extension of $k$, and fix a valuation $\val : (k^u)^\times
 
 If $S$ is a torus that is defined over an arbitrary field $F$ and
 $E/F$ is a Galois extension, then we have the norm map
-$$N_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \mapsto
+$$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \mapsto
 \prod_{\sigma \in \Gal(E/F)} \sigma(s)$$
 
 \section{Tori over finite fields}
@@ -360,9 +362,9 @@ furthermore define $T_r^L := T_r \cap T(L)$ for any field $L$ such
 that $k \subset L \subset k^u$.  We wish to compute $\HT{i}(G, T(K))$.
 We use the filtration $T_r^K$ on $T(K)$ in the following way.
 
-It is clear that $N_{K/k}$ maps $T_r^K$ into $T_r^k$ for all $r \geq 0$.
+It is clear that $\Nm_{K/k}$ maps $T_r^K$ into $T_r^k$ for all $r \geq 0$.
 Therefore, we get an induced map
-$$N_{K/k} : T_s^K / T_{r}^K \rightarrow T_s^k / T_{r}^k$$
+$$\Nm_{K/k} : T_s^K / T_{r}^K \rightarrow T_s^k / T_{r}^k$$
 for all $r > s \geq 0$.
 
 \begin{lemma}\label{H1compactpart}
@@ -426,21 +428,21 @@ $\HT{0}(G,T_0^K) = 0$.
 
 \proof
 We claim that the natural maps
-$$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
+$$\Nm_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 
 are surjective for $r \geq 0$.  First let $r \geq 1$.  First note that
 $T_0^L = X \otimes \mathcal{O}_L^\times$ and
 $T_r^L = X \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
-$$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
+$$\Nm_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 becomes
-$$N_{K/k} : X \otimes \left( (1 + \mathfrak{p}_K^r) / (1 +
+$$\Nm_{K/k} : X \otimes \left( (1 + \mathfrak{p}_K^r) / (1 +
   \mathfrak{p}_K^{r+1}) \right) \rightarrow (X \otimes \left( (1 +
   \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \right) )^G$$
 since $T_r^k / T_{r+1}^k = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
 $\HH^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
 $(1 + \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \cong \mathcal{O}_K / \mathfrak{p}_K \cong \mathfrak{f}_n$.
 Thus, we get
-$$N_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
 
 Well, $X \otimes \mathfrak{f}_n$ is a vector space over
 $\mathfrak{f}$.  But it is known that all forms of vector spaces are
@@ -448,16 +450,16 @@ equivalent.  Therefore, the vector space $X \otimes \mathfrak{f}_n$
 with the above Galois action is equivalent to $X \otimes \mathfrak{f}_n$
 with the standard action, i.e. $g \in G$ acts on $x \otimes z$ by
 $x \otimes gz$.  Therefore,
-$$N_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
 becomes
-$$N_{K/k} : X \otimes \mathfrak{f}_n \rightarrow X \otimes \mathfrak{f},$$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow X \otimes \mathfrak{f},$$
 which is surjective since the trace map $\mathfrak{f}_n \rightarrow \mathfrak{f}$
 is surjective.  Now let $r = 0$.  We wish to show that
-$$N_{K/k} : T_0^K / T_1^K \rightarrow T_0^k / T_1^k$$
+$$\Nm_{K/k} : T_0^K / T_1^K \rightarrow T_0^k / T_1^k$$
 is surjective.  But this map becomes
-$$N_{K/k} : X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
+$$\Nm_{K/k} : X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
 which is just
-$$N_{K/k} : \mathbb{T}(\mathfrak{f}_n) \rightarrow \mathbb{T}(\mathfrak{f}).$$
+$$\Nm_{K/k} : \mathbb{T}(\mathfrak{f}_n) \rightarrow \mathbb{T}(\mathfrak{f}).$$
 This last map is surjective by Lemma \ref{normtorifinitefields}.
 Finally, by \cite[Lemma 2, p. 81]{serre1}, we have our result.
 \qed
@@ -501,14 +503,14 @@ $T(k)$ being compact means that $X^G = 0$, hence the result follows by corollary
 Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
 is not an eigenvalue of $g$ on $X$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
 is the zero map on $X$.  Now, we have that
-$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = ker(N_{K/k}) / (1 - g)X$
-where $N_{K/k}$ is the norm map $N_{K/k} : X \rightarrow X$ on $X$.
+$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = \ker(\Nm_{K/k}) / (1 - g)X$
+where $\Nm_{K/k}$ is the norm map $\Nm_{K/k} : X \rightarrow X$ on $X$.
 Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X$,
 we get that $\HH^1(G, X) = X / (1 - g)X$.  It is known by standard lattice
 theory that the cardinality of $X / (1 - g)X$ is equal to the volume of
 a fundamental domain for the lattice $(1 - g)X$.  It is also known that
 the volume of a fundamental domain for the lattice $(1 - g)X$ is equal to
-$|det(1 - g)|$.  But $|det(1 - g)|$ is just $|\Phi(1)|$.  But
+$|\det(1 - g)|$.  But $|\det(1 - g)|$ is just $|\Phi(1)|$.  But
 $|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since
 $1 + g + g^2 + \cdots + g^{n-1} = 0$, $\Phi$ divides a power of
 $1 + x + x^2 + \cdots + x^{n-1}$ (since the minimal polynomial of $g$
@@ -582,9 +584,9 @@ Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
 respectively, let $Hom_{\alpha, \beta}(A,B)$ denote the set of
 homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
 The twisted norm map
-$$N_{\sigma} : \mathbb{T}^{\Phi_{\sigma}^n} \rightarrow \mathbb{T}^{\Phi_{\sigma}}$$
+$$\Nm_{\sigma} : \mathbb{T}^{\Phi_{\sigma}^n} \rightarrow \mathbb{T}^{\Phi_{\sigma}}$$
 given by
-$N_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
+$\Nm_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
 induces isomorphisms
 $$\mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
@@ -660,15 +662,15 @@ Therefore, $\chi(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
 Thus, $\chi$ is trivial on the augmentation ideal $I_{\Gamma}(T(E))$
 and gives $$\chi : T(E)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
 and coinvariants are related by the norm map
-$$N : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
+$$\Nm : T(E) \rightarrow T(F)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
-$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{N} T(F)
+$$1 \rightarrow \HT{-1}(\Gamma,T(E)) \rightarrow T(E)_{\Gamma} \xrightarrow{\Nm} T(F)
   = T(E)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(E)) \rightarrow 1$$
-(note that the norm map $N$ factors to $T(E)_{\Gamma}$).
+(note that the norm map $\Nm$ factors to $T(E)_{\Gamma}$).
 We have thus constructed a character $\chi$ of $T(E)_{\Gamma}$ from a
 Langlands parameter $\phi$. We note that $T(E)_{\Gamma}$ is a cover of
-$N(T(E)_{\Gamma})$, which is a subgroup of $T(F)$.  It is sometimes
-the case that $N$ is surjective, in which case $\chi$ is then a
+$\Nm(T(E)_{\Gamma})$, which is a subgroup of $T(F)$.  It is sometimes
+the case that $\Nm$ is surjective, in which case $\chi$ is then a
 character of $T(E)_{\Gamma}$, which is a cover of $T(F)$.
 
 We now give meaning to the definition of \emph{admissible pair} in the introduction.
@@ -678,44 +680,44 @@ Let $G$ be a connected reductive $F$-group and let $T$ be a maximal
 $F$-torus of $G$.  Let $E$ be the splitting field of $T$, and set
 $\Gamma = \Gal(E/F)$.
 \begin{enumerate}
-\item $N(G(E), T(F)) / T(E) \cong (N(G,T)/T)(F)$.
-\item The standard action of $N(G(E),T(E)) / T(E)$ on $T(E)$ determines
-well-defined actions of $N(G(E), T(E))^{\Gamma} / T(F)$ and $(N(G,T)/T)(F)$
+\item $\Nm(G(E), T(F)) / T(E) \cong (\Nm(G,T)/T)(F)$.
+\item The standard action of $\Nm(G(E),T(E)) / T(E)$ on $T(E)$ determines
+well-defined actions of $\Nm(G(E), T(E))^{\Gamma} / T(F)$ and $(\Nm(G,T)/T)(F)$
 on $T(E)$, which factor naturally to actions on $T(E)_{\Gamma}$.
 \end{enumerate}
 \end{lemma}
 
 \proof
-We first prove (1).  Let $nT(E)\in N(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.
+We first prove (1).  Let $nT(E)\in \Nm(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.
 Then $ntn^{-1}\in T(F)$, so for $\gamma\in\Gamma$,
 $\gamma(n)t\gamma(n)^{-1} =  \gamma (ntn^{-1}) = ntn^{-1}$.
 Thus $n^{-1}\gamma(n)$ centralizes $T(F)$, hence centralizes the centralizer
 of $T(F)$ in $G(E)$, which is $T(E)$. Thus $n^{-1}\gamma(n)\in T(E)$ so
 $\gamma(n T(E)) = \gamma (n) T(E) = n T(E)$. Thus the elements of
-$N(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so
-$N(G(E), T(F)) / T(E) \subset (N(G,T)/T)(F)$.
+$\Nm(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so
+$\Nm(G(E), T(F)) / T(E) \subset (\Nm(G,T)/T)(F)$.
 
-Conversely, since $T$ splits over $E$, any coset in $(N(G,T)/T)(F)$
-has a representative in the normalizer $N(G(E), T(E))$. Then $\gamma(n) = nt'$
+Conversely, since $T$ splits over $E$, any coset in $(\Nm(G,T)/T)(F)$
+has a representative in the normalizer $\Nm(G(E), T(E))$. Then $\gamma(n) = nt'$
 for some $t'\in T(E)$ since $nT$ is $F$-rational.  Let $t\in T(F)$.
 Then for $\gamma\in\Gamma$,
 $\gamma(ntn^{-1}) = \gamma(n) t \gamma(n)^{-1} = (nt')t(nt')^{-1} = ntn^{-1}$.
-Thus $ntn^{-1}\in T(F)$, so $n\in N(G(E),T(F))$, as desired.
+Thus $ntn^{-1}\in T(F)$, so $n\in \Nm(G(E),T(F))$, as desired.
 
 We now prove (2).
-The group $N(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(N(G,T)/T)(F)$.
+The group $\Nm(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(\Nm(G,T)/T)(F)$.
 Thus it suffices to to prove the statement for
-$(N(G,T)/T)(F) = N(G(E), T(F)) / T(E)$.  Let $n \in N(G(E),T(F))$.  Then since $n$
+$(\Nm(G,T)/T)(F) = \Nm(G(E), T(F)) / T(E)$.  Let $n \in \Nm(G(E),T(F))$.  Then since $n$
 normalizes $T(F)$, $n$ also normalizes $T(E)$.  Therefore, we have that
-$N(G(E), T(F)) / T(E)$ acts on $T(E)$.
+$\Nm(G(E), T(F)) / T(E)$ acts on $T(E)$.
 
-We now have to show that $N(G(E), T(F)) / T(E)$
+We now have to show that $\Nm(G(E), T(F)) / T(E)$
 sends the augmentation ideal
 $\{ t\sigma(t)^{-1} : t \in T(E), \sigma \in \Gamma \}$ to itself.
-Let $t \in T(E), \sigma \in \Gamma$ and let $w \in  (N(G,T)/T)(F)$.  Then $$w\left(\frac{t}{\sigma(t)}\right)
+Let $t \in T(E), \sigma \in \Gamma$ and let $w \in  (\Nm(G,T)/T)(F)$.  Then $$w\left(\frac{t}{\sigma(t)}\right)
 = \frac{wt}{w \sigma(t)} = \frac{w(t)}{\sigma (\sigma^{-1}(w(\sigma(t))))} =
 \frac{wt}{\sigma ({}^{\sigma^{-1}} w) (t)} = \frac{wt}{\sigma(wt)},$$
-the last equality coming from the fact that $w \in (N(G,T)/T)(F)$, so $w$
+the last equality coming from the fact that $w \in (\Nm(G,T)/T)(F)$, so $w$
 is fixed by $\Gamma$.
 \qed
 
@@ -748,11 +750,10 @@ What is $\chi$ restricted to $\HT{-1}(\Gamma, T(E))$?  Well, by
 stuff that Gordan and I did, and stuff that you have probably done as
 well, we know that $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
 since $E/F$ is unramified.  This latter group is some quotient of
-$ker(N : X_*(T) \rightarrow X_*(T))$, where $ker$ denotes kernel, and
-$N$ denotes norm.
+$\ker(\Nm : X_*(T) \rightarrow X_*(T))$.
 
 Let's describe $\chi$ on $\HT{-1}$.  Well, let
-$\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us think of
+$\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us think of
 $\lambda$ as living in $X^*(\hat{T})$ instead.
 
 Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
@@ -766,28 +767,28 @@ $\phi'$ has the same restriction to inertia as $\phi$.  Then we get an
 associated $\chi'$.  What is $\chi'$ restricted to
 $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$?
 
-Well, let $\lambda \in ker(N : X_*(T) \rightarrow X_*(T))$.  Let us
+Well, let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us
 think of $\lambda$ as living in $X^*(\hat{T})$ instead.  We need to
 compute $(tn)^r$.  This is $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r$.
 
 But $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} = t w(t) w^2(t) \cdots w^{r-1}(t)$,
 where $w$ is the Weyl group element associated to $n$.  If we write
-$t = \mu' \otimes z'$, then $t w(t) w^2(t) \cdots w^{r-1}(t) = N(\mu' ) \otimes z'$,
+$t = \mu' \otimes z'$, then $t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z'$,
 since $w$ acts as Galois on the character lattices, and since Galois
 acts holomorphically on the dual group rather than antiholomorphically
 (i.e. Galois acts trivially on $\mathbb{C}^\times$).  But now one checks:
-We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<N(\mu'), \lambda>}$.  But
+We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$.  But
 
-$$<N(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
+$$<\Nm(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
   = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
 
 Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> =
 <\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum
 becomes
-$$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', N(\lambda)>.$$
+$$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
 
 But $\lambda$ is assumed to be in the kernel of the norm map!  So we
-get $<\mu', N(\lambda)> = <\mu', 0> = 0$.  So
+get $<\mu', \Nm(\lambda)> = <\mu', 0> = 0$.  So
 $\chi'(\lambda) = z^{<\mu, \lambda>} = \chi(\lambda)$.  Done.
 \qed
 
@@ -818,12 +819,12 @@ Moreover, one can show using a profinite version of Lang's theorem and
 various results about tori over finite fields, that since $T$ is unramified,
 $\HT{-1}(\Gamma, T(\mathcal{O}_E)) = \HT{0}(\Gamma, T(\mathcal{O}_E)) = 1$.
 Therefore, the map
-$$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{N} T(\mathcal{O}_F)$$
+$$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(\mathcal{O}_F)$$
 is an isomorphism, and we may view
 $\chi|_{T(\mathcal{O}_E)_{\Gamma}}$ as a character of
 $T(\mathcal{O}_F)$ via this isomorphism.  Now, since $\chi$ was
 obtained from $\phi|_{W_E}$ via the local Langlands correspondence, we
-get that $\chi_{\phi} \circ N = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$.
+get that $\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$.
 We have therefore proven the following lemma.
 
 \begin{lemma}\label{grossanddebackerreedercompatibility}
@@ -837,7 +838,7 @@ We have therefore proven the following lemma.
 \section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
 Recall that we have fixed a splitting $(\hat{T}, \hat{B}, \{x_{\alpha} \})$
-for the dual group $\hat{G}$ and that $\hat{N} = N_{\hat{G}}(\hat{T})$.
+for the dual group $\hat{G}$ and that $\hat{\Nm} = \Nm_{\hat{G}}(\hat{T})$.
 For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
 and $\phi_{\alpha}\mat{1}{1}{0}{1} = x_{\alpha}$. Let
@@ -896,7 +897,7 @@ sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
 Note that $T(F) = T(\mathcal{O}_F)$, and so in particular
 $T(\mathcal{O}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
-$N$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
+$\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
 gives us that $\HT{-1}(\Gamma,T(E))$ and
 $T(\mathcal{O}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
 
@@ -910,7 +911,7 @@ $T(\mathcal{O}_E)_{\Gamma}$.  Moreover, by Lemma
 the same restriction to $\HT{-1}(\Gamma, T(E))$.  Therefore,
 $\chi \otimes \chi_o^{-1}$ is a character of $T(F)$.  Since
 $\chi \otimes \chi_o^{-1}$ is correct on $T(\mathcal{O}_E)_{\Gamma}$, and
-since $T(\mathcal{O}_E)_{\Gamma} \xrightarrow{N} T(F)$ is surjective,
+since $T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(F)$ is surjective,
 we are done.  (Do we need at some point that
 $\HT{-1}(\Gamma, T(E)) \bigcap T(\mathcal{O}_E)_{\Gamma} = 1$?
 It's true, because otherwise, there would be a nontrivial element in
