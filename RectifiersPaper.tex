@@ -26,6 +26,7 @@
 \setlength{\textwidth}{6.1in}
 
 \DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\val}{val}
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
 
@@ -305,8 +306,8 @@ $\mathfrak{f}_n$ will denote the degree $n$ extension of
 $\mathfrak{f}$.  $k$ will denote a nonarchimedean local field of
 charcteristic zero, and $\mathfrak{f}$ will be its residue field.  Fix
 a uniformizer $\varpi$ of $k$.  Let $k^u$ denote the maximal
-unramified extension of $k$, and fix a valuation $val : (k^u)^\times
-\rightarrow \mathbb{Z}$ normalized so that $val(\varpi) = 1$.
+unramified extension of $k$, and fix a valuation $\val : (k^u)^\times
+\rightarrow \mathbb{Z}$ normalized so that $\val(\varpi) = 1$.
 
 \section{Preliminaries}
 
@@ -352,7 +353,7 @@ $G$-modules $A$.  Let $X$ denote the cocharacter lattice of $T$ and
 $Y$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
 we define $T_0$ to be the maximal bounded subgroup of
 $T(k^u)$, and
-$$T_r := \{t \in T_0 : val(\chi(t) - 1) \geq r \ \ \forall \chi \in Y \}$$
+$$T_r := \{t \in T_0 : \val(\chi(t) - 1) \geq r \ \ \forall \chi \in Y \}$$
 for any natural number $r$.  We may
 furthermore define $T_r^L := T_r \cap T(L)$ for any field $L$ such
 that $k \subset L \subset k^u$.  We wish to compute $\hat{H}^i(G, T(K))$.
