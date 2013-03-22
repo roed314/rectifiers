@@ -501,14 +501,14 @@ $T(k)$ being compact means that $X^G = 0$, hence the result follows by corollary
 Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
 is not an eigenvalue of $g$ on $X$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
 is the zero map on $X$.  Now, we have that
-$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = ker(N_{K/k}) / (Id - g)X$
+$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = ker(N_{K/k}) / (1 - g)X$
 where $N_{K/k}$ is the norm map $N_{K/k} : X \rightarrow X$ on $X$.
 Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X$,
-we get that $\HH^1(G, X) = X / (Id - g)X$.  It is known by standard lattice
-theory that the cardinality of $X / (Id - g)X$ is equal to the volume of
-a fundamental domain for the lattice $(Id - g)X$.  It is also known that
-the volume of a fundamental domain for the lattice $(Id - g)X$ is equal to
-$|det(Id - g)|$.  But $|det(Id - g)|$ is just $|\Phi(1)|$.  But
+we get that $\HH^1(G, X) = X / (1 - g)X$.  It is known by standard lattice
+theory that the cardinality of $X / (1 - g)X$ is equal to the volume of
+a fundamental domain for the lattice $(1 - g)X$.  It is also known that
+the volume of a fundamental domain for the lattice $(1 - g)X$ is equal to
+$|det(1 - g)|$.  But $|det(1 - g)|$ is just $|\Phi(1)|$.  But
 $|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since
 $1 + g + g^2 + \cdots + g^{n-1} = 0$, $\Phi$ divides a power of
 $1 + x + x^2 + \cdots + x^{n-1}$ (since the minimal polynomial of $g$
@@ -588,13 +588,13 @@ $N_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1
 induces isomorphisms
 $$\mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \mathrm{Hom}_{\Phi_{\sigma}, Id}(\mathbb{T}^{\Phi_{\sigma}^n},
+  \mathrm{Hom}_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \mathrm{Hom}_{\Phi_{\sigma}, Id}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
+  \mathrm{Hom}_{\Phi_{\sigma}, 1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
 $$\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times, \hat{T})
   \stackrel{\sim}{\rightarrow} \mathrm{Hom}_{\Phi_{\sigma},
-  Id}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
+  1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
 projection $I_t \rightarrow \mathfrak{f}_m^\times$ induces an isomorphism
 as $\Phi$-modules
