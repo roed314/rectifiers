@@ -3,7 +3,10 @@
 *.lof
 *.log
 *.pdf
+*.djvu
 *.ps
 _*.tex
 *.toc
 *.synctex.gz
+tori5.tex
+mathoverflow.tex
