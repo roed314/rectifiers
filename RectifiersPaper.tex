@@ -31,6 +31,7 @@
 \DeclareMathOperator{\HH}{H}
 \DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\Hom}{Hom}
 
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
@@ -581,32 +582,32 @@ characers of $T^{\Phi_{\sigma}}$ where
 $\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
 this construction. Let $\mathbb{T} := X \otimes \mathfrak{F}^\times$.
 Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
-respectively, let $Hom_{\alpha, \beta}(A,B)$ denote the set of
+respectively, let $\Hom_{\alpha, \beta}(A,B)$ denote the set of
 homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
 The twisted norm map
 $$\Nm_{\sigma} : \mathbb{T}^{\Phi_{\sigma}^n} \rightarrow \mathbb{T}^{\Phi_{\sigma}}$$
 given by
 $\Nm_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
 induces isomorphisms
-$$\mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
+$$\Hom(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \mathrm{Hom}_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
+  \Hom_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \mathrm{Hom}_{\Phi_{\sigma}, 1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
+  \Hom_{\Phi_{\sigma}, 1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
-$$\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times, \hat{T})
-  \stackrel{\sim}{\rightarrow} \mathrm{Hom}_{\Phi_{\sigma},
+$$\Hom_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times, \hat{T})
+  \stackrel{\sim}{\rightarrow} \Hom_{\Phi_{\sigma},
   1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
 projection $I_t \rightarrow \mathfrak{f}_m^\times$ induces an isomorphism
 as $\Phi$-modules
 $I_t / (1 - \Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} \mathfrak{f}_m^\times$
 where $\Ad$ denotes the adjoint action.  Since $\hat{\sigma}$ has order
-$n$, we have $\mathrm{Hom}_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times,
-\hat{T}) \cong \mathrm{Hom}_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
+$n$, we have $\Hom_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times,
+\hat{T}) \cong \Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
 Therefore, the map $s \mapsto \chi_s$ is a canonical bijection
-$$\mathrm{Hom}_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
-  \stackrel{\sim}{\rightarrow} \mathrm{Hom}(\mathbb{T}^{\Phi_{\sigma}},
+$$\Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
+  \stackrel{\sim}{\rightarrow} \Hom(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times)$$
 Moreover, we have an isomorphism
 $${}^0T^{\Phi_{\sigma}} \times X^{\sigma} \stackrel{\sim}{\rightarrow}
@@ -616,7 +617,7 @@ where ${}^0 T$ is the group of $\mathcal{O}_{F^u}$-points of $\mathbf{T}$.
 Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
 character group of $X^{\sigma}$, whereby
 $\tau \in \hat{T} / (1 - \hat{\sigma}) \hat{T}$ corresponds to
-$\chi_{\tau} \in \mathrm{Hom}(X^{\sigma}, \mathbb{C}^\times),$ where
+$\chi_{\tau} \in \Hom(X^{\sigma}, \mathbb{C}^\times),$ where
 $\chi_{\tau}(\lambda) := \lambda(\tau)$.  Therefore, we have a
 canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
