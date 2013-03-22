@@ -184,7 +184,7 @@ ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
 We will show that the characters ${}_F \mu_{\xi}$ that arise in this setting
-are actually unramified (i.e. trivial on $T(\mathfrak{o}_E)_{\Gamma}$).  In particular, 
+are actually unramified (i.e. trivial on $T(\mathcal{O}_E)_{\Gamma}$).  In particular, 
 the setting
 of \cite{debackerreeder} and \cite{reeder} do not include all possible admissible
 pairs $(T, \xi)$.  In particular, because of condition (3) above, we cannot hope
@@ -210,7 +210,7 @@ There exists a unique function $${}_F
 \item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$
 
 \item The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on
-  $T(\mathfrak{o}_E)_{\Gamma}$)
+  $T(\mathcal{O}_E)_{\Gamma}$)
 
 \item $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   agrees with \cite{debackerreeder} and \cite{reeder}
@@ -429,7 +429,7 @@ We claim that the natural maps
 $$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 
 are surjective for $r \geq 0$.  First let $r \geq 1$.  First note that
-$T_0^L = X \otimes \mathfrak{o}_L^\times$ and
+$T_0^L = X \otimes \mathcal{O}_L^\times$ and
 $T_r^L = X \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
 $$N_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 becomes
@@ -438,7 +438,7 @@ $$N_{K/k} : X \otimes \left( (1 + \mathfrak{p}_K^r) / (1 +
   \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \right) )^G$$
 since $T_r^k / T_{r+1}^k = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
 $\HH^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
-$(1 + \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \cong \mathfrak{o}_K / \mathfrak{p}_K \cong \mathfrak{f}_n$.
+$(1 + \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \cong \mathcal{O}_K / \mathfrak{p}_K \cong \mathfrak{f}_n$.
 Thus, we get
 $$N_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
 
@@ -455,7 +455,7 @@ which is surjective since the trace map $\mathfrak{f}_n \rightarrow \mathfrak{f}
 is surjective.  Now let $r = 0$.  We wish to show that
 $$N_{K/k} : T_0^K / T_1^K \rightarrow T_0^k / T_1^k$$
 is surjective.  But this map becomes
-$$N_{K/k} : X \otimes \left( \mathfrak{o}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathfrak{o}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
+$$N_{K/k} : X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
 which is just
 $$N_{K/k} : \mathbb{T}(\mathfrak{f}_n) \rightarrow \mathbb{T}(\mathfrak{f}).$$
 This last map is surjective by Lemma \ref{normtorifinitefields}.
@@ -469,7 +469,7 @@ $\HT{i}(G, X \otimes K^\times) = \HT{i}(G, T(K)) = \HT{i}(G,X_*(T))$ for $i=0,1$
 \proof
 
 Recall that $X \otimes K^\times \xrightarrow{\sim} T(K)$ given by
-evaluation, restricting to an isomorphism $X \otimes \mathfrak{o}_K^\times
+evaluation, restricting to an isomorphism $X \otimes \mathcal{O}_K^\times
 \xrightarrow{\sim} T_0^K$.  We may thus identify $X$ with the quotient
 $T(K) / T_0^K$, giving rise to the short exact sequence
 $$1 \rightarrow T_0^K \rightarrow T(K) \rightarrow X \rightarrow 1.$$
@@ -609,7 +609,7 @@ $$\mathrm{Hom}_{Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
 Moreover, we have an isomorphism
 $${}^0T^{\Phi_{\sigma}} \times X^{\sigma} \stackrel{\sim}{\rightarrow}
   T^{\Phi_{\sigma}}$$ $$(\gamma, \lambda) \mapsto \gamma \lambda(\varpi)$$
-where ${}^0 T$ is the group of $\mathfrak{o}_{F^u}$-points of $\mathbf{T}$.
+where ${}^0 T$ is the group of $\mathcal{O}_{F^u}$-points of $\mathbf{T}$.
 
 Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
 character group of $X^{\sigma}$, whereby
@@ -811,25 +811,25 @@ rise to a character $\chi$ of $T(E)_{\Gamma}$, by local Langlands
 for tori (see section \ref{groupsoftypeL}).  Note that the above
 exact sequence restricts to an exact sequence
 
-$$1 \rightarrow \HT{-1}(\Gamma, T(\mathfrak{o}_E)) \rightarrow T(\mathfrak{o}_E)_{\Gamma}
-  \rightarrow T(\mathfrak{o}_F) \rightarrow \HT{0}(\Gamma, T(\mathfrak{o}_E)) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma, T(\mathcal{O}_E)) \rightarrow T(\mathcal{O}_E)_{\Gamma}
+  \rightarrow T(\mathcal{O}_F) \rightarrow \HT{0}(\Gamma, T(\mathcal{O}_E)) \rightarrow 1$$
 
 Moreover, one can show using a profinite version of Lang's theorem and
 various results about tori over finite fields, that since $T$ is unramified,
-$\HT{-1}(\Gamma, T(\mathfrak{o}_E)) = \HT{0}(\Gamma, T(\mathfrak{o}_E)) = 1$.
+$\HT{-1}(\Gamma, T(\mathcal{O}_E)) = \HT{0}(\Gamma, T(\mathcal{O}_E)) = 1$.
 Therefore, the map
-$$T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{N} T(\mathfrak{o}_F)$$
+$$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{N} T(\mathcal{O}_F)$$
 is an isomorphism, and we may view
-$\chi|_{T(\mathfrak{o}_E)_{\Gamma}}$ as a character of
-$T(\mathfrak{o}_F)$ via this isomorphism.  Now, since $\chi$ was
+$\chi|_{T(\mathcal{O}_E)_{\Gamma}}$ as a character of
+$T(\mathcal{O}_F)$ via this isomorphism.  Now, since $\chi$ was
 obtained from $\phi|_{W_E}$ via the local Langlands correspondence, we
-get that $\chi_{\phi} \circ N = \chi$ on $T(\mathfrak{o}_E)_{\Gamma}$.
+get that $\chi_{\phi} \circ N = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$.
 We have therefore proven the following lemma.
 
 \begin{lemma}\label{grossanddebackerreedercompatibility}
-  The restriction to $T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{\sim} T(\mathfrak{o}_F)$
+  The restriction to $T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\sim} T(\mathcal{O}_F)$
   of the genuine character arising from the Gross construction
-  coincides with the character of $T(\mathfrak{o}_F)$ that is
+  coincides with the character of $T(\mathcal{O}_F)$ that is
   constructed from $\phi$ via the construction of DeBacker--Reeder
   construction.
 \end{lemma}
@@ -894,29 +894,29 @@ Since $G$ is semisimple, $T(F)$ is compact.  In particular,
 $\HT{0}(\Gamma, T(E)) = 0$, so we have the following exact
 sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
-Note that $T(F) = T(\mathfrak{o}_F)$, and so in particular
-$T(\mathfrak{o}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
+Note that $T(F) = T(\mathcal{O}_F)$, and so in particular
+$T(\mathcal{O}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
 $N$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
 gives us that $\HT{-1}(\Gamma,T(E))$ and
-$T(\mathfrak{o}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
+$T(\mathcal{O}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
 
 Since $\phi_o|_{I_F} \equiv 1$, $\chi_o$ is trivial on
-$T(\mathfrak{o}_E)_{\Gamma}$.  By lemma
+$T(\mathcal{O}_E)_{\Gamma}$.  By lemma
 \ref{grossanddebackerreedercompatibility}, we have that
-$(\chi \otimes \chi_o^{-1})|_{T(\mathfrak{o}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mathfrak{o}_F)}$.
+$(\chi \otimes \chi_o^{-1})|_{T(\mathcal{O}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mathcal{O}_F)}$.
 Therefore, $\chi \otimes \chi_o^{-1}$ is correct on
-$T(\mathfrak{o}_E)_{\Gamma}$.  Moreover, by Lemma
+$T(\mathcal{O}_E)_{\Gamma}$.  Moreover, by Lemma
 \ref{toralmodification}, we also have that $\chi$ and $\chi_o$ have
 the same restriction to $\HT{-1}(\Gamma, T(E))$.  Therefore,
 $\chi \otimes \chi_o^{-1}$ is a character of $T(F)$.  Since
-$\chi \otimes \chi_o^{-1}$ is correct on $T(\mathfrak{o}_E)_{\Gamma}$, and
-since $T(\mathfrak{o}_E)_{\Gamma} \xrightarrow{N} T(F)$ is surjective,
+$\chi \otimes \chi_o^{-1}$ is correct on $T(\mathcal{O}_E)_{\Gamma}$, and
+since $T(\mathcal{O}_E)_{\Gamma} \xrightarrow{N} T(F)$ is surjective,
 we are done.  (Do we need at some point that
-$\HT{-1}(\Gamma, T(E)) \bigcap T(\mathfrak{o}_E)_{\Gamma} = 1$?
+$\HT{-1}(\Gamma, T(E)) \bigcap T(\mathcal{O}_E)_{\Gamma} = 1$?
 It's true, because otherwise, there would be a nontrivial element in
-$T(\mathfrak{o}_E)_{\Gamma}$ that mapped to the trivial element in
+$T(\mathcal{O}_E)_{\Gamma}$ that mapped to the trivial element in
 $T(F)$ via the norm map.  But this can't be, because
-$T(\mathfrak{o}_E)_{\Gamma}$ is isomorphic to $T(\mathfrak{o}_F)$ via
+$T(\mathcal{O}_E)_{\Gamma}$ is isomorphic to $T(\mathcal{O}_F)$ via
 the norm map.)
 \qed
 
@@ -934,7 +934,7 @@ setting (see \cite{bushnellhenniart}).
 
 \begin{lemma}
   Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is
-  unramified of degree $n$ and $\xi|_{\mathfrak{o}_E} \equiv 1$.  Let
+  unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.  Let
   ${}_F \nu_{\xi}$ be the associated rectifier, as defined in
   \cite{bushnellhenniart}.  Then ${}_F \nu_{\xi}$ is unramified and
   ${}_F \nu_{\xi}(\varpi) = (-1)^{n-1}$.
