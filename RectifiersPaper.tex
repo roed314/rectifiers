@@ -323,7 +323,7 @@ $$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \map
 
 Let $\mathbb{T}$ be a torus that is defined over a finite field
 $\mathfrak{f}$.  Suppose $\mathbb{T}$ splits over an extension
-$\mathfrak{f}_n$ and set $G_n := \Gal(\mathfrak{f}_n/\mathfrak{f})$.
+$\mathfrak{f}_n$ and set $G_n = \Gal(\mathfrak{f}_n/\mathfrak{f})$.
 We wish to compute $\HT{i}(G_n,\mathbb{T}(\mathfrak{f}_n))$.
 Recall that, since $G_n$ is cyclic, $\HT{i}(G_n,A)\cong
 \HT{i+2}(G_n,A)$ for all $i$, and all $G_n$-modules $A$.
@@ -349,16 +349,16 @@ that the Herbrand quotient of a finite group is trivial.  Hence, the result foll
 \section{Unramified Tori over p-adic fields}
 
 Let $T$ be a torus defined over $k$ that splits over an unramified
-extension $K/k$ of degree $n$, set $G := \Gal(K/k)$, and let $g$ be a
+extension $K/k$ of degree $n$, set $G = \Gal(K/k)$, and let $g$ be a
 generator of $G$.  Recall that, since $G$ is cyclic,
 $\HT{i}(G,A)\cong \HT{i+2}(G,A)$ for all $i$, and all
 $G$-modules $A$.  Let $X$ denote the cocharacter lattice of $T$ and
 $Y$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
 we define $T_0$ to be the maximal bounded subgroup of
 $T(k^u)$, and
-$$T_r := \{t \in T_0 : \val(\chi(t) - 1) \geq r \mbox{ for } \chi \in Y \}$$
+$$T_r = \{t \in T_0 : \val(\chi(t) - 1) \geq r \mbox{ for } \chi \in Y \}$$
 for any natural number $r$.  We may
-furthermore define $T_r^L := T_r \cap T(L)$ for any field $L$ such
+furthermore define $T_r^L = T_r \cap T(L)$ for any field $L$ such
 that $k \subset L \subset k^u$.  We wish to compute $\HT{i}(G, T(K))$.
 We use the filtration $T_r^K$ on $T(K)$ in the following way.
 
@@ -391,13 +391,13 @@ We do the case $j = 0$.  The argument for $j \geq 1$ is similar.  Let
 $f : G \rightarrow M$ be an element in $\HH^1(G,M)$.  We have a natural
 map $\HH^1(G, M ) \rightarrow \HH^1(G, M / M_1) = 0$.  Thus, there exists
 $m_0 \in M$ such that $f(\sigma) = (\sigma(m_0) - m_0) (\mathrm{mod} \
-M_1)$.  Then define $f_1 := f - (\sigma(m_0) - m_0)$.  This is in
+M_1)$.  Then define $f_1 = f - (\sigma(m_0) - m_0)$.  This is in
 $\HH^1(G, M_1)$. But then again we have the natural map
 $\HH^1(G, M_1) \rightarrow \HH^1(G, M_1 / M_2) = 0$.  Thus, again, there
 exists $m_1 \in M_1$ such that $f_1(\sigma) = (\sigma(m_1) - m_1) (\mathrm{mod} \ M_2)$.
 So define $f_2 = f - (\sigma(m) - m) - (\sigma(m_1) - m_1)$.  Continue
 this process indefinitely.  Then define
-$\tilde{m} := (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
+$\tilde{m} = (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
 + m_3, \ldots) \in \underleftarrow{\mathrm{lim}} \ M / M_i = M$.  Then,
 $f(\sigma) = \sigma(\tilde{m}) - \tilde{m}$, so we get finally that
 $\HH^1(G,M) = 0$.  \qed
@@ -528,7 +528,7 @@ extends to an automorphism of $\hat{T}$.  There is a unique extension
 of $\hat{\theta}$ to an automorphism of $\hat{G}$, satisfying
 $\hat{\theta}(x_{\alpha}) = x_{\theta \cdot \alpha}$ (see
 \cite[section 3.2]{debackerreeder}).  Following \cite{debackerreeder},
-we may form the semidirect product ${}^L G := \ <\hat{\theta}> \ltimes \hat{G}$.
+we may define ${}^LG$ as the semidirect product ${}^L G = \ <\hat{\theta}> \ltimes \hat{G}$.
 
 \begin{definition}
   Let $W_F'$ denote the Weil-Deligne group.  A Langlands parameter
@@ -553,9 +553,9 @@ $\hat{W}_o$, and let $w$ be the element of $W_o$ corresponding to $\hat{w}$.
 Let $\phi$ be a TRSELP with associated $w$ and set $\sigma = w \theta$.
 $\sigma$ is an automorphism of $X$.  Let $\hat{\sigma}$ be the
 automorphism dual to $\sigma$, and let $n$ be the order of $\sigma$.
-We set $\hat{G}_{ab} := \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
+We set $\hat{G}_{ab} = \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
 the derived group of $\hat{G}$. Let
-${}^L T_{\sigma} := \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
+${}^L T_{\sigma} = \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
 Associated to $\phi$, DeBacker--Reeder (see \cite[Chapter
 4]{debackerreeder}) define a $\hat{T}$-conjugacy class of Langlands
 parameters
@@ -564,8 +564,8 @@ parameters
 \phi_T : W_F \rightarrow {}^L T_{\sigma} \ \label{phiT}
 \end{equation}
 
-\noindent as follows.  Set $\phi_T := \phi$ on $I_F$, and
-$\phi_T(\Phi) := \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
+\noindent as follows.  Set $\phi_T = \phi$ on $I_F$, and
+$\phi_T(\Phi) = \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
 is any element whose class in $\hat{T} / (1 - \hat{\sigma}) \hat{T}$
 corresponds to the image of $f$ in $\hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab}$
 under the bijection
@@ -579,7 +579,7 @@ canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
 characers of $T^{\Phi_{\sigma}}$ where
 $\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
-this construction. Let $\mathbb{T} := X \otimes \mathfrak{F}^\times$.
+this construction. Let $\mathbb{T} = X \otimes \mathfrak{F}^\times$.
 Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
 respectively, let $\Hom_{\alpha, \beta}(A,B)$ denote the set of
 homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
