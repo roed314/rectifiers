@@ -56,7 +56,7 @@ groups, with certain classes of Langlands parameters.
 \end{abstract}
 
 \section{Introduction}
-Testing, testing, one two three.  In this paper, we propose a natural generalization of the notion of a
+In this paper, we propose a natural generalization of the notion of a
 rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
@@ -187,7 +187,7 @@ ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
 We will show that the characters ${}_F \mu_{\xi}$ that arise in this setting
-are actually unramified (i.e. trivial on $T(\mathcal{O}_E)_{\Gamma}$).  In particular,
+are actually unramified (i.e. trivial on $T(\mathcal{O}_E)_{\Gamma}$).  In particular, 
 the setting
 of \cite{debackerreeder} and \cite{reeder} do not include all possible admissible
 pairs $(T, \xi)$.  In particular, because of condition (3) above, we cannot hope
@@ -196,9 +196,9 @@ except possibly in the case where $G = GL(n)$ (note that for
 $G = GL(n)$, ${}_F \mu_{\xi}$ can be ramified even if $T$ is unramified).
 We return to this case in another paper.
 
-Since $L$-packets have not been constructed in the generality that
-we need in order to prove this conjecture, we prove a theorem that
-almost proves the conjecture in its entirety.  Let $Reg(T, \xi)$ denote
+Since $L$-packets have not been constructed in the generality that 
+we need in order to prove this conjecture, we prove a theorem that 
+almost proves the conjecture in its entirety.  Let $Reg(T, \xi)$ denote 
 the set of admissible pairs that arise from RSELPs,
 as in \cite{debackerreeder} and \cite{reeder}.  We can prove:
 
@@ -267,8 +267,8 @@ Let $\xi_o = \xi_{\phi_o}$.  Our main theorem is the following.
   \xi_o$$ satisfies conditions (1)-(4) of Definition \ref{regularrectifierdefinition}.
 \end{theorem}
 
-Therefore, we have may uniquely define
-${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi)
+Therefore, we have may uniquely define 
+${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) 
 := \xi_o \ \forall (T,\xi) \in Reg(T,\xi)$
 
 In the case that $G$ is semisimple, there was nothing special about
