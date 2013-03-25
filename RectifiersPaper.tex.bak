@@ -56,7 +56,7 @@ groups, with certain classes of Langlands parameters.
 \end{abstract}
 
 \section{Introduction}
-Testing, testing, one two three.  Another test, another test.  Here we go, here we go.  Hi David.  In this paper, we propose a natural generalization of the notion of a
+Testing, testing, one two three.  In this paper, we propose a natural generalization of the notion of a
 rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
@@ -267,8 +267,9 @@ Let $\xi_o = \xi_{\phi_o}$.  Our main theorem is the following.
   \xi_o$$ satisfies conditions (1)-(4) of Definition \ref{regularrectifierdefinition}.
 \end{theorem}
 
-Therefore, we have may uniquely define 
-${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_o$ for $T,\xi) \in Reg(T,\xi)$
+Therefore, we have may uniquely define
+${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi)
+:= \xi_o \ \forall (T,\xi) \in Reg(T,\xi)$
 
 In the case that $G$ is semisimple, there was nothing special about
 $\phi_o$.  In fact, by the same arguments that we will make, a
@@ -304,12 +305,12 @@ Fai for helpful conversations as well.
 
 \section{Notation and Definitions}
 
-Throughout, $k$ will denote a finite field, and
-$k_n$ will denote the degree $n$ extension of
-$k$.  $K$ will denote a nonarchimedean local field of
-charcteristic zero, and $k$ will be its residue field.  Fix
-a uniformizer $\varpi$ of $K$.  Let $K^u$ denote the maximal
-unramified extension of $K$, and fix a valuation $\val : (K^u)^\times
+Throughout, $\mathfrak{f}$ will denote a finite field, and
+$\mathfrak{f}_n$ will denote the degree $n$ extension of
+$\mathfrak{f}$.  $k$ will denote a nonarchimedean local field of
+charcteristic zero, and $\mathfrak{f}$ will be its residue field.  Fix
+a uniformizer $\varpi$ of $k$.  Let $k^u$ denote the maximal
+unramified extension of $k$, and fix a valuation $\val : (k^u)^\times
 \rightarrow \mathbb{Z}$ normalized so that $\val(\varpi) = 1$.
 
 \section{Preliminaries}
@@ -322,14 +323,14 @@ $$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \map
 \section{Tori over finite fields}
 
 Let $\mathbb{T}$ be a torus that is defined over a finite field
-$k$.  Suppose $\mathbb{T}$ splits over an extension
-$k_n$ and set $G_n = \Gal(k_n/k)$.
-We wish to compute $\HT{i}(G_n,\mathbb{T}(k_n))$.
+$\mathfrak{f}$.  Suppose $\mathbb{T}$ splits over an extension
+$\mathfrak{f}_n$ and set $G_n := \Gal(\mathfrak{f}_n/\mathfrak{f})$.
+We wish to compute $\HT{i}(G_n,\mathbb{T}(\mathfrak{f}_n))$.
 Recall that, since $G_n$ is cyclic, $\HT{i}(G_n,A)\cong
 \HT{i+2}(G_n,A)$ for all $i$, and all $G_n$-modules $A$.
 
 \begin{proposition}\label{trivialH1finitefields}
-$\HT{1}(G_n,\mathbb{T}(k_n))$ is trivial.
+$\HT{1}(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
 \end{proposition}
 
 \proof
@@ -337,7 +338,7 @@ This is Lang's theorem for connected algebraic groups over finite fields.
 \qed
 
 \begin{corollary}
-$\HT{0}(G_n,\mathbb{T}(k_n))$ is trivial.
+$\HT{0}(G_n,\mathbb{T}(\mathfrak{f}_n))$ is trivial.
 \end{corollary}
 
 \proof
@@ -348,32 +349,32 @@ that the Herbrand quotient of a finite group is trivial.  Hence, the result foll
 
 \section{Unramified Tori over p-adic fields}
 
-Let $T$ be a torus defined over $K$ that splits over an unramified
-extension $L/K$ of degree $n$, set $G = \Gal(L/K)$, and let $g$ be a
+Let $T$ be a torus defined over $k$ that splits over an unramified
+extension $K/k$ of degree $n$, set $G := \Gal(K/k)$, and let $g$ be a
 generator of $G$.  Recall that, since $G$ is cyclic,
 $\HT{i}(G,A)\cong \HT{i+2}(G,A)$ for all $i$, and all
-$G$-modules $A$.  Let $X_*(T)$ denote the cocharacter lattice of $T$ and
-$X^*(T)$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
+$G$-modules $A$.  Let $X$ denote the cocharacter lattice of $T$ and
+$Y$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
 we define $T_0$ to be the maximal bounded subgroup of
-$T(K^u)$, and
-$$T_r = \{t \in T_0 : \val(\chi(t) - 1) \geq r \mbox{ for } \chi \in X^*(T) \}$$
+$T(k^u)$, and
+$$T_r := \{t \in T_0 : \val(\chi(t) - 1) \geq r \ \ \forall \chi \in Y \}$$
 for any natural number $r$.  We may
-furthermore define $T_r^L = T_r \cap T(L)$ for any field $L$ such
-that $K \subset L \subset K^u$.  We wish to compute $\HT{i}(G, T(L))$.
-We use the filtration $T_r^L$ on $T(L)$ in the following way.
+furthermore define $T_r^L := T_r \cap T(L)$ for any field $L$ such
+that $k \subset L \subset k^u$.  We wish to compute $\HT{i}(G, T(K))$.
+We use the filtration $T_r^K$ on $T(K)$ in the following way.
 
-It is clear that $\Nm_{L/K}$ maps $T_r^L$ into $T_r^K$ for all $r \geq 0$.
+It is clear that $\Nm_{K/k}$ maps $T_r^K$ into $T_r^k$ for all $r \geq 0$.
 Therefore, we get an induced map
-$$\Nm_{L/K} : T_s^L / T_{r}^L \rightarrow T_s^K / T_{r}^K$$
+$$\Nm_{K/k} : T_s^K / T_{r}^K \rightarrow T_s^k / T_{r}^k$$
 for all $r > s \geq 0$.
 
 \begin{lemma}\label{H1compactpart}
-$\HT{1}(G, T_{s}^L) = 0$ for $s \geq 0$.
+$\HT{1}(G, T_{s}^K) = 0 \ \forall s \geq 0$.
 \end{lemma}
 
 \proof
 We prove the case $s = 0$, as the other cases are similar.  Recall
-that $T_0^L = \underleftarrow{\mathrm{lim}} \ T_0^L / T_{r+1}^L$.  We
+that $T_0^K = \underleftarrow{\mathrm{lim}} \ T_0^K / T_{r+1}^K$.  We
 need the following Lemma:
 
 \begin{lemma}\label{abstractcohomology}
@@ -381,8 +382,8 @@ need the following Lemma:
   a sequence of $G$-invariant subgroups $M = M_0 \supset M_1 \supset
   M_2 \supset ...$, so $\cap M_i = 0$.  Thus,
   $M = \underleftarrow{\mathrm{lim}} \ M / M_i$.
-  If $\HH^1(G, M_i / M_{i+1}) = 0$ for $i \geq 0$,
-  then $\HH^1(G, M_i) = 0$ for $i \geq 0$.
+  If $\HH^1(G, M_i / M_{i+1}) = 0 \ \forall i \geq 0$,
+  then $\HH^1(G, M_j) = 0 \forall j \geq 0$.
 \end{lemma}
 
 \proof
@@ -391,125 +392,125 @@ We do the case $j = 0$.  The argument for $j \geq 1$ is similar.  Let
 $f : G \rightarrow M$ be an element in $\HH^1(G,M)$.  We have a natural
 map $\HH^1(G, M ) \rightarrow \HH^1(G, M / M_1) = 0$.  Thus, there exists
 $m_0 \in M$ such that $f(\sigma) = (\sigma(m_0) - m_0) (\mathrm{mod} \
-M_1)$.  Then define $f_1 = f - (\sigma(m_0) - m_0)$.  This is in
+M_1)$.  Then define $f_1 := f - (\sigma(m_0) - m_0)$.  This is in
 $\HH^1(G, M_1)$. But then again we have the natural map
 $\HH^1(G, M_1) \rightarrow \HH^1(G, M_1 / M_2) = 0$.  Thus, again, there
 exists $m_1 \in M_1$ such that $f_1(\sigma) = (\sigma(m_1) - m_1) (\mathrm{mod} \ M_2)$.
 So define $f_2 = f - (\sigma(m) - m) - (\sigma(m_1) - m_1)$.  Continue
 this process indefinitely.  Then define
-$\tilde{m} = (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
+$\tilde{m} := (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
 + m_3, \ldots) \in \underleftarrow{\mathrm{lim}} \ M / M_i = M$.  Then,
 $f(\sigma) = \sigma(\tilde{m}) - \tilde{m}$, so we get finally that
 $\HH^1(G,M) = 0$.  \qed
 
-Let $r \geq 1$.  Note that $T_r^L / T_{r+1}^L = X_*(T) \otimes (1 +
-\mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) = X_*(T) \otimes
-k_n$.  Well, $X_*(T) \otimes k_n$ is a vector space
-over $k$.  But it is known that all forms of vector spaces
-are equivalent.  Therefore, the vector space $X_*(T) \otimes
-k_n$ with the above Galois action is equivalent to $X_*(T)
-\otimes k_n$ with the standard action, i.e. $g \in G$ acts
+Let $r \geq 1$.  Note that $T_r^K / T_{r+1}^K = X \otimes (1 +
+\mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) = X \otimes
+\mathfrak{f}_n$.  Well, $X \otimes \mathfrak{f}_n$ is a vector space
+over $\mathfrak{f}$.  But it is known that all forms of vector spaces
+are equivalent.  Therefore, the vector space $X \otimes
+\mathfrak{f}_n$ with the above Galois action is equivalent to $X
+\otimes \mathfrak{f}_n$ with the standard action, i.e. $g \in G$ acts
 on $x \otimes z$ by $x \otimes gz$.  Thus, we wish to calculate
-$\HT{1}(G, X_*(T) \otimes k_n)$ where $X_*(T) \otimes
-k_n$ is given the standard action.  Since $X_*(T) \otimes
-k_n$ is just a direct sum of copies of $k_n$, we
-are reduced to calculating $\HT{1}(G, k_n)$.  But since
+$\HT{1}(G, X \otimes \mathfrak{f}_n)$ where $X \otimes
+\mathfrak{f}_n$ is given the standard action.  Since $X \otimes
+\mathfrak{f}_n$ is just a direct sum of copies of $\mathfrak{f}_n$, we
+are reduced to calculating $\HT{1}(G, \mathfrak{f}_n)$.  But since
 the trace map over finite fields is surjective, we get that
-$\HT{0}(G, k_n) = 0$.  Therefore, since the Herbrand
+$\HT{0}(G, \mathfrak{f}_n) = 0$.  Therefore, since the Herbrand
 quotient of a finite group is trivial, we get that $\HT{1}(G,
-k_n) = 0$.  Finally, $\HT{1}(G, T_0^L / T_1^L) = 0$ by
-Lang's theorem since $T_0^L / T_1^L$ is a connected algebraic group
+\mathfrak{f}_n) = 0$.  Finally, $\HT{1}(G, T_0^K / T_1^K) = 0$ by
+Lang's theorem since $T_0^K / T_1^K$ is a connected algebraic group
 over a finite field.  By Lemma \ref{abstractcohomology}, we have
 concluded the proof of Lemma \ref{H1compactpart}.  \qed
 
 \begin{lemma}\label{H0compactpart}
-$\HT{0}(G,T_0^L) = 0$.
+$\HT{0}(G,T_0^K) = 0$.
 \end{lemma}
 
 \proof
 We claim that the natural maps
-$$\Nm_{L/K} : T_r^L / T_{r+1}^L \rightarrow T_r^K / T_{r+1}^K$$
+$$\Nm_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 
 are surjective for $r \geq 0$.  First let $r \geq 1$.  First note that
-$T_0^L = X_*(T) \otimes \mathcal{O}_L^\times$ and
-$T_r^L = X_*(T) \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
-$$\Nm_{L/K} : T_r^L / T_{r+1}^L \rightarrow T_r^K / T_{r+1}^K$$
+$T_0^L = X \otimes \mathcal{O}_L^\times$ and
+$T_r^L = X \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
+$$\Nm_{K/k} : T_r^K / T_{r+1}^K \rightarrow T_r^k / T_{r+1}^k$$
 becomes
-$$\Nm_{L/K} : X_*(T) \otimes \left( (1 + \mathfrak{p}_L^r) / (1 +
-  \mathfrak{p}_L^{r+1}) \right) \rightarrow (X_*(T) \otimes \left( (1 +
-  \mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) \right) )^G$$
-since $T_r^K / T_{r+1}^K = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
+$$\Nm_{K/k} : X \otimes \left( (1 + \mathfrak{p}_K^r) / (1 +
+  \mathfrak{p}_K^{r+1}) \right) \rightarrow (X \otimes \left( (1 +
+  \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \right) )^G$$
+since $T_r^k / T_{r+1}^k = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
 $\HH^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
-$(1 + \mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) \cong \mathcal{O}_L / \mathfrak{p}_L \cong k_n$.
+$(1 + \mathfrak{p}_K^r) / (1 + \mathfrak{p}_K^{r+1}) \cong \mathcal{O}_K / \mathfrak{p}_K \cong \mathfrak{f}_n$.
 Thus, we get
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow (X_*(T) \otimes k_n)^G$$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
 
-Well, $X_*(T) \otimes k_n$ is a vector space over
-$k$.  But it is known that all forms of vector spaces are
-equivalent.  Therefore, the vector space $X_*(T) \otimes k_n$
-with the above Galois action is equivalent to $X_*(T) \otimes k_n$
+Well, $X \otimes \mathfrak{f}_n$ is a vector space over
+$\mathfrak{f}$.  But it is known that all forms of vector spaces are
+equivalent.  Therefore, the vector space $X \otimes \mathfrak{f}_n$
+with the above Galois action is equivalent to $X \otimes \mathfrak{f}_n$
 with the standard action, i.e. $g \in G$ acts on $x \otimes z$ by
 $x \otimes gz$.  Therefore,
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow (X_*(T) \otimes k_n)^G$$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow (X \otimes \mathfrak{f}_n)^G$$
 becomes
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow X_*(T) \otimes k,$$
-which is surjective since the trace map $k_n \rightarrow k$
+$$\Nm_{K/k} : X \otimes \mathfrak{f}_n \rightarrow X \otimes \mathfrak{f},$$
+which is surjective since the trace map $\mathfrak{f}_n \rightarrow \mathfrak{f}$
 is surjective.  Now let $r = 0$.  We wish to show that
-$$\Nm_{L/K} : T_0^L / T_1^L \rightarrow T_0^K / T_1^K$$
+$$\Nm_{K/k} : T_0^K / T_1^K \rightarrow T_0^k / T_1^k$$
 is surjective.  But this map becomes
-$$\Nm_{L/K} : X_*(T) \otimes \left( \mathcal{O}_L^\times / (1 + \mathfrak{p}_L) \right) \rightarrow (X_*(T) \otimes \left( \mathcal{O}_L^\times / (1 + \mathfrak{p}_L) \right) )^G$$
+$$\Nm_{K/k} : X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) \rightarrow (X \otimes \left( \mathcal{O}_K^\times / (1 + \mathfrak{p}_K) \right) )^G$$
 which is just
-$$\Nm_{L/K} : \mathbb{T}(k_n) \rightarrow \mathbb{T}(k).$$
+$$\Nm_{K/k} : \mathbb{T}(\mathfrak{f}_n) \rightarrow \mathbb{T}(\mathfrak{f}).$$
 This last map is surjective by Lemma \ref{normtorifinitefields}.
 Finally, by \cite[Lemma 2, p. 81]{serre1}, we have our result.
 \qed
 
 \begin{corollary}\label{reductiontori}
-$\HT{i}(G, X_*(T) \otimes L^\times) = \HT{i}(G, T(L)) = \HT{i}(G,X_*(T))$ for $i=0,1$.
+$\HT{i}(G, X \otimes K^\times) = \HT{i}(G, T(K)) = \HT{i}(G,X_*(T))$ for $i=0,1$.
 \end{corollary}
 
 \proof
 
-Recall that $X_*(T) \otimes L^\times \xrightarrow{\sim} T(L)$ given by
-evaluation, restricting to an isomorphism $X_*(T) \otimes \mathcal{O}_L^\times
-\xrightarrow{\sim} T_0^L$.  We may thus identify $X_*(T)$ with the quotient
-$T(L) / T_0^L$, giving rise to the short exact sequence
-$$1 \rightarrow T_0^L \rightarrow T(L) \rightarrow X_*(T) \rightarrow 1.$$
+Recall that $X \otimes K^\times \xrightarrow{\sim} T(K)$ given by
+evaluation, restricting to an isomorphism $X \otimes \mathcal{O}_K^\times
+\xrightarrow{\sim} T_0^K$.  We may thus identify $X$ with the quotient
+$T(K) / T_0^K$, giving rise to the short exact sequence
+$$1 \rightarrow T_0^K \rightarrow T(K) \rightarrow X \rightarrow 1.$$
 We therefore have the long exact sequence
-$$... \rightarrow \HT{0}(G, T_0^L) \rightarrow \HT{0}(G, T(L)) \rightarrow \HT{0}(G, X_*(T))
-\rightarrow \HT{1}(G, T_0^L) \rightarrow $$ $$\HT{1}(G, T(L))
-\rightarrow \HT{1}(G, X_*(T)) \rightarrow \HT{0}(G, T_0^L)
+$$... \rightarrow \HT{0}(G, T_0^K) \rightarrow \HT{0}(G, T(K)) \rightarrow \HT{0}(G, X)
+\rightarrow \HT{1}(G, T_0^K) \rightarrow $$ $$\HT{1}(G, T(K))
+\rightarrow \HT{1}(G, X) \rightarrow \HT{0}(G, T_0^K)
 \rightarrow ...$$
 By corollary \ref{H0compactpart} and Lemma \ref{H1compactpart}, we get the result.
 \qed
 
 \begin{corollary}
-If $T(K)$ is compact, we have $\HT{0}(G, T(L)) = 0$.
+If $T(k)$ is compact, we have $\HT{0}(G, T(K)) = 0$.
 \end{corollary}
 
 \proof
-$T(K)$ being compact means that $X_*(T)^G = 0$, hence the result follows by corollary \ref{reductiontori}
+$T(k)$ being compact means that $X^G = 0$, hence the result follows by corollary \ref{reductiontori}
 \qed
 
 \begin{corollary}
-  Let $\Phi$ be the characteristic polynomial of $g$ acting on $X_*(T)$. If
-  $\Phi(1)\neq 0$, i.e. $T(K)$ is compact, then $\HH^0(G, X_*(T)\otimes
-  L^{\times})=0$ and the order of $\HH^1(G, X_*(T)\otimes L^{\times})$ is
+  Let $\Phi$ be the characteristic polynomial of $g$ acting on $X$. If
+  $\Phi(1)\neq 0$, i.e. $T_X(k)$ is compact, then $\HH^0(G, X\otimes
+  K^{\times})=0$ and the order of $\HH^1(G, X\otimes K^{\times})$ is
   $\Phi(1)$.
 \end{corollary}
 
 \proof
 
 Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
-is not an eigenvalue of $g$ on $X_*(T)$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
-is the zero map on $X_*(T)$.  Now, we have that
-$\HH^1(G, X_*(T)\otimes L^{\times}) = \HH^1(G, X_*(T)) = \ker(\Nm_{L/K}) / (1 - g)X_*(T)$
-where $\Nm_{L/K}$ is the norm map $\Nm_{L/K} : X_*(T) \rightarrow X_*(T)$ on $X_*(T)$.
-Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X_*(T)$,
-we get that $\HH^1(G, X_*(T)) = X_*(T) / (1 - g)X_*(T)$.  It is known by standard lattice
-theory that the cardinality of $X_*(T) / (1 - g)X_*(T)$ is equal to the volume of
-a fundamental domain for the lattice $(1 - g)X_*(T)$.  It is also known that
-the volume of a fundamental domain for the lattice $(1 - g)X_*(T)$ is equal to
+is not an eigenvalue of $g$ on $X$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
+is the zero map on $X$.  Now, we have that
+$\HH^1(G, X\otimes K^{\times}) = \HH^1(G, X) = \ker(\Nm_{K/k}) / (1 - g)X$
+where $\Nm_{K/k}$ is the norm map $\Nm_{K/k} : X \rightarrow X$ on $X$.
+Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X$,
+we get that $\HH^1(G, X) = X / (1 - g)X$.  It is known by standard lattice
+theory that the cardinality of $X / (1 - g)X$ is equal to the volume of
+a fundamental domain for the lattice $(1 - g)X$.  It is also known that
+the volume of a fundamental domain for the lattice $(1 - g)X$ is equal to
 $|\det(1 - g)|$.  But $|\det(1 - g)|$ is just $|\Phi(1)|$.  But
 $|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since
 $1 + g + g^2 + \cdots + g^{n-1} = 0$, $\Phi$ divides a power of
@@ -528,7 +529,7 @@ extends to an automorphism of $\hat{T}$.  There is a unique extension
 of $\hat{\theta}$ to an automorphism of $\hat{G}$, satisfying
 $\hat{\theta}(x_{\alpha}) = x_{\theta \cdot \alpha}$ (see
 \cite[section 3.2]{debackerreeder}).  Following \cite{debackerreeder},
-we may define ${}^LG$ as the semidirect product ${}^L G = \ <\hat{\theta}> \ltimes \hat{G}$.
+we may form the semidirect product ${}^L G := \ <\hat{\theta}> \ltimes \hat{G}$.
 
 \begin{definition}
   Let $W_F'$ denote the Weil-Deligne group.  A Langlands parameter
@@ -551,11 +552,11 @@ where $f \in \hat{N}$.  Let $\hat{w}$ be the image of $f$ in
 $\hat{W}_o$, and let $w$ be the element of $W_o$ corresponding to $\hat{w}$.
 
 Let $\phi$ be a TRSELP with associated $w$ and set $\sigma = w \theta$.
-$\sigma$ is an automorphism of $X_*(T)$.  Let $\hat{\sigma}$ be the
+$\sigma$ is an automorphism of $X$.  Let $\hat{\sigma}$ be the
 automorphism dual to $\sigma$, and let $n$ be the order of $\sigma$.
-We set $\hat{G}_{ab} = \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
+We set $\hat{G}_{ab} := \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
 the derived group of $\hat{G}$. Let
-${}^L T_{\sigma} = \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
+${}^L T_{\sigma} := \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
 Associated to $\phi$, DeBacker--Reeder (see \cite[Chapter
 4]{debackerreeder}) define a $\hat{T}$-conjugacy class of Langlands
 parameters
@@ -564,8 +565,8 @@ parameters
 \phi_T : W_F \rightarrow {}^L T_{\sigma} \ \label{phiT}
 \end{equation}
 
-\noindent as follows.  Set $\phi_T = \phi$ on $I_F$, and
-$\phi_T(\Phi) = \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
+\noindent as follows.  Set $\phi_T := \phi$ on $I_F$, and
+$\phi_T(\Phi) := \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
 is any element whose class in $\hat{T} / (1 - \hat{\sigma}) \hat{T}$
 corresponds to the image of $f$ in $\hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab}$
 under the bijection
@@ -579,7 +580,7 @@ canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
 characers of $T^{\Phi_{\sigma}}$ where
 $\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
-this construction. Let $\mathbb{T} = X_*(T) \otimes \mathfrak{F}^\times$.
+this construction. Let $\mathbb{T} := X \otimes \mathfrak{F}^\times$.
 Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
 respectively, let $\Hom_{\alpha, \beta}(A,B)$ denote the set of
 homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
@@ -592,31 +593,31 @@ $$\Hom(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
   \Hom_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
   \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \Hom_{\Phi_{\sigma}, 1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
+  \Hom_{\Phi_{\sigma}, 1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
-$$\Hom_{\Phi, \hat{\sigma}}(k_n^\times, \hat{T})
+$$\Hom_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times, \hat{T})
   \stackrel{\sim}{\rightarrow} \Hom_{\Phi_{\sigma},
-  1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
+  1}(X \otimes \mathfrak{f}_n^\times, \mathbb{C}^\times)$$
 where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
-projection $I_t \rightarrow k_m^\times$ induces an isomorphism
+projection $I_t \rightarrow \mathfrak{f}_m^\times$ induces an isomorphism
 as $\Phi$-modules
-$I_t / (1 - \Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} k_m^\times$
+$I_t / (1 - \Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} \mathfrak{f}_m^\times$
 where $\Ad$ denotes the adjoint action.  Since $\hat{\sigma}$ has order
-$n$, we have $\Hom_{\Phi, \hat{\sigma}}(k_n^\times,
+$n$, we have $\Hom_{\Phi, \hat{\sigma}}(\mathfrak{f}_n^\times,
 \hat{T}) \cong \Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
 Therefore, the map $s \mapsto \chi_s$ is a canonical bijection
 $$\Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
   \stackrel{\sim}{\rightarrow} \Hom(\mathbb{T}^{\Phi_{\sigma}},
   \mathbb{C}^\times)$$
 Moreover, we have an isomorphism
-$${}^0T^{\Phi_{\sigma}} \times X_*(T)^{\sigma} \stackrel{\sim}{\rightarrow}
+$${}^0T^{\Phi_{\sigma}} \times X^{\sigma} \stackrel{\sim}{\rightarrow}
   T^{\Phi_{\sigma}}$$ $$(\gamma, \lambda) \mapsto \gamma \lambda(\varpi)$$
 where ${}^0 T$ is the group of $\mathcal{O}_{F^u}$-points of $\mathbf{T}$.
 
 Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
-character group of $X_*(T)^{\sigma}$, whereby
+character group of $X^{\sigma}$, whereby
 $\tau \in \hat{T} / (1 - \hat{\sigma}) \hat{T}$ corresponds to
-$\chi_{\tau} \in \Hom(X_*(T)^{\sigma}, \mathbb{C}^\times),$ where
+$\chi_{\tau} \in \Hom(X^{\sigma}, \mathbb{C}^\times),$ where
 $\chi_{\tau}(\lambda) := \lambda(\tau)$.  Therefore, we have a
 canonical bijection between $\hat{T}$-conjugacy classes of admissible
 homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
