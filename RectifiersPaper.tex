@@ -37,7 +37,7 @@
 \end{array} \right)}
 
 \begin{document}
-\title{Rectifiers and the local Langlands Correspondence : the unramified case}
+\title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
 \author{Moshe Adrian and David Roe}
 %\address{Department of Mathematics, University of Utah, Salt Lake City, UT 84112, U.S.A.}
 
@@ -56,7 +56,7 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction}
-Testing, testing.  In this paper, we propose a natural generalization of the notion of a
+In this paper, we propose a natural generalization of the notion of a
 rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
@@ -144,9 +144,13 @@ have seen, a Langlands parameter $\phi$ as above does not naturally
 provide a character of $T(F)$, but rather a character of
 $T(E)_{\Gamma}$.
 
-\begin{definition}
+\begin{definition}\label{admissibledefinition}
 Let $T$ be a torus, defined over $F$, that splits over an unramified
-  extension $E$.  Suppose $\xi$ is a character of $T(E)_{\Gamma}$.
+  extension $E$ \MAxxx{Should we include the condition $F$-minisotropic
+  in this definition and remove $F$-minisotropic from Definition \ref{regularpairs}?
+  The reason I ask is that Bushnell/Henniart define admissible pairs as characters
+  of \emph{elliptic} tori.  They don't define admissible pairs for \emph{arbitrary}
+  tori}.  Suppose $\xi$ is a character of $T(E)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any element of $(N(G,T)/T)(F)$ (see Lemma \ref{weylgroups}).
 \end{definition}
@@ -190,17 +194,28 @@ We will show that the characters ${}_F \mu_{\xi}$ that arise in this setting
 are actually unramified (i.e. trivial on $T(\mathcal{O}_E)_{\Gamma}$).  In particular,
 the setting
 of \cite{debackerreeder} and \cite{reeder} do not include all possible admissible
-pairs $(T, \xi)$.  In particular, because of condition (3) above, we cannot hope
-to say anything at present about the situation where ${}_F \mu_{\xi}$ is ramified,
-except possibly in the case where $G = GL(n)$ (note that for
-$G = GL(n)$, ${}_F \mu_{\xi}$ can be ramified even if $T$ is unramified).
-We return to this case in another paper.
+pairs $(T, \xi)$.  For example, if $G = GL(n)$, ${}_F \mu_{\xi}$ can be ramified,
+even if $T$ is unramified.  We return to this case when supercuspidal $L$-packets
+are more generally constructed to include this case.
 
 Since $L$-packets have not been constructed in the generality that
-we need in order to prove this conjecture, we prove a theorem that
-almost proves the conjecture in its entirety.  Let $Reg(T, \xi)$ denote
-the set of admissible pairs that arise from RSELPs,
-as in \cite{debackerreeder} and \cite{reeder}.  We can prove:
+we need in order to prove this conjecture, we prove a theorem that determines
+the rectifier in the situation where supercuspidal $L$-packets are understood.
+
+\begin{definition}\label{regularpairs}
+Let $Reg(T, \xi)$ denote the set of admissible pairs $(T,\xi)$ such that 
+
+(i) $T$ is $F$-minisotropic.  
+
+(ii) $\xi$ is trivial on $T(1+\mathfrak{p}_E^{r+1})_{\Gamma}$ but nontrivial on 
+$T(1+\mathfrak{p}_E^{r})_{\Gamma}$ for some $r \geq 0$.
+
+(iii) $\xi|_{T(1+\mathfrak{p}_E^{r})_{\Gamma}}$ is not fixed by any element of
+$(N(G,T)/T)(F)$ (see Definition \ref{admissibledefinition})
+\end{definition}
+\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $Reg(T,\xi)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
+
+We can prove:
 
 \begin{theorem}\label{regularrectifierdefinition}
 Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.
@@ -230,66 +245,26 @@ Once phrased in this manner, uniqueness is a straightforward matter
 As explained earlier, this is all that we can hope to do,
 as more general $L$-packets in the case of $T$ unramified have not been
 constructed.  Once $L$-packets are constructed more generally, we hope to
-construct the rectifier in general.  The existence of this function
+construct the rectifier in general.  
+
+The existence of ${}_F  \boldsymbol\mu^{\mathrm{Reg}}$
 will be proven by interpreting the characters ${}_F \mu_{\xi}$
 in terms of a canonical Langlands parameter.  More explicitly,
 we will exhibit a canonical
 \MAxxx{Canonical?  Is the Tits group lift canonical?} Langlands
 parameter $\phi_{o}$, such that if $\xi_o = \xi_{\phi_o}$, then the
 function $$(T, \xi) \mapsto \xi_o$$ is satisfies conditions (1)-(4).
-
-Let $\phi, T, E, \xi$ as before, assuming that $\phi$ is RSELP.
-The projection of $\phi(\Phi)$ onto the connected component of ${}^L
-G$ is a lift of some Weyl group element $\hat{w}$ to the normalizer of
-the dual torus.  Associated to $\phi$, DeBacker/Reeder construct a
-character $\chi_{\phi}$ of $T(F)$, to which they associate a
-conjectural $L$-packet of representations $L(\chi_{\phi})$ (see \S
-\ref{preliminaries}).
-
-\begin{definition}
-Given $\phi$, we define a homomorphism $\phi_o : W_F \rightarrow {}^L G$ by
-\begin{enumerate}
-\item $\phi_o|_{I_F} \equiv 1$
-\item $\phi_o(\Phi) = \hat{\theta} \tilde{w}$
-\end{enumerate}
-\end{definition}
-
-where $\hat{\theta}$ is the geometric
-\MAxxx{geometric or arithmetic? or neither?}
-Frobenius element generating the action of Galois on
-the dual group, and where $\tilde{w}$ is the canonical lift
-\MAxxx{Is this lift really canonical?}
-of $\hat{w}$ to the Tits group (see \S\ref{mainresults}).
-Let $\xi_o = \xi_{\phi_o}$.  Our main theorem is the following.
+This Langlands parameter $\phi_o$ does not depend on $G$ being
+semisimple.  We believe that Theorem \ref{regularrectifierdefinition}
+can be proven for arbitrary $G$, using the obvious generalized definition of
+$\xi_o$, but are not able to prove this.  However, we prove:
 
 \begin{theorem}
-  If $G$ is semisimple, then $$(T, \xi) \mapsto
-  \xi_o$$ satisfies conditions (1)-(4) of Definition \ref{regularrectifierdefinition}.
-\end{theorem}
-
-Therefore, we have may uniquely define
-${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_o$ for $T,\xi) \in Reg(T,\xi)$
-
-In the case that $G$ is semisimple, there was nothing special about
-$\phi_o$.  In fact, by the same arguments that we will make, a
-rectifier is obtained from any Langlands parameter $\phi'$ such that
-$\phi'|_{I_F} \equiv 1$ and $\phi'(\Phi) = w'$, where $w'$ was any
-lift of $\hat{w}$ to the normalizer of the dual torus.  However, the
-following theorem (which we will prove) will show that $\phi_o$ is
-forced upon us.
-\MAxxx{Up to a sign, or something like that?}
-
-\begin{theorem}
-  If $G = GL(n,F)$, the character ${}_F \boldsymbol\mu$ agrees with
-  the rectifier of Bushnell/Henniart.  Moreover, $\phi_o$ is the
+  If $G = GL(n,F)$, the function $(T,\xi) \mapsto \xi_o$ agrees with
+  the rectifier of Bushnell/Henniart, when $(T,\xi) \in Reg(T,\xi)$.  Moreover, $\phi_o$ is the
   unique \MAxxx{up to a sign, or something like that} Langlands
   parameter such that $\xi_{\phi_o} = {}_F \mu_{\xi}$.
-\end{theorem}\MAxxx{This theorem is false, because our rectifier is unramified, but theirs can be ramified.
-So when we define $\phi_o$, say that this is a definition in the case of maybe regular Langlands parameters
-(where regular is condition 2 in Reeder's positive depth paper...probably we need some other conditions on
-our Langlands parameters, like maybe conditions 1 and 3 of Reeder's positive depth paper), or something like
-that. It's clearly not a definition for all rectifiers of unramified tori. Just in the case of at least
-DeBacker/Reeder and Reeder}
+\end{theorem}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(E))
 \neq 0$, the situation seems more difficult $\xi$ is defined on the
@@ -956,6 +931,10 @@ See \cite[Proposition 21]{bushnellhenniart}.
 \bibitem{adrian}
   Moshe Adrian,
   \emph{A new realization of the Langlands correspondence for $PGL(2,F)$}, Journal of Number Theory 133 (2013) 446-–474.
+
+\bibitem{adrian1}
+  Moshe Adrian
+  \emph{On the Local Langlands Correspondences of DeBacker/Reeder and Reeder for $GL(\ell,F)$, where $\ell$ is prime}, Pacific Journal of Mathematics 255-2 (2012), 257--280.
 
 \bibitem{amano}
   Kazuo Amano,
