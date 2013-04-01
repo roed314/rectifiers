@@ -164,7 +164,15 @@ to define a notion of isomorphic admissible pairs?  Also, should we
 denote by $P_G(F)$ the set of isomorphism classes of admissible pairs?  This
 would be in analogy with Bushnell/Henniart's notation $P_n(F)$ for admissible
 pairs for elliptic tori in $GL(n,F)$.}
-\end{definition}
+\end{definition}\MAxxx{This definition doesn't seem to be quite right.  I think.
+Because the first condition of admissible pair for $GL(n)$ is ``$\chi$ does not
+come from the norm for a proper subfield $L$ of $E$ containing $F$, where 
+$(E/F, \chi)$ is the pair in question.'' If this condition was $\chi$ does not
+come from the norm for $E/F$, then this is equivalent to $\chi$ is not fixed by
+$Gal(E/F)$, which seems to be our condition...I think we might need to fix our
+definition of admissible. Maybe the new condition should be ``$\xi$ is not
+fixed by any element of $(N(G,T)/T)(L)$ for any field $L$ such that
+$F \subseteq L \subseteq E$''???  This seems reasonable.}
 
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $F$, that splits over an unramified
@@ -174,12 +182,10 @@ pairs for elliptic tori in $GL(n,F)$.}
   \mu_{\xi}$ of $T(E)_{\Gamma}$ satisfying the following conditions.
 
 \begin{enumerate}
-\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$
-
 \item The character ${}_F \mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(1 + \mathfrak{p}_E)_{\Gamma}$)
 
-\item $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
+\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair $(T, \xi \cdot {}_F \mu_{\xi})$ is admissible, and $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   is the local Langlands correspondence.
 
 \item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
@@ -188,6 +194,8 @@ ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 \end{enumerate}
 
 \end{definition}
+
+Note that 
 
 \begin{conjecture}
   Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
@@ -204,14 +212,14 @@ we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{ree
 We will show that the characters ${}_F \mu_{\xi}$ that arise in this setting
 happen to be unramified (i.e. trivial on $T(\mathcal{O}_E)_{\Gamma}$).  This implies,
 in particular, that not all possible admissible pairs arise in the settings
-of \cite{debackerreeder} and \cite{reeder}.  
+of \cite{debackerreeder} and \cite{reeder}.
 For example, if $G = GL(n)$, ${}_F \mu_{\xi}$ can be ramified,
 even if $T$ is unramified.  We will return to this case when supercuspidal $L$-packets
 are more generally constructed to allow for ramified ${}_F \mu_{\xi}$.
 
 Since $L$-packets have not been constructed in the generality that
 we need in order to prove this conjecture, we prove a theorem that determines
-the rectifier in the situation where supercuspidal $L$-packets have been 
+the rectifier in the situation where supercuspidal $L$-packets have been
 constructed.\MAxxx{I really like this sentence, as it explains what we will do
 in Theorem \ref{regularrectifierdefinition} before we state the theorem. I think
 that is important, since it might not be easy to understand what the main
@@ -223,14 +231,14 @@ he thinks.}
 Let $Reg(F)$ \MAxxx{If we have used the notation $P_G(F)$ to denote
 the set of isomorphism classes of admissible pairs earlier, then we can maybe
 write $P_G^{Reg}(F)$ instead of $Reg(F)$ here.  I only wrote $Reg(F)$ because
-I wanted to change $Reg(T,\xi)$ since it didn't make sense to write 
+I wanted to change $Reg(T,\xi)$ since it didn't make sense to write
 $(T,\xi) \in Reg(T,\xi)$.} denote the set of admissible pairs $(T,\xi)$ such that
 
 (i) $T$ is $F$-minisotropic.\MAxxx{Shouldn't we say ``$T(F)$ is compact''?  Or something
 similar?  The reason is that all the theorems we prove about cohomology of unramified tori
 give the results that we need only when $T(F)$ is compact.  But maybe $G$ semisimple plus
-$T$ being $F$-minisotropic implies that $T(F)$ is compact?  Well, actually, this seems 
-to be true. Because if $G$ is semisimple, then the center is finite.  But $T$ being 
+$T$ being $F$-minisotropic implies that $T(F)$ is compact?  Well, actually, this seems
+to be true. Because if $G$ is semisimple, then the center is finite.  But $T$ being
 $F$-minisotropic is equivalent to $T(F) / Z(F)$ being compact.  But $Z(F)$ is finite, so
 since $T(F) / Z(F)$ is compact, so is $T(F)$  (right???)}
 
@@ -255,12 +263,10 @@ There exists a unique function $${}_F
   \mu_{\xi}$ of $T(E)_{\Gamma}$ satisfying the following conditions.
 
 \begin{enumerate}
-\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$
-
 \item The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on
   $T(\mathcal{O}_E)_{\Gamma}$)
 
-\item $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
+\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair $(T, \xi \cdot {}_F \mu_{\xi})$ is admissible, and $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   agrees with \cite{debackerreeder} and \cite{reeder}
 
 \item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
@@ -270,24 +276,24 @@ ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 \end{theorem}
 
 Once phrased in this manner, uniqueness is a straightforward matter
-(see \S\ref{}) \MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?  
+(see \S\ref{}) \MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?
 I don't know if we have an argument.  For example, there might be different
-characters of a torus $T(F)$ that give rise to the same supercuspidal $L$-packet.  
+characters of a torus $T(F)$ that give rise to the same supercuspidal $L$-packet.
 Is this true?}
 
 The existence of ${}_F  \boldsymbol\mu^{\mathrm{Reg}}$
 will be proven by interpreting the characters ${}_F \mu_{\xi}$
 in terms of a canonical Langlands parameter, as follows.  Let
 $G$ be an arbitrary unramified connected reductive group.  If
-$T$ is an unramified torus in $G$, then $T$ can be defined 
+$T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
 a Langlands parameter $\phi_o :W _F \rightarrow {}^L G$ by
-sending Frobenius to a canonical \MAxxx{cCanonical?  Is the Tits group 
+sending Frobenius to a canonical \MAxxx{cCanonical?  Is the Tits group
 lift canonical?} lift of $w$, using the Tits group, and by setting
-$\phi_o$ to be trivial on $I_F$.  
+$\phi_o$ to be trivial on $I_F$.
 If $G$ is semisimple,
-we will prove that the function $$(T, \xi) \mapsto \xi_{\phi_o}$$ 
-satisfies conditions (1)-(4), and we may therefore set 
+we will prove that the function $$(T, \xi) \mapsto \xi_{\phi_o}$$
+satisfies conditions (1)-(4), and we may therefore set
 ${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\phi_o}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
 
@@ -299,9 +305,9 @@ Moreover, we prove compatibility with Bushnell/Henniart:
 \end{theorem}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(E))
-\neq 0$, the situation seems more difficult because twisting $\xi$ 
+\neq 0$, the situation seems more difficult because twisting $\xi$
 by a character of $T(E)_{\Gamma}$
-can only result in a character of the image 
+can only result in a character of the image
 of $T(E)_{\Gamma}$ under the norm map.  However, one might be
 able to remedy this with a prediction of central character, as in
 \cite{grossreeder}, for example.
