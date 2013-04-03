@@ -511,118 +511,6 @@ If $T(K)$ is compact, we have $\HT{0}(G, T(L)) = 0$.
 $T(K)$ being compact means that $X_*(T)^G = 0$, hence the result follows by corollary \ref{reductiontori}
 \qed
 
-\section{Review of Construction of DeBacker and Reeder}\label{preliminaries}
-
-We first review some of the basic theory from \cite{debackerreeder}.
-We first fix a pinning $(\hat{T}, \hat{B}, \{x_{\alpha} \})$ for the
-dual group $\hat{G}$.  The operator $\hat{\theta}$ dual to $\theta$
-extends to an automorphism of $\hat{T}$.  There is a unique extension
-of $\hat{\theta}$ to an automorphism of $\hat{G}$, satisfying
-$\hat{\theta}(x_{\alpha}) = x_{\theta \cdot \alpha}$ (see
-\cite[section 3.2]{debackerreeder}).  Following \cite{debackerreeder},
-we may define ${}^LG$ as the semidirect product ${}^L G = \ <\hat{\theta}> \ltimes \hat{G}$.
-
-\begin{definition}
-  Let $W_F'$ denote the Weil-Deligne group.  A Langlands parameter
-  $\phi : W_F' \rightarrow {}^L G$ is called a \emph{tame regular
-    semisimple elliptic Langlands parameter} (abbreviated TRSELP) if
-
-  \begin{enumerate}
-    \item $\phi$ is trivial on $I_F^+$,
-
-    \item The centralizer of $\phi(I_F)$ in $\hat{G}$ is a torus.
-
-    \item $C_{\hat{G}}(\phi)^o = (\hat{Z}^{\hat{\theta}})^o$, where $\hat{Z}$ denotes the center of $\hat{G}$.
-  \end{enumerate}
-\end{definition}
-
-Condition (2) forces $\phi$ to be trivial on $SL(2,\mathbb{C})$.  Let
-$\hat{N} = N_{\hat{G}}(\hat{T})$.  After conjugating by $\hat{G}$, we
-may assume that $\phi(I_F) \subset \hat{T}$ and $\phi(\Phi) = \hat{\theta} f$,
-where $f \in \hat{N}$.  Let $\hat{w}$ be the image of $f$ in
-$\hat{W}_o$, and let $w$ be the element of $W_o$ corresponding to $\hat{w}$.
-
-Let $\phi$ be a TRSELP with associated $w$ and set $\sigma = w \theta$.
-$\sigma$ is an automorphism of $X_*(T)$.  Let $\hat{\sigma}$ be the
-automorphism dual to $\sigma$, and let $n$ be the order of $\sigma$.
-We set $\hat{G}_{ab} = \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
-the derived group of $\hat{G}$. Let
-${}^L T_{\sigma} = \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
-Associated to $\phi$, DeBacker--Reeder (see \cite[Chapter
-4]{debackerreeder}) define a $\hat{T}$-conjugacy class of Langlands
-parameters
-
-\begin{equation}
-\phi_T : W_F \rightarrow {}^L T_{\sigma} \ \label{phiT}
-\end{equation}
-
-\noindent as follows.  Set $\phi_T = \phi$ on $I_F$, and
-$\phi_T(\Phi) = \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
-is any element whose class in $\hat{T} / (1 - \hat{\sigma}) \hat{T}$
-corresponds to the image of $f$ in $\hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab}$
-under the bijection
-
-\begin{equation}
-\hat{T} / (1 - \hat{\sigma}) \hat{T} \stackrel{\sim}{\rightarrow} \hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab} \ \label{bijectionfortau}
-\end{equation}
-
-In \cite[Chapter 4]{debackerreeder}, DeBacker and Reeder construct a
-canonical bijection between $\hat{T}$-conjugacy classes of admissible
-homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
-characers of $T^{\Phi_{\sigma}}$ where
-$\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
-this construction. Let $\mathbb{T} = X_*(T) \otimes \mathfrak{F}^\times$.
-Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
-respectively, let $\Hom_{\alpha, \beta}(A,B)$ denote the set of
-homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
-The twisted norm map
-$$\Nm_{\sigma} : \mathbb{T}^{\Phi_{\sigma}^n} \rightarrow \mathbb{T}^{\Phi_{\sigma}}$$
-given by
-$\Nm_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
-induces isomorphisms
-$$\Hom(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \Hom_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
-  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \Hom_{\Phi_{\sigma}, 1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
-Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
-$$\Hom_{\Phi, \hat{\sigma}}(k_n^\times, \hat{T})
-  \stackrel{\sim}{\rightarrow} \Hom_{\Phi_{\sigma},
-  1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
-where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
-projection $I_t \rightarrow k_m^\times$ induces an isomorphism
-as $\Phi$-modules
-$I_t / (1 - \Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} k_m^\times$
-where $\Ad$ denotes the adjoint action.  Since $\hat{\sigma}$ has order
-$n$, we have $\Hom_{\Phi, \hat{\sigma}}(k_n^\times,
-\hat{T}) \cong \Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
-Therefore, the map $s \mapsto \chi_s$ is a canonical bijection
-$$\Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
-  \stackrel{\sim}{\rightarrow} \Hom(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^\times)$$
-Moreover, we have an isomorphism
-$${}^0T^{\Phi_{\sigma}} \times X_*(T)^{\sigma} \stackrel{\sim}{\rightarrow}
-  T^{\Phi_{\sigma}}$$ $$(\gamma, \lambda) \mapsto \gamma \lambda(\varpi)$$
-where ${}^0 T$ is the group of $\mathcal{O}_{F^u}$-points of $\mathbf{T}$.
-
-Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
-character group of $X_*(T)^{\sigma}$, whereby
-$\tau \in \hat{T} / (1 - \hat{\sigma}) \hat{T}$ corresponds to
-$\chi_{\tau} \in \Hom(X_*(T)^{\sigma}, \mathbb{C}^\times),$ where
-$\chi_{\tau}(\lambda) := \lambda(\tau)$.  Therefore, we have a
-canonical bijection between $\hat{T}$-conjugacy classes of admissible
-homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
-characters
-
-\begin{equation}
-\chi_{\phi} := \chi_s \otimes \chi_{\tau} \in \mathrm{Irr}(T^{\Phi_{\sigma}}) \ \ \label{chitau}
-\end{equation}
-
-\noindent where $s := \phi|_{I_t}$, $\phi(\Phi) = \hat{\sigma} \ltimes \tau$,
-and where we have inflated $\chi_s$ to ${}^0 T^{\Phi_{\sigma}}$.  To
-$\chi_{\phi}$, DeBacker and Reeder construct an $L$-packet of
-supercuspidal representations, which we denote $L(\chi_{\phi})$.
-
 \section{Groups of type L}\label{groupsoftypeL}
 We now review the theory of ``groups of type L'' due to Benedict
 Gross.  Let $F$ be a field, $F^{\mathrm s}$ a separable closure, and
@@ -734,13 +622,12 @@ z^{<\mu, \lambda>} = \chi_1(\lambda)$.
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
 
-We consider here a TRSELP $\phi$ for any unramified connected
+We consider here an RSELP $\phi$ for any unramified connected
 reductive group G.  Let $T$ be as in \S\ref{groupsoftypeL}.  Let $E$,
 $\chi$, etc.~be as in~\S\ref{groupsoftypeL}.  Let $w$ be the Weyl
 group element associated to $\phi$, and set $\sigma = w \theta\in {\rm Aut}(T)$.
 Let $\chi_{\phi}$ be the character of $T(F) = T^{\Phi_{\sigma}}$ that
-DeBacker and Reeder attach to $\phi$ (see section
-\ref{preliminaries}).
+DeBacker and Reeder attach to $\phi$.
 
 We have the exact sequence
 
@@ -755,16 +642,19 @@ exact sequence restricts to an exact sequence
 $$1 \rightarrow \HT{-1}(\Gamma, T(\mathcal{O}_E)) \rightarrow T(\mathcal{O}_E)_{\Gamma}
   \rightarrow T(\mathcal{O}_F) \rightarrow \HT{0}(\Gamma, T(\mathcal{O}_E)) \rightarrow 1$$
 
-Moreover, one can show using a profinite version of Lang's theorem and
-various results about tori over finite fields, that since $T$ is unramified,
+Moreover, by Lemmas \ref{H1compactpart} and \ref{H0compactpart}, we have
 $\HT{-1}(\Gamma, T(\mathcal{O}_E)) = \HT{0}(\Gamma, T(\mathcal{O}_E)) = 1$.
 Therefore, the map
 $$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(\mathcal{O}_F)$$
 is an isomorphism, and we may view
 $\chi|_{T(\mathcal{O}_E)_{\Gamma}}$ as a character of
 $T(\mathcal{O}_F)$ via this isomorphism.  Now, since $\chi$ was
-obtained from $\phi|_{W_E}$ via the local Langlands correspondence, we
-get that $\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$.
+obtained from $\phi|_{W_E}$ via the local Langlands correspondence, one can see
+from the constructions in \cite{debackerreeder} and \cite{reeder} that 
+$\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$ (one can see
+\cite{adrianlansky} for more details on the constructions of 
+\cite{debackerreeder} and \cite{reeder} and their relationship to groups of
+type $L$).
 We have therefore proven the following lemma.
 
 \begin{lemma}\label{grossanddebackerreedercompatibility}
