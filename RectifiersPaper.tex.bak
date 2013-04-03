@@ -166,7 +166,7 @@ would be in analogy with Bushnell/Henniart's notation $P_n(F)$ for admissible
 pairs for elliptic tori in $GL(n,F)$.}
 \end{definition}\MAxxx{This definition doesn't seem to be quite right.  I think.
 Because the first condition of admissible pair for $GL(n)$ is ``$\chi$ does not
-come from the norm for a proper subfield $L$ of $E$ containing $F$, where
+come from the norm for a proper subfield $L$ of $E$ containing $F$, where 
 $(E/F, \chi)$ is the pair in question.'' If this condition was $\chi$ does not
 come from the norm for $E/F$, then this is equivalent to $\chi$ is not fixed by
 $Gal(E/F)$, which seems to be our condition...I think we might need to fix our
@@ -197,7 +197,7 @@ ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 
 \end{definition}
 
-Note that
+Note that 
 
 \begin{conjecture}
   Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
@@ -268,9 +268,9 @@ There exists a unique function $${}_F
 \item The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on
   $T(\mathcal{O}_E)_{\Gamma}$)
 
-\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair
+\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair 
 $(T, \xi \cdot {}_F \mu_{\xi})$ is regular \MAxxx{Need to define notion of
-regularity for characters of tori}, and
+regularity for characters of tori}, and 
 $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   agrees with \cite{debackerreeder} and \cite{reeder}
 
@@ -511,6 +511,34 @@ If $T(K)$ is compact, we have $\HT{0}(G, T(L)) = 0$.
 $T(K)$ being compact means that $X_*(T)^G = 0$, hence the result follows by corollary \ref{reductiontori}
 \qed
 
+\begin{corollary}
+  Let $\Phi$ be the characteristic polynomial of $g$ acting on $X_*(T)$. If
+  $\Phi(1)\neq 0$, i.e. $T(K)$ is compact, then $\HH^0(G, X_*(T)\otimes
+  L^{\times})=0$ and the order of $\HH^1(G, X_*(T)\otimes L^{\times})$ is
+  $\Phi(1)$.
+\end{corollary}
+
+\proof
+
+Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
+is not an eigenvalue of $g$ on $X_*(T)$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
+is the zero map on $X_*(T)$.  Now, we have that
+$\HH^1(G, X_*(T)\otimes L^{\times}) = \HH^1(G, X_*(T)) = \ker(\Nm_{L/K}) / (1 - g)X_*(T)$
+where $\Nm_{L/K}$ is the norm map $\Nm_{L/K} : X_*(T) \rightarrow X_*(T)$ on $X_*(T)$.
+Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X_*(T)$,
+we get that $\HH^1(G, X_*(T)) = X_*(T) / (1 - g)X_*(T)$.  It is known by standard lattice
+theory that the cardinality of $X_*(T) / (1 - g)X_*(T)$ is equal to the volume of
+a fundamental domain for the lattice $(1 - g)X_*(T)$.  It is also known that
+the volume of a fundamental domain for the lattice $(1 - g)X_*(T)$ is equal to
+$|\det(1 - g)|$.  But $|\det(1 - g)|$ is just $|\Phi(1)|$.  But
+$|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since
+$1 + g + g^2 + \cdots + g^{n-1} = 0$, $\Phi$ divides a power of
+$1 + x + x^2 + \cdots + x^{n-1}$ (since the minimal polynomial of $g$
+divides $1 + x + x^2 + \cdots + x^{n-1}$).  Since
+$1 + 1 + 1^2 + \cdots + 1^{n-1} > 0$, we have that $\Phi(1) > 0$,
+so that $|\Phi(1)| = \Phi(1)$.
+\qed
+
 \section{Review of Construction of DeBacker and Reeder}\label{preliminaries}
 
 We first review some of the basic theory from \cite{debackerreeder}.
@@ -680,11 +708,41 @@ on $T(E)$, which factor naturally to actions on $T(E)_{\Gamma}$.
 \end{lemma}
 
 \proof
-See \cite{adrianlansky}.
+We first prove (1).  Let $nT(E)\in N(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.
+Then $ntn^{-1}\in T(F)$, so for $\gamma\in\Gamma$,
+$\gamma(n)t\gamma(n)^{-1} =  \gamma (ntn^{-1}) = ntn^{-1}$.
+Thus $n^{-1}\gamma(n)$ centralizes $T(F)$, hence centralizes the centralizer
+of $T(F)$ in $G(E)$, which is $T(E)$. Thus $n^{-1}\gamma(n)\in T(E)$ so
+$\gamma(n T(E)) = \gamma (n) T(E) = n T(E)$. Thus the elements of
+$N(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so
+$N(G(E), T(F)) / T(E) \subset (N(G,T)/T)(F)$.
+
+Conversely, since $T$ splits over $E$, any coset in $(N(G,T)/T)(F)$
+has a representative in the normalizer $N(G(E), T(E))$. Then $\gamma(n) = nt'$
+for some $t'\in T(E)$ since $nT$ is $F$-rational.  Let $t\in T(F)$.
+Then for $\gamma\in\Gamma$,
+$\gamma(ntn^{-1}) = \gamma(n) t \gamma(n)^{-1} = (nt')t(nt')^{-1} = ntn^{-1}$.
+Thus $ntn^{-1}\in T(F)$, so $n\in N(G(E),T(F))$, as desired.
+
+We now prove (2).
+The group $N(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(N(G,T)/T)(F)$.
+Thus it suffices to to prove the statement for
+$(N(G,T)/T)(F) = N(G(E), T(F)) / T(E)$.  Let $n \in N(G(E),T(F))$.  Then since $n$
+normalizes $T(F)$, $n$ also normalizes $T(E)$.  Therefore, we have that
+$N(G(E), T(F)) / T(E)$ acts on $T(E)$.
+
+We now have to show that $N(G(E), T(F)) / T(E)$
+sends the augmentation ideal
+$\{ t\sigma(t)^{-1} : t \in T(E), \sigma \in \Gamma \}$ to itself.
+Let $t \in T(E), \sigma \in \Gamma$ and let $w \in  (N(G,T)/T)(F)$.  Then $$w\left(\frac{t}{\sigma(t)}\right)
+= \frac{wt}{w \sigma(t)} = \frac{w(t)}{\sigma (\sigma^{-1}(w(\sigma(t))))} =
+\frac{wt}{\sigma ({}^{\sigma^{-1}} w) (t)} = \frac{wt}{\sigma(wt)},$$
+the last equality coming from the fact that $w \in (N(G,T)/T)(F)$, so $w$
+is fixed by $\Gamma$.
 \qed
 
 We will need the following structural result about Langlands
-parameters mapping to groups of type $L$ later.  First let $E,F,T,\hat{T}, \Gamma$
+parameters mapping to groups of type $L$ later.  First let $E,F,T,\hat{T}$
 be as above, with $E/F$ unramified.  Let $\varphi_1 : W_F \rightarrow D$
 be a Langlands parameter mapping to a group of type $L$.  $\varphi_1$
 gives rise to a character $\chi_1$ of $T(E)_{\Gamma}$.  Let $\varphi_2
@@ -697,39 +755,61 @@ $\chi_1$ and $\chi_2$ have the same restriction to $\HT{-1}(\Gamma, T(E))$.
 \end{lemma}
 
 \proof
-Let $\sigma$ be a generator of $\Gamma$.  First note that
-$\varphi_1(\Phi_E) = \varphi_1(\Phi_F)^r$.
-Suppose $\varphi_1(\Phi_F) = n \in N_{{}^L G}(\hat{T})$.
-Note that $n^r$ is an element in the dual torus
+I want to explicitly describe the character $\chi$ restricted to
+$\HT{-1}(\Gamma, T(E))$ that is attached to a Langlands parameter
+$\phi$.  Here, $T$ is defined over $F$, splits over unramified $E$,
+where the degree of $E/F$ is $r$.  Let $\Gamma = \Gal(E/F)$, generated
+by an element $\sigma$.
+
+We restrict $\phi$ to $W_E$.  Then $\phi(Frob_E) = \phi(Frob_F)^r$.
+Suppose $\phi(Frob_F) = n$, where $n$ is an element of the normalizer
+of the dual torus.  Then $n^r$ is an element in the dual torus
 $\hat{T}$.
 
-By Corollary \ref{reductiontori}, we know that
-$\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
-since $E/F$ is unramified.  Moreover,
-$\HT{-1}(\Gamma, X_*(T)) = \ker(\Nm : X_*(T) \rightarrow X_*(T)) / I_{\Gamma}(T(E))$.
+What is $\chi$ restricted to $\HT{-1}(\Gamma, T(E))$?  Well, by
+stuff that Gordan and I did, and stuff that you have probably done as
+well, we know that $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
+since $E/F$ is unramified.  This latter group is some quotient of
+$\ker(\Nm : X_*(T) \rightarrow X_*(T))$.
 
-Let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Note that
-$\lambda \in X^*(\hat{T})$.
-Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$,
-$z \in \mathbb{C}^\times$.  Then $\chi_1(\lambda) = z^{<\mu, \lambda>}$
-(where $< , >$ denotes the canonical pairing
+Let's describe $\chi$ on $\HT{-1}$.  Well, let
+$\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us think of
+$\lambda$ as living in $X^*(\hat{T})$ instead.
+
+Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
+$z \in \mathbb{C}^\times$.  What is $\chi(\lambda)$?  Most likely it is
+just $z^{<\mu, \lambda>}$ (where $< , >$ denotes the canonical pairing
 on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
 
-We now note that
-$$(tn)^r = t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r = t w(t) w^2(t) \cdots w^{r-1}(t),$$
+Now let's modify our Langlands parameter.  Suppose
+$\phi'(Frob_F) = tn$, for some element $t \in \hat{T}$, and suppose
+$\phi'$ has the same restriction to inertia as $\phi$.  Then we get an
+associated $\chi'$.  What is $\chi'$ restricted to
+$\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$?
+
+Well, let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us
+think of $\lambda$ as living in $X^*(\hat{T})$ instead.  We need to
+compute $(tn)^r$.  This is $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r$.
+
+But $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} = t w(t) w^2(t) \cdots w^{r-1}(t)$,
 where $w$ is the Weyl group element associated to $n$.  If we write
-$t = \mu' \otimes z'$, then $$t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z',$$
-But now one checks:
-We have $\chi_2(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$, and
+$t = \mu' \otimes z'$, then $t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z'$,
+since $w$ acts as Galois on the character lattices, and since Galois
+acts holomorphically on the dual group rather than antiholomorphically
+(i.e. Galois acts trivially on $\mathbb{C}^\times$).  But now one checks:
+We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$.  But
+
 $$<\Nm(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
   = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
+
 Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> =
 <\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum
 becomes
 $$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
-But $\lambda \in \ker(\Nm : X^*(\hat{T}) \rightarrow X^*(\hat{T}))$, so
-$<\mu', \Nm(\lambda)> = 0$.  Therefore, $\chi_2(\lambda) =
-z^{<\mu, \lambda>} = \chi_1(\lambda)$.
+
+But $\lambda$ is assumed to be in the kernel of the norm map!  So we
+get $<\mu', \Nm(\lambda)> = <\mu', 0> = 0$.  So
+$\chi'(\lambda) = z^{<\mu, \lambda>} = \chi(\lambda)$.  Done.
 \qed
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
@@ -900,10 +980,6 @@ See \cite[Proposition 21]{bushnellhenniart}.
 \bibitem{adrian1}
   Moshe Adrian
   \emph{On the Local Langlands Correspondences of DeBacker/Reeder and Reeder for $GL(\ell,F)$, where $\ell$ is prime}, Pacific Journal of Mathematics 255-2 (2012), 257--280.
-
-\bibitem{adrianlansky}
-  Moshe Adrian and Joshua Lansky,
-  \emph{An Interpretation of the Tame Local Langlands Correspondence for $p$-adic $PGSp(4)$ from the Perspective of Real Groups}, preprint, arXiv:1209.6045.
 
 \bibitem{amano}
   Kazuo Amano,
