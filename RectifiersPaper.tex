@@ -172,7 +172,18 @@ come from the norm for $E/F$, then this is equivalent to $\chi$ is not fixed by
 $Gal(E/F)$, which seems to be our condition...I think we might need to fix our
 definition of admissible. Maybe the new condition should be ``$\xi$ is not
 fixed by any element of $(N(G,T)/T)(L)$ for any field $L$ such that
-$F \subseteq L \subseteq E$''???  This seems reasonable.}
+$F \subseteq L \subseteq E$''???  This seems reasonable.  Here is why it is
+reasonable: We want this condition to generalize the condition that $\chi$
+does not comes from the norm for a proper subfield $L$ of $E$ containing $F$.
+I am guessing that $(N(G,T)/T)(L) = Gal(E/L)$.  In this case, if $\xi$
+is not fixed by $Gal(E/L)$, I think this means that $\xi$ doesn't factor
+through the norm for $L$.  Or: it might be that $(N(G,T)/T)(L)$ is not quite
+right, because I don't even know if this group acts on $T(E)_{\Gamma}$.  Look
+at Lemma 9.1 in my paper with Lansky to get an idea for which group we should
+use if it's not $(N(G,T)/T)(L)$.  Whatever it is, it should be equal to 
+$Gal(E/L)$ if $G = GL(n)$.  Maybe the correct group is 
+$N(G(E),T(E))^{Gal(E/L)} / T(F)$  (see Lemma 9.1 of my paper with Lansky on
+why I would say this).}
 
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $F$, that splits over an unramified
@@ -359,7 +370,7 @@ $\HT{0}(G_n,\mathbb{T}(k_n))$ is trivial.
 \end{corollary}
 
 \proof
-It is well-known (see \cite[p. 134]{serre}) that the Herbrand quotient 
+It is well-known (see \cite[p. 134]{serre}) that the Herbrand quotient
 of a finite group is trivial.  Hence, the result follows.
 \qed
 
@@ -583,7 +594,7 @@ $\chi_1$ and $\chi_2$ have the same restriction to $\HT{-1}(\Gamma, T(E))$.
 
 \proof
 Let $\sigma$ be a generator of $\Gamma$.  First note that
-$\varphi_1(\Phi_E) = \varphi_1(\Phi_F)^r$, where $r$ is the 
+$\varphi_1(\Phi_E) = \varphi_1(\Phi_F)^r$, where $r$ is the
 order of $\Gamma$.
 Suppose $\varphi_1(\Phi_F) = n \in N_{{}^L G}(\hat{T})$.
 Note that $n^r$ is an element in the dual torus
@@ -648,9 +659,9 @@ is an isomorphism, and we may view
 $\chi|_{T(\mathcal{O}_E)_{\Gamma}}$ as a character of
 $T(\mathcal{O}_F)$ via this isomorphism.  Now, since $\chi$ was
 obtained from $\phi|_{W_E}$ via the local Langlands correspondence, one can see
-from the constructions in \cite{debackerreeder} and \cite{reeder} that 
+from the constructions in \cite{debackerreeder} and \cite{reeder} that
 $\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$ (one can see
-\cite{adrianlansky} for more details on the constructions of 
+\cite{adrianlansky} for more details on the constructions of
 \cite{debackerreeder} and \cite{reeder} and their relationship to groups of
 type $L$).
 We have therefore proven the following lemma.
@@ -721,7 +732,7 @@ If $G$ is semisimple, then $\xi_{\phi} \otimes \xi_{\phi_o}^{-1} = \chi_{\phi}$.
 
 \proof
 Since $G$ is semisimple, $T(F)$ is compact.  In particular,
-$\HT{0}(\Gamma, T(E)) = 0$ by Corollary \ref{trivialh0compacttori}, 
+$\HT{0}(\Gamma, T(E)) = 0$ by Corollary \ref{trivialh0compacttori},
 so we have the following exact sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
 Note that $T(F) = T(\mathcal{O}_F)$, and so in particular
@@ -759,7 +770,7 @@ setting (see \cite{bushnellhenniart}).
 
 \begin{lemma}
   Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is
-  unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.  
+  unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.
   Then ${}_F \mu_{\xi}$ is unramified and
   ${}_F \mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{lemma}
@@ -769,8 +780,8 @@ See \cite[Proposition 21]{bushnellhenniart}.
 \qed
 
 \begin{proposition}
-Let $\hat{w} = s_{\alpha_1} s_{\alpha_2} \cdots s_{\alpha_n}$ where 
-$s_{\alpha_i}$ are the simple reflections of $GL(n,\mathbb{C})$, 
+Let $\hat{w} = s_{\alpha_1} s_{\alpha_2} \cdots s_{\alpha_n}$ where
+$s_{\alpha_i}$ are the simple reflections of $GL(n,\mathbb{C})$,
 for $i = 1, 2, \cdots, n$.  Then $\hat{w}^n = (-Id)^{n-1}$, where $Id$
 denotes the identity element in $GL(n,\mathbb{C})$.
 \end{proposition}
