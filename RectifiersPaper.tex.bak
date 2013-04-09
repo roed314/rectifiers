@@ -166,13 +166,24 @@ would be in analogy with Bushnell/Henniart's notation $P_n(F)$ for admissible
 pairs for elliptic tori in $GL(n,F)$.}
 \end{definition}\MAxxx{This definition doesn't seem to be quite right.  I think.
 Because the first condition of admissible pair for $GL(n)$ is ``$\chi$ does not
-come from the norm for a proper subfield $L$ of $E$ containing $F$, where 
+come from the norm for a proper subfield $L$ of $E$ containing $F$, where
 $(E/F, \chi)$ is the pair in question.'' If this condition was $\chi$ does not
 come from the norm for $E/F$, then this is equivalent to $\chi$ is not fixed by
 $Gal(E/F)$, which seems to be our condition...I think we might need to fix our
 definition of admissible. Maybe the new condition should be ``$\xi$ is not
 fixed by any element of $(N(G,T)/T)(L)$ for any field $L$ such that
-$F \subseteq L \subseteq E$''???  This seems reasonable.}
+$F \subseteq L \subseteq E$''???  This seems reasonable.  Here is why it is
+reasonable: We want this condition to generalize the condition that $\chi$
+does not comes from the norm for a proper subfield $L$ of $E$ containing $F$.
+I am guessing that $(N(G,T)/T)(L) = Gal(E/L)$.  In this case, if $\xi$
+is not fixed by $Gal(E/L)$, I think this means that $\xi$ doesn't factor
+through the norm for $L$.  Or: it might be that $(N(G,T)/T)(L)$ is not quite
+right, because I don't even know if this group acts on $T(E)_{\Gamma}$.  Look
+at Lemma 9.1 in my paper with Lansky to get an idea for which group we should
+use if it's not $(N(G,T)/T)(L)$.  Whatever it is, it should be equal to
+$Gal(E/L)$ if $G = GL(n)$.  Maybe the correct group is
+$N(G(E),T(E))^{Gal(E/L)} / T(F)$  (see Lemma 9.1 of my paper with Lansky on
+why I would say this).}
 
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $F$, that splits over an unramified
@@ -194,17 +205,24 @@ $F \subseteq L \subseteq E$''???  This seems reasonable.}
 $\xi_1^{-1} \xi_2$ is tamely ramified, then
 ${}_F \mu_{\xi_1} = {}_F \mu_{\xi_2}$.
 \end{enumerate}
+\MAxxx{Gordan, during my seminar that I gave about this stuff, asked me:
+What if $T$ occurs as a torus of two different groups $G$?  Do you 
+get the same rectifying character attached to $(T, \xi)$?  That is,
+is our function ${}_F \boldsymbol\mu$ well-defined?  Because $(T,\xi)$
+could occur for different groups $G_1, G_2$.  If they do, is the associated
+rectifier correct in LLC for $G_1$ and $G_2$??? I'm not even sure if 
+I formulated this question correctly, and to be honest, I don't know
+if Gordan did either, since he didn't completely understand my talk, but
+we should probably think about this type of thing...}
 
 \end{definition}
 
-Note that 
+Note that
 
 \begin{conjecture}
   Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
   admits a unique rectifier ${}_F \boldsymbol\mu : (T, \xi) \mapsto
-  {}_F \mu_{\xi}$.\MAxxx{Should we assume that the Langlands parameters
-  are ``regular''?  Since this is what we know for LLC.  Then we might
-  as well assume that the rectifiers are unramified as well.}
+  {}_F \mu_{\xi}$.
 \end{conjecture}
 
 As the local Langlands correspondence is not known in general, we must restrict
@@ -268,9 +286,9 @@ There exists a unique function $${}_F
 \item The character ${}_F \mu_{\xi}$ is unramified (i.e. trivial on
   $T(\mathcal{O}_E)_{\Gamma}$)
 
-\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair 
+\item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair
 $(T, \xi \cdot {}_F \mu_{\xi})$ is regular \MAxxx{Need to define notion of
-regularity for characters of tori}, and 
+regularity for characters of tori}, and
 $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   agrees with \cite{debackerreeder} and \cite{reeder}
 
@@ -361,9 +379,8 @@ $\HT{0}(G_n,\mathbb{T}(k_n))$ is trivial.
 \end{corollary}
 
 \proof
-It is well-known
-\DRxxx{add a reference}
-that the Herbrand quotient of a finite group is trivial.  Hence, the result follows.
+It is well-known (see \cite[p. 134]{serre}) that the Herbrand quotient
+of a finite group is trivial.  Hence, the result follows.
 \qed
 
 \section{Unramified Tori over p-adic fields}
@@ -481,7 +498,7 @@ $$\Nm_{L/K} : X_*(T) \otimes \left( \mathcal{O}_L^\times / (1 + \mathfrak{p}_L) 
 which is just
 $$\Nm_{L/K} : \mathbb{T}(k_n) \rightarrow \mathbb{T}(k).$$
 This last map is surjective by Lemma \ref{normtorifinitefields}.
-Finally, by \cite[Lemma 2, p. 81]{serre1}, we have our result.
+Finally, by \cite[Lemma 2, p. 81]{serre}, we have our result.
 \qed
 
 \begin{corollary}\label{reductiontori}
@@ -503,153 +520,13 @@ $$... \rightarrow \HT{0}(G, T_0^L) \rightarrow \HT{0}(G, T(L)) \rightarrow \HT{0
 By corollary \ref{H0compactpart} and Lemma \ref{H1compactpart}, we get the result.
 \qed
 
-\begin{corollary}
+\begin{corollary}\label{trivialh0compacttori}
 If $T(K)$ is compact, we have $\HT{0}(G, T(L)) = 0$.
 \end{corollary}
 
 \proof
 $T(K)$ being compact means that $X_*(T)^G = 0$, hence the result follows by corollary \ref{reductiontori}
 \qed
-
-\begin{corollary}
-  Let $\Phi$ be the characteristic polynomial of $g$ acting on $X_*(T)$. If
-  $\Phi(1)\neq 0$, i.e. $T(K)$ is compact, then $\HH^0(G, X_*(T)\otimes
-  L^{\times})=0$ and the order of $\HH^1(G, X_*(T)\otimes L^{\times})$ is
-  $\Phi(1)$.
-\end{corollary}
-
-\proof
-
-Since $0 = g^n - 1 = (1 + g + g^2 + ... + g^{n-1})(g-1)$ and since $1$
-is not an eigenvalue of $g$ on $X_*(T)$, we get that $1 + g + g^2 + \cdots + g^{n-1}$
-is the zero map on $X_*(T)$.  Now, we have that
-$\HH^1(G, X_*(T)\otimes L^{\times}) = \HH^1(G, X_*(T)) = \ker(\Nm_{L/K}) / (1 - g)X_*(T)$
-where $\Nm_{L/K}$ is the norm map $\Nm_{L/K} : X_*(T) \rightarrow X_*(T)$ on $X_*(T)$.
-Since $1 + g + g^2 + \cdots + g^{n-1}$ is the zero map on $X_*(T)$,
-we get that $\HH^1(G, X_*(T)) = X_*(T) / (1 - g)X_*(T)$.  It is known by standard lattice
-theory that the cardinality of $X_*(T) / (1 - g)X_*(T)$ is equal to the volume of
-a fundamental domain for the lattice $(1 - g)X_*(T)$.  It is also known that
-the volume of a fundamental domain for the lattice $(1 - g)X_*(T)$ is equal to
-$|\det(1 - g)|$.  But $|\det(1 - g)|$ is just $|\Phi(1)|$.  But
-$|\Phi(1)| = \Phi(1)$ for the following reason.  Note that since
-$1 + g + g^2 + \cdots + g^{n-1} = 0$, $\Phi$ divides a power of
-$1 + x + x^2 + \cdots + x^{n-1}$ (since the minimal polynomial of $g$
-divides $1 + x + x^2 + \cdots + x^{n-1}$).  Since
-$1 + 1 + 1^2 + \cdots + 1^{n-1} > 0$, we have that $\Phi(1) > 0$,
-so that $|\Phi(1)| = \Phi(1)$.
-\qed
-
-\section{Review of Construction of DeBacker and Reeder}\label{preliminaries}
-
-We first review some of the basic theory from \cite{debackerreeder}.
-We first fix a pinning $(\hat{T}, \hat{B}, \{x_{\alpha} \})$ for the
-dual group $\hat{G}$.  The operator $\hat{\theta}$ dual to $\theta$
-extends to an automorphism of $\hat{T}$.  There is a unique extension
-of $\hat{\theta}$ to an automorphism of $\hat{G}$, satisfying
-$\hat{\theta}(x_{\alpha}) = x_{\theta \cdot \alpha}$ (see
-\cite[section 3.2]{debackerreeder}).  Following \cite{debackerreeder},
-we may define ${}^LG$ as the semidirect product ${}^L G = \ <\hat{\theta}> \ltimes \hat{G}$.
-
-\begin{definition}
-  Let $W_F'$ denote the Weil-Deligne group.  A Langlands parameter
-  $\phi : W_F' \rightarrow {}^L G$ is called a \emph{tame regular
-    semisimple elliptic Langlands parameter} (abbreviated TRSELP) if
-
-  \begin{enumerate}
-    \item $\phi$ is trivial on $I_F^+$,
-
-    \item The centralizer of $\phi(I_F)$ in $\hat{G}$ is a torus.
-
-    \item $C_{\hat{G}}(\phi)^o = (\hat{Z}^{\hat{\theta}})^o$, where $\hat{Z}$ denotes the center of $\hat{G}$.
-  \end{enumerate}
-\end{definition}
-
-Condition (2) forces $\phi$ to be trivial on $SL(2,\mathbb{C})$.  Let
-$\hat{N} = N_{\hat{G}}(\hat{T})$.  After conjugating by $\hat{G}$, we
-may assume that $\phi(I_F) \subset \hat{T}$ and $\phi(\Phi) = \hat{\theta} f$,
-where $f \in \hat{N}$.  Let $\hat{w}$ be the image of $f$ in
-$\hat{W}_o$, and let $w$ be the element of $W_o$ corresponding to $\hat{w}$.
-
-Let $\phi$ be a TRSELP with associated $w$ and set $\sigma = w \theta$.
-$\sigma$ is an automorphism of $X_*(T)$.  Let $\hat{\sigma}$ be the
-automorphism dual to $\sigma$, and let $n$ be the order of $\sigma$.
-We set $\hat{G}_{ab} = \hat{G} / \hat{G}'$, where $\hat{G}'$ denotes
-the derived group of $\hat{G}$. Let
-${}^L T_{\sigma} = \langle \hat{\sigma} \rangle \ltimes \hat{T}$.
-Associated to $\phi$, DeBacker--Reeder (see \cite[Chapter
-4]{debackerreeder}) define a $\hat{T}$-conjugacy class of Langlands
-parameters
-
-\begin{equation}
-\phi_T : W_F \rightarrow {}^L T_{\sigma} \ \label{phiT}
-\end{equation}
-
-\noindent as follows.  Set $\phi_T = \phi$ on $I_F$, and
-$\phi_T(\Phi) = \hat{\sigma} \ltimes \tau$ where $\tau \in \hat{T}$
-is any element whose class in $\hat{T} / (1 - \hat{\sigma}) \hat{T}$
-corresponds to the image of $f$ in $\hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab}$
-under the bijection
-
-\begin{equation}
-\hat{T} / (1 - \hat{\sigma}) \hat{T} \stackrel{\sim}{\rightarrow} \hat{G}_{ab} / (1 - \hat{\theta}) \hat{G}_{ab} \ \label{bijectionfortau}
-\end{equation}
-
-In \cite[Chapter 4]{debackerreeder}, DeBacker and Reeder construct a
-canonical bijection between $\hat{T}$-conjugacy classes of admissible
-homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
-characers of $T^{\Phi_{\sigma}}$ where
-$\Phi_{\sigma} := \sigma \otimes \Phi^{-1}$.  We briefly summarize
-this construction. Let $\mathbb{T} = X_*(T) \otimes \mathfrak{F}^\times$.
-Given automorphisms $\alpha, \beta$ of abelian groups $A,B$,
-respectively, let $\Hom_{\alpha, \beta}(A,B)$ denote the set of
-homomorphisms $f : A \rightarrow B$ such that $f \circ \alpha = \beta \circ f$.
-The twisted norm map
-$$\Nm_{\sigma} : \mathbb{T}^{\Phi_{\sigma}^n} \rightarrow \mathbb{T}^{\Phi_{\sigma}}$$
-given by
-$\Nm_{\sigma}(t) = t \Phi_{\sigma}(t) \Phi_{\sigma}^2(t) \cdots \Phi_{\sigma}^{n-1}(t)$
-induces isomorphisms
-$$\Hom(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \Hom_{\Phi_{\sigma}, 1}(\mathbb{T}^{\Phi_{\sigma}^n},
-  \mathbb{C}^\times) \stackrel{\sim}{\rightarrow}
-  \Hom_{\Phi_{\sigma}, 1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
-Moreover, the map $s \mapsto \chi_s$ gives an isomorphism
-$$\Hom_{\Phi, \hat{\sigma}}(k_n^\times, \hat{T})
-  \stackrel{\sim}{\rightarrow} \Hom_{\Phi_{\sigma},
-  1}(X_*(T) \otimes k_n^\times, \mathbb{C}^\times)$$
-where $\chi_s(\lambda \otimes a) := \lambda(s(a))$.  The canonical
-projection $I_t \rightarrow k_m^\times$ induces an isomorphism
-as $\Phi$-modules
-$I_t / (1 - \Ad (\Phi)^m)I_t \stackrel{\sim}{\rightarrow} k_m^\times$
-where $\Ad$ denotes the adjoint action.  Since $\hat{\sigma}$ has order
-$n$, we have $\Hom_{\Phi, \hat{\sigma}}(k_n^\times,
-\hat{T}) \cong \Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})$.
-Therefore, the map $s \mapsto \chi_s$ is a canonical bijection
-$$\Hom_{\Ad(\Phi), \hat{\sigma}}(I_t, \hat{T})
-  \stackrel{\sim}{\rightarrow} \Hom(\mathbb{T}^{\Phi_{\sigma}},
-  \mathbb{C}^\times)$$
-Moreover, we have an isomorphism
-$${}^0T^{\Phi_{\sigma}} \times X_*(T)^{\sigma} \stackrel{\sim}{\rightarrow}
-  T^{\Phi_{\sigma}}$$ $$(\gamma, \lambda) \mapsto \gamma \lambda(\varpi)$$
-where ${}^0 T$ is the group of $\mathcal{O}_{F^u}$-points of $\mathbf{T}$.
-
-Finally, note that $\hat{T} / (1 - \hat{\sigma}) \hat{T}$ is the
-character group of $X_*(T)^{\sigma}$, whereby
-$\tau \in \hat{T} / (1 - \hat{\sigma}) \hat{T}$ corresponds to
-$\chi_{\tau} \in \Hom(X_*(T)^{\sigma}, \mathbb{C}^\times),$ where
-$\chi_{\tau}(\lambda) := \lambda(\tau)$.  Therefore, we have a
-canonical bijection between $\hat{T}$-conjugacy classes of admissible
-homomorphisms $\phi : W_t \rightarrow {}^L T_{\sigma}$ and depth-zero
-characters
-
-\begin{equation}
-\chi_{\phi} := \chi_s \otimes \chi_{\tau} \in \mathrm{Irr}(T^{\Phi_{\sigma}}) \ \ \label{chitau}
-\end{equation}
-
-\noindent where $s := \phi|_{I_t}$, $\phi(\Phi) = \hat{\sigma} \ltimes \tau$,
-and where we have inflated $\chi_s$ to ${}^0 T^{\Phi_{\sigma}}$.  To
-$\chi_{\phi}$, DeBacker and Reeder construct an $L$-packet of
-supercuspidal representations, which we denote $L(\chi_{\phi})$.
 
 \section{Groups of type L}\label{groupsoftypeL}
 We now review the theory of ``groups of type L'' due to Benedict
@@ -708,45 +585,15 @@ on $T(E)$, which factor naturally to actions on $T(E)_{\Gamma}$.
 \end{lemma}
 
 \proof
-We first prove (1).  Let $nT(E)\in N(G(E), T(F)) / T(E)$.  Let $t\in T(F)$.
-Then $ntn^{-1}\in T(F)$, so for $\gamma\in\Gamma$,
-$\gamma(n)t\gamma(n)^{-1} =  \gamma (ntn^{-1}) = ntn^{-1}$.
-Thus $n^{-1}\gamma(n)$ centralizes $T(F)$, hence centralizes the centralizer
-of $T(F)$ in $G(E)$, which is $T(E)$. Thus $n^{-1}\gamma(n)\in T(E)$ so
-$\gamma(n T(E)) = \gamma (n) T(E) = n T(E)$. Thus the elements of
-$N(G(E), T(F)) / T(E)$ are $\Gamma$-fixed, so
-$N(G(E), T(F)) / T(E) \subset (N(G,T)/T)(F)$.
-
-Conversely, since $T$ splits over $E$, any coset in $(N(G,T)/T)(F)$
-has a representative in the normalizer $N(G(E), T(E))$. Then $\gamma(n) = nt'$
-for some $t'\in T(E)$ since $nT$ is $F$-rational.  Let $t\in T(F)$.
-Then for $\gamma\in\Gamma$,
-$\gamma(ntn^{-1}) = \gamma(n) t \gamma(n)^{-1} = (nt')t(nt')^{-1} = ntn^{-1}$.
-Thus $ntn^{-1}\in T(F)$, so $n\in N(G(E),T(F))$, as desired.
-
-We now prove (2).
-The group $N(G(E), T(E))^{\Gamma} / T(F)$ embeds naturally in $(N(G,T)/T)(F)$.
-Thus it suffices to to prove the statement for
-$(N(G,T)/T)(F) = N(G(E), T(F)) / T(E)$.  Let $n \in N(G(E),T(F))$.  Then since $n$
-normalizes $T(F)$, $n$ also normalizes $T(E)$.  Therefore, we have that
-$N(G(E), T(F)) / T(E)$ acts on $T(E)$.
-
-We now have to show that $N(G(E), T(F)) / T(E)$
-sends the augmentation ideal
-$\{ t\sigma(t)^{-1} : t \in T(E), \sigma \in \Gamma \}$ to itself.
-Let $t \in T(E), \sigma \in \Gamma$ and let $w \in  (N(G,T)/T)(F)$.  Then $$w\left(\frac{t}{\sigma(t)}\right)
-= \frac{wt}{w \sigma(t)} = \frac{w(t)}{\sigma (\sigma^{-1}(w(\sigma(t))))} =
-\frac{wt}{\sigma ({}^{\sigma^{-1}} w) (t)} = \frac{wt}{\sigma(wt)},$$
-the last equality coming from the fact that $w \in (N(G,T)/T)(F)$, so $w$
-is fixed by $\Gamma$.
+See \cite{adrianlansky}.
 \qed
 
 We will need the following structural result about Langlands
-parameters mapping to groups of type $L$ later.  First let $E,F,T,\hat{T}$
+parameters mapping to groups of type $L$ later.  First let $E,F,T,\hat{T}, \Gamma$
 be as above, with $E/F$ unramified.  Let $\varphi_1 : W_F \rightarrow D$
 be a Langlands parameter mapping to a group of type $L$.  $\varphi_1$
 gives rise to a character $\chi_1$ of $T(E)_{\Gamma}$.  Let $\varphi_2
-: W_F \rightarrow D$ be defined with the only condition that
+: W_F \rightarrow D$ be defined by $\varphi_2|_{I_F} \equiv \varphi_1|_{I_F}$ and
 $\varphi_2(\Phi_F) = t \varphi_1(\Phi_F)$ for some $t \in \hat{T}$.
 $\varphi_2$ gives rise to a character $\chi_2$ of $T(E)_{\Gamma}$.
 
@@ -755,72 +602,50 @@ $\chi_1$ and $\chi_2$ have the same restriction to $\HT{-1}(\Gamma, T(E))$.
 \end{lemma}
 
 \proof
-I want to explicitly describe the character $\chi$ restricted to
-$\HT{-1}(\Gamma, T(E))$ that is attached to a Langlands parameter
-$\phi$.  Here, $T$ is defined over $F$, splits over unramified $E$,
-where the degree of $E/F$ is $r$.  Let $\Gamma = \Gal(E/F)$, generated
-by an element $\sigma$.
-
-We restrict $\phi$ to $W_E$.  Then $\phi(Frob_E) = \phi(Frob_F)^r$.
-Suppose $\phi(Frob_F) = n$, where $n$ is an element of the normalizer
-of the dual torus.  Then $n^r$ is an element in the dual torus
+Let $\sigma$ be a generator of $\Gamma$.  First note that
+$\varphi_1(\Phi_E) = \varphi_1(\Phi_F)^r$, where $r$ is the
+order of $\Gamma$.
+Suppose $\varphi_1(\Phi_F) = n \in N_{{}^L G}(\hat{T})$.
+Note that $n^r$ is an element in the dual torus
 $\hat{T}$.
 
-What is $\chi$ restricted to $\HT{-1}(\Gamma, T(E))$?  Well, by
-stuff that Gordan and I did, and stuff that you have probably done as
-well, we know that $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
-since $E/F$ is unramified.  This latter group is some quotient of
-$\ker(\Nm : X_*(T) \rightarrow X_*(T))$.
+By Corollary \ref{reductiontori}, we know that
+$\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
+since $E/F$ is unramified.  Moreover,
+$\HT{-1}(\Gamma, X_*(T)) = \ker(\Nm : X_*(T) \rightarrow X_*(T)) / I_{\Gamma}(T(E))$.
 
-Let's describe $\chi$ on $\HT{-1}$.  Well, let
-$\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us think of
-$\lambda$ as living in $X^*(\hat{T})$ instead.
-
-Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
-$z \in \mathbb{C}^\times$.  What is $\chi(\lambda)$?  Most likely it is
-just $z^{<\mu, \lambda>}$ (where $< , >$ denotes the canonical pairing
+Let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Note that
+$\lambda \in X^*(\hat{T})$.
+Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$,
+$z \in \mathbb{C}^\times$.  Then $\chi_1(\lambda) = z^{<\mu, \lambda>}$
+(where $< , >$ denotes the canonical pairing
 on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
 
-Now let's modify our Langlands parameter.  Suppose
-$\phi'(Frob_F) = tn$, for some element $t \in \hat{T}$, and suppose
-$\phi'$ has the same restriction to inertia as $\phi$.  Then we get an
-associated $\chi'$.  What is $\chi'$ restricted to
-$\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$?
-
-Well, let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Let us
-think of $\lambda$ as living in $X^*(\hat{T})$ instead.  We need to
-compute $(tn)^r$.  This is $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r$.
-
-But $t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} = t w(t) w^2(t) \cdots w^{r-1}(t)$,
+We now note that
+$$(tn)^r = t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r = t w(t) w^2(t) \cdots w^{r-1}(t),$$
 where $w$ is the Weyl group element associated to $n$.  If we write
-$t = \mu' \otimes z'$, then $t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z'$,
-since $w$ acts as Galois on the character lattices, and since Galois
-acts holomorphically on the dual group rather than antiholomorphically
-(i.e. Galois acts trivially on $\mathbb{C}^\times$).  But now one checks:
-We have $\chi'(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$.  But
-
+$t = \mu' \otimes z'$, then $$t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z',$$
+But now one checks:
+We have $\chi_2(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$, and
 $$<\Nm(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
   = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
-
 Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> =
 <\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum
 becomes
 $$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
-
-But $\lambda$ is assumed to be in the kernel of the norm map!  So we
-get $<\mu', \Nm(\lambda)> = <\mu', 0> = 0$.  So
-$\chi'(\lambda) = z^{<\mu, \lambda>} = \chi(\lambda)$.  Done.
+But $\lambda \in \ker(\Nm : X^*(\hat{T}) \rightarrow X^*(\hat{T}))$, so
+$<\mu', \Nm(\lambda)> = 0$.  Therefore, $\chi_2(\lambda) =
+z^{<\mu, \lambda>} = \chi_1(\lambda)$.
 \qed
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
 
-We consider here a TRSELP $\phi$ for any unramified connected
+We consider here an RSELP $\phi$ for any unramified connected
 reductive group G.  Let $T$ be as in \S\ref{groupsoftypeL}.  Let $E$,
 $\chi$, etc.~be as in~\S\ref{groupsoftypeL}.  Let $w$ be the Weyl
 group element associated to $\phi$, and set $\sigma = w \theta\in {\rm Aut}(T)$.
 Let $\chi_{\phi}$ be the character of $T(F) = T^{\Phi_{\sigma}}$ that
-DeBacker and Reeder attach to $\phi$ (see section
-\ref{preliminaries}).
+DeBacker and Reeder attach to $\phi$.
 
 We have the exact sequence
 
@@ -835,16 +660,19 @@ exact sequence restricts to an exact sequence
 $$1 \rightarrow \HT{-1}(\Gamma, T(\mathcal{O}_E)) \rightarrow T(\mathcal{O}_E)_{\Gamma}
   \rightarrow T(\mathcal{O}_F) \rightarrow \HT{0}(\Gamma, T(\mathcal{O}_E)) \rightarrow 1$$
 
-Moreover, one can show using a profinite version of Lang's theorem and
-various results about tori over finite fields, that since $T$ is unramified,
+Moreover, by Lemmas \ref{H1compactpart} and \ref{H0compactpart}, we have
 $\HT{-1}(\Gamma, T(\mathcal{O}_E)) = \HT{0}(\Gamma, T(\mathcal{O}_E)) = 1$.
 Therefore, the map
 $$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(\mathcal{O}_F)$$
 is an isomorphism, and we may view
 $\chi|_{T(\mathcal{O}_E)_{\Gamma}}$ as a character of
 $T(\mathcal{O}_F)$ via this isomorphism.  Now, since $\chi$ was
-obtained from $\phi|_{W_E}$ via the local Langlands correspondence, we
-get that $\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$.
+obtained from $\phi|_{W_E}$ via the local Langlands correspondence, one can see
+from the constructions in \cite{debackerreeder} and \cite{reeder} that
+$\chi_{\phi} \circ \Nm = \chi$ on $T(\mathcal{O}_E)_{\Gamma}$ (one can see
+\cite{adrianlansky} for more details on the constructions of
+\cite{debackerreeder} and \cite{reeder} and their relationship to groups of
+type $L$).
 We have therefore proven the following lemma.
 
 \begin{lemma}\label{grossanddebackerreedercompatibility}
@@ -858,7 +686,7 @@ We have therefore proven the following lemma.
 \section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
 Recall that we have fixed a splitting $(\hat{T}, \hat{B}, \{x_{\alpha} \})$
-for the dual group $\hat{G}$ and that $\hat{\Nm} = \Nm_{\hat{G}}(\hat{T})$.
+for the dual group $\hat{G}$ and that $\hat{N} = N_{\hat{G}}(\hat{T})$.
 For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
 and $\phi_{\alpha}\mat{1}{1}{0}{1} = x_{\alpha}$. Let
@@ -884,12 +712,13 @@ Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 \end{enumerate}
 \end{theorem}
 
-Let $\phi$ be a TRSELP.  Recall that $\phi(I_F) \subset \hat{T}$ and
-$\phi(\Phi) = \hat{\theta} f$, where $f \in \hat{N}$.  Let $\hat{w}$
+Let $\phi$ be a RSELP.  Then $\phi(I_F) \subset \hat{T}$ and
+$\phi(\Phi) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}_o$, and let $w$ be the element of
 $W_o$ corresponding to $\hat{w}$.  Write $\hat{w} = s_{\alpha_1} \cdots s_{\alpha_n}$
 as a product of simple reflections, and let
-$\tilde{w} = \sigma_{\alpha_1} \cdots \sigma_{\alpha_n}$ be the
+$\tilde{w} = \sigma_{\alpha_1} \cdots \sigma_{\alpha_n}$ be the \MAxxx{the?  Is there
+a canonical lift?}
 canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{definition}
@@ -904,16 +733,16 @@ By the theory in section \ref{preliminaries}, $\phi$ and $\phi_o$ give
 rise to a character $\chi_{\phi}$ and $\chi_{\phi_o}$ of
 $T(F) = T^{\Phi_{\sigma}}$, respectively.  By the theory in section
 \ref{groupsoftypeL}, $\phi$ and $\phi_o$ gives rise to characters
-$\chi$ and $\chi_o$ of $T(E)_{\Gamma}$, respectively.
+$\xi_{\phi}$ and $\xi_{\phi_o}$ of $T(E)_{\Gamma}$, respectively.
 
 \begin{proposition}
-If $G$ is semisimple, then $\chi \otimes \chi_o^{-1} = \chi_{\phi}$.
+If $G$ is semisimple, then $\xi_{\phi} \otimes \xi_{\phi_o}^{-1} = \chi_{\phi}$.
 \end{proposition}
 
 \proof
 Since $G$ is semisimple, $T(F)$ is compact.  In particular,
-$\HT{0}(\Gamma, T(E)) = 0$, so we have the following exact
-sequence:
+$\HT{0}(\Gamma, T(E)) = 0$ by Corollary \ref{trivialh0compacttori},
+so we have the following exact sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
 Note that $T(F) = T(\mathcal{O}_F)$, and so in particular
 $T(\mathcal{O}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
@@ -921,31 +750,26 @@ $\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
 gives us that $\HT{-1}(\Gamma,T(E))$ and
 $T(\mathcal{O}_E)_{\Gamma}$ together generate $T(E)_{\Gamma}$.
 
-Since $\phi_o|_{I_F} \equiv 1$, $\chi_o$ is trivial on
+Since $\phi_o|_{I_F} \equiv 1$, $\xi_{\phi_o}$ is trivial on
 $T(\mathcal{O}_E)_{\Gamma}$.  By lemma
 \ref{grossanddebackerreedercompatibility}, we have that
-$(\chi \otimes \chi_o^{-1})|_{T(\mathcal{O}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mathcal{O}_F)}$.
-Therefore, $\chi \otimes \chi_o^{-1}$ is correct on
+$(\xi_{\phi} \otimes \xi_{\phi_o}^{-1})|_{T(\mathcal{O}_E)_{\Gamma}} = \chi_{\phi}|_{T(\mathcal{O}_F)}$.
+Therefore, $\xi_{\phi} \otimes \xi_{\phi_o}^{-1}$ is correct on
 $T(\mathcal{O}_E)_{\Gamma}$.  Moreover, by Lemma
-\ref{toralmodification}, we also have that $\chi$ and $\chi_o$ have
+\ref{toralmodification}, we also have that $\xi_{\phi}$ and $\xi_{\phi_o}$ have
 the same restriction to $\HT{-1}(\Gamma, T(E))$.  Therefore,
-$\chi \otimes \chi_o^{-1}$ is a character of $T(F)$.  Since
-$\chi \otimes \chi_o^{-1}$ is correct on $T(\mathcal{O}_E)_{\Gamma}$, and
+$\xi_{\phi} \otimes \xi_{\phi_o}^{-1}$ is a character of $T(F)$.  Since
+$\xi_{\phi} \otimes \xi_{\phi_o}^{-1}$ is correct on $T(\mathcal{O}_E)_{\Gamma}$, and
 since $T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(F)$ is surjective,
-we are done.  (Do we need at some point that
-$\HT{-1}(\Gamma, T(E)) \bigcap T(\mathcal{O}_E)_{\Gamma} = 1$?
-It's true, because otherwise, there would be a nontrivial element in
-$T(\mathcal{O}_E)_{\Gamma}$ that mapped to the trivial element in
-$T(F)$ via the norm map.  But this can't be, because
-$T(\mathcal{O}_E)_{\Gamma}$ is isomorphic to $T(\mathcal{O}_F)$ via
-the norm map.)
+we are done.
 \qed
 
 In the case that $G$ is semisimple, there was nothing special about
-$\phi_o$.  In fact, by the same arguments, the rectifier is obtained
-from any Langlands parameter $\phi'$ such that $\phi'|_{I_F} \equiv 1$
+$\phi_o$.  In fact, by the same arguments, $\xi_{\phi_o} = \xi_{\phi'}$
+for any Langlands parameter $\phi'$ such that $\phi'|_{I_F} \equiv 1$
 and $\phi'(\Phi) = w'$, where $w'$ was any lift of $\hat{w}$ to $N$.
-However, we will see that the Tits group lift is forced on us when we
+However, we will see that the \MAxxx{the Tits group lift or a Tits group
+ lift?} Tits group lift is forced on us when we
 consider groups that are not necessarily semisimple, such as $GL(n,F)$.
 
 \section{Rectifiers for $GL(n,F)$}\label{GL(n)}
@@ -955,15 +779,21 @@ setting (see \cite{bushnellhenniart}).
 
 \begin{lemma}
   Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is
-  unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.  Let
-  ${}_F \nu_{\xi}$ be the associated rectifier, as defined in
-  \cite{bushnellhenniart}.  Then ${}_F \nu_{\xi}$ is unramified and
-  ${}_F \nu_{\xi}(\varpi) = (-1)^{n-1}$.
+  unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.
+  Then ${}_F \mu_{\xi}$ is unramified and
+  ${}_F \mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{lemma}
 
 \proof
 See \cite[Proposition 21]{bushnellhenniart}.
 \qed
+
+\begin{proposition}
+Let $\hat{w} = s_{\alpha_1} s_{\alpha_2} \cdots s_{\alpha_n}$ where
+$s_{\alpha_i}$ are the simple reflections of $GL(n,\mathbb{C})$,
+for $i = 1, 2, \cdots, n$.  Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
+denotes the identity element in $GL(n,\mathbb{C})$.
+\end{proposition}
 
 \MAxxx{In this section somewhere, should we calculate $\HT{0}$ and
   $\HT{-1}$ for unramified tori of $GL(n)$? We have done this
@@ -981,6 +811,10 @@ See \cite[Proposition 21]{bushnellhenniart}.
   Moshe Adrian
   \emph{On the Local Langlands Correspondences of DeBacker/Reeder and Reeder for $GL(\ell,F)$, where $\ell$ is prime}, Pacific Journal of Mathematics 255-2 (2012), 257--280.
 
+\bibitem{adrianlansky}
+  Moshe Adrian and Joshua Lansky,
+  \emph{An Interpretation of the Tame Local Langlands Correspondence for $p$-adic $PGSp(4)$ from the Perspective of Real Groups}, preprint, arXiv:1209.6045.
+
 \bibitem{amano}
   Kazuo Amano,
   \emph{A note on the Galois cohomology groups of algebraic tori}, Nagoya Math. J. Volume 34 (1969), 121-127.
@@ -997,6 +831,10 @@ See \cite[Proposition 21]{bushnellhenniart}.
 \bibitem{geo}
   Geo Kam-Fai Tam,
   \emph{Transfer relations in essentially tame local Langlands correspondence}, Ph.D. thesis, University of Toronto, 2012.
+
+\bibitem{grossreeder}
+  B. Gross and M. Reeder,
+  \emph{Arithmetic invariants of discrete Langlands parameters.}  Duke Math. Journal, 154, (2010), 431-508.
 
 \bibitem{howe}
   Roger Howe,
@@ -1016,9 +854,13 @@ See \cite[Proposition 21]{bushnellhenniart}.
   \emph{Supercuspidal $L$-packets of positive depth and twisted Coxeter elements},
   J. Reine Angew. Math. 620 (2008), 1-33.
 
-\bibitem{serre1}
+\bibitem{serre}
   Jean-Pierre Serre,
   \emph{Local Fields}, Graduate Texts in Mathematics, 67. Springer-Verlag, New York-Berlin, 1979.
+
+\bibitem{tits}
+  Jacques Tits,
+  \emph{Normalisateurs de tores. I. Groupes de Coxeter etendus}, J. Algebra, 4:96-116,1966.
 
 \end{thebibliography}
 
