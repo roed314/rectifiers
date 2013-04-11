@@ -32,9 +32,17 @@
 \DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\Nm}{Nm}
 \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Res}{Res}
 
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\OK}{\mathcal{O}_K}
+\newcommand{\OKn}{\mathcal{O}_{K_n}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\Gm}{\mathbb{G}_m}
 
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
@@ -361,12 +369,12 @@ $$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \map
 
 \section{Galois cohomology over finite fields}
 
-The following theorem, due to Lang \ref{lang}, underpins the facts in
+The following theorem, due to Lang \cite{lang}, underpins the facts in
 Section \ref{padic tori} on tori over $p$-adic fields.
 Let $\mathbb{G}$ be a commutative connected algebraic group over a
 finite field $k$, and suppose $G$ splits over $k_n$.
 
-\begin{theorem}
+\begin{theorem} \label{langs thm}
 $\HT{i}(\Gamma_n, G(k_n)) = 0$ for all $i$.
 \end{theorem}
 \begin{proof}
@@ -376,150 +384,88 @@ so it suffices to prove the result for $i=1$ and $i=2$, which is done
 in \ref[\SS VI.6]{serre2}.
 \end{proof}
 
-\section{Unramified Tori over p-adic fields}
+\section{Tori over $p$-adic fields} \label{padic tori}
 
-Let $T$ be a torus defined over $K$ that splits over an unramified
-extension $L/K$ of degree $n$, set $G = \Gal(L/K)$, and let $g$ be a
-generator of $G$.  Recall that, since $G$ is cyclic,
-$\HT{i}(G,A)\cong \HT{i+2}(G,A)$ for all $i$, and all
-$G$-modules $A$.  Let $X_*(T)$ denote the cocharacter lattice of $T$ and
-$X^*(T)$ denote the character lattice of $T$.  As in \cite[Section 3]{moyprasad1},
-we define $T_0$ to be the maximal bounded subgroup of
-$T(K^u)$, and
-$$T_r = \{t \in T_0 : \val(\chi(t) - 1) \geq r \mbox{ for } \chi \in X^*(T) \}$$
-for any natural number $r$.  We may
-furthermore define $T_r^L = T_r \cap T(L)$ for any field $L$ such
-that $K \subset L \subset K^u$.  We wish to compute $\HT{i}(G, T(L))$.
-We use the filtration $T_r^L$ on $T(L)$ in the following way.
+Let $T$ be a torus defined over $K$.  $T$ will split over an extension
+$L$ of $K$ if and only if $\Gal(\bar{K}/L)$ acts trivially on $X^*(T)$.
+We may thus define \emph{the} splitting field $L$ of $T$ as the
+minimal extension of $K$ splitting $T$; note that $L$ is necessarily
+Galois over $K$.  Let $K_n$ be the maximal unramified subextension
+of $L/K$, and set $I = \Gal(L/K_n)$.
 
-It is clear that $\Nm_{L/K}$ maps $T_r^L$ into $T_r^K$ for all $r \geq 0$.
-Therefore, we get an induced map
-$$\Nm_{L/K} : T_s^L / T_{r}^L \rightarrow T_s^K / T_{r}^K$$
-for all $r > s \geq 0$.
+Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
+over $\OK$ \cite[Ch. 10]{blr}.  As a consequence of the N\'eron mapping
+property, we may identify $\TT(\OK)$ with $T(K)$.  The connected
+component of the identity, $\TT^\circ$, cuts out a subgroup
+$T(K)_0 = \TT^\circ(\OK)$ of $T(K)$; we also write $T(K_n)_0$ for
+$\TT^\circ(\OKn)$.
 
-\begin{lemma}\label{H1compactpart}
-$\HT{1}(G, T_{s}^L) = 0$ for $s \geq 0$.
-\end{lemma}
+In fact, this subgroup of $T(K)$ is the first in a decreasing filtration.
+Moy and Prasad \cite{moy-prasad1} define one such filtration by
+embedding $T$ into an induced torus and defining the filtration of
+$\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu}
+describes a different filtration, agreeing with that of Moy and Prasad
+in the case of tame tori but with nicer features in the presence of wild
+ramification.  Let $\TT_r$ be the integral model of $T$ defined in Yu's
+minimal congruent filtration, and let $\{T(K)_r\}_{r \ge 0}$ and
+$\{T(K_n)_{r \ge 0}$ be the corresponding filtrations of $T(K)$ and
+$T(K_n)$.
 
-\proof
-We prove the case $s = 0$, as the other cases are similar.  Recall
-that $T_0^L = \underleftarrow{\mathrm{lim}} \ T_0^L / T_{r+1}^L$.  We
-need the following Lemma:
+Let $C$ be the scheme of
+connected components of $\TT$, which we may identify with the
+components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
+is connected.  The structure of $C$ is described by Xarles:
 
-\begin{lemma}\label{abstractcohomology}
-  Let $M$ be a $G$-module complete with respect to a topology given by
-  a sequence of $G$-invariant subgroups $M = M_0 \supset M_1 \supset
-  M_2 \supset ...$, so $\cap M_i = 0$.  Thus,
-  $M = \underleftarrow{\mathrm{lim}} \ M / M_i$.
-  If $\HH^1(G, M_i / M_{i+1}) = 0$ for $i \geq 0$,
-  then $\HH^1(G, M_i) = 0$ for $i \geq 0$.
-\end{lemma}
+\begin{proposition}[{\cite[Cor. 2.12]{xarles}}]
+There is an exact sequence of $\Gamma_n$-modules
+$$0 \rightarrow \Hom_{\ZZ}(\HH^1(I, X^*(T)), \QQ/\ZZ) \rightarrow
+C \rightarrow \Hom_{\ZZ}(X^*(T)^I, \ZZ) \rightarrow 0.$$
+\end{proposition}
 
-\proof
-
-We do the case $j = 0$.  The argument for $j \geq 1$ is similar.  Let
-$f : G \rightarrow M$ be an element in $\HH^1(G,M)$.  We have a natural
-map $\HH^1(G, M ) \rightarrow \HH^1(G, M / M_1) = 0$.  Thus, there exists
-$m_0 \in M$ such that $f(\sigma) = (\sigma(m_0) - m_0) (\mathrm{mod} \
-M_1)$.  Then define $f_1 = f - (\sigma(m_0) - m_0)$.  This is in
-$\HH^1(G, M_1)$. But then again we have the natural map
-$\HH^1(G, M_1) \rightarrow \HH^1(G, M_1 / M_2) = 0$.  Thus, again, there
-exists $m_1 \in M_1$ such that $f_1(\sigma) = (\sigma(m_1) - m_1) (\mathrm{mod} \ M_2)$.
-So define $f_2 = f - (\sigma(m) - m) - (\sigma(m_1) - m_1)$.  Continue
-this process indefinitely.  Then define
-$\tilde{m} = (m_0, m_0 + m_1, m_0 + m_1 + m_2, m_0 + m_1 + m_2
-+ m_3, \ldots) \in \underleftarrow{\mathrm{lim}} \ M / M_i = M$.  Then,
-$f(\sigma) = \sigma(\tilde{m}) - \tilde{m}$, so we get finally that
-$\HH^1(G,M) = 0$.  \qed
-
-Let $r \geq 1$.  Note that $T_r^L / T_{r+1}^L = X_*(T) \otimes (1 +
-\mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) = X_*(T) \otimes
-k_n$.  Well, $X_*(T) \otimes k_n$ is a vector space
-over $k$.  But it is known that all forms of vector spaces
-are equivalent.  Therefore, the vector space $X_*(T) \otimes
-k_n$ with the above Galois action is equivalent to $X_*(T)
-\otimes k_n$ with the standard action, i.e. $g \in G$ acts
-on $x \otimes z$ by $x \otimes gz$.  Thus, we wish to calculate
-$\HT{1}(G, X_*(T) \otimes k_n)$ where $X_*(T) \otimes
-k_n$ is given the standard action.  Since $X_*(T) \otimes
-k_n$ is just a direct sum of copies of $k_n$, we
-are reduced to calculating $\HT{1}(G, k_n)$.  But since
-the trace map over finite fields is surjective, we get that
-$\HT{0}(G, k_n) = 0$.  Therefore, since the Herbrand
-quotient of a finite group is trivial, we get that $\HT{1}(G,
-k_n) = 0$.  Finally, $\HT{1}(G, T_0^L / T_1^L) = 0$ by
-Lang's theorem since $T_0^L / T_1^L$ is a connected algebraic group
-over a finite field.  By Lemma \ref{abstractcohomology}, we have
-concluded the proof of Lemma \ref{H1compactpart}.  \qed
-
-\begin{lemma}\label{H0compactpart}
-$\HT{0}(G,T_0^L) = 0$.
-\end{lemma}
-
-\proof
-We claim that the natural maps
-$$\Nm_{L/K} : T_r^L / T_{r+1}^L \rightarrow T_r^K / T_{r+1}^K$$
-
-are surjective for $r \geq 0$.  First let $r \geq 1$.  First note that
-$T_0^L = X_*(T) \otimes \mathcal{O}_L^\times$ and
-$T_r^L = X_*(T) \otimes (1 + \mathfrak{p}_L^r)$ for $r \geq 1$.  Then
-$$\Nm_{L/K} : T_r^L / T_{r+1}^L \rightarrow T_r^K / T_{r+1}^K$$
-becomes
-$$\Nm_{L/K} : X_*(T) \otimes \left( (1 + \mathfrak{p}_L^r) / (1 +
-  \mathfrak{p}_L^{r+1}) \right) \rightarrow (X_*(T) \otimes \left( (1 +
-  \mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) \right) )^G$$
-since $T_r^K / T_{r+1}^K = T_r^G / T_{r+1}^G = (T_r / T_{r+1})^G$ since
-$\HH^1(G, T_{r+1}) = 0$ by Lemma \ref{H1compactpart}.  But
-$(1 + \mathfrak{p}_L^r) / (1 + \mathfrak{p}_L^{r+1}) \cong \mathcal{O}_L / \mathfrak{p}_L \cong k_n$.
-Thus, we get
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow (X_*(T) \otimes k_n)^G$$
-
-Well, $X_*(T) \otimes k_n$ is a vector space over
-$k$.  But it is known that all forms of vector spaces are
-equivalent.  Therefore, the vector space $X_*(T) \otimes k_n$
-with the above Galois action is equivalent to $X_*(T) \otimes k_n$
-with the standard action, i.e. $g \in G$ acts on $x \otimes z$ by
-$x \otimes gz$.  Therefore,
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow (X_*(T) \otimes k_n)^G$$
-becomes
-$$\Nm_{L/K} : X_*(T) \otimes k_n \rightarrow X_*(T) \otimes k,$$
-which is surjective since the trace map $k_n \rightarrow k$
-is surjective.  Now let $r = 0$.  We wish to show that
-$$\Nm_{L/K} : T_0^L / T_1^L \rightarrow T_0^K / T_1^K$$
-is surjective.  But this map becomes
-$$\Nm_{L/K} : X_*(T) \otimes \left( \mathcal{O}_L^\times / (1 + \mathfrak{p}_L) \right) \rightarrow (X_*(T) \otimes \left( \mathcal{O}_L^\times / (1 + \mathfrak{p}_L) \right) )^G$$
-which is just
-$$\Nm_{L/K} : \mathbb{T}(k_n) \rightarrow \mathbb{T}(k).$$
-This last map is surjective by Lemma \ref{normtorifinitefields}.
-Finally, by \cite[Lemma 2, p. 81]{serre}, we have our result.
-\qed
-
-\begin{corollary}\label{reductiontori}
-$\HT{i}(G, X_*(T) \otimes L^\times) = \HT{i}(G, T(L)) = \HT{i}(G,X_*(T))$ for $i=0,1$.
+\begin{corollary}[{\cite[Thm. 1.1]{xarles}}] \label{unram comps}
+If $T$ is unramified, then $C \cong X_*(T)$.
 \end{corollary}
 
-\proof
+Using our filtration of $T(K_n)$, we may relate the cohomology of $T(K_n)$
+with that of $C$.
 
-Recall that $X_*(T) \otimes L^\times \xrightarrow{\sim} T(L)$ given by
-evaluation, restricting to an isomorphism $X_*(T) \otimes \mathcal{O}_L^\times
-\xrightarrow{\sim} T_0^L$.  We may thus identify $X_*(T)$ with the quotient
-$T(L) / T_0^L$, giving rise to the short exact sequence
-$$1 \rightarrow T_0^L \rightarrow T(L) \rightarrow X_*(T) \rightarrow 1.$$
-We therefore have the long exact sequence
-$$... \rightarrow \HT{0}(G, T_0^L) \rightarrow \HT{0}(G, T(L)) \rightarrow \HT{0}(G, X_*(T))
-\rightarrow \HT{1}(G, T_0^L) \rightarrow $$ $$\HT{1}(G, T(L))
-\rightarrow \HT{1}(G, X_*(T)) \rightarrow \HT{0}(G, T_0^L)
-\rightarrow ...$$
-By corollary \ref{H0compactpart} and Lemma \ref{H1compactpart}, we get the result.
-\qed
+\begin{proposition}
+$\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
+\end{proposition}
+\begin{proof}
+Note that
+$$T(K_n)_0 = \lim_{\leftarrow r} T(K_n)_0 / T(K_n)_r.$$
+So by a result of Serre \cite[Lem. 3]{serre1}, it suffices to prove that
+$\HT{i}(\Gamma_n, T(K_n)_r / T(K_n)_{r+}) = 0$ for all $i$.  But $T(K_n)_r / T(K_n)_{r+}$
+is connected \cite[Prop. 5.2]{yu} and thus has trivial cohomology by
+Theorem \ref{langs thm}.
+\end{proof}
 
-\begin{corollary}\label{trivialh0compacttori}
-If $T(K)$ is compact, we have $\HT{0}(G, T(L)) = 0$.
+\begin{corollary}
+$\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, C)$.
 \end{corollary}
 
-\proof
-$T(K)$ being compact means that $X_*(T)^G = 0$, hence the result follows by corollary \ref{reductiontori}
-\qed
+\begin{proof}
+This follows from the long exact sequence in cohomology associated to the sequence
+$$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow C \rightarrow 0.$$
+\end{proof}
+
+\begin{corollary}
+If $T$ is unramified then $\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T))$
+for all $i$.
+\end{corollary}
+
+\begin{proof}
+This follows from the previous corollary together with Corollary \ref{unram comps}.
+\end{proof}
+
+\begin{corollary}
+If $T$ is unramified and anisotropic then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
+\end{corollary}
+
+\begin{proof}
+Since $T$ is anisotropic $\HH^0(\Gamma_n, T(K_n)) \cong X_*(T)^{\Gamma_n} = 0$.
+\end{proof}
 
 \section{Groups of type L}\label{groupsoftypeL}
 We now review the theory of ``groups of type L'' due to Benedict
@@ -812,6 +758,9 @@ denotes the identity element in $GL(n,\mathbb{C})$.
   Kazuo Amano,
   \emph{A note on the Galois cohomology groups of algebraic tori}, Nagoya Math. J. Volume 34 (1969), 121-127.
 
+\bibitem{blr}
+  Siegfried Bosch, Werner L\"utkebohmert, and Michel Reynaud. \emph{N\'eron Models}. Springer-Verlag, Berlin, 1980.
+
 \bibitem{bushnellhenniart}
   Colin Bushnell, Guy Henniart,
   \emph{The essentially tame local Langlands correspondence, III: the general case}, Proc. Lond. Math. Soc. (3) 101 (2010), no. 2, 497â€“553.
@@ -865,6 +814,13 @@ denotes the identity element in $GL(n,\mathbb{C})$.
 \bibitem{tits}
   Jacques Tits,
   \emph{Normalisateurs de tores. I. Groupes de Coxeter etendus}, J. Algebra, 4:96-116,1966.
+
+\bibitem{xarles}
+  Xavier Xarles, \emph{The scheme of connected components of the NŽron model of an algebraic torus},
+  Journal fŸr die reine und angewandte Mathematik 437 (1993): 167-180.
+
+\bibitem{yu}
+  Jiu-Kang Yu, \emph{Smooth models associated to concave functions in Bruhat-Tits theory}. Preprint, 2003.
 
 \end{thebibliography}
 
