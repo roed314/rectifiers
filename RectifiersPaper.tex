@@ -230,15 +230,23 @@ we should probably think about this type of thing...}
 
 \end{definition}
 
-Note that
-
 \begin{conjecture}
   Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
   admits a unique rectifier ${}_F \boldsymbol\mu : (T, \xi) \mapsto
   {}_F \mu_{\xi}$.
 \end{conjecture}
 
-As the local Langlands correspondence is not known in general, we must restrict
+We first note that the definition of admissible pair above generalizes 
+the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
+if $G = GL(n)$, and $T$ is an elliptic torus in $G$ splitting over
+an unramified extension $E/F$, then one can show that
+$(N(G,T)/T)(F) = Gal(E/F)$.  Thus, for $\xi$ to not be fixed by any
+element of $(N(G,T)/T)(F)$ is equivalent to $\xi$ not being fixed by
+any subgroup of $Gal(E/F)$.  This can be seen to be equivalent to $\xi$
+not coming from the norms $N_{E/L}$ for any proper subfield $L$ contained
+in $E$, containing $F$.
+
+We next note that as the local Langlands correspondence is not known in general, we must restrict
 ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
@@ -721,7 +729,7 @@ consider groups that are not necessarily semisimple, such as $GL(n,F)$.
 We first recall the structure of the rectifiers for $GL(n,F)$ in our
 setting (see \cite{bushnellhenniart}).
 
-\begin{lemma}
+\begin{lemma}\label{rectifierofbushnellhenniart}
   Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is
   unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.
   Then ${}_F \mu_{\xi}$ is unramified and
@@ -757,7 +765,7 @@ one space.  Thus $\ker(\Nm) \subset I_{\Gamma}(X_*(T))$.
 
 The Tate cohomology exact sequence therefore reduces to
 $$1 \rightarrow T(E)_{\Gamma} \xrightarrow{\sim} T(F) \rightarrow 1$$
-\begin{proposition}
+\begin{proposition}\label{powersoflifts}
 Let $\hat{w} = s_{\alpha_1} s_{\alpha_2} \cdots s_{\alpha_n}$ where
 $s_{\alpha_i}$ are the simple reflections of $GL(n,\mathbb{C})$,
 for $i = 1, 2, \cdots, n$.  Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
@@ -771,9 +779,44 @@ See \cite[\S3.1]{zaremsky}.
 Since $\Phi_E = \Phi_F^n$ and $\Phi_E$ corresponds to $\varpi_E$ under local
 class field theory, we obtain
 
-\begin{corollary}
+\begin{corollary}\label{agreemenetofrectifiers}
 $\xi_{\phi_o} = {}_F \mu_{\xi}$.
 \end{corollary}
+
+\proof
+Note that $T(E) = E^{\times} \times E^{\times} \times \cdots \times E^{\times}$, and
+that $T(F) = (w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w))$, where 
+$Gal(E/F) = \langle \sigma \rangle$.  A uniformizer $\varpi_E$ in $E^{\times}$ 
+therefore corresponds to $(\varpi_E, \varpi_E, \cdots, \varpi_E) \in T(F)$, whose 
+preimage under $\Nm$ is the class of $(\varpi_E, 1, 1, \cdots, 1) \in T(E)_{\Gamma}$.
+The local Langlands correpondence for tori says now that 
+$\xi_{\phi_o}(\varpi_E) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
+\qed
+
+We end this section by explaining why the Tits group lift of $w$ is forced upon us.
+We may look no further than $G = GL(2)$.  Suppose we define
+$\phi_o' : W_F \rightarrow GL(2,\mathbb{C})$ by $\phi_o'|_{I_F} \equiv 1$ and
+
+\[
+\phi_o'(\Phi_F) = \left( \begin{array}{cc}
+0 & a\\
+b & 0
+\end{array} \right)
+\]
+
+We may conjugate $\phi_o'$ so that
+
+\[
+\phi_o'(\Phi_F) = \left( \begin{array}{cc}
+0 & 1\\
+b & 0
+\end{array} \right)
+\]
+
+for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments 
+as in Corollary \ref{agreementofrectifiers}
+$\xi_{\phi_o'}(\varpi_E) = b$.  By Lemma \ref{rectifierofbushnellhenniart}, we are 
+forced to have $b = -1$.
 
 \begin{thebibliography}{9}
 
