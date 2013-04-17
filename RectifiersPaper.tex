@@ -176,27 +176,7 @@ to define a notion of isomorphic admissible pairs?  Also, should we
 denote by $P_G(F)$ the set of isomorphism classes of admissible pairs?  This
 would be in analogy with Bushnell/Henniart's notation $P_n(F)$ for admissible
 pairs for elliptic tori in $GL(n,F)$.}
-\end{definition}\MAxxx{This definition doesn't seem to be quite right.  I think.
-Because the first condition of admissible pair for $GL(n)$ is ``$\chi$ does not
-come from the norm for a proper subfield $L$ of $E$ containing $F$, where
-$(E/F, \chi)$ is the pair in question.'' If this condition was $\chi$ does not
-come from the norm for $E/F$, then this is equivalent to $\chi$ is not fixed by
-$Gal(E/F)$, which seems to be our condition...I think we might need to fix our
-definition of admissible. Maybe the new condition should be ``$\xi$ is not
-fixed by any element of $(N(G,T)/T)(L)$ for any field $L$ such that
-$F \subseteq L \subseteq E$''???  This seems reasonable.  Here is why it is
-reasonable: We want this condition to generalize the condition that $\chi$
-does not comes from the norm for a proper subfield $L$ of $E$ containing $F$.
-I am guessing that $(N(G,T)/T)(L) = Gal(E/L)$.  In this case, if $\xi$
-is not fixed by $Gal(E/L)$, I think this means that $\xi$ doesn't factor
-through the norm for $L$.  Or: it might be that $(N(G,T)/T)(L)$ is not quite
-right, because I don't even know if this group acts on $T(E)_{\Gamma}$.  Look
-at Lemma 9.1 in my paper with Lansky to get an idea for which group we should
-use if it's not $(N(G,T)/T)(L)$.  Whatever it is, it should be equal to
-$Gal(E/L)$ if $G = GL(n)$.  Maybe the correct group is
-$N(G(E),T(E))^{Gal(E/L)} / T(F)$  (see Lemma 9.1 of my paper with Lansky on
-why I would say this).}
-\MAxxx{Look at Lemma 2.2.1 of https://web.math.princeton.edu/$\sim$tkaletha/sscgln.pdf}
+\end{definition}
 
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $F$, that splits over an unramified
@@ -236,7 +216,7 @@ we should probably think about this type of thing...}
   {}_F \mu_{\xi}$.
 \end{conjecture}
 
-We first note that the definition of admissible pair above generalizes 
+We first note that the definition of admissible pair above generalizes
 the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
 if $G = GL(n)$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $E/F$, then one can show that
@@ -308,8 +288,7 @@ There exists a unique function $${}_F
   $T(\mathcal{O}_E)_{\Gamma}$)
 
 \item $\xi \cdot {}_F \mu_{\xi} \in \widehat{T(F)}$, the pair
-$(T, \xi \cdot {}_F \mu_{\xi})$ is regular \MAxxx{Need to define notion of
-regularity for characters of tori}, and
+$(T, \xi \cdot {}_F \mu_{\xi})$ is regular, and
 $\phi \mapsto L(\xi_{\phi} \cdot {}_F \mu_{\xi_{\phi}})$
   agrees with \cite{debackerreeder} and \cite{reeder}
 
@@ -332,11 +311,12 @@ $G$ be an arbitrary unramified connected reductive group.  If
 $T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
 a Langlands parameter $\phi_o :W _F \rightarrow {}^L G$ by
-sending Frobenius to a canonical \MAxxx{cCanonical?  Is the Tits group
+sending Frobenius to a canonical \MAxxx{Canonical?  Is the Tits group
 lift canonical?} lift of $w$, using the Tits group, and by setting
 $\phi_o$ to be trivial on $I_F$.
 If $G$ is semisimple,
 we will prove that the function $$(T, \xi) \mapsto \xi_{\phi_o}$$
+\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\phi_o}^{-1}$????  Since the inverse is what we twist by to get a character of $T(F)$ (see Section \ref{mainresults})}
 satisfies conditions (1)-(4), and we may therefore set
 ${}_F \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\phi_o}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
@@ -370,22 +350,24 @@ charcteristic zero, and $k$ will be its residue field.  Fix
 a uniformizer $\varpi$ of $K$.  Let $K^u$ denote the maximal
 unramified extension of $K$, and fix a valuation $\val : (K^u)^\times
 \rightarrow \mathbb{Z}$ normalized so that $\val(\varpi) = 1$.
-Write $K_n$ for the unramified extension of $K$ of degree $n$,
-and $\Gamma_n = \Gal(K_n/K) = \Gal(k_n/k)$.
+Write $K_n$ for the unramified extension of $K$ of degree $n$, $k_n$ for
+the degree $n$ extension of $k$,
+and set $\Gamma_n = \Gal(K_n/K) = \Gal(k_n/k)$.
 
 \section{Preliminaries}
 
 If $S$ is a torus that is defined over an arbitrary field $F$ and
 $E/F$ is a Galois extension, then we have the norm map
 $$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \mapsto
-\prod_{\sigma \in \Gal(E/F)} \sigma(s)$$
+\prod_{\sigma \in \Gal(E/F)} \sigma(s)$$\MAxxx{Sometimes we write $\Nm_{E/F}$, sometimes we
+write $\Nm$.  Be consistent.}
 
 \section{Galois cohomology over finite fields}
 
 The following theorem, due to Lang \cite{lang}, underpins the facts in
 Section \ref{padic tori} on tori over $p$-adic fields.
 Let $\mathbb{G}$ be a commutative connected algebraic group over a
-finite field $k$, and suppose $G$ splits over $k_n$.
+finite field $k$, and suppose $\mathbb{G}$ splits over $k_n$.
 
 \begin{theorem} \label{langs thm}
 $\HT{i}(\Gamma_n, G(k_n)) = 0$ for all $i$.
@@ -394,7 +376,7 @@ $\HT{i}(\Gamma_n, G(k_n)) = 0$ for all $i$.
 Since $\Gamma_n$ is cyclic,
 $\HT{i}(\Gamma_n, G(k_n)) \cong \HT{i+2}(\Gamma_n, G(k_n))$,
 so it suffices to prove the result for $i=1$ and $i=2$, which is done
-in \ref[\SS VI.6]{serre2}.
+in \cite[\SS VI.6]{serre2}.
 \end{proof}
 
 \section{Tori over $p$-adic fields} \label{padic tori}
@@ -414,7 +396,8 @@ $T(K)_0 = \TT^\circ(\OK)$ of $T(K)$; we also write $T(K_n)_0$ for
 $\TT^\circ(\OKn)$.
 
 In fact, this subgroup of $T(K)$ is the first in a decreasing filtration.
-Moy and Prasad \cite{moy-prasad1} define one such filtration by
+Moy and Prasad \cite{moyprasad} \MAxxx{Is this the correct reference?}
+define one such filtration by
 embedding $T$ into an induced torus and defining the filtration of
 $\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu}
 describes a different filtration, agreeing with that of Moy and Prasad
@@ -442,7 +425,7 @@ If $T$ is unramified, then $C \cong X_*(T)$.
 Using our filtration of $T(K_n)$, we may relate the cohomology of $T(K_n)$
 with that of $C$.
 
-\begin{proposition}
+\begin{proposition}\label{vanishingtateonintegralpoints}
 $\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
 \end{proposition}
 \begin{proof}
@@ -463,8 +446,8 @@ This follows from the long exact sequence in cohomology associated to the sequen
 $$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow C \rightarrow 0.$$
 \end{proof}
 
-\begin{corollary}
-If $T$ is unramified then $\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T))$
+\begin{corollary}\label{reductiontori}
+If $T$ is unramified, then $\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T))$
 for all $i$.
 \end{corollary}
 
@@ -472,8 +455,8 @@ for all $i$.
 This follows from the previous corollary together with Corollary \ref{unram comps}.
 \end{proof}
 
-\begin{corollary}
-If $T$ is unramified and anisotropic then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
+\begin{corollary}\label{vanishingH0}
+If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
 \end{corollary}
 
 \begin{proof}
@@ -527,7 +510,10 @@ We now give meaning to the definition of \emph{admissible pair} in the introduct
 \begin{lemma}\label{weylgroups}
 Let $G$ be a connected reductive $F$-group and let $T$ be a maximal
 $F$-torus of $G$.  Let $E$ be the splitting field of $T$, and set
-$\Gamma = \Gal(E/F)$.
+$\Gamma = \Gal(E/F)$.\MAxxx{Umm.....does $E/F$ need to be Galois?  I asked 
+the same question when introducing groups of type $L$ in the introduction of this paper...
+the torus $T$ in the introduction (when introducing groups of type $L$) could
+split over a non-Galois extension.}
 \begin{enumerate}
 \item $N(G(E), T(F)) / T(E) \cong (N(G,T)/T)(F)$.
 \item The standard action of $N(G(E),T(E)) / T(E)$ on $T(E)$ determines
@@ -537,16 +523,17 @@ on $T(E)$, which factor naturally to actions on $T(E)_{\Gamma}$.
 \end{lemma}
 
 \proof
-See \cite{adrianlansky}.
+See \cite[Lemma 9.1]{adrianlansky}.
 \qed
 
 We will need the following structural result about Langlands
 parameters mapping to groups of type $L$ later.  First let $E,F,T,\hat{T}, \Gamma$
 be as above, with $E/F$ unramified.  Let $\varphi_1 : W_F \rightarrow D$
-be a Langlands parameter mapping to a group of type $L$.  $\varphi_1$
+be a Langlands parameter mapping to a group of type $L$.  By the theory
+of groups of type $L$, $\varphi_1$
 gives rise to a character $\chi_1$ of $T(E)_{\Gamma}$.  Let $\varphi_2
 : W_F \rightarrow D$ be defined by $\varphi_2|_{I_F} \equiv \varphi_1|_{I_F}$ and
-$\varphi_2(\Phi_F) = t \varphi_1(\Phi_F)$ for some $t \in \hat{T}$.
+$\varphi_2(\Phi_F) = t \varphi_1(\Phi_F)$ for some $t \in \hat{T}$.  Then likewise
 $\varphi_2$ gives rise to a character $\chi_2$ of $T(E)_{\Gamma}$.
 
 \begin{lemma}\label{toralmodification}
@@ -557,14 +544,13 @@ $\chi_1$ and $\chi_2$ have the same restriction to $\HT{-1}(\Gamma, T(E))$.
 Let $\sigma$ be a generator of $\Gamma$.  First note that
 $\varphi_1(\Phi_E) = \varphi_1(\Phi_F)^r$, where $r$ is the
 order of $\Gamma$.
-Suppose $\varphi_1(\Phi_F) = n \in N_{{}^L G}(\hat{T})$.
-Note that $n^r$ is an element in the dual torus
-$\hat{T}$.
+Set $n = \varphi_1(\Phi_F)$.
+Note that $n^r \in \hat{T}$.
 
 By Corollary \ref{reductiontori}, we know that
 $\HT{-1}(\Gamma, T(E)) = \HT{-1}(\Gamma, X_*(T))$,
-since $E/F$ is unramified.  Moreover,
-$\HT{-1}(\Gamma, X_*(T)) = \ker(\Nm : X_*(T) \rightarrow X_*(T)) / I_{\Gamma}(T(E))$.
+since $E/F$ is unramified.  Recall that
+$\HT{-1}(\Gamma, X_*(T)) = \ker(\Nm : X_*(T) \rightarrow X_*(T)) / I_{\Gamma}(X_*(T))$.
 
 Let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Note that
 $\lambda \in X^*(\hat{T})$.
@@ -575,19 +561,17 @@ on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
 
 We now note that
 $$(tn)^r = t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r = t w(t) w^2(t) \cdots w^{r-1}(t),$$
-where $w$ is the Weyl group element associated to $n$.  If we write
-$t = \mu' \otimes z'$, then $$t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z',$$
-But now one checks:
-We have $\chi_2(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$, and
-$$<\Nm(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
-  = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
-Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> =
-<\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum
-becomes
-$$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
+where $w$ is the class of $n$ in the Weyl group of $\hat{T}$.  If we write
+$t = \mu' \otimes z'$ for $\mu' \in X_*(\hat{T}), z' \in \mathbb{C}^{\times}$, 
+then $$t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z'.$$
+But now one see that $\chi_2(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$, 
+and
+$$<\Nm(\mu'), \lambda> = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >.$$
+Since $< , >$ is Galois equivariant, 
+$$\displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda > = 
+\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
 But $\lambda \in \ker(\Nm : X^*(\hat{T}) \rightarrow X^*(\hat{T}))$, so
-$<\mu', \Nm(\lambda)> = 0$.  Therefore, $\chi_2(\lambda) =
-z^{<\mu, \lambda>} = \chi_1(\lambda)$.
+$\chi_2(\lambda) = z^{<\mu, \lambda>} = \chi_1(\lambda)$.
 \qed
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
@@ -612,7 +596,7 @@ exact sequence restricts to an exact sequence
 $$1 \rightarrow \HT{-1}(\Gamma, T(\mathcal{O}_E)) \rightarrow T(\mathcal{O}_E)_{\Gamma}
   \rightarrow T(\mathcal{O}_F) \rightarrow \HT{0}(\Gamma, T(\mathcal{O}_E)) \rightarrow 1$$
 
-Moreover, by Lemmas \ref{H1compactpart} and \ref{H0compactpart}, we have
+Moreover, by Proposition \ref{vanishingtateonintegralpoints}, we have
 $\HT{-1}(\Gamma, T(\mathcal{O}_E)) = \HT{0}(\Gamma, T(\mathcal{O}_E)) = 1$.
 Therefore, the map
 $$T(\mathcal{O}_E)_{\Gamma} \xrightarrow{\Nm} T(\mathcal{O}_F)$$
@@ -681,7 +665,7 @@ Given $\phi$, we define a homomorphism $\phi_o : W_F \rightarrow {}^L G$ by
 \end{enumerate}
 \end{definition}
 
-By the theory in section \ref{preliminaries}, $\phi$ and $\phi_o$ give
+By the theory in \cite{debackerreeder}, $\phi$ and $\phi_o$ give
 rise to a character $\chi_{\phi}$ and $\chi_{\phi_o}$ of
 $T(F) = T^{\Phi_{\sigma}}$, respectively.  By the theory in section
 \ref{groupsoftypeL}, $\phi$ and $\phi_o$ gives rise to characters
@@ -693,9 +677,9 @@ If $G$ is semisimple, then $\xi_{\phi} \otimes \xi_{\phi_o}^{-1} = \chi_{\phi}$.
 
 \proof
 Since $G$ is semisimple, $T(F)$ is compact.  In particular,
-$\HT{0}(\Gamma, T(E)) = 0$ by Corollary \ref{trivialh0compacttori},
+$\HT{0}(\Gamma, T(E)) = 0$ by Corollary \ref{vanishingH0},
 so we have the following exact sequence:
-$$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1$$
+$$1 \rightarrow \HT{-1}(\Gamma, T(E)) \rightarrow T(E)_{\Gamma} \rightarrow T(F) \rightarrow 1.$$
 Note that $T(F) = T(\mathcal{O}_F)$, and so in particular
 $T(\mathcal{O}_E)_{\Gamma}$ surjects onto $T(F)$ via the norm map
 $\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(E)) \neq 0$,
@@ -729,12 +713,12 @@ consider groups that are not necessarily semisimple, such as $GL(n,F)$.
 We first recall the structure of the rectifiers for $GL(n,F)$ in our
 setting (see \cite{bushnellhenniart}).
 
-\begin{lemma}\label{rectifierofbushnellhenniart}
+\begin{proposition}\label{rectifierofbushnellhenniart}
   Suppose that $(E/F, \xi)$ is an admissible pair such that $E/F$ is
   unramified of degree $n$ and $\xi|_{\mathcal{O}_E} \equiv 1$.
   Then ${}_F \mu_{\xi}$ is unramified and
   ${}_F \mu_{\xi}(\varpi_E) = (-1)^{n-1}$.
-\end{lemma}
+\end{proposition}
 
 \proof
 See \cite[Proposition 21]{bushnellhenniart}.
@@ -785,11 +769,11 @@ $\xi_{\phi_o} = {}_F \mu_{\xi}$.
 
 \proof
 Note that $T(E) = E^{\times} \times E^{\times} \times \cdots \times E^{\times}$, and
-that $T(F) = (w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w))$, where 
-$Gal(E/F) = \langle \sigma \rangle$.  A uniformizer $\varpi_E$ in $E^{\times}$ 
-therefore corresponds to $(\varpi_E, \varpi_E, \cdots, \varpi_E) \in T(F)$, whose 
+that $T(F) = (w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w))$, where
+$Gal(E/F) = \langle \sigma \rangle$.  A uniformizer $\varpi_E$ in $E^{\times}$
+therefore corresponds to $(\varpi_E, \varpi_E, \cdots, \varpi_E) \in T(F)$, whose
 preimage under $\Nm$ is the class of $(\varpi_E, 1, 1, \cdots, 1) \in T(E)_{\Gamma}$.
-The local Langlands correpondence for tori says now that 
+The local Langlands correpondence for tori says now that
 $\xi_{\phi_o}(\varpi_E) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
 \qed
 
@@ -813,9 +797,9 @@ b & 0
 \end{array} \right)
 \]
 
-for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments 
+for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreementofrectifiers}
-$\xi_{\phi_o'}(\varpi_E) = b$.  By Lemma \ref{rectifierofbushnellhenniart}, we are 
+$\xi_{\phi_o'}(\varpi_E) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to have $b = -1$.
 
 \begin{thebibliography}{9}
@@ -830,7 +814,7 @@ forced to have $b = -1$.
 
 \bibitem{adrianlansky}
   Moshe Adrian and Joshua Lansky,
-  \emph{An Interpretation of the Tame Local Langlands Correspondence for $p$-adic $PGSp(4)$ from the Perspective of Real Groups}, preprint, arXiv:1209.6045.
+  \emph{A real groups construction of the tame local Langlands correspondence for $PGSp(4,F)$}, preprint, arXiv:1209.6045.
 
 \bibitem{amano}
   Kazuo Amano,
@@ -866,6 +850,11 @@ forced to have $b = -1$.
 
 \bibitem{lang}
   Serge Lang, \emph{Algebraic groups over finite fields},  Amer. J. Math. (1956) 78, 555Ð563.
+
+\bibitem{moyprasad}
+  \emph{A. Moy and G. Prasad},
+  Unrefined minimal $K$-types for $p$-adic groups,
+   Invent. Math. 116, no. 1-3, 393-408 (1994).
 
 \bibitem{moyprasad1}
   Allen Moy, Gopal Prasad,
