@@ -38,6 +38,7 @@
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
 \newcommand{\TT}{\mathcal{T}}
+\newcommand{\C}{\mathcal{C}}
 \newcommand{\OK}{\mathcal{O}_K}
 \newcommand{\OKn}{\mathcal{O}_{K_n}}
 \newcommand{\ZZ}{\mathbb{Z}}
@@ -414,33 +415,33 @@ $T(K)_0 = \TT^\circ(\OK)$ of $T(K)$; we also write $T(K_n)_0$ for
 $\TT^\circ(\OKn)$.
 
 In fact, this subgroup of $T(K)$ is the first in a decreasing filtration.
-Moy and Prasad \cite{moy-prasad1} define one such filtration by
+Moy and Prasad \cite{moyprasad1} define one such filtration by
 embedding $T$ into an induced torus and defining the filtration of
 $\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu}
 describes a different filtration, agreeing with that of Moy and Prasad
 in the case of tame tori but with nicer features in the presence of wild
 ramification.  Let $\TT_r$ be the integral model of $T$ defined in Yu's
 minimal congruent filtration, and let $\{T(K)_r\}_{r \ge 0}$ and
-$\{T(K_n)_{r \ge 0}$ be the corresponding filtrations of $T(K)$ and
+$\{T(K_n)_r\}_{r \ge 0}$ be the corresponding filtrations of $T(K)$ and
 $T(K_n)$.
 
-Let $C$ be the scheme of
+Let $\C$ be the scheme of
 connected components of $\TT$, which we may identify with the
 components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
-is connected.  The structure of $C$ is described by Xarles:
+is connected.  The structure of $\C$ is described by Xarles:
 
 \begin{proposition}[{\cite[Cor. 2.12]{xarles}}]
 There is an exact sequence of $\Gamma_n$-modules
 $$0 \rightarrow \Hom_{\ZZ}(\HH^1(I, X^*(T)), \QQ/\ZZ) \rightarrow
-C \rightarrow \Hom_{\ZZ}(X^*(T)^I, \ZZ) \rightarrow 0.$$
+\C \rightarrow \Hom_{\ZZ}(X^*(T)^I, \ZZ) \rightarrow 0.$$
 \end{proposition}
 
 \begin{corollary}[{\cite[Thm. 1.1]{xarles}}] \label{unram comps}
-If $T$ is unramified, then $C \cong X_*(T)$.
+If $T$ is unramified, then $\C \cong X_*(T)$.
 \end{corollary}
 
 Using our filtration of $T(K_n)$, we may relate the cohomology of $T(K_n)$
-with that of $C$.
+with that of $\C$.
 
 \begin{proposition}
 $\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
@@ -455,12 +456,12 @@ Theorem \ref{langs thm}.
 \end{proof}
 
 \begin{corollary}
-$\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, C)$.
+$\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, \C)$.
 \end{corollary}
 
 \begin{proof}
 This follows from the long exact sequence in cohomology associated to the sequence
-$$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow C \rightarrow 0.$$
+$$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow \C \rightarrow 0.$$
 \end{proof}
 
 \begin{corollary}
