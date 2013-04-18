@@ -587,7 +587,7 @@ type $L$.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
 \S\ref{groupsoftypeL}.  DeBacker and Reeder associate a character $\chi_{\varphi}$
 of $T(K)$ to $\varphi$.  
 
-\begin{lemma}
+\begin{lemma}\label{grossanddebackerreedercompatibility}
 $\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
 \end{lemma}
 
@@ -649,15 +649,14 @@ Let $\varphi$ be a regular semisimple elliptic Langlands parameter.
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$, where $\hat{\theta}$
 is the dual Frobenius automorphism (see \cite[\S 3]{debackerreeder}).  Let $\hat{w}$
-be the image of $f$ in $\hat{W}$, and let $w$ be the element of
-$W$ corresponding to $\hat{w}$ (see \cite[p. 824]{debackerreeder}).  
+be the image of $f$ in $\hat{W}$.  
 Write $\hat{w} = s_{\alpha_1} \cdots s_{\alpha_n}$
 as a product of simple reflections, and let
 $\tilde{w} = \sigma_{\alpha_1} \cdots \sigma_{\alpha_n}$ be the
 canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{definition}
-Given $\varphi$, we define a homomorphism $\varphi_o : W_K \rightarrow {}^L G = <\hat{\theta}> \ltimes \hat{G}$ by
+Given $\varphi$, we define a homomorphism $\varphi_o : W_K \rightarrow {}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$ by
 \begin{enumerate}
 \item $\varphi_o|_{I_K} \equiv 1$
 \item $\varphi_o(\Fr) = \hat{\theta} \tilde{w}$
@@ -670,7 +669,7 @@ Let $\chi_{\varphi}$ be the character of $T(K)$ associated to $\varphi$ by the t
 $\xi_{\varphi}$ and $\xi_{\varphi_o}$ of $T(L)_{\Gamma}$, respectively.
 
 \begin{proposition}
-If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1} = \chi_{\varphi}$.
+If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1} = \chi_{\varphi} \circ \Nm$.
 \end{proposition}
 
 \begin{proof}
@@ -680,30 +679,34 @@ so we have the following exact sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K) \rightarrow 1$$
 Note that $T(K) = T(\OK)$, and so in particular
 $T(\OL)_{\Gamma}$ surjects onto $T(K)$ via the norm map
-$\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(L)) \neq 0$,
+$\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(L)) \neq 0$\MAxxx{Give a reference for this fact},
 gives us that $\HT{-1}(\Gamma,T(L))$ and
 $T(\OL)_{\Gamma}$ together generate $T(L)_{\Gamma}$.
 
 Since $\varphi_o|_{I_K} \equiv 1$, $\xi_{\varphi_o}$ is trivial on
 $T(\OL)_{\Gamma}$.  By lemma
 \ref{grossanddebackerreedercompatibility}, we have that
-$(\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1})|_{T(\OL)_{\Gamma}} = \chi_{\varphi}|_{T(\OK)}$.
-Therefore, $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1}$ is correct on
-$T(\OL)_{\Gamma}$.  Moreover, by Lemma
+$(\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1})|_{T(\OL)_{\Gamma}} = \chi_{\varphi} \circ \Nm|_{T(\OL)_{\Gamma}} $.  \MAxxx{Maybe I should now say something like : 
+``Since $\HT{-1}(\Gamma, T(L)) \neq 0$, there exists a unique extension
+of $\xi_{\varphi_o}^{-1}|_{T(\OL)_{\Gamma}}$ to a character $\lambda$ of $T(L)_{\Gamma}$
+such that $\xi_{\varphi} \otimes \lambda$ factors to a character of $T(K)$.''  This 
+seems to make things more clear to the reader, and may be the correct way of putting
+things.}
+Moreover, by Lemma
 \ref{toralmodification}, we also have that $\xi_{\varphi}$ and $\xi_{\varphi_o}$ have
 the same restriction to $\HT{-1}(\Gamma, T(L))$.  Therefore,
 $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1}$ is a character of $T(K)$.  Since
 $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1}$ is correct on $T(\OL)_{\Gamma}$, and
 since $T(\OL)_{\Gamma} \xrightarrow{\Nm} T(K)$ is surjective,
-we are done.
+we are done.\MAxxx{I think we need to make this proof more understandable.  It's not
+very understandable right now....the last few sentences are not clear.}
 \end{proof}
 
 In the case that $G$ is semisimple, there was nothing special about
 $\varphi_o$.  In fact, by the same arguments, $\xi_{\varphi_o} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
-and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $N$.
-However, we will see that the \MAxxx{the Tits group lift or a Tits group
- lift?} Tits group lift is forced on us when we
+and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
+However, we will see that the Tits group lift is forced upon us when we
 consider groups that are not necessarily semisimple, such as $GL(n,K)$.
 
 \section{Rectifiers for $GL(n,K)$}\label{GL(n)}
