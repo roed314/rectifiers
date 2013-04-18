@@ -131,9 +131,10 @@ associated to $\varphi(\Fr)$, where $\Fr$ is the geometric Frobenius
 \MAxxx{geometric or arithmetic?  does it even make sense to say ``the
   geometric Frobenius of $W_K$''?} of $W_K$.  Suppose that $T$ splits
 over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
-Restricting $\varphi$ to $W_L$, by the local Langlands correspondence for
-tori, one can canonically associate to $\varphi$ a character $\xi_{\varphi}$
-of $T(L)_{\Gamma}$, the group of coinvariants of $T(L)$ with respect
+Since $\phi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \mathbb{C}^{\times}$,
+then by the local Langlands correspondence for tori one can canonically
+associate to $\phi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$, 
+the group of coinvariants of $T(L)$ with respect
 to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
 are related by the norm map
 $$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
@@ -157,10 +158,10 @@ conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
 If $G$ happens to be $GL(n)$, one can compute that
 $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
 $T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$, and
-$(L/K, \xi)$ is an admissible pair.  To construct the local Langlands
+$(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
 correspondence, one would then proceed (as explained earlier) to
 attach the supercuspidal representation $\pi_{\xi \cdot {}_K
-  \mu_{\xi}}$ to $\xi$, via the construction of Howe.
+  \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Howe.
 
 If $G$ were arbitrary, then in analogy to the case of $GL(n,K)$, there
 exist in certain cases constructions of supercuspidal $L$-packets
@@ -505,22 +506,22 @@ $I_{\Gamma}(T(L)) = \{(1 - \sigma)t \ : t \in T(L), \sigma \in \Gamma \}$.
 Restricting $\varphi$ to $W_L$ we get a homomorphism
 $$\varphi|_{W_L} : W_L \rightarrow \hat{T}.$$
 By the Langlands correspondence for tori, this gives us a character
-$\chi : T(L) \rightarrow \mathbb{C}^\times$.  Since $\varphi|_{W_L}$ extends
+$\xi_{\varphi} : T(L) \rightarrow \mathbb{C}^\times$.  Since $\varphi|_{W_L}$ extends
 to $\varphi$, one can see that
-$$\chi(t^{\sigma}) = \chi(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
-Therefore, $\chi(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
-Thus, $\chi$ is trivial on the augmentation ideal $I_{\Gamma}(T(L))$
-and gives $$\chi : T(L)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
+$$\xi_{\varphi}(t^{\sigma}) = \xi_{\varphi}(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
+Therefore, $\xi_{\varphi}(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
+Thus, $\xi_{\varphi}$ is trivial on the augmentation ideal $I_{\Gamma}(T(L))$
+and gives $$\xi_{\varphi} : T(L)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
 and coinvariants are related by the norm map
 $$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
 $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
   = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1$$
 (note that the norm map $\Nm$ factors to $T(L)_{\Gamma}$).
-We have thus constructed a character $\chi$ of $T(L)_{\Gamma}$ from a
+We have thus constructed a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$ from a
 Langlands parameter $\varphi$. We note that $T(L)_{\Gamma}$ is a cover of
 $\Nm(T(L)_{\Gamma})$, which is a subgroup of $T(K)$.  It is sometimes
-the case that $\Nm$ is surjective, in which case $\chi$ is then a
+the case that $\Nm$ is surjective, in which case $\xi_{\varphi}$ is then a
 character of $T(L)_{\Gamma}$, which is a cover of $T(K)$.
 
 We now give meaning to the definition of \emph{admissible pair} in the introduction.
@@ -528,7 +529,7 @@ We now give meaning to the definition of \emph{admissible pair} in the introduct
 \begin{lemma}\label{weylgroups}
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$.  Let $L$ be the splitting field of $T$, and set
-$\Gamma = \Gal(L/K)$.\MAxxx{Umm.....does $E/F$ need to be Galois?  I asked 
+$\Gamma = \Gal(L/K)$.\MAxxx{Umm.....does $E/F$ need to be Galois?  I asked
 the same question when introducing groups of type $L$ in the introduction of this paper...
 the torus $T$ in the introduction (when introducing groups of type $L$) could
 split over a non-Galois extension.}
@@ -550,14 +551,14 @@ parameters mapping to groups of type $L$ later.  First let $L,K,T,\hat{T}, \Gamm
 be as above, with $L/K$ unramified.
 Suppose $\varphi$ and $\varphi'$ are two Langlands parameters,
 agreeing on $I_K$, with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
-Let $\chi$ and $\chi'$ be the associated characters of $T(L)_{\Gamma}$.
+Let $\xi_{\varphi}$ and $\xi_{\varphi'}$ be the associated characters of $T(L)_{\Gamma}$.
 
 \begin{lemma}\label{toralmodification}
-$\chi$ and $\chi'$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
+$\xi_{\varphi}$ and $\xi_{\varphi'}$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 \end{lemma}
 
 \begin{proof}
-It suffices to prove that $\chi' \cdot \chi^{-1}$ vanishes on
+It suffices to prove that $\xi_{\varphi'} \cdot \xi_{\varphi}^{-1}$ vanishes on
 $\ker(\Nm : T(L) \rightarrow T(K))$.  Define $g \in D$ and $t \in \hat{T}$ by
 $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 \begin{align*}
@@ -567,33 +568,37 @@ $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 \end{align*}
 since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon W_L \rightarrow \hat{T}$
 by $\varphi_i(\sigma) = 1$ for $\sigma \in I_L$ and
-$\varphi_i(\Fr^n) = \Fr^i(t)$; let $\chi_i$ be the associated character
-of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\chi_i = \chi_0 \circ \Fr^i.$
+$\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_{\varphi_i}$ be the associated character
+of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\xi_{\varphi_i} = \xi_{\varphi_0} \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \begin{align*}
-\chi'(x) \chi(x)^{-1} &= \prod_{i=0}^{n-1} \chi_i(x) \\
-&= \chi_0 \left(\prod_{i=0}^{n-1}\Fr^i(x)\right) \\
+\xi_{\varphi'}(x) \xi_{\varphi}(x)^{-1} &= \prod_{i=0}^{n-1} \xi_{\varphi_i}(x) \\
+&= \xi_{\varphi_0} \left(\prod_{i=0}^{n-1}\Fr^i(x)\right) \\
 &= 1.\\
 \end{align*}
 \end{proof}
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
 
-We consider here an RSELP $\varphi$ for any unramified connected
-reductive group G.  Let $T$ be as in \S\ref{groupsoftypeL}.  Let $L$,
-$\chi$, etc.~be as in~\S\ref{groupsoftypeL}.  Let $w$ be the Weyl
-group element associated to $\varphi$, and set $\sigma = w \theta\in {\rm Aut}(T)$.
-Let $\chi_{\varphi}$ be the character of $T(K) = T^{\Fr}$ that
-DeBacker and Reeder attach to $\varphi$.
+We consider here a regular semisimple elliptic Langlands parameter
+ $\varphi$ for an unramified connected
+reductive group $G$ (see \cite{reeder}).  Then $\phi$ has image in a group of
+type $L$.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in  
+\S\ref{groupsoftypeL}.  DeBacker and Reeder associate a character $\chi_{\varphi}$
+of $T(K)$ to $\varphi$.  
 
+\begin{lemma}
+$\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
+\end{lemma}
+
+\proof
 We have the exact sequence
 
 $$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K)
-  \rightarrow \HT{0}(\Gamma, T(L)) \rightarrow 1$$
+  \rightarrow \HT{0}(\Gamma, T(L)) \rightarrow 1.$$
 
-where $\Gamma = \Gal(L/K)$.  Recall that $\varphi$ canonically gives
-rise to a character $\chi$ of $T(L)_{\Gamma}$, by local Langlands
-for tori (see section \ref{groupsoftypeL}).  Note that the above
+Recall that the character $\xi_{\varphi}$ is associated to $\varphi$ by
+the local Langlands correspondence for tori (see section \ref{groupsoftypeL}).  Note that the above
 exact sequence restricts to an exact sequence
 
 $$1 \rightarrow \HT{-1}(\Gamma, T(\OL)) \rightarrow T(\OL)_{\Gamma}
@@ -604,23 +609,10 @@ $\HT{-1}(\Gamma, T(\OL)) = \HT{0}(\Gamma, T(\OL)) = 1$.
 Therefore, the map
 $$T(\OL)_{\Gamma} \xrightarrow{\Nm} T(\OK)$$
 is an isomorphism, and we may view
-$\chi|_{T(\OL)_{\Gamma}}$ as a character of
-$T(\OK)$ via this isomorphism.  Now, since $\chi$ was
-obtained from $\varphi|_{W_L}$ via the local Langlands correspondence, one can see
-from the constructions in \cite{debackerreeder} and \cite{reeder} that
-$\chi_{\varphi} \circ \Nm = \chi$ on $T(\OL)_{\Gamma}$ (one can see
-\cite{adrianlansky} for more details on the constructions of
-\cite{debackerreeder} and \cite{reeder} and their relationship to groups of
-type $L$).
-We have therefore proven the following lemma.
-
-\begin{lemma}\label{grossanddebackerreedercompatibility}
-  The restriction to $T(\OL)_{\Gamma} \xrightarrow{\sim} T(\OK)$
-  of the genuine character arising from the Gross construction
-  coincides with the character of $T(\OK)$ that is
-  constructed from $\varphi$ via the construction of DeBacker--Reeder
-  construction.
-\end{lemma}
+$\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ as a character of
+$T(\OK)$ via this isomorphism.  But this is exactly how the character
+$\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{reeder}.
+\qed
 
 \section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
@@ -772,11 +764,11 @@ $\xi_{\varphi_o} = {}_K \mu_{\xi}$.
 
 \begin{proof}
 Note that $T(L) = L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
-that $T(K) = (w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w))$, where 
-$Gal(L/K) = \langle \sigma \rangle$.  A uniformizer $\varpi_L$ in $L^{\times}$ 
-therefore corresponds to $(\varpi_L, \varpi_L, \cdots, \varpi_L) \in T(K)$, whose 
+that $T(K) = (w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w))$, where
+$Gal(L/K) = \langle \sigma \rangle$.  A uniformizer $\varpi_L$ in $L^{\times}$
+therefore corresponds to $(\varpi_L, \varpi_L, \cdots, \varpi_L) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi_L, 1, 1, \cdots, 1) \in T(L)_{\Gamma}$.
-The local Langlands correspondence for tori says now that 
+The local Langlands correspondence for tori says now that
 $\xi_{\varphi_o}(\varpi_L) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
 \end{proof}
 
