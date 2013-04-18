@@ -34,16 +34,21 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Fr}{Fr}
 
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\C}{\mathcal{C}}
+\newcommand{\CC}{\mathbb{C}}
 \newcommand{\OK}{\mathcal{O}_K}
 \newcommand{\OKn}{\mathcal{O}_{K_n}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\Gm}{\mathbb{G}_m}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
 
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
@@ -362,7 +367,7 @@ conversations with Gordan Savin.  We wish to thank him for these
 conversations.  We would also like to thank Jeffrey Adams and Geo Kam
 Fai for helpful conversations as well.
 
-\section{Notation and Definitions}
+\section{Notation and Preliminaries}
 
 Throughout, $k$ will denote a finite field, and
 $k_n$ will denote the degree $n$ extension of
@@ -374,38 +379,47 @@ unramified extension of $K$, and fix a valuation $\val : (K^u)^\times
 Write $K_n$ for the unramified extension of $K$ of degree $n$,
 and $\Gamma_n = \Gal(K_n/K) = \Gal(k_n/k)$.
 
-\section{Preliminaries}
+If $T$ is a torus defined over $K$ we write $X^*(T)$
+for the character lattice $\Hom_{\bar{K}}(T, \Gm)$ and $X_*(T)$ for the
+cocharacter lattice $\Hom_{\bar{K}}(\Gm, T)$ \cite[\S 16.2]{humphreys}.
+$T$ will split over an extension
+$L$ of $K$ if and only if $\Gal(\bar{K}/L)$ acts trivially on $X^*(T)$.
+We may thus define \emph{the} splitting field $L$ of $T$ as the
+minimal extension of $K$ splitting $T$; note that $L$ is necessarily
+Galois over $K$.  Write $\Gamma$ for $\Gal(L/K)$; $X_*(T)$, $X^*(T)$ and $T(L)$
+are all $\Gamma$-modules.
 
-If $S$ is a torus that is defined over an arbitrary field $F$ and
-$E/F$ is a Galois extension, then we have the norm map
-$$\Nm_{E/F} : S(E) \rightarrow S(F)$$ $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s \mapsto
-\prod_{\sigma \in \Gal(E/F)} \sigma(s)$$
+Let $\hat{T}$ be the dual torus over $\CC$ with $X_*(\hat{T}) = X^*(T)$ and
+$X^*(\hat{T}) = X_*(T)$.  By transport of structure $\hat{T}$ is also a $\Gamma$-module.
+For $\lambda \in X_*(T)$ and $\mu \in X^*(T)$ we write $\la \lambda, \mu \ra$
+for the canonical $\Gamma$-equivariant pairing
+$$\Hom_{\bar{K}}(\Gm, T) \times \Hom_{\bar{K}}(T, \Gm) \rightarrow \Hom_{\bar{K}}(\Gm, \Gm) \cong \ZZ.$$
 
-\section{Galois cohomology over finite fields}
+For any Galois extension $E$ of $K$ we have the norm map
+\begin{align*}
+\Nm_{E/F} : S(E) &\rightarrow S(F) \\
+s &\mapsto \prod_{\sigma \in \Gal(E/F)} \sigma(s).
+\end{align*}
 
 The following theorem, due to Lang \cite{lang}, underpins the facts in
 Section \ref{padic tori} on tori over $p$-adic fields.
-Let $\mathbb{G}$ be a commutative connected algebraic group over a
-finite field $k$, and suppose $G$ splits over $k_n$.
+Let $H$ be a commutative connected algebraic group over a
+finite field $k$, and suppose $H$ splits over $k_n$.
 
 \begin{theorem} \label{langs thm}
-$\HT{i}(\Gamma_n, G(k_n)) = 0$ for all $i$.
+$\HT{i}(\Gamma_n, H(k_n)) = 0$ for all $i$.
 \end{theorem}
 \begin{proof}
 Since $\Gamma_n$ is cyclic,
-$\HT{i}(\Gamma_n, G(k_n)) \cong \HT{i+2}(\Gamma_n, G(k_n))$,
+$\HT{i}(\Gamma_n, H(k_n)) \cong \HT{i+2}(\Gamma_n, H(k_n))$ \cite[Thm. 5]{atiyah-wall},
 so it suffices to prove the result for $i=1$ and $i=2$, which is done
-in \cite[\S VI.6]{serre2}.
+by Serre \cite[\S VI.6]{serre2}.
 \end{proof}
 
 \section{Tori over $p$-adic fields} \label{padic tori}
 
-Let $T$ be a torus defined over $K$.  $T$ will split over an extension
-$L$ of $K$ if and only if $\Gal(\bar{K}/L)$ acts trivially on $X^*(T)$.
-We may thus define \emph{the} splitting field $L$ of $T$ as the
-minimal extension of $K$ splitting $T$; note that $L$ is necessarily
-Galois over $K$.  Let $K_n$ be the maximal unramified subextension
-of $L/K$, and set $I = \Gal(L/K_n)$.
+Let $T$ be a torus defined over $K$.    Let $K_n$ be the maximal unramified subextension
+of the splitting field $L$, and set $I = \Gal(L/K_n)$.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
 over $\OK$ \cite[Ch. 10]{blr}.  As a consequence of the N\'eron mapping
@@ -483,12 +497,8 @@ Since $T$ is anisotropic $\HH^0(\Gamma_n, T(K_n)) \cong X_*(T)^{\Gamma_n} = 0$.
 
 \section{Groups of type L}\label{groupsoftypeL}
 We now review the theory of ``groups of type L'' due to Benedict
-Gross.  Let $F$ be a field, $F^{\mathrm s}$ a separable closure, and
-$T$ a torus defined over $F$ that splits over an extension $E \subset
-F^s$.  Let $\Gamma = \Gal(E/F)$.  Let $X^*(T)$ be the character module
-of $T$ and $X_*(T)$ the cocharacter module of $T$.  Define
-$\hat{T} = X^*(T) \otimes \mathbb{C}^\times$.  The group $\Gamma$ acts on
-$\hat{T}$ via its action on $X^*(T)$.
+Gross.  For a torus $T$ over $K$, recall that the dual torus $\hat{T}$ is equipped with
+an action of $\Gamma$.
 
 \begin{definition}
 A \emph{group of type L} is a group extension of $\Gamma$ by $\hat{T}$.
@@ -837,8 +847,13 @@ forced to have $b = -1$.
   Kazuo Amano,
   \emph{A note on the Galois cohomology groups of algebraic tori}, Nagoya Math. J. Volume 34 (1969), 121-127.
 
+\bibitem{atiyah-wall}
+  Michael Atiyah and Charles Wall,
+  \emph{Cohomology of Groups}, 84-115, in Algebraic Number Theory, John W. S. Cassels and Albrecht Frohlich (eds.).  Academic Press, London, 1967.
+
 \bibitem{blr}
-  Siegfried Bosch, Werner L\"utkebohmert, and Michel Reynaud. \emph{N\'eron Models}. Springer-Verlag, Berlin, 1980.
+  Siegfried Bosch, Werner L\"utkebohmert, and Michel Reynaud.
+  \emph{N\'eron Models}. Springer-Verlag, Berlin, 1980.
 
 \bibitem{bushnellhenniart}
   Colin Bushnell, Guy Henniart,
@@ -861,6 +876,10 @@ forced to have $b = -1$.
   Roger Howe,
   \emph{Tamely ramified supercuspidal representations of $GL_n(F)$},
    Pacific Journal of Math.  73  (1977),  437--460.
+
+\bibitem{humphreys}
+  James Humphreys,
+  \emph{Linear Algebraic Groups}, Graduate Texts in Mathematics, 21.  Springer-Verlag, New York, 1975.
 
 \bibitem{kaletha}
   Tasho Kaletha, \emph{Simple Wild L-packets}, J. Inst. Math. Jussieu (2013) 12(1), 43-75.
