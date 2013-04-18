@@ -586,25 +586,23 @@ $\HT{-1}(\Gamma, X_*(T)) = \ker(\Nm : X_*(T) \rightarrow X_*(T)) / I_{\Gamma}(T(
 Let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  Note that
 $\lambda \in X^*(\hat{T})$.
 Write $n^r = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$,
-$z \in \mathbb{C}^\times$.  Then $\chi_1(\lambda) = z^{<\mu, \lambda>}$
-(where $< , >$ denotes the canonical pairing
-on $X_*(\hat{T}) \times X^*(\hat{T})$ ).
+$z \in \mathbb{C}^\times$.  Then $\chi_1(\lambda) = z^{\la\mu, \lambda\ra}$.
 
 We now note that
 $$(tn)^r = t ntn^{-1} n^2 t n^{-2} \cdots n^{r-1} t n^{1-r} n^r = t w(t) w^2(t) \cdots w^{r-1}(t),$$
 where $w$ is the Weyl group element associated to $n$.  If we write
 $t = \mu' \otimes z'$, then $$t w(t) w^2(t) \cdots w^{r-1}(t) = \Nm(\mu' ) \otimes z',$$
 But now one checks:
-We have $\chi_2(\lambda) = z^{<\mu, \lambda>} (z' )^{<\Nm(\mu'), \lambda>}$, and
-$$<\Nm(\mu'), \lambda> = < \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda>
-  = \displaystyle\sum_{i=0}^{r-1} < \sigma^i(\mu'), \lambda >$$
-Since $< , >$ is Galois equivariant, $<\sigma^i(\mu'), \lambda> =
-<\mu', \sigma^{-i}(\lambda)>$.  Thus, the sum
+We have $\chi_2(\lambda) = z^{\la\mu, \lambda\ra} (z' )^{\la\Nm(\mu'), \lambda\ra}$, and
+$$\la\Nm(\mu'), \lambda\ra = \la \mu' + \sigma(\mu') + \sigma^2(\mu') + ... + \sigma^{r-1}(\mu'), \lambda\ra
+  = \displaystyle\sum_{i=0}^{r-1} \la \sigma^i(\mu'), \lambda \ra$$
+Since $\la , \ra$ is Galois equivariant, $\la\sigma^i(\mu'), \lambda\ra =
+\la\mu', \sigma^{-i}(\lambda)\ra$.  Thus, the sum
 becomes
-$$\displaystyle\sum_{i=0}^{r-1} <\mu', \sigma^{-i}(\lambda)> = <\mu', \Nm(\lambda)>.$$
+$$\displaystyle\sum_{i=0}^{r-1} \la\mu', \sigma^{-i}(\lambda)\ra = \la\mu', \Nm(\lambda)\ra.$$
 But $\lambda \in \ker(\Nm : X^*(\hat{T}) \rightarrow X^*(\hat{T}))$, so
-$<\mu', \Nm(\lambda)> = 0$.  Therefore, $\chi_2(\lambda) =
-z^{<\mu, \lambda>} = \chi_1(\lambda)$.
+$\la\mu', \Nm(\lambda)\ra = 0$.  Therefore, $\chi_2(\lambda) =
+z^{\la\mu, \lambda\ra} = \chi_1(\lambda)$.
 \qed
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
