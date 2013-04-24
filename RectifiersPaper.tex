@@ -318,22 +318,22 @@ in terms of a canonical Langlands parameter, as follows.  Let
 $G$ be an arbitrary unramified connected reductive group.  If
 $T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
-a Langlands parameter $\varphi_o :W _K \rightarrow {}^L G$ by
+a Langlands parameter $\varphi_{\hat{w}} :W _K \rightarrow {}^L G$ by
 sending Frobenius to a canonical \MAxxx{Canonical?  Is the Tits group
-lift canonical?} lift of $w$, using the Tits group, and by setting
-$\varphi_o$ to be trivial on $I_K$.
+lift canonical?} lift of $\hat{w}w$, using the Tits group, and by setting
+$\varphi_{\hat{w}}$ to be trivial on $I_K$.
 If $G$ is semisimple,
-we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_o}$$
-\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\varphi_o}^{-1}$????  Since the inverse is what we twist by to get a character of $T(K)$ (see Section \ref{mainresults})}
+we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}$$
+\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$????  Since the inverse is what we twist by to get a character of $T(K)$ (see Section \ref{mainresults})}
 satisfies conditions (1)-(4), and we may therefore set
-${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_o}$.
+${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{\hat{w}}}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
 
 \begin{theorem}
-  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_o}$ agrees with
-  the rectifier of Bushnell/Henniart, when $(T,\xi) \in Reg(K)$.  Moreover, $\varphi_o$ is the
+  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{\hat{w}}}$ agrees with
+  the rectifier of Bushnell/Henniart, when $(T,\xi) \in Reg(K)$.  Moreover, $\varphi_{\hat{w}}$ is the
   unique \MAxxx{up to a sign, or something like that?} Langlands
-  parameter such that $\xi_{\varphi_o} = {}_K \mu_{\xi}$.
+  parameter such that $\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
 \end{theorem}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(L))
@@ -518,8 +518,7 @@ in the Tate cohomology sequence
 $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
   = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1$$
 (note that the norm map $\Nm$ factors to $T(L)_{\Gamma}$).
-We have thus constructed a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$ from a
-Langlands parameter $\varphi$. We note that $T(L)_{\Gamma}$ is a cover of
+We note that $T(L)_{\Gamma}$ is a cover of
 $\Nm(T(L)_{\Gamma})$, which is a subgroup of $T(K)$.  It is sometimes
 the case that $\Nm$ is surjective, in which case $\xi_{\varphi}$ is then a
 character of $T(L)_{\Gamma}$, which is a cover of $T(K)$.
@@ -567,7 +566,7 @@ $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 &= \prod_{i=0}^{n-1} \Fr^i(t)
 \end{align*}
 since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon W_L \rightarrow \hat{T}$
-by $\varphi_i(\sigma) = 1$ for $\sigma \in I_L$ and
+by $\varphi_i(z) = 1$ for $z \in I_L$ and
 $\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_{\varphi_i}$ be the associated character
 of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\xi_{\varphi_i} = \xi_{\varphi_0} \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
@@ -578,14 +577,13 @@ Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \end{align*}
 \end{proof}
 
-\section{The relationship between the Gross construction and the DeBacker--Reeder construction}\label{grossdebackerreeder}
+\section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction}\label{grossdebackerreeder}
 
 We consider here a regular semisimple elliptic Langlands parameter
  $\varphi$ for an unramified connected
 reductive group $G$ (see \cite{reeder}).  Then $\varphi$ has image in a group of
 type $L$.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
-\S\ref{groupsoftypeL}.  DeBacker and Reeder associate a character $\chi_{\varphi}$
-of $T(K)$ to $\varphi$.
+\S\ref{groupsoftypeL}.  DeBacker--Reeder and Reeder (in \cite{debackerreeder} and \cite{reeder}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 
 \begin{lemma}\label{grossanddebackerreedercompatibility}
 $\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
@@ -608,8 +606,8 @@ Moreover, by Proposition \ref{vanishingtateonintegralpoints}, we have
 $\HT{-1}(\Gamma, T(\OL)) = \HT{0}(\Gamma, T(\OL)) = 1$.
 Therefore, the map
 $$T(\OL)_{\Gamma} \xrightarrow{\Nm} T(\OK)$$
-is an isomorphism, and we may view
-$\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ as a character of
+is an isomorphism, so
+$\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ factors to a character of
 $T(\OK)$ via this isomorphism.  But this is exactly how the character
 $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{reeder}.
 \qed
@@ -623,7 +621,7 @@ roots of $\hat{T}$ in $\hat{B}$.
 For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
 and $\phi_{\alpha}\mat{1}{1}{0}{1} = x_{\alpha}$. Let
-$\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
+$\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.\MAxxx{Is this last paragraph completely correct?  Maybe we should do Lie algebra version.}
 
 \begin{definition}
   The Tits group $\widetilde{W}$ is the subgroup of $\hat{N}$
@@ -633,7 +631,7 @@ $\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
 For each simple root $\alpha$, let $m_{\alpha} = \sigma_{\alpha}^2 = \alpha^{\vee}(-1)$.
 Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 
-\begin{theorem}{(Tits \cite{tits})}
+\begin{theorem}{(\cite{tits})}
 \begin{enumerate}
 
 \item The kernel of the natural map $\widetilde{W} \rightarrow \hat{W}$
@@ -645,31 +643,28 @@ Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 \end{enumerate}
 \end{theorem}
 
-Let $\varphi$ be a regular semisimple elliptic Langlands parameter.
+Let $\varphi : W_K \rightarrow {}^L G$ be a regular semisimple elliptic Langlands parameter.  Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$, where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$ (see \cite[\S 3]{debackerreeder}).  
 Then $\varphi(I_K) \subset \hat{T}$ and
-$\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$, where $\hat{\theta}$
-is the dual Frobenius automorphism (see \cite[\S 3]{debackerreeder}).  Let $\hat{w}$
+$\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
-Write $\hat{w} = s_{\alpha_1} \cdots s_{\alpha_n}$
-as a product of simple reflections, and let
-$\tilde{w} = \sigma_{\alpha_1} \cdots \sigma_{\alpha_n}$ be the
+Let $\tilde{w}$ be the
 canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{definition}
-Given $\varphi$, we define a homomorphism $\varphi_o : W_K \rightarrow {}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$ by
+Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.  We define a homomorphism $\varphi_{\hat{u}} : W_K \rightarrow {}^L G$ by
 \begin{enumerate}
-\item $\varphi_o|_{I_K} \equiv 1$
-\item $\varphi_o(\Fr) = \hat{\theta} \tilde{w}$
+\item $\varphi_{\hat{u}}|_{I_K} \equiv 1$
+\item $\varphi_{\hat{u}}(\Fr) = \hat{\theta} \tilde{u}$
 \end{enumerate}
 \end{definition}
 
 Let $\chi_{\varphi}$ be the character of $T(K)$ associated to $\varphi$ by the theory in
 \cite{debackerreeder}.  By the theory in section
-\ref{groupsoftypeL}, $\varphi$ and $\varphi_o$ gives rise to characters
-$\xi_{\varphi}$ and $\xi_{\varphi_o}$ of $T(L)_{\Gamma}$, respectively.
+\ref{groupsoftypeL}, $\varphi$ and $\varphi_{\hat{w}}$ gives rise to characters
+$\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$, respectively.
 
 \begin{proposition}
-If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1} = \chi_{\varphi} \circ \Nm$.
+If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1} = \chi_{\varphi} \circ \Nm$.
 \end{proposition}
 
 \begin{proof}
@@ -683,33 +678,33 @@ $\Nm$.  This, together with the fact that $\HT{-1}(\Gamma, T(L)) \neq 0$\MAxxx{G
 gives us that $\HT{-1}(\Gamma,T(L))$ and
 $T(\OL)_{\Gamma}$ together generate $T(L)_{\Gamma}$.
 
-Since $\varphi_o|_{I_K} \equiv 1$, $\xi_{\varphi_o}$ is trivial on
+Since $\varphi_{\hat{w}}|_{I_K} \equiv 1$, $\xi_{\varphi_{\hat{w}}}$ is trivial on
 $T(\OL)_{\Gamma}$.  By lemma
 \ref{grossanddebackerreedercompatibility}, we have that
-$(\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1})|_{T(\OL)_{\Gamma}} = \chi_{\varphi} \circ \Nm|_{T(\OL)_{\Gamma}} $.  \MAxxx{Maybe I should now say something like :
+$(\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1})|_{T(\OL)_{\Gamma}} = \chi_{\varphi} \circ \Nm|_{T(\OL)_{\Gamma}} $.  \MAxxx{Maybe I should now say something like :
 ``Since $\HT{-1}(\Gamma, T(L)) \neq 0$, there exists a unique extension
-of $\xi_{\varphi_o}^{-1}|_{T(\OL)_{\Gamma}}$ to a character $\lambda$ of $T(L)_{\Gamma}$
+of $\xi_{\varphi_{\hat{w}}}^{-1}|_{T(\OL)_{\Gamma}}$ to a character $\lambda$ of $T(L)_{\Gamma}$
 such that $\xi_{\varphi} \otimes \lambda$ factors to a character of $T(K)$.''  This
 seems to make things more clear to the reader, and may be the correct way of putting
 things.}
 Moreover, by Lemma
-\ref{toralmodification}, we also have that $\xi_{\varphi}$ and $\xi_{\varphi_o}$ have
+\ref{toralmodification}, we also have that $\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ have
 the same restriction to $\HT{-1}(\Gamma, T(L))$.  Therefore,
-$\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1}$ is a character of $T(K)$.  Since
-$\xi_{\varphi} \otimes \xi_{\varphi_o}^{-1}$ is correct on $T(\OL)_{\Gamma}$, and
+$\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1}$ is a character of $T(K)$.  Since
+$\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1}$ is correct on $T(\OL)_{\Gamma}$, and
 since $T(\OL)_{\Gamma} \xrightarrow{\Nm} T(K)$ is surjective,
 we are done.\MAxxx{I think we need to make this proof more understandable.  It's not
 very understandable right now....the last few sentences are not clear.}
 \end{proof}
 
-In the case that $G$ is semisimple, there was nothing special about
-$\varphi_o$.  In fact, by the same arguments, $\xi_{\varphi_o} = \xi_{\varphi'}$
+We have therefore proven Theorem \ref{regularrectifierdefinition}.  In the case that $G$ is semisimple, there was nothing special about
+$\varphi_{\hat{w}}$.  In fact, by the same arguments, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
-However, we will see that the Tits group lift is forced upon us when we
+However, we will see that the canonical Tits group lift is forced upon us when we
 consider groups that are not necessarily semisimple, such as $GL(n,K)$.
 
-\section{Rectifiers for $GL(n,K)$}\label{GL(n)}
+\section{Rectifier for $GL(n,K)$}\label{GL(n)}
 
 In this section, we show that our function ${}_K
   \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
@@ -747,8 +742,7 @@ $\HT{-1}(\Gamma, X_*(T)) = 0$.
 \begin{proof}
 $(a_1, a_2, \cdots, a_n) \in \ker(\Nm)$ if and only if $\displaystyle\sum_{i=1}^n a_i = 0$.
 It is then easy to see that $\ker(\Nm)$ is generated by $e_i - e_j$ for $i < j$, where
-$e_i$ is the standard basis of $\mathbb{Z}^n$.  But $e_i - e_j = (1-\sigma^{j-i}) e_i$,
-where $\sigma$ is the element of $\Gamma$ that cyclically shifts one space to the right.  Thus $\ker(\Nm) \subset I_{\Gamma}(X_*(T))$.
+$e_i$ are the standard basis of $\mathbb{Z}^n$.  But $e_i - e_j = (1 - \tau)e_i$ for some $\tau \in \Gamma$, since $\Gamma$ acts by cyclic shift.  Thus $\ker(\Nm) \subset I_{\Gamma}(X_*(T))$.
 \end{proof}
 
 The Tate cohomology exact sequence for $T$ therefore reduces to
@@ -764,40 +758,40 @@ denotes the identity element in $GL(n,\mathbb{C})$.
 See \cite[\S3.1]{zaremsky}.
 \end{proof}
 
-Since $\Fr^n$ is a geometric Frobenius for $L$ and thus corresponds to $\varpi_L$ under local
+Since $\Fr^n$ is a geometric \MAxxx{geometric or arithmetic?} Frobenius for $L$ and thus corresponds to $\varpi_L$ under local
 class field theory, we obtain
 
 \begin{corollary}\label{agreemenetofrectifiers}
-$\xi_{\varphi_o} = {}_K \mu_{\xi}$.
+$\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
 \end{corollary}
 
 \begin{proof}
-Note that $T(L) = L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
-that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in L^{\times} \}$, where
+Note that $T(L) \cong L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
+that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in L^{\times} \} \cong L^{\times}$, where
 $\sigma$ is a generator of $Gal(L/K)$.  A uniformizer $\varpi_L$ in $L^{\times}$
 therefore corresponds to $(\varpi_L, \varpi_L, \cdots, \varpi_L) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi_L, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
-$\xi_{\varphi_o}(\varpi_L) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
-Finally, since $\varphi_o|_{I_F} \equiv 1$, we get that $\xi_{\varphi_o}(\varpi_L)$ is
+$\xi_{\varphi_{\hat{w}}}(\varpi_L) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
+Finally, since $\varphi_{\hat{w}}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{\hat{w}}}$ is
 unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 \end{proof}
 
-We end this section by explaining why the Tits group lift of $\tilde{w}$ is forced upon us.
+We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 We may look no further than $G = GL(2)$.  Suppose we define
-$\varphi_o' : W_K \rightarrow GL(2,\mathbb{C})$ by $\varphi_o'|_{I_K} \equiv 1$ and
+$\varphi_{\hat{w}}' : W_K \rightarrow GL(2,\mathbb{C})$ by $\varphi_{\hat{w}}'|_{I_K} \equiv 1$ and
 
 \[
-\varphi_o'(\Fr) = \left( \begin{array}{cc}
+\varphi_{\hat{w}}'(\Fr) = \left( \begin{array}{cc}
 0 & a\\
 b & 0
 \end{array} \right)
 \]
 
-We may conjugate $\varphi_o'$ so that
+We may conjugate $\varphi_{\hat{w}}'$ so that
 
 \[
-\varphi_o'(\Fr) = \left( \begin{array}{cc}
+\varphi_{\hat{w}}'(\Fr) = \left( \begin{array}{cc}
 0 & 1\\
 b & 0
 \end{array} \right)
@@ -805,8 +799,8 @@ b & 0
 
 for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
-$\xi_{\varphi_o'}(\varpi_E) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
-forced to set $b = -1$, so that $\varphi_o'(\Fr)$ is the lift of $\hat{w}$ to $\widetilde{W}$.\MAxxx{I think that we should do the general $GL(n)$ case here.  I'm not convinced yet that the Tits group lift is even forced upon us for general $GL(n)$...it looks like it might be, though.}
+$\xi_{\varphi_{\hat{w}}'}(\varpi_E) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
+forced to set $b = -1$, so that $\varphi_{\hat{w}}'(\Fr)$ is the canonical lift of $\hat{w}$ to $\widetilde{W}$.\MAxxx{I think that we should do the general $GL(n)$ case here.  I'm not convinced yet that the Tits group lift is even forced upon us for general $GL(n)$...it looks like it might be, though.}
 
 \begin{thebibliography}{9}
 
