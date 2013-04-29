@@ -759,29 +759,12 @@ unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 \end{proof}
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
-We may look no further than $G = GL(2)$.  Suppose we define
-$\varphi_{\hat{w}}' : W_K \rightarrow GL(2,\mathbb{C})$ by $\varphi_{\hat{w}}'|_{I_K} \equiv 1$ and
-
-\[
-\varphi_{\hat{w}}'(\Fr) = \left( \begin{array}{cc}
-0 & a\\
-b & 0
-\end{array} \right)
-\]
-
-We may conjugate $\varphi_{\hat{w}}'$ so that
-
-\[
-\varphi_{\hat{w}}'(\Fr) = \left( \begin{array}{cc}
-0 & 1\\
-b & 0
-\end{array} \right)
-\]
-
-for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
+Suppose we define
+$\varphi_{\hat{w}}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{\hat{w}}'|_{I_K} \equiv 1$ and
+$\varphi_{\hat{w}}'(\Fr)$ is a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} implies that the characteristic polynomial of $\varphi_{\hat{w}}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
-$\xi_{\varphi_{\hat{w}}'}(\varpi) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
-forced to set $b = -1$, so that $\varphi_{\hat{w}}'(\Fr)$ is the canonical lift of $\hat{w}$ to $\widetilde{W}$.\MAxxx{I think that we should do the general $GL(n)$ case here.  I'm not convinced yet that the Tits group lift is even forced upon us for general $GL(n)$...it looks like it might be, though.}
+$\xi_{\varphi_{\hat{w}}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
+forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{\hat{w}}'(\Fr)$ is the canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{thebibliography}{9}
 
