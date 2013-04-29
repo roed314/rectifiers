@@ -696,7 +696,7 @@ setting.
   Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
   unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
   Then ${}_K \mu_{\xi}$ is unramified and
-  ${}_K \mu_{\xi}(\varpi_L) = (-1)^{n-1}$.
+  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
 \MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $GL(n)$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
 \begin{proof}
@@ -740,8 +740,7 @@ denotes the identity element in $GL(n,\mathbb{C})$.
 See \cite[\S3.1]{zaremsky}.
 \end{proof}
 
-Since $\Fr^n$ is a geometric Frobenius for $L$ and thus corresponds to $\varpi_L$ under local
-class field theory, we obtain
+By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin reciprocity map for $L$, so we obtain
 
 \begin{corollary}\label{agreemenetofrectifiers}
 $\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
@@ -750,11 +749,11 @@ $\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
 \begin{proof}
 Note that $T(L) \cong L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
 that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in L^{\times} \} \cong L^{\times}$, where
-$\sigma$ is a generator of $Gal(L/K)$.  A uniformizer $\varpi_L$ in $L^{\times}$
-therefore corresponds to $(\varpi_L, \varpi_L, \cdots, \varpi_L) \in T(K)$, whose
-preimage under $\Nm$ is the class of $(\varpi_L, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
+$\sigma$ is a generator of $Gal(L/K)$.  A uniformizer $\varpi$ in $L^{\times}$
+therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
+preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
-$\xi_{\varphi_{\hat{w}}}(\varpi_L) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
+$\xi_{\varphi_{\hat{w}}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
 Finally, since $\varphi_{\hat{w}}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{\hat{w}}}$ is
 unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 \end{proof}
@@ -781,7 +780,7 @@ b & 0
 
 for some $b \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
-$\xi_{\varphi_{\hat{w}}'}(\varpi_E) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
+$\xi_{\varphi_{\hat{w}}'}(\varpi) = b$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to set $b = -1$, so that $\varphi_{\hat{w}}'(\Fr)$ is the canonical lift of $\hat{w}$ to $\widetilde{W}$.\MAxxx{I think that we should do the general $GL(n)$ case here.  I'm not convinced yet that the Tits group lift is even forced upon us for general $GL(n)$...it looks like it might be, though.}
 
 \begin{thebibliography}{9}
