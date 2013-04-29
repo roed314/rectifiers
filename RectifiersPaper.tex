@@ -383,13 +383,12 @@ For $\lambda \in X_*(T)$ and $\mu \in X^*(T)$ we write $\la \lambda, \mu \ra$
 for the canonical $\Gamma$-equivariant pairing
 $$\Hom_{\bar{K}}(\Gm, T) \times \Hom_{\bar{K}}(T, \Gm) \rightarrow \Hom_{\bar{K}}(\Gm, \Gm) \cong \ZZ.$$
 
-For any Galois extension $E$ of $K$ we have the norm map
+Write $\Nm$ for the map 
 \begin{align*}
-\Nm_{E/K} : S(E) &\rightarrow S(K) \\
-s &\mapsto \prod_{\sigma \in \Gal(E/K)} \sigma(s).
+T(L) &\rightarrow T(K) \\
+t &\mapsto \prod_{\sigma \in \Gamma} \sigma(t)
 \end{align*}
-\MAxxx{Sometimes we write $\Nm_{E/F}$, sometimes we
-write $\Nm$.  Be consistent.}
+and for its restriction to $X_*(T)$.
 
 The following theorem, due to Lang \cite{lang}, underpins the facts in
 Section \ref{padic tori} on tori over $p$-adic fields.
@@ -419,7 +418,7 @@ $T(K)_0 = \TT^\circ(\OK)$ of $T(K)$; we also write $T(K_n)_0$ for
 $\TT^\circ(\OKn)$.
 
 In fact, this subgroup of $T(K)$ is the first in a decreasing filtration.
-Moy and Prasad \cite{moyprasad1} \MAxxx{Is this the correct reference?}
+Moy and Prasad \cite{moyprasad}
 define one such filtration by
 embedding $T$ into an induced torus and defining the filtration of
 $\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu}
@@ -528,11 +527,7 @@ We now give meaning to the definition of \emph{admissible pair} in the introduct
 \begin{lemma}\label{weylgroups}
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$.  Let $L$ be the splitting field of $T$, and set
-$\Gamma = \Gal(L/K)$.\MAxxx{Umm.....does $E/F$ need to be Galois?  I asked
-the same question when introducing groups of type $L$ in the introduction of this paper...
-the torus $T$ in the introduction (when introducing groups of type $L$) could
-split over a non-Galois extension.}
-\DRxxx{Yes, $L/K$ is necessarily Galois.  I'll tell you why on Skype sometime.}
+$\Gamma = \Gal(L/K)$.
 \begin{enumerate}
 \item $N(G(L), T(K)) / T(L) \cong (N(G,T)/T)(K)$.
 \item The standard action of $N(G(L),T(L)) / T(L)$ on $T(L)$ determines
@@ -614,14 +609,15 @@ $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{ree
 
 \section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
-Let us fix a splitting $(\hat{T}, \hat{B}, \{x_{\alpha} \})$
+Let us fix a splitting $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
 for the dual group $\hat{G}$.  Set $\hat{N} = N_{\hat{G}}(\hat{T})$ and
-$\hat{W} = \hat{N} / \hat{T}$.  Here, $\alpha$ range over the set of simple
-roots of $\hat{T}$ in $\hat{B}$.
+$\hat{W} = \hat{N} / \hat{T}$.  Here, $\{ \alpha \}$ is the set of simple
+roots of $\hat{T}$ in $\hat{B}$, and $\{ X_{\alpha} \}$ is a set of root vectors
+for this set of simple roots.
 For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
-and $\phi_{\alpha}\mat{1}{1}{0}{1} = x_{\alpha}$. Let
-$\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.\MAxxx{Is this last paragraph completely correct?  Maybe we should do Lie algebra version.}
+and $d \phi_{\alpha}\mat{0}{1}{0}{0} = X_{\alpha}$. Let
+$\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
 
 \begin{definition}
   The Tits group $\widetilde{W}$ is the subgroup of $\hat{N}$
@@ -865,10 +861,10 @@ forced to set $b = -1$, so that $\varphi_{\hat{w}}'(\Fr)$ is the canonical lift 
   Unrefined minimal $K$-types for $p$-adic groups,
    Invent. Math. 116, no. 1-3, 393-408 (1994).
 
-\bibitem{moyprasad1}
-  Allen Moy, Gopal Prasad,
-  \emph{Jacquet functors and unrefined minimal $K$-types},
-   Comment. Math. Helv. 71 (1996), no. 1, 98--121.
+%\bibitem{moyprasad1}
+%  Allen Moy, Gopal Prasad,
+%  \emph{Jacquet functors and unrefined minimal $K$-types},
+%   Comment. Math. Helv. 71 (1996), no. 1, 98--121.
 
 \bibitem{reeder}
   Mark Reeder,
