@@ -233,38 +233,27 @@ the rectifier in the situation where supercuspidal $L$-packets have been
 constructed.
 
 \begin{definition}\label{regularpairs}
-Let $P_G^{Reg}(K)$ denote the set of admissible pairs $(T,\xi)$ such that
-
-(i) $\xi$ is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
-$T(1+\mathfrak{p}_L^{r})_{\Gamma}$ for some $r \geq 0$.
-
-(ii) $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$ is not fixed by any element of
-$(N(G,T)/T)(K)$ (see Definition \ref{admissibledefinition})
+Suppose $(T, \xi)$ is an admissible pair.
+\begin{enumerate}
+\item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
+is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
+$T(1+\mathfrak{p}_L^{r})_{\Gamma}$
+\item An admissible pair is \emph{regular} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
+is not fixed by any element of $(N(G,T)/T)(K)$.  We denote by $P_G^{Reg}(K)$ the set
+of regular pairs in $G$.
+\item A \emph{weak rectifier} is a function
+\begin{align*}
+{}_K\boldsymbol\mu^{\mathrm{Reg}} : (T, \xi) \mapsto {}_K \mu_{\xi}
+\end{align*}
+on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{rectifierdefinition}.
+\end{enumerate}
 \end{definition}
 \MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
 
 We can prove:
 
-\begin{theorem}\label{regularrectifierdefinition}\MAxxx{David seemed a little bit
-uncomfortable restating these four conditions, even though two of them are not
-really restated, since they are different.  Let's think about how we can
- state this theorem better.}
-Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.
-There exists a unique function $${}_K
-  \boldsymbol\mu^{\mathrm{Reg}} : P_G^{Reg}(K) \mapsto {}_K \mu_{\xi}$$ which attaches,
-  to each admissible pair $(T, \xi) \in P_G^{Reg}(K)$, a character ${}_K
-  \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions.
-
-\begin{enumerate}
-\item The character ${}_K \mu_{\xi}$ is unramified (i.e. trivial on
-  $T(\OL)_{\Gamma}$)
-
-\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$ agrees with \cite{debackerreeder} and \cite{reeder}
-
-\item If $(T, \xi_i) \in P_G^{Reg}(K)$ such that
-$\xi_1^{-1} \xi_2$ is tamely ramified, then
-${}_K \mu_{\xi_1} = {}_K \mu_{\xi_2}$.
-\end{enumerate}
+\begin{theorem}\label{regularrectifierdefinition}
+Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
 \end{theorem}
 
 Once phrased in this manner, uniqueness is a straightforward matter
