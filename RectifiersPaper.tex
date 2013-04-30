@@ -143,14 +143,7 @@ $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm}
 where $\HT{i}$ denotes $\mathrm{i}^{\mathrm{th}}$ Tate cohomology.
 
 Suppose that $\HT{0}(\Gamma, T(L)) = 0$, in which case
-$T(L)_{\Gamma}$ surjects onto $T(K)$\MAxxx{Do we need to suppose this?
-It is going to be true once we assume $G$ is semisimple and $T$
-unramified, but we don't really need to suppose this now, do we?  I guess
-it makes things easier to understand for the reader if we do suppose this
-now, because then one can actually twist a character of the coinvariants
-to get a character of $T(K)$, whereas one wouldn't be able to do this
-if $\HT{0}$ wasn't trivial....hm, ask David if we should delete this
-sentence or not.}.  Let us also suppose that
+$T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
 $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
@@ -171,18 +164,10 @@ provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.
 
 \begin{definition}\label{admissibledefinition}
-Let $T$ be a torus, defined over $K$, that splits over an unramified
-  extension $L$ \MAxxx{Should we include the condition $K$-minisotropic
-  in this definition and remove $K$-minisotropic from Definition \ref{regularpairs}?
-  The reason I ask is that Bushnell/Henniart define admissible pairs as characters
-  of \emph{elliptic} tori.  They don't define admissible pairs for \emph{arbitrary}
-  tori}.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
+Let $T$ be a $K$-minisotropic torus, that splits over an unramified
+  extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). \MAxxx{Do we need
-to define a notion of isomorphic admissible pairs?  Also, should we
-denote by $P_G(K)$ the set of isomorphism classes of admissible pairs?  This
-would be in analogy with Bushnell/Henniart's notation $P_n(K)$ for admissible
-pairs for elliptic tori in $GL(n,K)$.}
+by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $K$-isomorphism $\alpha$ from $T$ to $T'$ with $\xi = \xi' \circ \alpha$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
 \end{definition}
 
 \begin{definition}\label{rectifierdefinition}
@@ -262,18 +247,10 @@ write $P_G^{Reg}(K)$ instead of $Reg(K)$ here.  I only wrote $Reg(K)$ because
 I wanted to change $Reg(T,\xi)$ since it didn't make sense to write
 $(T,\xi) \in Reg(T,\xi)$.} denote the set of admissible pairs $(T,\xi)$ such that
 
-(i) $T$ is $K$-minisotropic.\MAxxx{Shouldn't we say ``$T(K)$ is compact''?  Or something
-similar?  The reason is that all the theorems we prove about cohomology of unramified tori
-give the results that we need only when $T(K)$ is compact.  But maybe $G$ semisimple plus
-$T$ being $K$-minisotropic implies that $T(K)$ is compact?  Well, actually, this seems
-to be true. Because if $G$ is semisimple, then the center is finite.  But $T$ being
-$K$-minisotropic is equivalent to $T(K) / Z(K)$ being compact.  But $Z(K)$ is finite, so
-since $T(K) / Z(K)$ is compact, so is $T(K)$  (right???)}
-
-(ii) $\xi$ is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
+(i) $\xi$ is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
 $T(1+\mathfrak{p}_L^{r})_{\Gamma}$ for some $r \geq 0$.
 
-(iii) $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$ is not fixed by any element of
+(ii) $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$ is not fixed by any element of
 $(N(G,T)/T)(K)$ (see Definition \ref{admissibledefinition})
 \end{definition}
 \MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $Reg(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
@@ -761,7 +738,7 @@ unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
 $\varphi_{\hat{w}}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{\hat{w}}'|_{I_K} \equiv 1$ and
-$\varphi_{\hat{w}}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} implies that the characteristic polynomial of $\varphi_{\hat{w}}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
+$\varphi_{\hat{w}}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[???]{reeder} \MAxxx{Which page?  It's page 31 of Reeder's version of the paper on his webpage} imply that the characteristic polynomial of $\varphi_{\hat{w}}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
 $\xi_{\varphi_{\hat{w}}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{\hat{w}}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
