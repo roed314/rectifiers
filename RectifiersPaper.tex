@@ -71,16 +71,23 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction}
-In this paper, we propose a natural generalization of the notion of a
+Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.  The local Langlands conjecture predicts a correspondence between a finite to one map, from the set of isomorphism classes of irreducible admissible representations of $G(K)$, to the set of equivalence classes of admissible homomorphisms from the Weil-Deligne group $W_K'$ of $K$, to the $L$-group ${}^L G$ of $G$.  
+
+In the case of supercuspidal representations of $G(K)$, there has been a significant amount of progress in the local Langlands correspondence in recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder}, \cite{kaletha1}, and \cite{reeder}, the strategy of constructing a local Langlands correspondence is to first attach a character of an elliptic torus to a Langlands parameter $W_K \rightarrow {}^L G$, where $W_K$ is the Weil group of $K$, and then to construct a putative supercuspidal $L$-packet associated to this character.
+
+Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $W_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
+
+The simplest example of this difficulty arising is in the case of supercuspidal representations of $PGL(2,K)$.  Suppose that $p \neq 2$, and that that $\varphi : W_K \rightarrow SL(2,\mathbb{C})$ is a homomorphism that is irreducible as a representation.  Then $\varphi = Ind_{W_L}^{W_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $N_{L/K}(L^{\times})$, where $N_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+
+Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / N_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $PGL(2,K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / N_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $PGL(2,K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / N_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
+
+In this paper, we propose a generalization of their notion of a
 rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
 associated Langlands parameters, and show that they are compatible
-with the rectifiers of $GL(n,K)$ as in \cite{bushnellhenniart}.
-\MAxxx{In the introduction, I should outline the case of $PGL(2,K)$
-and therefore the notion of rectifier (i.e. first take Langlands
-parameter, then do the natural thing to it, then ``rectify''
-the situation) can be seen very clearly for $PGL(2,K)$.}
+with the rectifiers of $GL(n,K)$ as in \cite{bushnellhenniart}.  We recall the 
+notion of a rectifier, as in \cite{bushnellhenniart}.
 
 An irreducible smooth representation of the Weil group $W_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
@@ -167,7 +174,7 @@ $T(L)_{\Gamma}$.
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
   extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $K$-isomorphism $\alpha$ from $T$ to $T'$ with $\xi = \xi' \circ \alpha$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
+by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
 \end{definition}
 
 We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
@@ -269,12 +276,10 @@ $G$ be an arbitrary unramified connected reductive group.  If
 $T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
 a Langlands parameter $\varphi_{w} :W _K \rightarrow {}^L G$ by
-sending Frobenius to a canonical \MAxxx{Canonical?  Is the Tits group
-lift canonical?} lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
+sending Frobenius to a canonical lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
 $\varphi_{w}$ to be trivial on $I_K$.
 If $G$ is semisimple,
-we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{w}}$$
-\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\varphi_{w}}^{-1}$????  Since the inverse is what we twist by to get a character of $T(K)$ (see Section \ref{mainresults})}
+we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{w}}^{-1}$$
 satisfies conditions (1)-(3), and we may therefore set
 ${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{w}}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
@@ -282,7 +287,7 @@ Moreover, we prove compatibility with Bushnell/Henniart:
 \begin{theorem}
   If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
   the rectifier of Bushnell/Henniart, when $(T,\xi) \in P_G^{Reg}(K)$.  Moreover, $\varphi_{w}$ is the
-  unique \MAxxx{up to a sign, or something like that?} Langlands
+  unique Langlands
   parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{theorem}
 
@@ -712,7 +717,7 @@ unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
 $\varphi_{w}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
-$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[???]{reeder} \MAxxx{Which page?  It's page 31 of Reeder's version of the paper on his webpage} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
+$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
 $\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
