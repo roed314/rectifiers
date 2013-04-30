@@ -170,6 +170,8 @@ The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $K$-isomorphism $\alpha$ from $T$ to $T'$ with $\xi = \xi' \circ \alpha$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
 \end{definition}
 
+We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
+
 \begin{definition}\label{rectifierdefinition}
   Let $T$ be a torus, defined over $K$, that splits over an unramified
   extension $L$.  A \emph{rectifier} for $T$ is a function $${}_K
@@ -181,9 +183,7 @@ by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two
 \item The character ${}_K \mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(1 + \mathfrak{p}_L)_{\Gamma}$)
 
-\item $\xi \cdot {}_K \mu_{\xi} \in \widehat{T(K)}$, the pair $(T, \xi \cdot {}_K \mu_{\xi})$
- is regular \MAxxx{Need to define notion of regularity for characters
-    of tori}, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
+\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
   is the local Langlands correspondence.
 
 \item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
@@ -227,25 +227,13 @@ happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
 in particular, that not all possible admissible pairs arise in the settings
 of \cite{debackerreeder} and \cite{reeder}.
 For example, if $G = GL(n)$, ${}_K \mu_{\xi}$ can be ramified,
-even if $T$ is unramified.  We will return to this case when supercuspidal $L$-packets
-are more generally constructed to allow for ramified ${}_K \mu_{\xi}$.
-
-Since $L$-packets have not been constructed in the generality that
-we need in order to prove this conjecture, we prove a theorem that determines
+even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
+we need in order to prove this conjecture, we prove Theorem \ref{regularrectifierdefinition}, which determines
 the rectifier in the situation where supercuspidal $L$-packets have been
-constructed.\MAxxx{I really like this sentence, as it explains what we will do
-in Theorem \ref{regularrectifierdefinition} before we state the theorem. I think
-that is important, since it might not be easy to understand what the main
-point of the theorem is.  On the other hand, this sentence sounds a bit
-redundant when reading it after the previous paragraph.  Ask David what
-he thinks.}
+constructed.
 
 \begin{definition}\label{regularpairs}
-Let $Reg(K)$ \MAxxx{If we have used the notation $P_G(K)$ to denote
-the set of isomorphism classes of admissible pairs earlier, then we can maybe
-write $P_G^{Reg}(K)$ instead of $Reg(K)$ here.  I only wrote $Reg(K)$ because
-I wanted to change $Reg(T,\xi)$ since it didn't make sense to write
-$(T,\xi) \in Reg(T,\xi)$.} denote the set of admissible pairs $(T,\xi)$ such that
+Let $P_G^{Reg}(K)$ denote the set of admissible pairs $(T,\xi)$ such that
 
 (i) $\xi$ is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
 $T(1+\mathfrak{p}_L^{r})_{\Gamma}$ for some $r \geq 0$.
@@ -253,7 +241,7 @@ $T(1+\mathfrak{p}_L^{r})_{\Gamma}$ for some $r \geq 0$.
 (ii) $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$ is not fixed by any element of
 $(N(G,T)/T)(K)$ (see Definition \ref{admissibledefinition})
 \end{definition}
-\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $Reg(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
+\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
 
 We can prove:
 
@@ -263,20 +251,17 @@ really restated, since they are different.  Let's think about how we can
  state this theorem better.}
 Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.
 There exists a unique function $${}_K
-  \boldsymbol\mu^{\mathrm{Reg}} : Reg(K) \mapsto {}_K \mu_{\xi}$$ which attaches,
-  to each admissible pair $(T, \xi) \in Reg(K)$, a character ${}_K
+  \boldsymbol\mu^{\mathrm{Reg}} : P_G^{Reg}(K) \mapsto {}_K \mu_{\xi}$$ which attaches,
+  to each admissible pair $(T, \xi) \in P_G^{Reg}(K)$, a character ${}_K
   \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions.
 
 \begin{enumerate}
 \item The character ${}_K \mu_{\xi}$ is unramified (i.e. trivial on
   $T(\OL)_{\Gamma}$)
 
-\item $\xi \cdot {}_K \mu_{\xi} \in \widehat{T(K)}$, the pair
-$(T, \xi \cdot {}_K \mu_{\xi})$ is regular, and
-$\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
-  agrees with \cite{debackerreeder} and \cite{reeder}
+\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$ agrees with \cite{debackerreeder} and \cite{reeder}
 
-\item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
+\item If $(T, \xi_i) \in P_G^{Reg}(K)$ are admissible pairs  such that
 $\xi_1^{-1} \xi_2$ is unramified, then
 ${}_K \mu_{\xi_1} = {}_K \mu_{\xi_2}$.
 \end{enumerate}
@@ -294,22 +279,22 @@ in terms of a canonical Langlands parameter, as follows.  Let
 $G$ be an arbitrary unramified connected reductive group.  If
 $T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
-a Langlands parameter $\varphi_{\hat{w}} :W _K \rightarrow {}^L G$ by
+a Langlands parameter $\varphi_{w} :W _K \rightarrow {}^L G$ by
 sending Frobenius to a canonical \MAxxx{Canonical?  Is the Tits group
-lift canonical?} lift of $\hat{w}w$, using the Tits group, and by setting
-$\varphi_{\hat{w}}$ to be trivial on $I_K$.
+lift canonical?} lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
+$\varphi_{w}$ to be trivial on $I_K$.
 If $G$ is semisimple,
-we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}$$
-\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$????  Since the inverse is what we twist by to get a character of $T(K)$ (see Section \ref{mainresults})}
-satisfies conditions (1)-(4), and we may therefore set
-${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{\hat{w}}}$.
+we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{w}}$$
+\MAxxx{Should this be $(T, \xi) \mapsto \xi_{\varphi_{w}}^{-1}$????  Since the inverse is what we twist by to get a character of $T(K)$ (see Section \ref{mainresults})}
+satisfies conditions (1)-(3), and we may therefore set
+${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{w}}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
 
 \begin{theorem}
-  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{\hat{w}}}$ agrees with
-  the rectifier of Bushnell/Henniart, when $(T,\xi) \in Reg(K)$.  Moreover, $\varphi_{\hat{w}}$ is the
+  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
+  the rectifier of Bushnell/Henniart, when $(T,\xi) \in P_G^{Reg}(K)$.  Moreover, $\varphi_{w}$ is the
   unique \MAxxx{up to a sign, or something like that?} Langlands
-  parameter such that $\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
+  parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{theorem}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(L))
@@ -632,11 +617,11 @@ Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetild
 
 Let $\chi_{\varphi}$ be the character of $T(K)$ associated to $\varphi$ by the theory in
 \cite{debackerreeder}.  By the theory in section
-\ref{groupsoftypeL}, $\varphi$ and $\varphi_{\hat{w}}$ gives rise to characters
-$\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$, respectively.
+\ref{groupsoftypeL}, $\varphi$ and $\varphi_{w}$ gives rise to characters
+$\xi_{\varphi}$ and $\xi_{\varphi_{w}}$ of $T(L)_{\Gamma}$, respectively.
 
 \begin{proposition}
-If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1} = \chi_{\varphi} \circ \Nm$.
+If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$.
 \end{proposition}
 
 \begin{proof}
@@ -648,16 +633,16 @@ Note that $T(K) = T(\OK)$, and so in particular
 $T(\OL)_{\Gamma}$ surjects onto $T(K)$ via the norm map
 $\Nm$.  Therefore, $\HT{-1}(\Gamma,T(L))$ and
 $T(\OL)_{\Gamma}$ together generate $T(L)_{\Gamma}$.  It thus suffices to check that
-$\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1} = \chi_{\varphi} \circ \Nm$ on each of these two subgroups.
+$\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$ on each of these two subgroups.
 
-Since $\varphi_{\hat{w}}|_{I_K} \equiv 1$, $\xi_{\varphi_{\hat{w}}}$ is trivial on
+Since $\varphi_{w}|_{I_K} \equiv 1$, $\xi_{\varphi_{w}}$ is trivial on
 $T(\OL)_{\Gamma}$ so Lemma
 \ref{grossanddebackerreedercompatibility} implies equality on $T(\OL)_{\Gamma}$.
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{toralmodification}.
 \end{proof}
 
 We have therefore proven Theorem \ref{regularrectifierdefinition}.  In the case that $G$ is semisimple, there was nothing special about
-$\varphi_{\hat{w}}$.  In fact, by the same arguments, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
+$\varphi_{w}$.  In fact, by the same arguments, $\xi_{\varphi_{w}} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift is forced upon us when we
@@ -720,7 +705,7 @@ See \cite[\S3.1]{zaremsky}.
 By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin reciprocity map for $L$, so we obtain
 
 \begin{corollary}\label{agreemenetofrectifiers}
-$\xi_{\varphi_{\hat{w}}} = {}_K \mu_{\xi}$.
+$\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{corollary}
 
 \begin{proof}
@@ -730,18 +715,18 @@ $\sigma$ is a generator of $Gal(L/K)$.  A uniformizer $\varpi$ in $L^{\times}$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
-$\xi_{\varphi_{\hat{w}}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
-Finally, since $\varphi_{\hat{w}}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{\hat{w}}}$ is
+$\xi_{\varphi_{w}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
+Finally, since $\varphi_{w}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{w}}$ is
 unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 \end{proof}
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
-$\varphi_{\hat{w}}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{\hat{w}}'|_{I_K} \equiv 1$ and
-$\varphi_{\hat{w}}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[???]{reeder} \MAxxx{Which page?  It's page 31 of Reeder's version of the paper on his webpage} imply that the characteristic polynomial of $\varphi_{\hat{w}}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
+$\varphi_{w}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
+$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[???]{reeder} \MAxxx{Which page?  It's page 31 of Reeder's version of the paper on his webpage} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
-$\xi_{\varphi_{\hat{w}}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
-forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{\hat{w}}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
+$\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
+forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{thebibliography}{9}
 
