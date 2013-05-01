@@ -35,12 +35,18 @@
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Res}{Res}
 \DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Ind}{Ind}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SL}{SL}
 
 \newcommand{\mat}[4]{\left( \begin{array}{cc} {#1} & {#2} \\ {#3} & {#4}
 \end{array} \right)}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\C}{\mathcal{C}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\CCx}{\mathbb{C}^\times}
 \newcommand{\OK}{\mathcal{O}_K}
 \newcommand{\OKn}{\mathcal{O}_{K_n}}
 \newcommand{\OL}{\mathcal{O}_L}
@@ -63,7 +69,7 @@
 
 In this paper we propose a natural generalization of rectifiers, the
 character twists that appear in the local Langlands correspondence for
-$GL(n,K)$.  Our generalization is to arbitrary connected reductive
+$\GL_{n}(K)$.  Our generalization is to arbitrary connected reductive
 groups, with certain classes of Langlands parameters.
 
 \end{abstract}
@@ -77,16 +83,16 @@ In the case of supercuspidal representations of $G(K)$, there has been a signifi
 
 Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $W_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
 
-The simplest example of this difficulty arising is in the case of supercuspidal representations of $PGL(2,K)$.  Suppose that $p \neq 2$, and that that $\varphi : W_K \rightarrow SL(2,\mathbb{C})$ is a homomorphism that is irreducible as a representation.  Then $\varphi = Ind_{W_L}^{W_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $N_{L/K}(L^{\times})$, where $N_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : W_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{W_L}^{W_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $N_{L/K}(L^{\times})$, where $N_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
 
-Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / N_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $PGL(2,K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / N_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $PGL(2,K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / N_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
+Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / N_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / N_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / N_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
 
 In this paper, we propose a generalization of their notion of a
 rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
 associated Langlands parameters, and show that they are compatible
-with the rectifiers of $GL(n,K)$ as in \cite{bushnellhenniart}.
+with the rectifiers of $\GL_{n}(K)$ as in \cite{bushnellhenniart}.
 
 \subsection*{Acknowledgements}
 
@@ -151,18 +157,18 @@ so it suffices to prove the result for $i=1$ and $i=2$, which is done
 by Serre \cite[\S VI.6]{serre2}.
 \end{proof}
 
-\section{Rectifiers for $GL(n,K)$}
+\section{Rectifiers for $\GL_{n}(K)$}
 
 We recall the notion of a rectifier, as in \cite{bushnellhenniart}.
 An irreducible smooth representation of the Weil group $W_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
 sum of characters.  Let us recall the classical construction of the
-essentially tame local Langlands correspondence for $GL(n,K)$.  In the
+essentially tame local Langlands correspondence for $\GL_{n}(K)$.  In the
 essentially tame case, an irreducible representation $\varphi : W_K
-\rightarrow GL(n,\mathbb{C})$ naturally provides an \emph{admissible
+\rightarrow \GL_{n}(\CC)$ naturally provides an \emph{admissible
   pair} $(L/K, \xi)$.  Here, $L/K$ is a degree $n$ separable extension
 and $\xi$ is a character (with certain conditions) of $L^{\times}$,
-which one can view as a maximal elliptic torus in $GL(n,K)$.  Howe
+which one can view as a maximal elliptic torus in $\GL_{n}(K)$.  Howe
 constructs a map (see \cite{howe})
 \begin{equation*}
 \left\{
@@ -173,7 +179,7 @@ admissible \ pairs
 \right\} \rightarrow \left\{
 \begin{array}{ll}
 supercuspidal \ representations \\
-of \ GL(n,K)
+of \ \GL_{n}(K)
 \end{array} \right\}
 \end{equation*}
 $$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
@@ -288,12 +294,12 @@ $I_{\Gamma}(T(L)) = \{(1 - \sigma)t \ : t \in T(L), \sigma \in \Gamma \}$.
 Restricting $\varphi$ to $W_L$ we get a homomorphism
 $$\varphi|_{W_L} : W_L \rightarrow \hat{T}.$$
 By the Langlands correspondence for tori, this gives us a character
-$\xi_{\varphi} : T(L) \rightarrow \mathbb{C}^\times$.  Since $\varphi|_{W_L}$ extends
+$\xi_{\varphi} : T(L) \rightarrow \CCx$.  Since $\varphi|_{W_L}$ extends
 to $\varphi$, one can see that
 $$\xi_{\varphi}(t^{\sigma}) = \xi_{\varphi}(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
 Therefore, $\xi_{\varphi}(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
 Thus, $\xi_{\varphi}$ is trivial on the augmentation ideal $I_{\Gamma}(T(L))$
-and gives $$\xi_{\varphi} : T(L)_\Gamma \rightarrow \mathbb{C}^\times$$ Invariants
+and gives $$\xi_{\varphi} : T(L)_\Gamma \rightarrow \CCx$$ Invariants
 and coinvariants are related by the norm map
 $$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
@@ -397,7 +403,7 @@ for the dual group $\hat{G}$.  Set $\hat{N} = N_{\hat{G}}(\hat{T})$ and
 $\hat{W} = \hat{N} / \hat{T}$.  Here, $\{ \alpha \}$ is the set of simple
 roots of $\hat{T}$ in $\hat{B}$, and $\{ X_{\alpha} \}$ is a set of root vectors
 for this set of simple roots.
-For each simple root $\alpha$, let $\phi_{\alpha} : SL(2) \rightarrow \hat{G}$
+For each simple root $\alpha$, let $\phi_{\alpha} : \SL_2 \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
 and $d \phi_{\alpha}\mat{0}{1}{0}{0} = X_{\alpha}$. Let
 $\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
@@ -468,13 +474,13 @@ $\varphi_{w}$.  In fact, by the same arguments, $\xi_{\varphi_{w}} = \xi_{\varph
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift is forced upon us when we
-consider groups that are not necessarily semisimple, such as $GL(n,K)$.
+consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
 \section{Rectifiers for general reductive groups}
 
-One may ask whether rectifiers exist for groups apart from $GL(n,K)$.
+One may ask whether rectifiers exist for groups apart from $\GL_{n}(K)$.
 Even moreso, how does one define the notion of rectifier for
-groups apart from $GL(n,K)$?  The answer can be gleamed from a recent
+groups apart from $\GL_{n}(K)$?  The answer can be gleamed from a recent
 construction of Benedict Gross, which we briefly describe now (for
 more details, see \S\ref{groupsoftypeL}).
 
@@ -486,7 +492,7 @@ associate a maximal $K$-torus $T$ in $G$, the twisted $K$-torus
 associated to $\varphi(\Fr)$, where $\Fr$ is a geometric Frobenius
 of $W_K$.  Suppose that $T$ splits
 over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
-Since $\varphi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \mathbb{C}^{\times}$,
+Since $\varphi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \CCx$,
 then by the local Langlands correspondence for tori one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
@@ -503,7 +509,7 @@ $T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
 $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
-If $G$ happens to be $GL(n)$, one can compute that
+If $G$ happens to be $\GL_n$, one can compute that
 $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
 $T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$, and
 $(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
@@ -511,7 +517,7 @@ correspondence, one would then proceed (as explained earlier) to
 attach the supercuspidal representation $\pi_{\xi \cdot {}_K
   \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Howe.
 
-If $G$ were arbitrary, then in analogy to the case of $GL(n,K)$, there
+If $G$ were arbitrary, then in analogy to the case of $\GL_{n}(K)$, there
 exist in certain cases constructions of supercuspidal $L$-packets
 $L(\chi)$ associated to characters $\chi$ of tori $T(K)$ in $G(K)$ (see
 \cite{debackerreeder}, \cite{kaletha}, \cite{reeder}).  However, as we
@@ -566,11 +572,11 @@ we should probably think about this type of thing...}
 
 We first note that the definition of admissible pair above generalizes
 the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
-if $G = GL(n)$, and $T$ is an elliptic torus in $G$ splitting over
+if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $L/K$, then one can show that
-$(N(G,T)/T)(K) = Gal(L/K)$.  Thus, for $\xi$ to not be fixed by any
+$(N(G,T)/T)(K) = \Gal(L/K)$.  Thus, for $\xi$ to not be fixed by any
 element of $(N(G,T)/T)(K)$ is equivalent to $\xi$ not being fixed by
-any subgroup of $Gal(L/K)$.  This can be seen to be equivalent to $\xi$
+any subgroup of $\Gal(L/K)$.  This can be seen to be equivalent to $\xi$
 not coming from the norms $N_{L/M}$ for any proper subfield $M$ contained
 in $L$, containing $K$.
 
@@ -582,7 +588,7 @@ We will show that the characters ${}_K \mu_{\xi}$ that arise in this setting
 happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
 in particular, that not all possible admissible pairs arise in the settings
 of \cite{debackerreeder} and \cite{reeder}.
-For example, if $G = GL(n)$, ${}_K \mu_{\xi}$ can be ramified,
+For example, if $G = \GL_n$, ${}_K \mu_{\xi}$ can be ramified,
 even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
 we need in order to prove this conjecture, we determine
 the rectifier in the situation where supercuspidal $L$-packets have been
@@ -634,7 +640,7 @@ ${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{w}}$.
 Moreover, we prove compatibility with Bushnell/Henniart:
 
 \begin{theorem}
-  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
+  If $G = \GL_{n}(K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
   the rectifier of Bushnell/Henniart, when $(T,\xi) \in P_G^{Reg}(K)$.  Moreover, $\varphi_{w}$ is the
   unique Langlands
   parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
@@ -648,7 +654,7 @@ of $T(L)_{\Gamma}$ under the norm map.  However, one might be
 able to remedy this with a prediction of central character, as in
 \cite{grossreeder}, for example.
 
-\section{Compatibility with Bushnell-Henniart}\label{GL(n)}
+\section{Compatibility with Bushnell-Henniart}\label{GLn}
 
 In this section, we show that our function ${}_K
   \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
@@ -660,13 +666,13 @@ setting.
   Then ${}_K \mu_{\xi}$ is unramified and
   ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
-\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $GL(n)$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
+\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
 \begin{proof}
 See \cite[Proposition 21]{bushnellhenniart}.
 \end{proof}
 
 Let $L/K$ be the degree $n$ unramified extension of $K$.
-Let $T = Res_{L/K}(\Gm)$, $\Gamma = Gal(L/K)$.
+Let $T = \Res_{L/K}(\Gm)$, $\Gamma = \Gal(L/K)$.
 
 \begin{proposition}
 $\HT{0}(\Gamma, X_*(T)) = 0$.
@@ -694,8 +700,8 @@ $$1 \rightarrow T(L)_{\Gamma} \xrightarrow{\sim} T(K) \rightarrow 1$$ by
 Corollary \ref{reductiontori}.
 
 \begin{proposition}\label{powersoflifts}
-Let $\hat{w}$ be a Coxeter element of $GL(n,\mathbb{C})$.  Let $\tilde{w}$ be the canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
-denotes the identity element in $GL(n,\mathbb{C})$.
+Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
+denotes the identity element in $\GL_{n}(\CC)$.
 \end{proposition}
 
 \begin{proof}
@@ -711,7 +717,7 @@ $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \begin{proof}
 Note that $T(L) \cong L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
 that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in L^{\times} \} \cong L^{\times}$, where
-$\sigma$ is a generator of $Gal(L/K)$.  A uniformizer $\varpi$ in $L^{\times}$
+$\sigma$ is a generator of $\Gal(L/K)$.  A uniformizer $\varpi$ in $L^{\times}$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
@@ -722,8 +728,8 @@ unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
-$\varphi_{w}' : W_K \rightarrow GL(n,\mathbb{C})$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
-$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \mathbb{C}^{\times}$.  One can see that, by analogous arguments
+$\varphi_{w}' : W_K \rightarrow \GL_{n}(\CC)$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
+$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
 $\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
