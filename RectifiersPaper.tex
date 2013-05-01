@@ -54,6 +54,9 @@
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\Gm}{\mathbb{G}_m}
 
+\newcommand{\Weil}{\mathcal{W}}
+\newcommand{\WD}{\mathcal{W}'}
+
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 
@@ -77,15 +80,15 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction}
-Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.  The local Langlands conjecture predicts the existence of a finite to one map, from the set of isomorphism classes of irreducible admissible representations of $G(K)$, to the set of equivalence classes of admissible homomorphisms from the Weil-Deligne group $W_K'$ of $K$, to the $L$-group ${}^L G$ of $G$.
+Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.  The local Langlands conjecture predicts the existence of a finite to one map, from the set of isomorphism classes of irreducible admissible representations of $G(K)$, to the set of equivalence classes of admissible homomorphisms from the Weil-Deligne group $\WD_K$ of $K$, to the $L$-group ${}^L G$ of $G$.
 
-In the case of supercuspidal representations of $G(K)$, there has been a significant amount of progress in the local Langlands correspondence in recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder}, \cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands correspondence is to first attach a character of an elliptic torus to a Langlands parameter $W_K \rightarrow {}^L G$, where $W_K$ is the Weil group of $K$, and then to construct a putative supercuspidal $L$-packet associated to this character.
+In the case of supercuspidal representations of $G(K)$, there has been a significant amount of progress in the local Langlands correspondence in recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder}, \cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands correspondence is to first attach a character of an elliptic torus to a Langlands parameter $\Weil_K \rightarrow {}^L G$, where $\Weil_K$ is the Weil group of $K$, and then to construct a putative supercuspidal $L$-packet associated to this character.
 
-Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $W_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
+Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
 
-The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : W_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{W_L}^{W_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $N_{L/K}(L^{\times})$, where $N_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $\Nm_{L/K}(L^{\times})$, where $\Nm_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
 
-Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / N_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / N_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / N_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
+Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / \Nm_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / \Nm_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / \Nm_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
 
 In this paper, we propose a generalization of their notion of a
 rectifier.  In particular, we define rectifiers for Langlands
@@ -160,11 +163,11 @@ by Serre \cite[\S VI.6]{serre2}.
 \section{Rectifiers for $\GL_{n}(K)$}
 
 We recall the notion of a rectifier, as in \cite{bushnellhenniart}.
-An irreducible smooth representation of the Weil group $W_K$ of $K$ is
+An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
 sum of characters.  Let us recall the classical construction of the
 essentially tame local Langlands correspondence for $\GL_{n}(K)$.  In the
-essentially tame case, an irreducible representation $\varphi : W_K
+essentially tame case, an irreducible representation $\varphi : \Weil_K
 \rightarrow \GL_{n}(\CC)$ naturally provides an \emph{admissible
   pair} $(L/K, \xi)$.  Here, $L/K$ is a degree $n$ separable extension
 and $\xi$ is a character (with certain conditions) of $L^{\times}$,
@@ -287,14 +290,14 @@ For such a group $D$ we have by definition an exact sequence
 $$1 \rightarrow \hat{T} \rightarrow D \rightarrow \Gamma \rightarrow 1.$$
 
 We now describe how, given a Langlands parameter
-$$\varphi : W_K \rightarrow D,$$
+$$\varphi : \Weil_K \rightarrow D,$$
 where $D$ is a group of type L, we can naturally attach a character of
 $T(L)_{\Gamma} := T(L) / I_{\Gamma}(T(L))$, where
 $I_{\Gamma}(T(L)) = \{(1 - \sigma)t \ : t \in T(L), \sigma \in \Gamma \}$.
-Restricting $\varphi$ to $W_L$ we get a homomorphism
-$$\varphi|_{W_L} : W_L \rightarrow \hat{T}.$$
+Restricting $\varphi$ to $\Weil_L$ we get a homomorphism
+$$\varphi|_{\Weil_L} : \Weil_L \rightarrow \hat{T}.$$
 By the Langlands correspondence for tori, this gives us a character
-$\xi_{\varphi} : T(L) \rightarrow \CCx$.  Since $\varphi|_{W_L}$ extends
+$\xi_{\varphi} : T(L) \rightarrow \CCx$.  Since $\varphi|_{\Weil_L}$ extends
 to $\varphi$, one can see that
 $$\xi_{\varphi}(t^{\sigma}) = \xi_{\varphi}(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
 Therefore, $\xi_{\varphi}(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
@@ -349,7 +352,7 @@ $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 &= \prod_{i=0}^{n-1} g^i t g^{-i} \\
 &= \prod_{i=0}^{n-1} \Fr^i(t)
 \end{align*}
-since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon W_L \rightarrow \hat{T}$
+since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon \Weil_L \rightarrow \hat{T}$
 by $\varphi_i(z) = 1$ for $z \in I_L$ and
 $\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_{\varphi_i}$ be the associated character
 of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\xi_{\varphi_i} = \xi_{\varphi_0} \circ \Fr^i.$
@@ -428,7 +431,7 @@ Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 \end{enumerate}
 \end{theorem}
 
-Let $\varphi : W_K \rightarrow {}^L G$ be a regular semisimple elliptic Langlands parameter.  Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$, where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$ (see \cite[\S 3]{debackerreeder}).
+Let $\varphi : \Weil_K \rightarrow {}^L G$ be a regular semisimple elliptic Langlands parameter.  Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$, where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$ (see \cite[\S 3]{debackerreeder}).
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
@@ -436,7 +439,7 @@ Let $\tilde{w}$ be the
 canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{definition}
-Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.  We define a homomorphism $\varphi_{\hat{u}} : W_K \rightarrow {}^L G$ by
+Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.  We define a homomorphism $\varphi_{\hat{u}} : \Weil_K \rightarrow {}^L G$ by
 \begin{enumerate}
 \item $\varphi_{\hat{u}}|_{I_K} \equiv 1$
 \item $\varphi_{\hat{u}}(\Fr) = \hat{\theta} \tilde{u}$
@@ -485,14 +488,14 @@ construction of Benedict Gross, which we briefly describe now (for
 more details, see \S\ref{groupsoftypeL}).
 
 Suppose that $G$ is a connected reductive group defined over a
-$p$-adic field $K$.  Let $\varphi : W_K \rightarrow {}^L G$ be a
+$p$-adic field $K$.  Let $\varphi : \Weil_K \rightarrow {}^L G$ be a
 Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
 through the normalizer of a maximal torus. To $\varphi$, one can
 associate a maximal $K$-torus $T$ in $G$, the twisted $K$-torus
 associated to $\varphi(\Fr)$, where $\Fr$ is a geometric Frobenius
-of $W_K$.  Suppose that $T$ splits
+of $\Weil_K$.  Suppose that $T$ splits
 over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
-Since $\varphi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \CCx$,
+Since $\varphi|_{\Weil_L}$ has image in $\hat{T} = X^*(T) \otimes \CCx$,
 then by the local Langlands correspondence for tori one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
@@ -630,7 +633,7 @@ in terms of a canonical Langlands parameter, as follows.  Let
 $G$ be an arbitrary unramified connected reductive group.  If
 $T$ is an unramified torus in $G$, then $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We will define
-a Langlands parameter $\varphi_{w} :W _K \rightarrow {}^L G$ by
+a Langlands parameter $\varphi_{w} :\Weil _K \rightarrow {}^L G$ by
 sending Frobenius to a canonical lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
 $\varphi_{w}$ to be trivial on $I_K$.
 If $G$ is semisimple,
@@ -728,7 +731,7 @@ unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
-$\varphi_{w}' : W_K \rightarrow \GL_{n}(\CC)$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
+$\varphi_{w}' : \Weil_K \rightarrow \GL_{n}(\CC)$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
 $\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that, by analogous arguments
 as in Corollary \ref{agreemenetofrectifiers},
 $\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
