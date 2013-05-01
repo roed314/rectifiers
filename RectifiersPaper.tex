@@ -86,220 +86,11 @@ rectifier.  In particular, we define rectifiers for Langlands
 parameters of arbitrary connected reductive groups that map into a
 ``group of type L''.  We then describe these rectifiers via their
 associated Langlands parameters, and show that they are compatible
-with the rectifiers of $GL(n,K)$ as in \cite{bushnellhenniart}.  We recall the
-notion of a rectifier, as in \cite{bushnellhenniart}.
+with the rectifiers of $GL(n,K)$ as in \cite{bushnellhenniart}.
 
-An irreducible smooth representation of the Weil group $W_K$ of $K$ is
-called \emph{essentially tame} if its restriction to wild inertia is a
-sum of characters.  Let us recall the classical construction of the
-essentially tame local Langlands correspondence for $GL(n,K)$.  In the
-essentially tame case, an irreducible representation $\varphi : W_K
-\rightarrow GL(n,\mathbb{C})$ naturally provides an \emph{admissible
-  pair} $(L/K, \xi)$.  Here, $L/K$ is a degree $n$ separable extension
-and $\xi$ is a character (with certain conditions) of $L^{\times}$,
-which one can view as a maximal elliptic torus in $GL(n,K)$.  Howe
-constructs a map (see \cite{howe})
-\begin{equation*}
-\left\{
-\begin{array}{ll}
-isomorphism \ classes \ of \\
-admissible \ pairs
-\end{array}
-\right\} \rightarrow \left\{
-\begin{array}{ll}
-supercuspidal \ representations \\
-of \ GL(n,K)
-\end{array} \right\}
-\end{equation*}
-$$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
-The problem is that the obvious map, $$\varphi \mapsto \pi_{\xi},$$
-the so-called ``naive correspondence'', is not the local Langlands
-correspondence because $\pi_{\xi}$ has the wrong central character.
-Instead, the local Langlands correspondence is given by $$\varphi
-\mapsto \pi_{\xi \cdot {}_K \mu_{\xi}}$$ for some subtle finite order
-character ${}_K \mu_{\xi}$ of $L^{\times}$.  The function $${}_K
-\boldsymbol\mu : (L/K, \xi) \mapsto {}_K \mu_{\xi}$$ is called the
-\emph{rectifier} associated to $L/K$.  Both the description of and the
-intuition behind the rectifiers ${}_K \boldsymbol\mu$ have been
-studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
+\subsection*{Acknowledgements}
 
-One may ask whether rectifiers exist for groups apart from $GL(n,K)$.
-Even moreso, how does one define the notion of rectifier for
-groups apart from $GL(n,K)$?  The answer can be gleamed from a recent
-construction of Benedict Gross, which we briefly describe now (for
-more details, see \S\ref{groupsoftypeL}).
-
-Suppose that $G$ is a connected reductive group defined over a
-$p$-adic field $K$.  Let $\varphi : W_K \rightarrow {}^L G$ be a
-Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
-through the normalizer of a maximal torus. To $\varphi$, one can
-associate a maximal $K$-torus $T$ in $G$, the twisted $K$-torus
-associated to $\varphi(\Fr)$, where $\Fr$ is a geometric Frobenius
-of $W_K$.  Suppose that $T$ splits
-over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
-Since $\varphi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \mathbb{C}^{\times}$,
-then by the local Langlands correspondence for tori one can canonically
-associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
-the group of coinvariants of $T(L)$ with respect
-to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
-are related by the norm map
-$$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
-in the cohomology sequence
-$$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
-= T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1,$$
-where $\HT{i}$ denotes $\mathrm{i}^{\mathrm{th}}$ Tate cohomology.
-
-Suppose that $\HT{0}(\Gamma, T(L)) = 0$, in which case
-$T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
-$\varphi$ does not factor through a proper Levi subgroup, so that the
-representations in the $L$-packet associated to $\varphi$ are
-conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
-If $G$ happens to be $GL(n)$, one can compute that
-$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
-$T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$, and
-$(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
-correspondence, one would then proceed (as explained earlier) to
-attach the supercuspidal representation $\pi_{\xi \cdot {}_K
-  \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Howe.
-
-If $G$ were arbitrary, then in analogy to the case of $GL(n,K)$, there
-exist in certain cases constructions of supercuspidal $L$-packets
-$L(\chi)$ associated to characters $\chi$ of tori $T(K)$ in $G(K)$ (see
-\cite{debackerreeder}, \cite{kaletha}, \cite{reeder}).  However, as we
-have seen, a Langlands parameter $\varphi$ as above does not naturally
-provide a character of $T(K)$, but rather a character of
-$T(L)_{\Gamma}$.
-
-\begin{definition}\label{admissibledefinition}
-Let $T$ be a $K$-minisotropic torus, that splits over an unramified
-  extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
-The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
-\end{definition}
-
-We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
-
-\begin{definition}\label{rectifierdefinition}
-  Let $T$ be a torus, defined over $K$, that splits over an unramified
-  extension $L$.  A \emph{rectifier} for $T$ is a function $${}_K
-  \boldsymbol\mu : (T, \xi) \mapsto {}_K \mu_{\xi}$$ which attaches,
-  to each admissible pair $(T, \xi)$, a character ${}_K
-  \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions.
-
-\begin{enumerate}
-\item The character ${}_K \mu_{\xi}$ is tamely ramified (i.e. trivial on
-  $T(1 + \mathfrak{p}_L)_{\Gamma}$)
-
-\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
-  is the local Langlands correspondence.
-
-\item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
-$\xi_1^{-1} \xi_2$ is tamely ramified, then
-${}_K \mu_{\xi_1} = {}_K \mu_{\xi_2}$.
-\end{enumerate}
-\MAxxx{Gordan, during my seminar that I gave about this stuff, asked me:
-What if $T$ occurs as a torus of two different groups $G$?  Do you
-get the same rectifying character attached to $(T, \xi)$?  That is,
-is our function ${}_K \boldsymbol\mu$ well-defined?  Because $(T,\xi)$
-could occur for different groups $G_1, G_2$.  If they do, is the associated
-rectifier correct in LLC for $G_1$ and $G_2$??? I'm not even sure if
-I formulated this question correctly, and to be honest, I don't know
-if Gordan did either, since he didn't completely understand my talk, but
-we should probably think about this type of thing...}
-
-\end{definition}
-
-\begin{conjecture}
-  Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
-  admits a unique rectifier ${}_K \boldsymbol\mu : (T, \xi) \mapsto
-  {}_K \mu_{\xi}$.
-\end{conjecture}
-
-We first note that the definition of admissible pair above generalizes
-the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
-if $G = GL(n)$, and $T$ is an elliptic torus in $G$ splitting over
-an unramified extension $L/K$, then one can show that
-$(N(G,T)/T)(K) = Gal(L/K)$.  Thus, for $\xi$ to not be fixed by any
-element of $(N(G,T)/T)(K)$ is equivalent to $\xi$ not being fixed by
-any subgroup of $Gal(L/K)$.  This can be seen to be equivalent to $\xi$
-not coming from the norms $N_{L/M}$ for any proper subfield $M$ contained
-in $L$, containing $K$.
-
-We next note that as the local Langlands correspondence is not known in general, we must restrict
-ourselves to cases where supercuspidal $L$-packets have been constructed.
-Since we are in the present paper considering the situation when $T$ is unramified,
-we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
-We will show that the characters ${}_K \mu_{\xi}$ that arise in this setting
-happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
-in particular, that not all possible admissible pairs arise in the settings
-of \cite{debackerreeder} and \cite{reeder}.
-For example, if $G = GL(n)$, ${}_K \mu_{\xi}$ can be ramified,
-even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
-we need in order to prove this conjecture, we determine
-the rectifier in the situation where supercuspidal $L$-packets have been
-constructed.
-
-\begin{definition}\label{regularpairs}
-Suppose $(T, \xi)$ is an admissible pair.
-\begin{enumerate}
-\item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
-is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
-$T(1+\mathfrak{p}_L^{r})_{\Gamma}$
-\item An admissible pair is \emph{regular} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
-is not fixed by any element of $(N(G,T)/T)(K)$.  We denote by $P_G^{Reg}(K)$ the set
-of regular pairs in $G$.
-\item A \emph{weak rectifier} is a function
-\begin{align*}
-{}_K\boldsymbol\mu^{\mathrm{Reg}} : (T, \xi) \mapsto {}_K \mu_{\xi}
-\end{align*}
-on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{rectifierdefinition}.
-\end{enumerate}
-\end{definition}
-\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
-
-We can prove:
-
-\begin{theorem}\label{regularrectifierdefinition}
-Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
-\end{theorem}
-
-Once phrased in this manner, uniqueness is a straightforward matter
-(see \S\ref{}) \MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?
-I don't know if we have an argument.  For example, there might be different
-characters of a torus $T(K)$ that give rise to the same supercuspidal $L$-packet.
-Is this true?}
-
-The existence of ${}_K  \boldsymbol\mu^{\mathrm{Reg}}$
-will be proven by interpreting the characters ${}_K \mu_{\xi}$
-in terms of a canonical Langlands parameter, as follows.  Let
-$G$ be an arbitrary unramified connected reductive group.  If
-$T$ is an unramified torus in $G$, then $T$ can be defined
-via Galois twisting by a Weyl group element $w$.  We will define
-a Langlands parameter $\varphi_{w} :W _K \rightarrow {}^L G$ by
-sending Frobenius to a canonical lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
-$\varphi_{w}$ to be trivial on $I_K$.
-If $G$ is semisimple,
-we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{w}}^{-1}$$
-satisfies conditions (1)-(3), and we may therefore set
-${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{w}}$.
-Moreover, we prove compatibility with Bushnell/Henniart:
-
-\begin{theorem}
-  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
-  the rectifier of Bushnell/Henniart, when $(T,\xi) \in P_G^{Reg}(K)$.  Moreover, $\varphi_{w}$ is the
-  unique Langlands
-  parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
-\end{theorem}
-
-We would like to note that in the case that $\HT{0}(\Gamma, T(L))
-\neq 0$, the situation seems more difficult because twisting $\xi$
-by a character of $T(L)_{\Gamma}$
-can only result in a character of the image
-of $T(L)_{\Gamma}$ under the norm map.  However, one might be
-able to remedy this with a prediction of central character, as in
-\cite{grossreeder}, for example.
-
-Acknowledgements: Part of this paper was heavily influenced by
+Part of this paper was heavily influenced by
 conversations with Gordan Savin.  We wish to thank him for these
 conversations.  We would also like to thank Jeffrey Adams and Geo Kam
 Fai for helpful conversations as well.
@@ -359,6 +150,43 @@ $\HT{i}(\Gamma_n, H(k_n)) \cong \HT{i+2}(\Gamma_n, H(k_n))$ \cite[Thm. 5]{atiyah
 so it suffices to prove the result for $i=1$ and $i=2$, which is done
 by Serre \cite[\S VI.6]{serre2}.
 \end{proof}
+
+\section{Rectifiers for $GL(n,K)$}
+
+We recall the notion of a rectifier, as in \cite{bushnellhenniart}.
+An irreducible smooth representation of the Weil group $W_K$ of $K$ is
+called \emph{essentially tame} if its restriction to wild inertia is a
+sum of characters.  Let us recall the classical construction of the
+essentially tame local Langlands correspondence for $GL(n,K)$.  In the
+essentially tame case, an irreducible representation $\varphi : W_K
+\rightarrow GL(n,\mathbb{C})$ naturally provides an \emph{admissible
+  pair} $(L/K, \xi)$.  Here, $L/K$ is a degree $n$ separable extension
+and $\xi$ is a character (with certain conditions) of $L^{\times}$,
+which one can view as a maximal elliptic torus in $GL(n,K)$.  Howe
+constructs a map (see \cite{howe})
+\begin{equation*}
+\left\{
+\begin{array}{ll}
+isomorphism \ classes \ of \\
+admissible \ pairs
+\end{array}
+\right\} \rightarrow \left\{
+\begin{array}{ll}
+supercuspidal \ representations \\
+of \ GL(n,K)
+\end{array} \right\}
+\end{equation*}
+$$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
+The problem is that the obvious map, $$\varphi \mapsto \pi_{\xi},$$
+the so-called ``naive correspondence'', is not the local Langlands
+correspondence because $\pi_{\xi}$ has the wrong central character.
+Instead, the local Langlands correspondence is given by $$\varphi
+\mapsto \pi_{\xi \cdot {}_K \mu_{\xi}}$$ for some subtle finite order
+character ${}_K \mu_{\xi}$ of $L^{\times}$.  The function $${}_K
+\boldsymbol\mu : (L/K, \xi) \mapsto {}_K \mu_{\xi}$$ is called the
+\emph{rectifier} associated to $L/K$.  Both the description of and the
+intuition behind the rectifiers ${}_K \boldsymbol\mu$ have been
+studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
 
 \section{Tori over $p$-adic fields} \label{padic tori}
 
@@ -642,7 +470,185 @@ and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift is forced upon us when we
 consider groups that are not necessarily semisimple, such as $GL(n,K)$.
 
-\section{Rectifier for $GL(n,K)$}\label{GL(n)}
+\section{Rectifiers for general reductive groups}
+
+One may ask whether rectifiers exist for groups apart from $GL(n,K)$.
+Even moreso, how does one define the notion of rectifier for
+groups apart from $GL(n,K)$?  The answer can be gleamed from a recent
+construction of Benedict Gross, which we briefly describe now (for
+more details, see \S\ref{groupsoftypeL}).
+
+Suppose that $G$ is a connected reductive group defined over a
+$p$-adic field $K$.  Let $\varphi : W_K \rightarrow {}^L G$ be a
+Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
+through the normalizer of a maximal torus. To $\varphi$, one can
+associate a maximal $K$-torus $T$ in $G$, the twisted $K$-torus
+associated to $\varphi(\Fr)$, where $\Fr$ is a geometric Frobenius
+of $W_K$.  Suppose that $T$ splits
+over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
+Since $\varphi|_{W_L}$ has image in $\hat{T} = X^*(T) \otimes \mathbb{C}^{\times}$,
+then by the local Langlands correspondence for tori one can canonically
+associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
+the group of coinvariants of $T(L)$ with respect
+to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
+are related by the norm map
+$$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
+in the cohomology sequence
+$$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
+= T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1,$$
+where $\HT{i}$ denotes $\mathrm{i}^{\mathrm{th}}$ Tate cohomology.
+
+Suppose that $\HT{0}(\Gamma, T(L)) = 0$, in which case
+$T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
+$\varphi$ does not factor through a proper Levi subgroup, so that the
+representations in the $L$-packet associated to $\varphi$ are
+conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
+If $G$ happens to be $GL(n)$, one can compute that
+$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
+$T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$, and
+$(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
+correspondence, one would then proceed (as explained earlier) to
+attach the supercuspidal representation $\pi_{\xi \cdot {}_K
+  \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Howe.
+
+If $G$ were arbitrary, then in analogy to the case of $GL(n,K)$, there
+exist in certain cases constructions of supercuspidal $L$-packets
+$L(\chi)$ associated to characters $\chi$ of tori $T(K)$ in $G(K)$ (see
+\cite{debackerreeder}, \cite{kaletha}, \cite{reeder}).  However, as we
+have seen, a Langlands parameter $\varphi$ as above does not naturally
+provide a character of $T(K)$, but rather a character of
+$T(L)_{\Gamma}$.
+
+\begin{definition}\label{admissibledefinition}
+Let $T$ be a $K$-minisotropic torus, that splits over an unramified
+  extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
+The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
+by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
+\end{definition}
+
+We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
+
+\begin{definition}\label{rectifierdefinition}
+  Let $T$ be a torus, defined over $K$, that splits over an unramified
+  extension $L$.  A \emph{rectifier} for $T$ is a function $${}_K
+  \boldsymbol\mu : (T, \xi) \mapsto {}_K \mu_{\xi}$$ which attaches,
+  to each admissible pair $(T, \xi)$, a character ${}_K
+  \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions.
+
+\begin{enumerate}
+\item The character ${}_K \mu_{\xi}$ is tamely ramified (i.e. trivial on
+  $T(1 + \mathfrak{p}_L)_{\Gamma}$)
+
+\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
+  is the local Langlands correspondence.
+
+\item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
+$\xi_1^{-1} \xi_2$ is tamely ramified, then
+${}_K \mu_{\xi_1} = {}_K \mu_{\xi_2}$.
+\end{enumerate}
+\MAxxx{Gordan, during my seminar that I gave about this stuff, asked me:
+What if $T$ occurs as a torus of two different groups $G$?  Do you
+get the same rectifying character attached to $(T, \xi)$?  That is,
+is our function ${}_K \boldsymbol\mu$ well-defined?  Because $(T,\xi)$
+could occur for different groups $G_1, G_2$.  If they do, is the associated
+rectifier correct in LLC for $G_1$ and $G_2$??? I'm not even sure if
+I formulated this question correctly, and to be honest, I don't know
+if Gordan did either, since he didn't completely understand my talk, but
+we should probably think about this type of thing...}
+
+\end{definition}
+
+\begin{conjecture}
+  Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
+  admits a unique rectifier ${}_K \boldsymbol\mu : (T, \xi) \mapsto
+  {}_K \mu_{\xi}$.
+\end{conjecture}
+
+We first note that the definition of admissible pair above generalizes
+the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
+if $G = GL(n)$, and $T$ is an elliptic torus in $G$ splitting over
+an unramified extension $L/K$, then one can show that
+$(N(G,T)/T)(K) = Gal(L/K)$.  Thus, for $\xi$ to not be fixed by any
+element of $(N(G,T)/T)(K)$ is equivalent to $\xi$ not being fixed by
+any subgroup of $Gal(L/K)$.  This can be seen to be equivalent to $\xi$
+not coming from the norms $N_{L/M}$ for any proper subfield $M$ contained
+in $L$, containing $K$.
+
+We next note that as the local Langlands correspondence is not known in general, we must restrict
+ourselves to cases where supercuspidal $L$-packets have been constructed.
+Since we are in the present paper considering the situation when $T$ is unramified,
+we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
+We will show that the characters ${}_K \mu_{\xi}$ that arise in this setting
+happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
+in particular, that not all possible admissible pairs arise in the settings
+of \cite{debackerreeder} and \cite{reeder}.
+For example, if $G = GL(n)$, ${}_K \mu_{\xi}$ can be ramified,
+even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
+we need in order to prove this conjecture, we determine
+the rectifier in the situation where supercuspidal $L$-packets have been
+constructed.
+
+\begin{definition}\label{regularpairs}
+Suppose $(T, \xi)$ is an admissible pair.
+\begin{enumerate}
+\item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
+is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
+$T(1+\mathfrak{p}_L^{r})_{\Gamma}$
+\item An admissible pair is \emph{regular} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
+is not fixed by any element of $(N(G,T)/T)(K)$.  We denote by $P_G^{Reg}(K)$ the set
+of regular pairs in $G$.
+\item A \emph{weak rectifier} is a function
+\begin{align*}
+{}_K\boldsymbol\mu^{\mathrm{Reg}} : (T, \xi) \mapsto {}_K \mu_{\xi}
+\end{align*}
+on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{rectifierdefinition}.
+\end{enumerate}
+\end{definition}
+\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
+
+We can prove:
+
+\begin{theorem}\label{regularrectifierdefinition}
+Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
+\end{theorem}
+
+Once phrased in this manner, uniqueness is a straightforward matter
+(see \S\ref{}) \MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?
+I don't know if we have an argument.  For example, there might be different
+characters of a torus $T(K)$ that give rise to the same supercuspidal $L$-packet.
+Is this true?}
+
+The existence of ${}_K  \boldsymbol\mu^{\mathrm{Reg}}$
+will be proven by interpreting the characters ${}_K \mu_{\xi}$
+in terms of a canonical Langlands parameter, as follows.  Let
+$G$ be an arbitrary unramified connected reductive group.  If
+$T$ is an unramified torus in $G$, then $T$ can be defined
+via Galois twisting by a Weyl group element $w$.  We will define
+a Langlands parameter $\varphi_{w} :W _K \rightarrow {}^L G$ by
+sending Frobenius to a canonical lift of $\varphi_{w}(\Fr)$, using the Tits group, and by setting
+$\varphi_{w}$ to be trivial on $I_K$.
+If $G$ is semisimple,
+we will prove that the function $$(T, \xi) \mapsto \xi_{\varphi_{w}}^{-1}$$
+satisfies conditions (1)-(3), and we may therefore set
+${}_K \boldsymbol\mu^{\mathrm{Reg}}(T,\xi) = \xi_{\varphi_{w}}$.
+Moreover, we prove compatibility with Bushnell/Henniart:
+
+\begin{theorem}
+  If $G = GL(n,K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{w}}$ agrees with
+  the rectifier of Bushnell/Henniart, when $(T,\xi) \in P_G^{Reg}(K)$.  Moreover, $\varphi_{w}$ is the
+  unique Langlands
+  parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
+\end{theorem}
+
+We would like to note that in the case that $\HT{0}(\Gamma, T(L))
+\neq 0$, the situation seems more difficult because twisting $\xi$
+by a character of $T(L)_{\Gamma}$
+can only result in a character of the image
+of $T(L)_{\Gamma}$ under the norm map.  However, one might be
+able to remedy this with a prediction of central character, as in
+\cite{grossreeder}, for example.
+
+\section{Compatibility with Bushnell-Henniart}\label{GL(n)}
 
 In this section, we show that our function ${}_K
   \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
@@ -721,6 +727,10 @@ $\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $
 as in Corollary \ref{agreemenetofrectifiers},
 $\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
+
+\section{Compatibility with DeBacker-Reeder}
+
+\section{Further Questions}
 
 \begin{thebibliography}{9}
 
