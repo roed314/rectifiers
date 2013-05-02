@@ -80,7 +80,7 @@ groups, with certain classes of Langlands parameters.
 
 \maketitle
 
-\section{Introduction}
+\section{Introduction} \label{section:intro}
 Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.  The local Langlands conjecture predicts the existence of a finite to one map, from the set of isomorphism classes of irreducible admissible representations of $G(K)$, to the set of equivalence classes of admissible homomorphisms from the Weil-Deligne group $\WD_K$ of $K$, to the $L$-group ${}^L G$ of $G$.
 
 In the case of supercuspidal representations of $G(K)$, there has been a significant amount of progress in the local Langlands correspondence in recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder}, \cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands correspondence is to first attach a character of an elliptic torus to a Langlands parameter $\Weil_K \rightarrow {}^L G$, where $\Weil_K$ is the Weil group of $K$, and then to construct a putative supercuspidal $L$-packet associated to this character.
@@ -105,7 +105,7 @@ conversations with Gordan Savin.  We wish to thank him for these
 conversations.  We would also like to thank Jeffrey Adams and Geo Kam
 Fai for helpful conversations as well.
 
-\section{Notation and Preliminaries}
+\section{Notation and Preliminaries} \label{section:notation}
 
 Throughout, $k$ will denote a finite field, and
 $k_n$ will denote the degree $n$ extension of
@@ -149,11 +149,11 @@ t &\mapsto \prod_{\sigma \in \Gamma} \sigma(t)
 and for its restriction to $X_*(T)$.
 
 The following theorem, due to Lang \cite{lang}, underpins the facts in
-Section \ref{padic tori} on tori over $p$-adic fields.
+Section \ref{section:padic_tori} on tori over $p$-adic fields.
 Let $H$ be a commutative connected algebraic group over a
 finite field $k$, and suppose $H$ splits over $k_n$.
 
-\begin{theorem} \label{langs thm}
+\begin{theorem} \label{thm:lang}
 $\HT{i}(\Gamma_n, H(k_n)) = 0$ for all $i$.
 \end{theorem}
 \begin{proof}
@@ -163,7 +163,7 @@ so it suffices to prove the result for $i=1$ and $i=2$, which is done
 by Serre \cite[\S VI.6]{serre2}.
 \end{proof}
 
-\section{Rectifiers for $\GL_{n}(K)$}
+\section{Rectifiers for $\GL_{n}(K)$} \label{section:BH_recall}
 
 We recall the notion of a rectifier, as in \cite{bushnellhenniart}.
 An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
@@ -204,7 +204,7 @@ We will need a description of the characters ${}_K \mu_{\xi}$ in certain cases. 
 
 Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.  Then there is a unique sub-extension $L_i/K$ of $L/K$ such that $\xi|_{1 + \mathfrak{p}_L^{i+1}}$
 
-\section{Tori over $p$-adic fields} \label{padic tori}
+\section{Tori over $p$-adic fields} \label{section:padic_tori}
 
 Let $T$ be a torus defined over $K$.    Let $K_n$ be the maximal unramified subextension
 of the splitting field $L$, and set $I = \Gal(L/K_n)$.
@@ -239,14 +239,14 @@ $$0 \rightarrow \Hom_{\ZZ}(\HH^1(I, X^*(T)), \QQ/\ZZ) \rightarrow
 \C \rightarrow \Hom_{\ZZ}(X^*(T)^I, \ZZ) \rightarrow 0.$$
 \end{proposition}
 
-\begin{corollary}[{\cite[Thm. 1.1]{xarles}}] \label{unram comps}
+\begin{corollary}[{\cite[Thm. 1.1]{xarles}}] \label{cor:unram_components}
 If $T$ is unramified, then $\C \cong X_*(T)$.
 \end{corollary}
 
 Using our filtration of $T(K_n)$, we may relate the cohomology of $T(K_n)$
 with that of $\C$.
 
-\begin{proposition}\label{vanishingtateonintegralpoints}
+\begin{proposition}\label{prop:T0_cohom_triv}
 $\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
 \end{proposition}
 \begin{proof}
@@ -255,7 +255,7 @@ $$T(K_n)_0 = \lim_{\leftarrow r} T(K_n)_0 / T(K_n)_r.$$
 So by a result of Serre \cite[Lem. 3]{serre1}, it suffices to prove that
 $\HT{i}(\Gamma_n, T(K_n)_r / T(K_n)_{r+}) = 0$ for all $i$.  But $T(K_n)_r / T(K_n)_{r+}$
 is connected \cite[Prop. 5.2]{yu} and thus has trivial cohomology by
-Theorem \ref{langs thm}.
+Theorem \ref{thm:lang}.
 \end{proof}
 
 \begin{corollary}
@@ -267,16 +267,16 @@ This follows from the long exact sequence in cohomology associated to the sequen
 $$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow \C \rightarrow 0.$$
 \end{proof}
 
-\begin{corollary}\label{reductiontori}
+\begin{corollary} \label{cor:cohom_tori}
 If $T$ is unramified, then $\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T))$
 for all $i$.
 \end{corollary}
 
 \begin{proof}
-This follows from the previous corollary together with Corollary \ref{unram comps}.
+This follows from the previous corollary together with Corollary \ref{cor:unram_components}.
 \end{proof}
 
-\begin{corollary}\label{vanishingH0}
+\begin{corollary}\label{cor:vanishing_H0}
 If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
 \end{corollary}
 
@@ -284,7 +284,7 @@ If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
 Since $T$ is anisotropic $\HH^0(\Gamma_n, T(K_n)) \cong X_*(T)^{\Gamma_n} = 0$.
 \end{proof}
 
-\section{Groups of type L}\label{groupsoftypeL}
+\section{Groups of type L} \label{section:groups_of_type_L}
 
 We now review the theory of ``groups of type L'' due to Benedict
 Gross.  For a torus $T$ over $K$, recall that the dual torus $\hat{T}$ is equipped with
@@ -323,7 +323,7 @@ character of $T(L)_{\Gamma}$, which is a cover of $T(K)$.
 
 We now give meaning to the definition of \emph{admissible pair} in the introduction.
 
-\begin{lemma}\label{weylgroups}
+\begin{lemma} \label{lem:weyl_groups}
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$.
 \begin{enumerate}
@@ -345,7 +345,7 @@ Suppose $\varphi$ and $\varphi'$ are two Langlands parameters,
 agreeing on $I_K$, with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
 Let $\xi_{\varphi}$ and $\xi_{\varphi'}$ be the associated characters of $T(L)_{\Gamma}$.
 
-\begin{lemma}\label{toralmodification}
+\begin{lemma} \label{lem:toral_modification}
 $\xi_{\varphi}$ and $\xi_{\varphi'}$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 \end{lemma}
 
@@ -370,42 +370,13 @@ Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \end{align*}
 \end{proof}
 
-\section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction}\label{grossdebackerreeder}
+\section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction} \label{section:gross_debacker_reeder}
 
 We consider here a regular semisimple elliptic Langlands parameter
  $\varphi$ for an unramified connected
 reductive group $G$ (see \cite{reeder}).  Then $\varphi$ has image in a group of
 type $L$.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
-\S\ref{groupsoftypeL}.  DeBacker--Reeder and Reeder (in \cite{debackerreeder} and \cite{reeder}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
-
-\begin{lemma}\label{grossanddebackerreedercompatibility}
-$\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
-\end{lemma}
-
-\proof
-We have the exact sequence
-
-$$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K)
-  \rightarrow \HT{0}(\Gamma, T(L)) \rightarrow 1.$$
-
-Recall that the character $\xi_{\varphi}$ is associated to $\varphi$ by
-the local Langlands correspondence for tori (see section \ref{groupsoftypeL}).  Note that the above
-exact sequence restricts to an exact sequence
-
-$$1 \rightarrow \HT{-1}(\Gamma, T(\OL)) \rightarrow T(\OL)_{\Gamma}
-  \rightarrow T(\OK) \rightarrow \HT{0}(\Gamma, T(\OL)) \rightarrow 1$$
-
-Moreover, by Proposition \ref{vanishingtateonintegralpoints}, we have
-$\HT{-1}(\Gamma, T(\OL)) = \HT{0}(\Gamma, T(\OL)) = 1$.
-Therefore, the map
-$$T(\OL)_{\Gamma} \xrightarrow{\Nm} T(\OK)$$
-is an isomorphism, so
-$\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ factors to a character of
-$T(\OK)$ via this isomorphism.  But this is exactly how the character
-$\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{reeder}.
-\qed
-
-\section{Rectifiers and DeBacker/Reeder}\label{mainresults}
+\S\ref{section:groups_of_type_L}.  DeBacker--Reeder and Reeder (in \cite{debackerreeder} and \cite{reeder}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 
 Let us fix a splitting $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
 for the dual group $\hat{G}$.  Here $\{ X_{\alpha} \}$ is a set of root vectors
@@ -452,8 +423,35 @@ Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetild
 
 Let $\chi_{\varphi}$ be the character of $T(K)$ associated to $\varphi$ by the theory in
 \cite{debackerreeder}.  By the theory in section
-\ref{groupsoftypeL}, $\varphi$ and $\varphi_{w}$ gives rise to characters
+\ref{section:groups_of_type_L}, $\varphi$ and $\varphi_{w}$ gives rise to characters
 $\xi_{\varphi}$ and $\xi_{\varphi_{w}}$ of $T(L)_{\Gamma}$, respectively.
+
+\begin{lemma} \label{lem:GDR_compat}
+$\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
+\end{lemma}
+
+\proof
+We have the exact sequence
+
+$$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K)
+  \rightarrow \HT{0}(\Gamma, T(L)) \rightarrow 1.$$
+
+Recall that the character $\xi_{\varphi}$ is associated to $\varphi$ by
+the local Langlands correspondence for tori (see section \ref{section:groups_of_type_L}).  Note that the above
+exact sequence restricts to an exact sequence
+
+$$1 \rightarrow \HT{-1}(\Gamma, T(\OL)) \rightarrow T(\OL)_{\Gamma}
+  \rightarrow T(\OK) \rightarrow \HT{0}(\Gamma, T(\OL)) \rightarrow 1$$
+
+Moreover, by Proposition \ref{prop:T0_cohom_triv}, we have
+$\HT{-1}(\Gamma, T(\OL)) = \HT{0}(\Gamma, T(\OL)) = 1$.
+Therefore, the map
+$$T(\OL)_{\Gamma} \xrightarrow{\Nm} T(\OK)$$
+is an isomorphism, so
+$\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ factors to a character of
+$T(\OK)$ via this isomorphism.  But this is exactly how the character
+$\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{reeder}.
+\qed
 
 \begin{proposition}
 If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$.
@@ -461,7 +459,7 @@ If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_
 
 \begin{proof}
 Since $G$ is semisimple, $T(K)$ is compact.  In particular,
-$\HT{0}(\Gamma, T(L)) = 0$ by Corollary \ref{vanishingH0},
+$\HT{0}(\Gamma, T(L)) = 0$ by Corollary \ref{cor:vanishing_H0},
 so we have the following exact sequence:
 $$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K) \rightarrow 1$$
 Note that $T(K) = T(\OK)$, and so in particular
@@ -472,24 +470,24 @@ $\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$ on eac
 
 Since $\varphi_{w}|_{I_K} \equiv 1$, $\xi_{\varphi_{w}}$ is trivial on
 $T(\OL)_{\Gamma}$ so Lemma
-\ref{grossanddebackerreedercompatibility} implies equality on $T(\OL)_{\Gamma}$.
-Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{toralmodification}.
+\ref{lem:GDR_compat} implies equality on $T(\OL)_{\Gamma}$.
+Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-We have therefore proven Theorem \ref{regularrectifierdefinition}.  In the case that $G$ is semisimple, there was nothing special about
+We have therefore proven Theorem \ref{thm:unique_semisimple}.  In the case that $G$ is semisimple, there was nothing special about
 $\varphi_{w}$.  In fact, by the same arguments, $\xi_{\varphi_{w}} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
-\section{Rectifiers for general reductive groups}
+\section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
 
 One may ask whether rectifiers exist for groups apart from $\GL_{n}(K)$.
 Even moreso, how does one define the notion of rectifier for
 groups apart from $\GL_{n}(K)$?  The answer can be gleamed from a recent
 construction of Benedict Gross, which we briefly describe now (for
-more details, see \S\ref{groupsoftypeL}).
+more details, see \S\ref{section:groups_of_type_L}).
 
 Suppose that $G$ is a connected reductive group defined over a
 $p$-adic field $K$.  Let $\varphi : \Weil_K \rightarrow {}^L G$ be a
@@ -502,7 +500,7 @@ Since $\varphi|_{\Weil_L}$ has image in $\hat{T} = X^*(T) \otimes \CCx$,
 then by the local Langlands correspondence for tori one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
-to $\Gamma$ (see~\S\ref{groupsoftypeL}).  Invariants and coinvariants
+to $\Gamma$ (see~\S\ref{section:groups_of_type_L}).  Invariants and coinvariants
 are related by the norm map
 $$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the cohomology sequence
@@ -531,16 +529,16 @@ have seen, a Langlands parameter $\varphi$ as above does not naturally
 provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.
 
-\begin{definition}\label{admissibledefinition}
+\begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
   extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $W(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
+by any element of $W(K)$. (see Lemma \ref{lem:weyl_groups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
 \end{definition}
 
 We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
 
-\begin{definition}\label{rectifierdefinition}
+\begin{definition} \label{def:rectifier}
   Let $T$ be a torus, defined over $K$, that splits over an unramified
   extension $L$.  A \emph{rectifier} for $T$ is a function $${}_K
   \boldsymbol\mu : (T, \xi) \mapsto {}_K \mu_{\xi}$$ which attaches,
@@ -571,7 +569,7 @@ we should probably think about this type of thing...}
 \end{definition}
 
 \begin{conjecture}
-  Let $T$ be as in Definition \ref{rectifierdefinition}.  Then $T$
+  Let $T$ be as in Definition \ref{def:rectifier}.  Then $T$
   admits a unique rectifier ${}_K \boldsymbol\mu : (T, \xi) \mapsto
   {}_K \mu_{\xi}$.
 \end{conjecture}
@@ -600,7 +598,7 @@ we need in order to prove this conjecture, we determine
 the rectifier in the situation where supercuspidal $L$-packets have been
 constructed.
 
-\begin{definition}\label{regularpairs}
+\begin{definition}\label{def:regular_pair}
 Suppose $(T, \xi)$ is an admissible pair.
 \begin{enumerate}
 \item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
@@ -613,19 +611,19 @@ of regular pairs in $G$.
 \begin{align*}
 {}_K\boldsymbol\mu^{\mathrm{Reg}} : (T, \xi) \mapsto {}_K \mu_{\xi}
 \end{align*}
-on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{rectifierdefinition}.
+on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{def:rectifier}.
 \end{enumerate}
 \end{definition}
-\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{regularrectifierdefinition} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
+\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{thm:unique_semisimple} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
 
 We can prove:
 
-\begin{theorem}\label{regularrectifierdefinition}
-Let $G$ be semisimple, and $T$ as in Definition \ref{rectifierdefinition}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
+\begin{theorem} \label{thm:unique_semisimple}
+Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
 \end{theorem}
 
 Once phrased in this manner, uniqueness is a straightforward matter
-(see \S\ref{}) \MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?
+\MAxxx{Fix when we can.}. \MAxxx{Wait.  Can we really prove uniqueness?
 I don't know if we have an argument.  For example, there might be different
 characters of a torus $T(K)$ that give rise to the same supercuspidal $L$-packet.
 Is this true?}
@@ -652,13 +650,13 @@ Moreover, we prove compatibility with Bushnell/Henniart:
   parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{theorem}
 
-\section{Compatibility with Bushnell-Henniart}\label{GLn}
+\section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
 In this section, we show that our function ${}_K
   \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
 setting.
 
-\begin{proposition}\label{rectifierofbushnellhenniart}
+\begin{proposition}\label{prop:BH_result}
   Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
   unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
   Then ${}_K \mu_{\xi}$ is unramified and
@@ -695,9 +693,9 @@ $e_i$ are the standard basis of $\mathbb{Z}^n$.  But $e_i - e_j = (1 - \tau)e_i$
 
 The Tate cohomology exact sequence for $T$ therefore reduces to
 $$1 \rightarrow T(L)_{\Gamma} \xrightarrow{\sim} T(K) \rightarrow 1$$ by
-Corollary \ref{reductiontori}.
+Corollary \ref{cor:cohom_tori}.
 
-\begin{proposition}\label{powersoflifts}
+\begin{proposition}\label{prop:powers_of_lifts}
 Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
 denotes the identity element in $\GL_{n}(\CC)$.
 \end{proposition}
@@ -708,7 +706,7 @@ See \cite[\S3.1]{zaremsky}.
 
 By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin reciprocity map for $L$, so we obtain
 
-\begin{corollary}\label{agreemenetofrectifiers}
+\begin{corollary} \label{cor:rectifier_agreement}
 $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{corollary}
 
@@ -719,22 +717,22 @@ $\sigma$ is a generator of $\Gal(L/K)$.  A uniformizer $\varpi$ in $\Lx$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
-$\xi_{\varphi_{w}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{powersoflifts}.
+$\xi_{\varphi_{w}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{prop:powers_of_lifts}.
 Finally, since $\varphi_{w}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{w}}$ is
-unramified.  By Proposition \ref{rectifierofbushnellhenniart}, we are done.
+unramified.  By Proposition \ref{prop:BH_result}, we are done.
 \end{proof}
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
 $\varphi_{w}' : \Weil_K \rightarrow \GL_{n}(\CC)$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
 $\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that, by analogous arguments
-as in Corollary \ref{agreemenetofrectifiers},
-$\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{rectifierofbushnellhenniart}, we are
+as in Corollary \ref{cor:rectifier_agreement},
+$\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{prop:BH_result}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
-\section{Compatibility with DeBacker-Reeder}
+\section{Compatibility with DeBacker-Reeder} \label{section:DR_compat}
 
-\section{Further Questions}
+\section{Further Questions} \label{section:questions}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(L))
 \neq 0$, the situation seems more difficult because twisting $\xi$
