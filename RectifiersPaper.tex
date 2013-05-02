@@ -53,6 +53,7 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\Gm}{\mathbb{G}_m}
+\newcommand{\Lx}{L^\times}
 
 \newcommand{\Weil}{\mathcal{W}}
 \newcommand{\WD}{\mathcal{W}'}
@@ -86,9 +87,9 @@ In the case of supercuspidal representations of $G(K)$, there has been a signifi
 
 Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
 
-The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $L^{\times}$ that is trivial on $\Nm_{L/K}(L^{\times})$, where $\Nm_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $\Lx$ that is trivial on $\Nm_{L/K}(\Lx)$, where $\Nm_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
 
-Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow L^{\times} / \Nm_{L/K}(L^{\times}) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $L^{\times} / \Nm_{L/K}(L^{\times})$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $L^{\times} / \Nm_{L/K}(L^{\times})$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
+Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $\Lx / \Nm_{L/K}(\Lx)$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
 
 In this paper, we propose a generalization of their notion of a
 rectifier.  In particular, we define rectifiers for Langlands
@@ -140,6 +141,8 @@ For $\lambda \in X_*(T)$ and $\mu \in X^*(T)$ we write $\la \lambda, \mu \ra$
 for the canonical $\Gamma$-equivariant pairing
 $$\Hom_{\bar{K}}(\Gm, T) \times \Hom_{\bar{K}}(T, \Gm) \rightarrow \Hom_{\bar{K}}(\Gm, \Gm) \cong \ZZ.$$
 
+Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.  We write $N$ for the normalizer of $T$ in $G$ and define $W = N/T$; set $\hat{N}$ as the normalizer of $\hat{T}$ in $\hat{G}$ and $\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$ yields a canonical anti-isomorphism between $W$ and $\hat{W}$.  Note that $W$ is a scheme over $K$; in general $W(K) \ne N(K) / T(K)$.
+
 Write $\Nm$ for the map
 \begin{align*}
 T(L) &\rightarrow T(K) \\
@@ -172,7 +175,7 @@ essentially tame local Langlands correspondence for $\GL_{n}(K)$.  In the
 essentially tame case, an irreducible representation $\varphi : \Weil_K
 \rightarrow \GL_{n}(\CC)$ naturally provides an \emph{admissible
   pair} $(L/K, \xi)$.  Here, $L/K$ is a degree $n$ separable extension
-and $\xi$ is a character (with certain conditions) of $L^{\times}$,
+and $\xi$ is a character (with certain conditions) of $\Lx$,
 which one can view as a maximal elliptic torus in $\GL_{n}(K)$.  Howe
 constructs a map (see \cite{howe})
 \begin{equation*}
@@ -193,7 +196,7 @@ the so-called ``naive correspondence'', is not the local Langlands
 correspondence because $\pi_{\xi}$ has the wrong central character.
 Instead, the local Langlands correspondence is given by $$\varphi
 \mapsto \pi_{\xi \cdot {}_K \mu_{\xi}}$$ for some subtle finite order
-character ${}_K \mu_{\xi}$ of $L^{\times}$.  The function $${}_K
+character ${}_K \mu_{\xi}$ of $\Lx$.  The function $${}_K
 \boldsymbol\mu : (L/K, \xi) \mapsto {}_K \mu_{\xi}$$ is called the
 \emph{rectifier} associated to $L/K$.  Both the description of and the
 intuition behind the rectifiers ${}_K \boldsymbol\mu$ have been
@@ -296,6 +299,7 @@ Since $T$ is anisotropic $\HH^0(\Gamma_n, T(K_n)) \cong X_*(T)^{\Gamma_n} = 0$.
 \end{proof}
 
 \section{Groups of type L}\label{groupsoftypeL}
+
 We now review the theory of ``groups of type L'' due to Benedict
 Gross.  For a torus $T$ over $K$, recall that the dual torus $\hat{T}$ is equipped with
 an action of $\Gamma$.
@@ -309,9 +313,8 @@ $$1 \rightarrow \hat{T} \rightarrow D \rightarrow \Gamma \rightarrow 1.$$
 
 We now describe how, given a Langlands parameter
 $$\varphi : \Weil_K \rightarrow D,$$
-where $D$ is a group of type L, we can naturally attach a character of
-$T(L)_{\Gamma} := T(L) / I_{\Gamma}(T(L))$, where
-$I_{\Gamma}(T(L)) = \{(1 - \sigma)t \ : t \in T(L), \sigma \in \Gamma \}$.
+where $D$ is a group of type L, we can naturally attach a character of the coinvariants
+$T(L)_{\Gamma}.$
 Restricting $\varphi$ to $\Weil_L$ we get a homomorphism
 $$\varphi|_{\Weil_L} : \Weil_L \rightarrow \hat{T}.$$
 By the Langlands correspondence for tori, this gives us a character
@@ -336,12 +339,11 @@ We now give meaning to the definition of \emph{admissible pair} in the introduct
 
 \begin{lemma}\label{weylgroups}
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
-$K$-torus of $G$.  Let $L$ be the splitting field of $T$, and set
-$\Gamma = \Gal(L/K)$.
+$K$-torus of $G$.
 \begin{enumerate}
-\item $N(G(L), T(K)) / T(L) \cong (N(G,T)/T)(K)$.
+\item $N(G(L), T(K)) / T(L) \cong W(K)$.
 \item The standard action of $N(G(L),T(L)) / T(L)$ on $T(L)$ determines
-well-defined actions of $N(G(L), T(L))^{\Gamma} / T(K)$ and $(N(G,T)/T)(K)$
+well-defined actions of $N(G(L), T(L))^{\Gamma} / T(K)$ and $W(K)$
 on $T(L)$, which factor naturally to actions on $T(L)_{\Gamma}$.
 \end{enumerate}
 \end{lemma}
@@ -420,10 +422,8 @@ $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{ree
 \section{Rectifiers and DeBacker/Reeder}\label{mainresults}
 
 Let us fix a splitting $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
-for the dual group $\hat{G}$.  Set $\hat{N} = N_{\hat{G}}(\hat{T})$ and
-$\hat{W} = \hat{N} / \hat{T}$.  Here, $\{ \alpha \}$ is the set of simple
-roots of $\hat{T}$ in $\hat{B}$, and $\{ X_{\alpha} \}$ is a set of root vectors
-for this set of simple roots.
+for the dual group $\hat{G}$.  Here $\{ X_{\alpha} \}$ is a set of root vectors
+indexed by the set of simple roots of $\hat{T}$ in $\hat{B}$.
 For each simple root $\alpha$, let $\phi_{\alpha} : \SL_2 \rightarrow \hat{G}$
 be defined by $\phi_{\alpha}(\mathrm{diag}(z,1/z)) = \alpha^{\vee}(z)$
 and $d \phi_{\alpha}\mat{0}{1}{0}{0} = X_{\alpha}$. Let
@@ -511,8 +511,7 @@ Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
 through the normalizer of a maximal torus. To $\varphi$, one can
 associate a maximal $K$-torus $T$ in $G$, the twisted $K$-torus
 associated to $\varphi(\Fr)$, where $\Fr$ is a geometric Frobenius
-of $\Weil_K$.  Suppose that $T$ splits
-over the Galois extension $L$ of $K$, and set $\Gamma = \Gal(L/K)$.
+of $\Weil_K$.
 Since $\varphi|_{\Weil_L}$ has image in $\hat{T} = X^*(T) \otimes \CCx$,
 then by the local Langlands correspondence for tori one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
@@ -532,7 +531,7 @@ representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
 If $G$ happens to be $\GL_n$, one can compute that
 $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
-$T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$, and
+$T(L)_{\Gamma} \cong T(K)$ can be identified with $\Lx$, and
 $(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
 correspondence, one would then proceed (as explained earlier) to
 attach the supercuspidal representation $\pi_{\xi \cdot {}_K
@@ -550,7 +549,7 @@ $T(L)_{\Gamma}$.
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
   extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $(N(G,T)/T)(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
+by any element of $W(K)$. (see Lemma \ref{weylgroups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
 \end{definition}
 
 We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
@@ -595,9 +594,9 @@ We first note that the definition of admissible pair above generalizes
 the notion of admissible pair of \cite{bushnellhenniart}.  Indeed,
 if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $L/K$, then one can show that
-$(N(G,T)/T)(K) = \Gal(L/K)$.  Thus, for $\xi$ to not be fixed by any
-element of $(N(G,T)/T)(K)$ is equivalent to $\xi$ not being fixed by
-any subgroup of $\Gal(L/K)$.  This can be seen to be equivalent to $\xi$
+$W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
+element of $W(K)$ is equivalent to $\xi$ not being fixed by
+any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
 not coming from the norms $N_{L/M}$ for any proper subfield $M$ contained
 in $L$, containing $K$.
 
@@ -622,7 +621,7 @@ Suppose $(T, \xi)$ is an admissible pair.
 is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
 $T(1+\mathfrak{p}_L^{r})_{\Gamma}$
 \item An admissible pair is \emph{regular} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
-is not fixed by any element of $(N(G,T)/T)(K)$.  We denote by $P_G^{Reg}(K)$ the set
+is not fixed by any element of $W(K)$.  We denote by $P_G^{Reg}(K)$ the set
 of regular pairs in $G$.
 \item A \emph{weak rectifier} is a function
 \begin{align*}
@@ -667,21 +666,13 @@ Moreover, we prove compatibility with Bushnell/Henniart:
   parameter such that $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{theorem}
 
-We would like to note that in the case that $\HT{0}(\Gamma, T(L))
-\neq 0$, the situation seems more difficult because twisting $\xi$
-by a character of $T(L)_{\Gamma}$
-can only result in a character of the image
-of $T(L)_{\Gamma}$ under the norm map.  However, one might be
-able to remedy this with a prediction of central character, as in
-\cite{grossreeder}, for example.
-
 \section{Compatibility with Bushnell-Henniart}\label{GLn}
 
 In this section, we show that our function ${}_K
   \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.
 
 Let $L/K$ be the degree $n$ unramified extension of $K$.
-Let $T = \Res_{L/K}(\Gm)$, $\Gamma = \Gal(L/K)$.
+Let $T = \Res_{L/K}(\Gm)$.
 
 \begin{proposition}
 $\HT{0}(\Gamma, X_*(T)) = 0$.
@@ -724,9 +715,9 @@ $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
 \end{corollary}
 
 \begin{proof}
-Note that $T(L) \cong L^{\times} \times L^{\times} \times \cdots \times L^{\times}$, and
-that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in L^{\times} \} \cong L^{\times}$, where
-$\sigma$ is a generator of $\Gal(L/K)$.  A uniformizer $\varpi$ in $L^{\times}$
+Note that $T(L) \cong \Lx \times \Lx \times \cdots \times \Lx$, and
+that $T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in \Lx \} \cong \Lx$, where
+$\sigma$ is a generator of $\Gal(L/K)$.  A uniformizer $\varpi$ in $\Lx$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
 The local Langlands correspondence for tori says now that
@@ -746,6 +737,14 @@ forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument 
 \section{Compatibility with DeBacker-Reeder}
 
 \section{Further Questions}
+
+We would like to note that in the case that $\HT{0}(\Gamma, T(L))
+\neq 0$, the situation seems more difficult because twisting $\xi$
+by a character of $T(L)_{\Gamma}$
+can only result in a character of the image
+of $T(L)_{\Gamma}$ under the norm map.  However, one might be
+able to remedy this with a prediction of central character, as in
+\cite{grossreeder}, for example.
 
 \begin{thebibliography}{9}
 
