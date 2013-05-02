@@ -122,6 +122,8 @@ inducing the automorphism $x \mapsto x^{1/p}$ of $\bar{k}$.  Under the
 Artin reciprocity map of local class field theory the choice of uniformizer $\varpi$
 determines a geometric Frobenius $\Fr$ \cite[\S 2]{serre1}.
 
+If $\chi : K^{\times} \rightarrow \mathbb{C}^{\times}$ is a character, we define the \emph{level} of $\chi$ to be the smallest integer $r$ such that $\chi|_{1 + \mathfrak{p}_K^{r+1}} \equiv 1$, with $\chi|_{1 + \mathfrak{p}_K^{r+1}} \not\equiv 1$.
+
 If $T$ is a torus defined over $K$ we write $X^*(T)$
 for the character lattice $\Hom_{\bar{K}}(T, \Gm)$ and $X_*(T)$ for the
 cocharacter lattice $\Hom_{\bar{K}}(\Gm, T)$ \cite[\S 16.2]{humphreys}.
@@ -199,7 +201,19 @@ studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
 
 We will need a description of the characters ${}_K \mu_{\xi}$ in certain cases.  Let us recall the following notions from \cite[\S8]{bushnellhenniart}.
 
-Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.  Then there is a unique sub-extension $L_i/K$ of $L/K$ such that $\xi|_{1 + \mathfrak{p}_L^{i+1}}$
+Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.  Then there is a unique sub-extension $L_i/K$ of $L/K$ such that $\xi|_{1 + \mathfrak{p}_L^{i+1}}$ factors through the norm $N_{L/L_i}$, and which is minimal for this property.  We say that $i \in \mathbb{Z}$ is a \emph{jump of} $\xi$ \emph{over} $F$ if $i \geq 1$ and $E_{i-1} \neq E_i$.
+
+Suppose now that $(L/K,\xi)$ is an admissible pair, where $\xi$ has level $r \geq 1$.  Suppose that $\xi|_{1 + \mathfrak{p}_L^r}$ does not factor through $N_{L/L_i}$ for any proper subextension $L_i$ contained in $L$, containing $K$.  Then $L_0 = L_1 = \cdots L_r = L$ and $L_{j} = K$ for all $j > r$.  By Theorem ??????????? and Theorem ??????\MAxxx{This is the Ramification Theorem of Essentially Tame, III, but once we find out what the error in the paper is, together with Remark 21 on Essentially Tame, III, page 547}, we have \MAxxx{Now state the proposition about rectifiers in this setting, based on the Ramification Theorem}
+
+Now suppose that $(L/K, \xi)$ is an admissible pair, where $\xi$ has level $r = 0$.  Then the set of jumps of $\xi$ over $F$ is empty.  Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have
+
+\begin{proposition}\label{rectifierofbushnellhenniart}
+  Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
+  unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
+  Then ${}_K \mu_{\xi}$ is unramified and
+  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
+\end{proposition}
+\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
 
 \section{Tori over $p$-adic fields} \label{padic tori}
 
@@ -664,19 +678,7 @@ able to remedy this with a prediction of central character, as in
 \section{Compatibility with Bushnell-Henniart}\label{GLn}
 
 In this section, we show that our function ${}_K
-  \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
-setting.
-
-\begin{proposition}\label{rectifierofbushnellhenniart}
-  Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
-  unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
-  Then ${}_K \mu_{\xi}$ is unramified and
-  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
-\end{proposition}
-\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
-\begin{proof}
-See \cite[Proposition 21]{bushnellhenniart}.
-\end{proof}
+  \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.
 
 Let $L/K$ be the degree $n$ unramified extension of $K$.
 Let $T = \Res_{L/K}(\Gm)$, $\Gamma = \Gal(L/K)$.
