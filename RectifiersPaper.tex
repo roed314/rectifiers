@@ -81,11 +81,27 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction} \label{section:intro}
-Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.  The local Langlands conjecture predicts the existence of a finite to one map, from the set of isomorphism classes of irreducible admissible representations of $G(K)$, to the set of equivalence classes of admissible homomorphisms from the Weil-Deligne group $\WD_K$ of $K$, to the $L$-group ${}^L G$ of $G$.
+Let $G$ be a connected reductive group, defined over a $p$-adic field $K$. 
+The local Langlands conjecture predicts the existence of a finite to one map,
+from the set of isomorphism classes of irreducible admissible representations
+of $G(K)$, to the set of equivalence classes of admissible homomorphisms
+from the Weil-Deligne group $\WD_K$ of $K$, to the $L$-group ${}^L G$ of $G$.
 
-In the case of supercuspidal representations of $G(K)$, there has been a significant amount of progress in the local Langlands correspondence in recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder}, \cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands correspondence is to first attach a character of an elliptic torus to a Langlands parameter $\Weil_K \rightarrow {}^L G$, where $\Weil_K$ is the Weil group of $K$, and then to construct a putative supercuspidal $L$-packet associated to this character.
+In the case of supercuspidal representations of $G(K)$, there has been a
+significant amount of progress in the local Langlands correspondence in
+recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder},
+\cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands
+correspondence is to first attach a character of an elliptic torus to a Langlands
+parameter $\Weil_K \rightarrow {}^L G$, where $\Weil_K$ is the Weil group of
+$K$, and then to construct a putative supercuspidal $L$-packet associated to
+this character.
 
-Some of the difficulty arises in the construction of the character of an elliptic torus.  The difficulty arises from the fact that a Langlands parameter $\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the $L$-group of an elliptic torus.  If it did, then the local Langlands correspondence for tori would give us the desired character.  Instead, one has to rectify the situation in some way.
+Some of the difficulty arises in the construction of the character of an elliptic
+torus.  The difficulty arises from the fact that a Langlands parameter
+$\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the
+$L$-group of an elliptic torus.  If it did, then the local Langlands correspondence
+for tori would give us the desired character.  Instead, one has to rectify the
+situation in some way.
 
 The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $\Lx$ that is trivial on $\Nm_{L/K}(\Lx)$, where $\Nm_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
 
@@ -210,7 +226,7 @@ Suppose now that $(L/K,\xi)$ is an admissible pair, where $\xi$ has level $r \ge
 
 Now suppose that $(L/K, \xi)$ is an admissible pair, where $\xi$ has level $r = 0$.  Then the set of jumps of $\xi$ over $F$ is empty.  Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have
 
-\begin{proposition}\label{rectifierofbushnellhenniart}
+\begin{proposition}\label{prop:BH_result}
   Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
   unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
   Then ${}_K \mu_{\xi}$ is unramified and
@@ -666,24 +682,8 @@ Moreover, we prove compatibility with Bushnell/Henniart:
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
-In this section, we show that our function ${}_K
-<<<<<<< HEAD
-  \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  We first recall the structure of the rectifier of Bushnell/Henniart in our
-setting.
-
-\begin{proposition}\label{prop:BH_result}
-  Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
-  unramified of degree $n$ and $\xi|_{\OL} \equiv 1$.
-  Then ${}_K \mu_{\xi}$ is unramified and
-  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
-\end{proposition}
-\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
-\begin{proof}
-See \cite[Proposition 21]{bushnellhenniart}.
-\end{proof}
-=======
-  \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.
->>>>>>> a98c424f630298fb7e9acbbc04eefa9d10565304
+In this section, we show that our function ${}_K \boldsymbol\mu^{\mathrm{Reg}}$
+agrees with the rectifier of Bushnell/Henniart.
 
 Let $L/K$ be the degree $n$ unramified extension of $K$.
 Let $T = \Res_{L/K}(\Gm)$.
