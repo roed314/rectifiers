@@ -81,7 +81,7 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction} \label{section:intro}
-Let $G$ be a connected reductive group, defined over a $p$-adic field $K$. 
+Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.
 The local Langlands conjecture predicts the existence of a finite to one map,
 from the set of isomorphism classes of irreducible admissible representations
 of $G(K)$, to the set of equivalence classes of admissible homomorphisms
@@ -697,7 +697,7 @@ $T(1+\mathfrak{p}_L^{r})_{\Gamma}$
 \item An admissible pair is \emph{regular} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
 is not fixed by any element of $W(K)$.  We denote by $P_G^{Reg}(K)$ the set
 of regular pairs in $G$.
-\item A \emph{weak rectifier} is a function
+\item A \emph{weak rectifier} for $T \subset G$ is a function
 \begin{align*}
 {}_K\boldsymbol\mu^{\mathrm{Reg}} : (T, \xi) \mapsto {}_K \mu_{\xi}
 \end{align*}
@@ -827,6 +827,11 @@ so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widet
 
 \section{Compatibility with DeBacker-Reeder} \label{section:DR_compat}
 
+Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$ such that $(T, \xi) \in P_G^{Reg}(K)$, and let $\xi \mapsto {}_K \mu_{\xi}^i$ be a rectifier for $T \subset G$, $i = 1,2$.  By hypothesis, we have $$L({}_K \mu_{\xi}^1 \xi) = L({}_K \mu_{\xi}^1 \xi).$$ 
+By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$, depending on $\xi$, such that $$({}_K \mu_{\xi}^1 \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \xi.$$  Suppose that $\xi$ is not trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  Restricting the equation $({}_K \mu_{\xi}^1 \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \xi$ to $T(1 + \mathfrak{p}_L)_{\Gamma}$, we get that $\xi^{w_{\xi}} = \xi$, by condition (1) of Definition \ref{def:rectifier}.  This contradicts admissibility of $\xi$.
+
+Now suppose that $\xi$ is trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  Consider the restriction of the equation $({}_K \mu_{\xi}^1 \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \xi$ to $T(\mathcal{O}_L)_{\Gamma} \cong T(\mathcal{O}_K)$.  Write $\mu = (({}_K \mu_{\xi}^2)^{w_{\xi}})^{-1} {}_K \mu_{\xi}^2$. Reducing mod $\mathfrak{p}_L$, we conclude that there exists a character, $\mu$, of $T(k)$ with the property that if $\xi$ is any $W(k)$-regular character of $T(k)$, then $\mu \xi$ is $W(k)$-conjugate to $\xi$. By ???????, $\mu$ is trivial.  Therefore, $({}_K \mu_{\xi}^1)^{w_{\xi}} = {}_K \mu_{\xi}^2$ upon restriction to $T(\mathcal{O}_L)_{\Gamma}$.  Finally, since ${}_K \mu_{\xi}^1 \xi$ and ${}_K \mu_{\xi}^2 \xi$ must descend to $T(K)$ by condition (2) of Definition \ref{def:rectifier}, we have that ${}_K \mu_{\xi}^1$ and ${}_K \mu_{\xi}^2$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.  Hence, ${}_K \mu_{\xi}^1 = {}_K \mu_{\xi}^2$
+
 \section{Further Questions} \label{section:questions}
 
 We would like to note that in the case that $\HT{0}(\Gamma, T(L))
@@ -904,6 +909,10 @@ able to remedy this with a prediction of central character, as in
 %  Allen Moy, Gopal Prasad,
 %  \emph{Jacquet functors and unrefined minimal $K$-types},
 %   Comment. Math. Helv. 71 (1996), no. 1, 98--121.
+
+\bibitem{murnaghan}
+  Fiona Murnaghan, 
+  \emph{Parametrization of tame supercuspidal representations}, pp.439-470 in On Certain L-functions: A volume in honour of Freydoon Shahidi on the occasion of his 60th birthday , Clay Math. Proc. 13 (2011), edited by J. Arthur, J.W. Cogdell, S. Gelbart, D. Goldberg, D. Ramakrishnan.
 
 \bibitem{reeder}
   Mark Reeder,
