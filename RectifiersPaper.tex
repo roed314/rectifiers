@@ -1,5 +1,7 @@
 \documentclass[11pt]{amsart}
 \usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
+\usepackage{mathtools}
+
 \theoremstyle{plain}
 \newtheorem{iassumption}{Assumption}
 \newtheorem{theorem}{Theorem}[section]
@@ -61,6 +63,8 @@
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 
+\newcommand{\invlim}[1]{\varprojlim_{#1}}
+
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
 \author{Moshe Adrian and David Roe}
@@ -81,6 +85,7 @@ groups, with certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction} \label{section:intro}
+
 Let $G$ be a connected reductive group, defined over a $p$-adic field $K$. 
 The local Langlands conjecture predicts the existence of a finite to one map,
 from the set of isomorphism classes of irreducible admissible representations
@@ -223,14 +228,14 @@ which one can view as a maximal elliptic torus in $\GL_{n}(K)$.  Howe
 constructs a map (see \cite{howe})
 \begin{equation*}
 \left\{
-\begin{array}{ll}
-isomorphism \ classes \ of \\
-admissible \ pairs
+\begin{array}{cc}
+\mathrm{isomorphism \ classes \ of} \\
+\mathrm{admissible \ pairs}
 \end{array}
 \right\} \rightarrow \left\{
-\begin{array}{ll}
-supercuspidal \ representations \\
-of \ \GL_{n}(K)
+\begin{array}{cc}
+\mathrm{supercuspidal \ representations} \\
+\mathrm{of} \ \GL_{n}(K)
 \end{array} \right\}
 \end{equation*}
 $$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
@@ -327,7 +332,7 @@ $\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
 \end{proposition}
 \begin{proof}
 Note that
-$$T(K_n)_0 = \lim_{\leftarrow r} T(K_n)_0 / T(K_n)_r.$$
+$$T(K_n)_0 = \invlim{r} T(K_n)_0 / T(K_n)_r.$$
 So by a result of Serre \cite[Lem. 3]{serre1}, it suffices to prove that
 $\HT{i}(\Gamma_n, T(K_n)_r / T(K_n)_{r+}) = 0$ for all $i$.  But $T(K_n)_r / T(K_n)_{r+}$
 is connected \cite[Prop. 5.2]{yu} and thus has trivial cohomology by
