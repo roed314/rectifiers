@@ -11,3 +11,6 @@ _*.tex
 tori5.tex
 mathoverflow.tex
 *~
+*.tex.bak
+*.blg
+*.tex.sav
