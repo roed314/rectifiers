@@ -68,6 +68,7 @@
 \newcommand{\ra}{\rangle}
 
 \newcommand{\invlim}[1]{\varprojlim_{#1}}
+\newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
 
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
@@ -189,8 +190,8 @@ for the canonical $\Gamma$-equivariant pairing
 $$\Hom_{\bar{K}}(\Gm, T) \times \Hom_{\bar{K}}(T, \Gm) \rightarrow \Hom_{\bar{K}}(\Gm, \Gm) \cong \ZZ.$$
 
 Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.
-We write $N$ for the normalizer of $T$ in $G$ and define $W = N/T$;
-set $\hat{N}$ as the normalizer of $\hat{T}$ in $\hat{G}$ and
+We write $N$ for the normalizer $\Normalizer{T}{G}$ of $T$ in $G$ and define $W = N/T$;
+set $\hat{N} = \Normalizer{\hat{T}}{\hat{G}}$ and
 $\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$
 yields a canonical anti-isomorphism between $W$ and $\hat{W}$.
 Note that $W$ is a scheme over $K$; in general $W(K) \ne N(K) / T(K)$.
@@ -412,10 +413,10 @@ We now give meaning to the definition of \emph{admissible pair} in the introduct
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$.
 \begin{enumerate}
-\item $N(G(L), T(K)) / T(L) \cong W(K)$.
-\item The standard action of $N(G(L),T(L)) / T(L)$ on $T(L)$ determines
-well-defined actions of $N(G(L), T(L))^{\Gamma} / T(K)$ and $W(K)$
-on $T(L)$, which factor naturally to actions on $T(L)_{\Gamma}$.
+\item $\Normalizer{T(K)}{G(L)} / T(L) \cong W(K)$.
+\item The standard action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
+well-defined actions of $\Normalizer{T(L)}{G(L)}^\Gamma / T(K)$ and $W(K)$
+on $T(L)$, which factor naturally to actions on $T(L)_\Gamma$.
 \end{enumerate}
 \end{lemma}
 
