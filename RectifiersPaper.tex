@@ -103,9 +103,28 @@ $L$-group of an elliptic torus.  If it did, then the local Langlands corresponde
 for tori would give us the desired character.  Instead, one has to rectify the
 situation in some way.
 
-The simplest example of this difficulty arising is in the case of supercuspidal representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$, where $L/K$ is a tamely ramified quadratic extension, for some character $\chi$ of $\Lx$ that is trivial on $\Nm_{L/K}(\Lx)$, where $\Nm_{L/K}$ denotes the norm map from $L$ to $K$.  Then the image of $\varphi$ is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.  In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+The simplest example of this difficulty arising is in the case of supercuspidal
+representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that that
+$\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is
+irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$,
+where $L/K$ is a tamely ramified quadratic extension, for some character
+$\chi$ of $\Lx$ that is trivial on $\Nm_{L/K}(\Lx)$, where $\Nm_{L/K}$
+denotes the norm map from $L$ to $K$.  Then the image of $\varphi$
+is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer
+is an extension of $\Gal(L/K)$ by $\hat{T}$, which is a non-split extension.
+In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
 
-Moreover, we have the exact sequence $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1,$$ where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$ is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter $\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$, but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore, to rectify the situation, we should twist $\chi$ by a genuine character of $\Lx / \Nm_{L/K}(\Lx)$, in order to obtain a character of $L^1$.  This twist is exactly what occurs in the work of \cite{bushnellhenniart}, and is the subject of their notion of a rectifier.
+Moreover, we have the exact sequence
+$$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1,$$
+where $L^1$ denotes the norm one elements in $L$.  We note that $L^1$
+is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter
+$\varphi$ naturally provides a character $\chi$, not of the elliptic torus $L^1$,
+but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal
+representation of $\PGL_{2}(K)$, we need a character of $L^1$.  Therefore,
+to rectify the situation, we should twist $\chi$ by a genuine character of
+$\Lx / \Nm_{L/K}(\Lx)$, in order to obtain a character of $L^1$.  This twist
+is exactly what occurs in the work of \cite{bushnellhenniart}, and is the
+subject of their notion of a rectifier.
 
 In this paper, we propose a generalization of their notion of a
 rectifier.  In particular, we define rectifiers for Langlands
@@ -139,7 +158,10 @@ inducing the automorphism $x \mapsto x^{1/p}$ of $\bar{k}$.  Under the
 Artin reciprocity map of local class field theory the choice of uniformizer $\varpi$
 determines a geometric Frobenius $\Fr$ \cite[\S 2]{serre1}.
 
-If $\chi : K^{\times} \rightarrow \mathbb{C}^{\times}$ is a character, we define the \emph{level} of $\chi$ to be the smallest integer $r$ such that $\chi|_{1 + \mathfrak{p}_K^{r+1}} \equiv 1$, with $\chi|_{1 + \mathfrak{p}_K^{r+1}} \not\equiv 1$.
+If $\chi : K^{\times} \rightarrow \mathbb{C}^{\times}$ is a character, we define
+the \emph{level} of $\chi$ to be the smallest integer $r$ such that
+$\chi|_{1 + \mathfrak{p}_K^{r+1}} \equiv 1$, with
+$\chi|_{1 + \mathfrak{p}_K^{r+1}} \not\equiv 1$.
 
 If $T$ is a torus defined over $K$ we write $X^*(T)$
 for the character lattice $\Hom_{\bar{K}}(T, \Gm)$ and $X_*(T)$ for the
@@ -157,7 +179,12 @@ For $\lambda \in X_*(T)$ and $\mu \in X^*(T)$ we write $\la \lambda, \mu \ra$
 for the canonical $\Gamma$-equivariant pairing
 $$\Hom_{\bar{K}}(\Gm, T) \times \Hom_{\bar{K}}(T, \Gm) \rightarrow \Hom_{\bar{K}}(\Gm, \Gm) \cong \ZZ.$$
 
-Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.  We write $N$ for the normalizer of $T$ in $G$ and define $W = N/T$; set $\hat{N}$ as the normalizer of $\hat{T}$ in $\hat{G}$ and $\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$ yields a canonical anti-isomorphism between $W$ and $\hat{W}$.  Note that $W$ is a scheme over $K$; in general $W(K) \ne N(K) / T(K)$.
+Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.
+We write $N$ for the normalizer of $T$ in $G$ and define $W = N/T$;
+set $\hat{N}$ as the normalizer of $\hat{T}$ in $\hat{G}$ and
+$\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$
+yields a canonical anti-isomorphism between $W$ and $\hat{W}$.
+Note that $W$ is a scheme over $K$; in general $W(K) \ne N(K) / T(K)$.
 
 Write $\Nm$ for the map
 \begin{align*}
@@ -218,13 +245,29 @@ character ${}_K \mu_{\xi}$ of $\Lx$.  The function $${}_K
 intuition behind the rectifiers ${}_K \boldsymbol\mu$ have been
 studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
 
-We will need a description of the characters ${}_K \mu_{\xi}$ in certain cases.  Let us recall the following notions from \cite[\S8]{bushnellhenniart}.
+We will need a description of the characters ${}_K \mu_{\xi}$ in certain cases.
+Let us recall the following notions from \cite[\S8]{bushnellhenniart}.
 
-Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.  Then there is a unique sub-extension $L_i/K$ of $L/K$ such that $\xi|_{1 + \mathfrak{p}_L^{i+1}}$ factors through the norm $N_{L/L_i}$, and which is minimal for this property.  We say that $i \in \mathbb{Z}$ is a \emph{jump of} $\xi$ \emph{over} $F$ if $i \geq 1$ and $E_{i-1} \neq E_i$.
+Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.
+Then there is a unique sub-extension $L_i/K$ of $L/K$ such that
+$\xi|_{1 + \mathfrak{p}_L^{i+1}}$ factors through the norm $N_{L/L_i}$,
+and which is minimal for this property.  We say that $i \in \mathbb{Z}$
+is a \emph{jump of} $\xi$ \emph{over} $F$ if $i \geq 1$ and $E_{i-1} \neq E_i$.
 
-Suppose now that $(L/K,\xi)$ is an admissible pair, where $\xi$ has level $r \geq 1$.  Suppose that $\xi|_{1 + \mathfrak{p}_L^r}$ does not factor through $N_{L/L_i}$ for any proper subextension $L_i$ contained in $L$, containing $K$.  Then $L_0 = L_1 = \cdots L_r = L$ and $L_{j} = K$ for all $j > r$.  By Theorem ??????????? and Theorem ??????\MAxxx{This is the Ramification Theorem of Essentially Tame, III, but once we find out what the error in the paper is, together with Remark 21 on Essentially Tame, III, page 547}, we have \MAxxx{Now state the proposition about rectifiers in this setting, based on the Ramification Theorem}
+Suppose now that $(L/K,\xi)$ is an admissible pair, where $\xi$ has
+level $r \geq 1$.  Suppose that $\xi|_{1 + \mathfrak{p}_L^r}$ does not
+factor through $N_{L/L_i}$ for any proper subextension $L_i$ contained
+in $L$, containing $K$.  Then $L_0 = L_1 = \cdots L_r = L$ and $L_{j} = K$
+for all $j > r$.  By Theorem ??????????? and Theorem ??????
+\MAxxx{This is the Ramification Theorem of Essentially Tame, III, but once
+we find out what the error in the paper is, together with Remark 21 on
+Essentially Tame, III, page 547},
+we have
+\MAxxx{Now state the proposition about rectifiers in this setting, based on the Ramification Theorem}
 
-Now suppose that $(L/K, \xi)$ is an admissible pair, where $\xi$ has level $r = 0$.  Then the set of jumps of $\xi$ over $F$ is empty.  Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have
+Now suppose that $(L/K, \xi)$ is an admissible pair, where $\xi$ has level
+$r = 0$.  Then the set of jumps of $\xi$ over $F$ is empty.
+Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have
 
 \begin{proposition}\label{prop:BH_result}
   Suppose that $(L/K, \xi)$ is an admissible pair such that $L/K$ is
@@ -232,12 +275,15 @@ Now suppose that $(L/K, \xi)$ is an admissible pair, where $\xi$ has level $r = 
   Then ${}_K \mu_{\xi}$ is unramified and
   ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
-\MAxxx{We only showed that our rectifier agrees with B/H for depth zero! We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).  That is, this proposition only says what the B/H rectifiers are in DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
+\MAxxx{We only showed that our rectifier agrees with B/H for depth zero!
+We should do positive depth as well! (ie Reeder's setting, for $\GL_n$).
+That is, this proposition only says what the B/H rectifiers are in
+DeBacker/Reeder.  What are the B/H rectifiers in the Reeder setting?}
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
-Let $T$ be a torus defined over $K$.    Let $K_n$ be the maximal unramified subextension
-of the splitting field $L$, and set $I = \Gal(L/K_n)$.
+Let $T$ be a torus defined over $K$.    Let $K_n$ be the maximal
+unramified subextension of the splitting field $L$, and set $I = \Gal(L/K_n)$.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
 over $\OK$ \cite[Ch. 10]{blr}.  As a consequence of the N\'eron mapping
@@ -400,13 +446,15 @@ Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \end{align*}
 \end{proof}
 
-\section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction} \label{section:gross_debacker_reeder}
+\section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction}
+\label{section:gross_debacker_reeder}
 
 We consider here a regular semisimple elliptic Langlands parameter
  $\varphi$ for an unramified connected
 reductive group $G$ (see \cite{reeder}).  Then $\varphi$ has image in a group of
 type $L$.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
-\S\ref{section:groups_of_type_L}.  DeBacker--Reeder and Reeder (in \cite{debackerreeder} and \cite{reeder}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
+\S\ref{section:groups_of_type_L}.  DeBacker--Reeder and Reeder (in \cite{debackerreeder}
+and \cite{reeder}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 
 Let us fix a splitting $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
 for the dual group $\hat{G}$.  Here $\{ X_{\alpha} \}$ is a set of root vectors
@@ -436,7 +484,10 @@ Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 \end{enumerate}
 \end{theorem}
 
-Let $\varphi : \Weil_K \rightarrow {}^L G$ be a regular semisimple elliptic Langlands parameter.  Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$, where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$ (see \cite[\S 3]{debackerreeder}).
+Let $\varphi : \Weil_K \rightarrow {}^L G$ be a regular semisimple elliptic Langlands
+parameter.  Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$,
+where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$
+(see \cite[\S 3]{debackerreeder}).
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
@@ -444,7 +495,8 @@ Let $\tilde{w}$ be the
 canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \begin{definition}
-Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.  We define a homomorphism $\varphi_{\hat{u}} : \Weil_K \rightarrow {}^L G$ by
+Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.
+We define a homomorphism $\varphi_{\hat{u}} : \Weil_K \rightarrow {}^L G$ by
 \begin{enumerate}
 \item $\varphi_{\hat{u}}|_{I_K} \equiv 1$
 \item $\varphi_{\hat{u}}(\Fr) = \hat{\theta} \tilde{u}$
@@ -467,8 +519,8 @@ $$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K)
   \rightarrow \HT{0}(\Gamma, T(L)) \rightarrow 1.$$
 
 Recall that the character $\xi_{\varphi}$ is associated to $\varphi$ by
-the local Langlands correspondence for tori (see section \ref{section:groups_of_type_L}).  Note that the above
-exact sequence restricts to an exact sequence
+the local Langlands correspondence for tori (see section \ref{section:groups_of_type_L}).
+Note that the above exact sequence restricts to an exact sequence
 
 $$1 \rightarrow \HT{-1}(\Gamma, T(\OL)) \rightarrow T(\OL)_{\Gamma}
   \rightarrow T(\OK) \rightarrow \HT{0}(\Gamma, T(\OL)) \rightarrow 1$$
@@ -496,7 +548,8 @@ Note that $T(K) = T(\OK)$, and so in particular
 $T(\OL)_{\Gamma}$ surjects onto $T(K)$ via the norm map
 $\Nm$.  Therefore, $\HT{-1}(\Gamma,T(L))$ and
 $T(\OL)_{\Gamma}$ together generate $T(L)_{\Gamma}$.  It thus suffices to check that
-$\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$ on each of these two subgroups.
+$\xi_{\varphi} \otimes \xi_{\varphi_{w}}^{-1} = \chi_{\varphi} \circ \Nm$
+on each of these two subgroups.
 
 Since $\varphi_{w}|_{I_K} \equiv 1$, $\xi_{\varphi_{w}}$ is trivial on
 $T(\OL)_{\Gamma}$ so Lemma
@@ -504,7 +557,8 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-We have therefore proven Theorem \ref{thm:unique_semisimple}.  In the case that $G$ is semisimple, there was nothing special about
+We have therefore proven Theorem \ref{thm:unique_semisimple}.  In the
+case that $G$ is semisimple, there was nothing special about
 $\varphi_{w}$.  In fact, by the same arguments, $\xi_{\varphi_{w}} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ was any lift of $\hat{w}$ to $\hat{N}$.
@@ -563,10 +617,15 @@ $T(L)_{\Gamma}$.
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
   extension $L$.  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $W(K)$. (see Lemma \ref{lem:weyl_groups}). We say that two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes of admissible pairs in $G$.
+by any element of $W(K)$. (see Lemma \ref{lem:weyl_groups}). We say that
+two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there
+exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
+for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes
+of admissible pairs in $G$.
 \end{definition}
 
-We recall that there is a notion of regularity for characters of $T(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
+We recall that there is a notion of regularity for characters of $T(K)$
+(see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
 
 \begin{definition} \label{def:rectifier}
   Let $T$ be a torus, defined over $K$, that splits over an unramified
@@ -579,7 +638,8 @@ We recall that there is a notion of regularity for characters of $T(K)$ (see \ci
 \item The character ${}_K \mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(1 + \mathfrak{p}_L)_{\Gamma}$)
 
-\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular, and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
+\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular,
+and $\varphi \mapsto L(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
   is the local Langlands correspondence.
 
 \item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
@@ -644,12 +704,22 @@ of regular pairs in $G$.
 on $P_G^{Reg}(K)$, satisfying conditions (1)-(3) of Definition \ref{def:rectifier}.
 \end{enumerate}
 \end{definition}
-\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible pairs considered in DeBacker/Reeder and Reeder.  We don't need to find conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3 conditions on Langlands parameters that are considered on page 31 of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$ to be a subset of their pairs $(T,\xi)$ so that condition (3) of Theorem \ref{thm:unique_semisimple} makes sense. Note that David has an argument that condition (iii) is equivalent (or implied by?) condition (2) on page 31 of Reeder's positive depth paper.}
+\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible
+pairs considered in DeBacker/Reeder and Reeder.  We don't need to find
+conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3
+conditions on Langlands parameters that are considered on page 31
+of Reeder's positive depth paper.  We just need our definition of $P_G^{Reg}(K)$
+to be a subset of their pairs $(T,\xi)$ so that condition (3) of
+Theorem \ref{thm:unique_semisimple} makes sense. Note that David has
+an argument that condition (iii) is equivalent (or implied by?) condition (2)
+on page 31 of Reeder's positive depth paper.}
 
 We can prove:
 
 \begin{theorem} \label{thm:unique_semisimple}
-Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is unramified for all regular pairs $(T, \xi)$.
+Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then
+there is a unique weak rectifier for $T$.  Moreover, ${}_K\mu_{\xi}$ is
+unramified for all regular pairs $(T, \xi)$.
 \end{theorem}
 
 Once phrased in this manner, uniqueness is a straightforward matter
@@ -682,12 +752,8 @@ Moreover, we prove compatibility with Bushnell/Henniart:
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
-<<<<<<< HEAD
 In this section, we show that our function ${}_K \boldsymbol\mu^{\mathrm{Reg}}$
 agrees with the rectifier of Bushnell/Henniart.
-=======
-In this section, we show that our function ${}_K  \boldsymbol\mu^{\mathrm{Reg}}$ agrees with the rectifier of Bushnell/Henniart.  
->>>>>>> ba6f841e8ed7cff345976c95441a693e3ebfacec
 
 Let $L/K$ be the degree $n$ unramified extension of $K$.
 Let $T = \Res_{L/K}(\Gm)$.
@@ -710,7 +776,8 @@ $\HT{-1}(\Gamma, X_*(T)) = 0$.
 \begin{proof}
 $(a_1, a_2, \cdots, a_n) \in \ker(\Nm)$ if and only if $\displaystyle\sum_{i=1}^n a_i = 0$.
 It is then easy to see that $\ker(\Nm)$ is generated by $e_i - e_j$ for $i < j$, where
-$e_i$ are the standard basis of $\mathbb{Z}^n$.  But $e_i - e_j = (1 - \tau)e_i$ for some $\tau \in \Gamma$, since $\Gamma$ acts by cyclic shift.  Thus $\ker(\Nm) \subset I_{\Gamma}(X_*(T))$.
+$e_i$ are the standard basis of $\mathbb{Z}^n$.  But $e_i - e_j = (1 - \tau)e_i$ for some
+$\tau \in \Gamma$, since $\Gamma$ acts by cyclic shift.  Thus $\ker(\Nm) \subset I_{\Gamma}(X_*(T))$.
 \end{proof}
 
 The Tate cohomology exact sequence for $T$ therefore reduces to
@@ -718,7 +785,8 @@ $$1 \rightarrow T(L)_{\Gamma} \xrightarrow{\sim} T(K) \rightarrow 1$$ by
 Corollary \ref{cor:cohom_tori}.
 
 \begin{proposition}\label{prop:powers_of_lifts}
-Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
+Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the
+canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
 denotes the identity element in $\GL_{n}(\CC)$.
 \end{proposition}
 
@@ -726,7 +794,8 @@ denotes the identity element in $\GL_{n}(\CC)$.
 See \cite[\S3.1]{zaremsky}.
 \end{proof}
 
-By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin reciprocity map for $L$, so we obtain
+By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin
+reciprocity map for $L$, so we obtain
 
 \begin{corollary} \label{cor:rectifier_agreement}
 $\xi_{\varphi_{w}} = {}_K \mu_{\xi}$.
@@ -747,10 +816,14 @@ unramified.  By Proposition \ref{prop:BH_result}, we are done.
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
 $\varphi_{w}' : \Weil_K \rightarrow \GL_{n}(\CC)$ by $\varphi_{w}'|_{I_K} \equiv 1$ and
-$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.  Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that, by analogous arguments
-as in Corollary \ref{cor:rectifier_agreement},
+$\varphi_{w}'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.
+Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic
+polynomial of $\varphi_{w}'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that,
+by analogous arguments as in Corollary \ref{cor:rectifier_agreement},
 $\xi_{\varphi_{w}'}(\varpi) = a$.  By Proposition \ref{prop:BH_result}, we are
-forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$, so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
+forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the
+canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$,
+so that $\varphi_{w}'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
 
 \section{Compatibility with DeBacker-Reeder} \label{section:DR_compat}
 
