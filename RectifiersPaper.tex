@@ -62,7 +62,8 @@
 \newcommand{\WD}{\mathcal{W}'}
 \newcommand{\Lpack}{\mathcal{L}}
 \newcommand{\Pgen}{P_G^{\gen}}
-\newcommand{\mugen}{\boldsymbol\mu^{\gen}}
+\newcommand{\bmu}{\boldsymbol\mu}
+\newcommand{\mugen}{\bmu^{\gen}}
 
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
@@ -130,7 +131,7 @@ Moreover, we have the exact sequence
 $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1$$
 $$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ w \Nm_{L/K}(L^{\times}) \mapsto w / \sigma(w)$$
 where $L^1$ denotes the norm one elements in $L$, and where $\sigma$ is
-the nontrivial element of $Gal(L/K)$.  We note that $L^1$
+the nontrivial element of $\Gal(L/K)$.  We note that $L^1$
 is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus 
 $L^1 \subset PGL(2,K)$,
@@ -265,13 +266,15 @@ the so-called ``naive correspondence'', is not the local Langlands
 correspondence because $\pi_{\xi}$ has the wrong central character.
 Instead, the local Langlands correspondence is given by $$\varphi_{\xi}
 \mapsto \pi_{\xi \cdot {}_K \mu_{\xi}}$$ for some subtle finite order
-character ${}_K \mu_{\xi}$ of $\Lx$.  The function $${}_K
-\boldsymbol\mu : (L/K, \xi) \mapsto {}_K \mu_{\xi}$$ is called the
+character ${}_K \mu_{\xi}$ of $\Lx$.  Since we will not be changing $K$
+in this paper we will write $\mu_\xi$ for ${}_K \mu_{\xi}$.  The function
+$$\bmu : (L/K, \xi) \mapsto \mu_{\xi}$$
+is called the
 \emph{rectifier} associated to $L/K$.  Both the description of and the
-intuition behind the rectifiers ${}_K \boldsymbol\mu$ have been
+intuition behind the rectifiers $\bmu$ have been
 studied (see \cite{bushnellhenniart}, \cite{geo}, \cite{adrian}).
 
-We will need a description of the characters ${}_K \mu_{\xi}$ in certain cases.
+We will need a description of the characters $\mu_{\xi}$ in certain cases.
 Let us recall some notions from \cite[\S8]{bushnellhenniart}.
 
 Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.
@@ -283,8 +286,8 @@ is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
 \begin{proposition}\label{prop:BH_result1}
   Suppose that $(L/K, \xi)$ is an admissible pair, where $L/K$
   is unramified and $\xi$ has level $0$.
-  Then ${}_K \mu_{\xi}$ is unramified and
-  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
+  Then $\mu_{\xi}$ is unramified and
+  $\mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
 
 \proof
@@ -297,8 +300,8 @@ Suppose that $(L/K,\xi)$ is an admissible pair, where $L/K$ is unramified
 of degree $n$ and where $\xi$ has
 level $r \geq 1$.  Suppose that $\xi|_{1 + \mathfrak{p}_L^r}$ does not
 factor through $\Nm_{L/L_i}$ for any proper subextension $L_i$ contained
-in $L$, containing $K$.  Then ${}_K \mu_{\xi}$ is unramified and
-  ${}_K \mu_{\xi}(\varpi) = (-1)^{n-1}$.
+in $L$, containing $K$.  Then $\mu_{\xi}$ is unramified and
+  $\mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
 
 \proof
@@ -597,7 +600,7 @@ through a group of type L for $T$
 As in \S\ref{section:groups_of_type_L}, one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
-to $\Gamma = Gal(L/K)$.
+to $\Gamma = \Gal(L/K)$.
 Recall again the Tate cohomology sequence
 $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
 = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1.$$
@@ -611,7 +614,7 @@ $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
 $T(L)_{\Gamma} \cong T(K)$ can be identified with $\Lx$, and
 $(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
 correspondence, one would then proceed (as in \S\ref{section:BH_recall}) to
-attach the supercuspidal representation $\pi_{\xi_{\varphi} \cdot {}_K
+attach the supercuspidal representation $\pi_{\xi_{\varphi} \cdot 
   \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Howe.
 
 If $G$ were arbitrary, then in analogy to the case of $\GL_{n}(K)$, there
@@ -640,27 +643,27 @@ Recall that there is a notion of regularity for characters of $T(K)$
 \begin{definition} \label{def:rectifier}
   Let $T$ be a $K$-minisotropic torus in $G$, 
   that splits over an unramified
-  extension $L$.  A \emph{rectifier} for $T$ is a function $${}_K
-  \boldsymbol\mu : (T, \xi) \mapsto {}_K \mu_{\xi}$$ which attaches,
-  to each admissible pair $(T, \xi) \in P_G(K)$, a character ${}_K
+  extension $L$.  A \emph{rectifier} for $T$ is a function
+  $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
+  which attaches, to each admissible pair $(T, \xi) \in P_G(K)$, a character $
   \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
 
 \begin{enumerate}
-\item The character ${}_K \mu_{\xi}$ is tamely ramified (i.e. trivial on
+\item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(1 + \mathfrak{p}_L)_{\Gamma}$)
 
-\item The character $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$, is regular,
-and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot {}_K \mu_{\xi_{\varphi}})$
+\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is regular,
+and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
   is the local Langlands correspondence.
 
 \item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
 $\xi_1^{-1} \xi_2$ is tamely ramified, then
-${}_K \mu_{\xi_1} = {}_K \mu_{\xi_2}$.
+$\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
 \MAxxx{Gordan, during my seminar that I gave about this stuff, asked me:
 What if $T$ occurs as a torus of two different groups $G$?  Do you
 get the same rectifying character attached to $(T, \xi)$?  That is,
-is our function ${}_K \boldsymbol\mu$ well-defined?  Because $(T,\xi)$
+is our function $\bmu$ well-defined?  Because $(T,\xi)$
 could occur for different groups $G_1, G_2$.  If they do, is the associated
 rectifier correct in LLC for $G_1$ and $G_2$??? I'm not even sure if
 I formulated this question correctly, and to be honest, I don't know
@@ -670,14 +673,14 @@ we should probably think about this type of thing...}
 \end{definition}
 
 We note that since we have assumed that $\HT{0}(\Gamma,T(L)) = 0$, the condition
-that $\xi \cdot {}_K \mu_{\xi}$ descends to $T(K)$ is possible, so
+that $\xi \cdot \mu_{\xi}$ descends to $T(K)$ is possible, so
 condition (2) makes sense.  We believe that the assumption $\HT{0}(\Gamma,T(L)) = 0$
 is not necessary (see \S\ref{section:questions}).
 
 \begin{conjecture}
   Let $T$ be as in Definition \ref{def:rectifier}.  Then $T$
-  admits a unique rectifier ${}_K \boldsymbol\mu : (T, \xi) \mapsto
-  {}_K \mu_{\xi}$.
+  admits a unique rectifier $\bmu : (T, \xi) \mapsto
+  \mu_{\xi}$.
 \end{conjecture}
 
 We first note that the definition of admissible pair above generalizes
@@ -695,11 +698,11 @@ We next note that as the local Langlands correspondence is not known in general,
 ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
-We will show that the characters ${}_K \mu_{\xi}$ that arise in this setting
+We will show that the characters $\mu_{\xi}$ that arise in this setting
 happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
 in particular, that not all possible admissible pairs arise in the settings
 of \cite{debackerreeder} and \cite{reeder}.
-For example, if $G = \GL_n$, ${}_K \mu_{\xi}$ can be ramified,
+For example, if $G = \GL_n$, $\mu_{\xi}$ can be ramified,
 even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
 we need in order to prove this conjecture, we determine
 the rectifier in the situation where supercuspidal $L$-packets have been
@@ -717,11 +720,11 @@ is not fixed by any element of $W(K)$.  We denote by $\Pgen(K)$ the set
 of admissible pairs in $G$ in general position.
 \item A \emph{weak rectifier} for $T \subset G$ is a function
 \begin{align*}
-{}_K\mugen : (T, \xi) \mapsto {}_K \mu_{\xi}
+\mugen : (T, \xi) \mapsto \mu_{\xi}
 \end{align*}
 which attaches,
-  to each admissible pair $(T, \xi) \in \Pgen(K)$, a character ${}_K
-  \mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3) 
+  to each admissible pair $(T, \xi) \in \Pgen(K)$, a character
+  $\mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3) 
   of Definition \ref{def:rectifier}.
 \end{enumerate}
 \end{definition}
@@ -758,42 +761,42 @@ $\xi_{\varphi_{w}}^{-1}$ is unramified, so this function also
 satisfies condition (1).  Finally, $\xi_{\varphi_{w}}$ only depends on $T$,
 and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
 We may therefore set
-${}_K \mugen(T,\xi) = \xi_{\varphi_{w}}^{-1}$.
+$\mugen(T,\xi) = \xi_{\varphi_{w}}^{-1}$.
 
 We now prove uniqueness.
 Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$ 
 such that $(T, \xi) \in P_G^{Reg}(K)$, and let 
-$\xi \mapsto {}_K \mu_{\xi}^i$ be a rectifier for 
-$T \subset G$, $i = 1,2$.  By hypothesis, we have 
-$$\Lpack({}_K \mu_{\xi}^1 \cdot \xi) = \Lpack({}_K \mu_{\xi}^1 \cdot \xi).$$
+$\xi \mapsto \mu_{\xi}$ and $\xi \mapsto \mu'_{\xi}$ be rectifiers for 
+$T \subset G$.  By hypothesis, we have 
+$$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
 By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$, 
 depending on $\xi$, such that 
-$$({}_K \mu_{\xi}^1 \cdot \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \cdot \xi.$$  
+$$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi.$$  
 Suppose that $\xi$ is not trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  
 Restricting the equation 
-$({}_K \mu_{\xi}^1 \cdot \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \cdot \xi$ 
+$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$ 
 to $T(1 + \mathfrak{p}_L)_{\Gamma}$, we get that $\xi^{w_{\xi}} = \xi$, 
 by condition (1) of Definition \ref{def:rectifier}.  
 This contradicts admissibility of $\xi$.
 
 Now suppose that $\xi$ is trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  
 Consider the restriction of the equation 
-$({}_K \mu_{\xi}^1 \cdot \xi)^{w_{\xi}} = {}_K \mu_{\xi}^2 \cdot \xi$ 
+$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$ 
 to $T(\mathcal{O}_L)_{\Gamma} \cong T(\mathcal{O}_K)$.  
-Write $\mu = (({}_K \mu_{\xi}^1)^{w_{\xi}})^{-1} \cdot {}_K \mu_{\xi}^2$. 
+Write $\lambda = ((\mu_\xi)^{w_\xi})^{-1} \cdot \mu'_\xi$. 
 Reducing mod $\mathfrak{p}_L$, we conclude that there exists a character, 
-$\mu$, of $T(k)$, with the property that if $\xi$ is any 
-$W(k)$-regular character of $T(k)$, then $\mu \xi$ is 
+$\lambda$, of $T(k)$, with the property that if $\xi$ is any 
+$W(k)$-regular character of $T(k)$, then $\lambda \xi$ is 
 $W(k)$-conjugate to $\xi$. By ???????\MAxxx{Fill this in when we know
-what to fill it in with}, $\mu$ is trivial.  
-Therefore, $({}_K \mu_{\xi}^1)^{w_{\xi}} = {}_K \mu_{\xi}^2$ 
+what to fill it in with}, $\lambda$ is trivial.  
+Therefore, $(\mu_\xi)^{w_{\xi}} = \mu'_\xi$ 
 upon restriction to $T(\mathcal{O}_L)_{\Gamma}$.  
-Finally, since ${}_K \mu_{\xi}^1 \cdot \xi$ and ${}_K \mu_{\xi}^2 \cdot \xi$ 
+Finally, since $\mu_\xi \cdot \xi$ and $\mu'_\xi \cdot \xi$ 
 must descend to $T(K)$ by condition (2) of Definition 
-\ref{def:rectifier}, we have that ${}_K \mu_{\xi}^1$ and 
-${}_K \mu_{\xi}^2$ have the same restriction to 
+\ref{def:rectifier}, we have that $\mu_\xi$ and 
+$\mu'_\xi$ have the same restriction to 
 $\hat{H}^{-1}(\Gamma, T(L))$.  Hence, 
-${}_K \mu_{\xi}^1 = {}_K \mu_{\xi}^2$.
+$\mu_\xi = \mu'_\xi$.
 \qed
 
 We note that in the
@@ -804,13 +807,13 @@ and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
-We also note for emphasis that even though ${}_K  \mugen((T, \xi))$ is
+We also note for emphasis that even though $ \mugen((T, \xi))$ is
 unramified for all pairs $(T, \xi) \in \Pgen(K)$, it will not be
 unramified for more general pairs $(T, \xi)$, as noted earlier.
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
-In this section, we show that our function ${}_K \mugen$
+In this section, we show that our function $\mugen$
 agrees with the rectifier of Bushnell/Henniart.
 Let $L/K$ be the degree $n$ unramified extension of $K$.
 Let $T = \Res_{L/K}(\Gm)$.
