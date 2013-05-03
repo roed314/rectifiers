@@ -52,6 +52,8 @@
 \newcommand{\CCx}{\mathbb{C}^\times}
 \newcommand{\OK}{\mathcal{O}_K}
 \newcommand{\OKn}{\mathcal{O}_{K_n}}
+\newcommand{\pK}{\mathfrak{p}_K}
+\newcommand{\pL}{\mathfrak{p}_L}
 \newcommand{\OL}{\mathcal{O}_L}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
@@ -134,7 +136,7 @@ where $L^1$ denotes the norm one elements in $L$, and where $\sigma$ is
 the nontrivial element of $\Gal(L/K)$.  We note that $L^1$
 is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus 
-$L^1 \subset PGL(2,K)$,
+$L^1 \subset \PGL(2,K)$,
 but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal
 representation of $\PGL_{2}(K)$, we need a character of $L^1$.  
 To rectify the situation at hand, we can twist $\chi$ by a genuine character of
@@ -164,8 +166,8 @@ Fai for helpful conversations as well.
 Throughout, $k$ will denote a finite field, and
 $k_n$ will denote the degree $n$ extension of
 $k$.  $K$ will denote a nonarchimedean local field of
-charcteristic zero, $\mathcal{O}_K$ its ring of integers,
-$\mathfrak{p}_K$ the maximal ideal in $\mathcal{O}_K$,
+charcteristic zero, $\OK$ its ring of integers,
+$\mathfrak{p}_K$ the maximal ideal in $\OK$,
 and $k$ will also denote the residue field of $K$.  Fix
 a uniformizer $\varpi$ of $K$.  Let $K^u$ denote the maximal
 unramified extension of $K$, and fix a valuation $\val : (K^u)^\times
@@ -375,8 +377,10 @@ This follows from the long exact sequence in cohomology associated to the sequen
 $$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow \C \rightarrow 0.$$
 \end{proof}
 
+Suppose now that $T$ is unramified with splitting field $L = K_n$.  
+
 \begin{corollary} \label{cor:cohom_tori}
-If $T$ is unramified, then $\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T))$
+If $T$ is unramified, then $\HT{i}(\Gamma_n, T(L)) \cong \HT{i}(\Gamma_n, X_*(T))$
 for all $i$.
 \end{corollary}
 
@@ -385,12 +389,20 @@ This follows from the previous corollary together with Corollary \ref{cor:unram_
 \end{proof}
 
 \begin{corollary}\label{cor:vanishing_H0}
-If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(K_n)) = 0$.
+If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(L)) = 0$.
 \end{corollary}
 
 \begin{proof}
-Since $T$ is anisotropic $\HH^0(\Gamma_n, T(K_n)) \cong X_*(T)^{\Gamma_n} = 0$.
+Since $T$ is anisotropic $\HH^0(\Gamma_n, T(L)) \cong X_*(T)^{\Gamma_n} = 0$.
 \end{proof}
+
+For unramified $T$ the jumps in the filtration on $T(K)$ and $T(L)$ occur at integers, and we write
+\begin{align*}
+T(\OK) &= T(K)_0 \\
+T(\OL) &= T(L)_0 \\
+T(\pK^r) &= T(K)_r \mbox{for $r > 0$} \\
+T(\pL^r) &= T(L)_r \mbox{for $r > 0$}
+\end{align*}
 
 \section{Groups of type L} \label{section:groups_of_type_L}
 
@@ -650,7 +662,7 @@ Recall that there is a notion of regularity for characters of $T(K)$
 
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
-  $T(1 + \mathfrak{p}_L)_{\Gamma}$)
+  $T(\pL)_{\Gamma}$)
 
 \item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is regular,
 and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
@@ -712,10 +724,10 @@ constructed.
 Suppose $(T, \xi) \in P_G(K)$.
 \begin{enumerate}
 \item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
-is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
-$T(1+\mathfrak{p}_L^{r})_{\Gamma}$
+is trivial on $T(\pL^{r+1})_{\Gamma}$ but nontrivial on
+$T(\pL^{r})_{\Gamma}$
 \item An admissible pair of depth $r$ is in \emph{general position} 
-if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
+if $\xi|_{T(\pL^{r})_{\Gamma}}$
 is not fixed by any element of $W(K)$.  We denote by $\Pgen(K)$ the set
 of admissible pairs in $G$ in general position.
 \item A \emph{weak rectifier} for $T \subset G$ is a function
@@ -772,17 +784,17 @@ $$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
 By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$, 
 depending on $\xi$, such that 
 $$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi.$$  
-Suppose that $\xi$ is not trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  
+Suppose that $\xi$ is not trivial on $T(\pL)_{\Gamma}$.  
 Restricting the equation 
 $(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$ 
-to $T(1 + \mathfrak{p}_L)_{\Gamma}$, we get that $\xi^{w_{\xi}} = \xi$, 
+to $T(\pL)_{\Gamma}$, we get that $\xi^{w_{\xi}} = \xi$, 
 by condition (1) of Definition \ref{def:rectifier}.  
 This contradicts admissibility of $\xi$.
 
-Now suppose that $\xi$ is trivial on $T(1 + \mathfrak{p}_L)_{\Gamma}$.  
+Now suppose that $\xi$ is trivial on $T(\pL)_{\Gamma}$.  
 Consider the restriction of the equation 
 $(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$ 
-to $T(\mathcal{O}_L)_{\Gamma} \cong T(\mathcal{O}_K)$.  
+to $T(\OL)_{\Gamma} \cong T(\OK)$.  
 Write $\lambda = ((\mu_\xi)^{w_\xi})^{-1} \cdot \mu'_\xi$. 
 Reducing mod $\mathfrak{p}_L$, we conclude that there exists a character, 
 $\lambda$, of $T(k)$, with the property that if $\xi$ is any 
@@ -790,7 +802,7 @@ $W(k)$-regular character of $T(k)$, then $\lambda \xi$ is
 $W(k)$-conjugate to $\xi$. By ???????\MAxxx{Fill this in when we know
 what to fill it in with}, $\lambda$ is trivial.  
 Therefore, $(\mu_\xi)^{w_{\xi}} = \mu'_\xi$ 
-upon restriction to $T(\mathcal{O}_L)_{\Gamma}$.  
+upon restriction to $T(\OL)_{\Gamma}$.  
 Finally, since $\mu_\xi \cdot \xi$ and $\mu'_\xi \cdot \xi$ 
 must descend to $T(K)$ by condition (2) of Definition 
 \ref{def:rectifier}, we have that $\mu_\xi$ and 
