@@ -149,7 +149,7 @@ Gross, called ``groups of type L'' in order to give a framework that
 will allow us to define a rectifier.  This construction allows us to define
 a notion of admissible pair.   We will show that a rectifier exists, is
 unique, and is compatible
-with the rectifier in the setting $\GL_{n}(K)$ as in \cite{bushnellhenniart}.
+with the rectifier in the setting $\GL_{n}(K)$ as in \cite{bushnellhenniart}.\MAxxx{Insert a paragraph describing each section of the paper.}
 
 \subsection*{Acknowledgements}
 
@@ -447,7 +447,7 @@ See \cite[Lem. 9.1]{adrianlansky}.
 We will need the following structural result about Langlands
 parameters mapping to groups of type L later.  Suppose that $L/K$ is now unramified.
 Suppose $\varphi$ and $\varphi'$ are two Langlands parameters,
-agreeing on $I_K$, with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
+with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
 Let $\xi_{\varphi}$ and $\xi_{\varphi'}$ be the associated characters of $T(L)_{\Gamma}$.
 
 \begin{lemma} \label{lem:toral_modification}
@@ -465,12 +465,12 @@ $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 \end{align*}
 since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon \Weil_L \rightarrow \hat{T}$
 by $\varphi_i(z) = 1$ for $z \in I_L$ and
-$\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_{\varphi_i}$ be the associated character
-of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\xi_{\varphi_i} = \xi_{\varphi_0} \circ \Fr^i.$
+$\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_i$ be the associated character
+of $T(L)$.  By \cite[Lem. 4.3.1]{debackerreeder}, $\xi_i = \xi_0 \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \begin{align*}
-\xi_{\varphi'}(x) \xi_{\varphi}(x)^{-1} &= \prod_{i=0}^{n-1} \xi_{\varphi_i}(x) \\
-&= \xi_{\varphi_0} \left(\prod_{i=0}^{n-1}\Fr^i(x)\right) \\
+\xi_{\varphi'}(x) \xi_{\varphi}(x)^{-1} &= \prod_{i=0}^{n-1} \xi_i(x) \\
+&= \xi_0 \left(\prod_{i=0}^{n-1}\Fr^i(x)\right) \\
 &= 1.\\
 \end{align*}
 \end{proof}
@@ -712,7 +712,8 @@ Suppose $(T, \xi) \in P_G(K)$.
 \item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
 is trivial on $T(1+\mathfrak{p}_L^{r+1})_{\Gamma}$ but nontrivial on
 $T(1+\mathfrak{p}_L^{r})_{\Gamma}$
-\item An admissible pair is in \emph{general position} if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
+\item An admissible pair of depth $r$ is in \emph{general position} 
+if $\xi|_{T(1+\mathfrak{p}_L^{r})_{\Gamma}}$
 is not fixed by any element of $W(K)$.  We denote by $\Pgen(K)$ the set
 of admissible pairs in $G$ in general position.
 \item A \emph{weak rectifier} for $T \subset G$ is a function
