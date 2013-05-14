@@ -152,7 +152,26 @@ Gross, called ``groups of type L'' in order to give a framework that
 will allow us to define a rectifier.  This construction allows us to define
 a notion of admissible pair.   We will show that a rectifier exists, is
 unique, and is compatible
-with the rectifier in the setting $\GL_{n}(K)$ as in \cite{bushnellhenniart}.\MAxxx{Insert a paragraph describing each section of the paper.}
+with the rectifier in the setting $\GL_{n}(K)$ as in \cite{bushnellhenniart}.
+\MAxxx{I guess we don't show compatibility with their rectifier.  So fix this claim everywhere
+in the paper.  But explain that it's ok, because the rectifier depends on various
+constructions, and can be different, probably depending on the construction of
+supercuspidals}
+
+We now present an outline of the paper.  In \S\ref{section:BH_recall}, we recall
+the notion of rectifier as in \cite{bushnellhenniart}, and we describe
+the rectifier in the settings that we will need.  In \S\ref{section:padic_tori},
+we present some results about Tate cohomology of $p$-adic tori, that will be used
+in the rest of the paper.  In \S\ref{section:groups_of_type_L}, we introduce
+the theory of ``groups of type L'', due to Benedict Gross.  In 
+\S\ref{section:gross_debacker_reeder}, we describe the relationship between the
+construction of Gross, via groups of type L, and the constructions of 
+DeBacker-Reeder and Reeder.  In \S\ref{section:general_rectifiers}, we
+introduce our notion of rectifier, we state a conjecture, and then we
+state and prove the main theorems of this paper.
+In \S\ref{section:BH_compat}, we show that our rectifier is compatible with
+the rectifier of \cite{bushnellhenniart}.  Finally, in \S\ref{section:questions},
+we expound some natural questions that arise in our work.
 
 \subsection*{Acknowledgements}
 
@@ -608,17 +627,12 @@ $p$-adic field $K$.  Fix a $K$-torus $T$, contained in $G$, and suppose
 that the splitting field of $T$ is $L$.
 Let $\varphi : \Weil_K \rightarrow {}^L G$ be a
 Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
-through a group of type L for $T$.\MAxxx{I think that we should say here 
-``We note that every Langlands parameter that factors through the
-normalizer of a maximal torus will factor through a group of type 
-L for some torus.  It is more convenient, for our purposes, to 
-begin by fixing a torus $T$, rather than a Langlands parameter.''  
-(It may not be a torus that is embeddable in
-$G$, but it will still be for some torus that is contained
-in the quasi-split form.  Wait a minute, aren't there unramified
-grousp that are not quasi-split?  But in DeBacker-Reeder, the tori 
-in question do occur in the groups, don't they?  Maybe they work
-on the quasi-split form, but I don't think they do)}
+through a group of type L for $T$.  We note that every Langlands 
+parameter that factors through the normalizer of a maximal torus will
+factor through a group of type L for some torus.
+\MAxxx{Is this really true?  I don't see it immediately.}  It is more
+convenient however, for our purposes, to begin by fixing a torus
+$T$, rather than a Langlands parameter.
 As in \S\ref{section:groups_of_type_L}, one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
@@ -741,15 +755,6 @@ which attaches,
   of Definition \ref{def:rectifier}.
 \end{enumerate}
 \end{definition}
-\MAxxx{IMPORTANT: These 3 conditions certainly fall into the set of admissible
-pairs considered in DeBacker/Reeder and Reeder.  We don't need to find
-conditions on admissible pairs $(T,\xi)$ that are equivallent to the 3
-conditions on Langlands parameters that are considered on page 31
-of Reeder's positive depth paper.  We just need our definition of $\Pgen(K)$
-to be a subset of their pairs $(T,\xi)$ so that condition (3) of
-Theorem \ref{thm:unique_semisimple} makes sense. Note that David has
-an argument that condition (iii) is equivalent (or implied by?) condition (2)
-on page 31 of Reeder's positive depth paper.}
 
 \begin{theorem} \label{thm:unique_semisimple}
 Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then
