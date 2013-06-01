@@ -1,0 +1,133 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
+\usepackage{mathtools}
+
+\theoremstyle{plain}
+\newtheorem{iassumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{corollary}{Corollary}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{statement}[theorem]{Statement}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{problem}{Problem}
+
+\newcommand{\MAxxx}[1]{$\clubsuit$\footnote{#1}}
+\newcommand{\DRxxx}[1]{$\spadesuit$\footnote{#1}}
+\newcommand{\HT}[1]{\hat{\HH}{}^{#1}}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\setlength{\oddsidemargin}{0.2in}
+\setlength{\evensidemargin}{0.2in}
+\setlength{\textwidth}{6.1in}
+
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\HH}{H}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Nm}{Nm}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\gen}{gen}
+\DeclareMathOperator{\Z}{Z}
+
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SL}{SL}
+
+\newcommand{\stupid}{\ensuremath{\ \ \ \vert\ }}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CCx}{\mathbb{C}^\times}
+\newcommand{\OK}{\mathcal{O}_K}
+\newcommand{\OKn}{\mathcal{O}_{K_n}}
+\newcommand{\PK}{\mathcal{P}_K}
+\newcommand{\PL}{\mathcal{P}_L}
+\newcommand{\OL}{\mathcal{O}_L}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\Gm}{\mathbb{G}_m}
+\newcommand{\Lx}{L^\times}
+
+\newcommand{\T}{\mathbf{T}}
+\newcommand{\G}{\mathbf{G}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\W}{\mathbf{W}}
+\newcommand{\Galk}{\Gamma}
+\newcommand{\hatT}{\hat{T}}
+
+\newcommand{\Treg}{T^{\operatorname{reg}}}
+\newcommand{\Threg}{\hatT^{\operatorname{reg}}}
+\newcommand{\Tirr}{T^{\operatorname{irr}}}
+\newcommand{\Thirr}{\hatT^{\operatorname{irr}}}
+
+\newcommand{\Weil}{\mathcal{W}}
+\newcommand{\WD}{\mathcal{W}'}
+\newcommand{\Lpack}{\mathcal{L}}
+\newcommand{\Pgen}{P_G^{\gen}}
+\newcommand{\bmu}{\boldsymbol\mu}
+\newcommand{\mugen}{\bmu^{\gen}}
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\newcommand{\invlim}[1]{\varprojlim_{#1}}
+\newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
+
+\begin{document}
+\title{The Lemma}
+
+Suppose $k$ is a finite field, $\G$ is a connected reductive group over $k$ and $\T$ is a maximal torus in $G$.  Let $\N$ be the normalizer of $\T$ and $\W$ the absolute Weyl group $\N / \T$.  The absolute Galois group $\Galk = \Gal(\bar{k}/k)$ acts on everything; write $G = \G^\Galk$, $T = \T^\Galk$ and $W = \W^\Galk$.  Set $\hatT = \Hom(T, \CC^\times)$.  We have that $W$ acts on $T$ and $\hat{T}$; we call an element or character \emph{regular} if it is not fixed by any nontrivial element of $W$ (this condition is sometimes referred to as strongly regular).  Write $\Treg$ for the set of regular elements in $T$, $\Threg$ for the set of regular characters, $\Tirr$ for the set of irregular elements and $\Thirr$ for the set of irregular characters.  Note that in general neither the regular nor the irregular elements of $T$ or $\hatT$ form a subgroup.
+
+\begin{problem}
+Identify the set $Q_{\T}$ of $\alpha \in \hatT$ with the following property:
+\begin{itemize}
+\item For every $\chi \in \Threg$ there is a $w \in W$ with $\frac{\chi}{w(\chi)} = \alpha$.
+\end{itemize}
+\end{problem}
+
+\section{Facts}
+
+\begin{proposition}
+Suppose $\#\Threg > \# W \cdot \# \Thirr$.  Then $Q_{\T} = \{ 1 \}$.
+\end{proposition}
+\begin{proof}
+For $w \in W$, set
+$$S_w = \{\chi \in \Threg \stupid  \frac{\chi}{w(\chi)} = \alpha\}.$$
+By the pigeonhole principle, there is a $w \in W$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
+$$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
+and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus 
+$$\alpha = \frac{\chi}{\chi} = 1.$$
+\end{proof}
+
+Recall that Frobenius acts on $X^*(\T)$ via an endomorphism $F = qF_0$, where $F_0$ is an automorphism of finite order.  So it makes sense to vary $q$: we fix $F_0$ and consider the tori dual to the $\Galk$-modules with Frobenius acting through $qF_0$.
+
+\begin{corollary}[{c.f. \cite[Lemma 8.4.2]{carter}}]
+Consider the family of tori $\T_q$ with the same $F_0$.  Then for sufficiently large $q$, $Q_{\T_q} = \{ 1 \}$ (regardless of the $\G$ in which $\T_q$ is embedded).
+\end{corollary}
+\begin{proof}
+We will write $\T$ for a general torus in the family and $r$ for the common dimension.  For $w \in W$ with $w \ne 1$ the centralizer $\Z_{\T}(w)$ is a proper $F$-stable subgroup of $\T$, and thus $\dim(\Z_{\T}(w)) \le r - 1$.  By \cite[3.3.5]{carter} $\# T$ is a polynomial in $q$ of degree $r$ and $\# \Z_{\T}(w)^\Galk = \# \Z_T(w)$ is a polynomial in $q$ of degree at most $r-1$.  Thus the ratio
+$$\frac{\# \Treg}{\# \Tirr} = \frac{\# T - \sum_{1 \ne w \in W} \# \Z_T(w)}{\sum_{1 \ne w \in W} \# \Z_T(w)}$$
+grows without bound as $q$ does.  Applying this result to the dual torus $\hatT$ yields the corollary.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{carter}
+  Roger Carter,
+  \emph{Finite Groups of Lie Type: Conjugacy Classes and Complex Characters}.  Wiley \& Sons, Chichester, 1985.
+\end{thebibliography}
+
+\end{document}
