@@ -74,7 +74,7 @@
 \newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
 
 \begin{document}
-\title{Rectifiers and the local Langlands Correspondence, I : the unramified case}
+\title{Rectifiers and the local Langlands Correspondence: the unramified case}
 \author{Moshe Adrian and David Roe}
 %\address{Department of Mathematics, University of Utah, Salt Lake City, UT 84112, U.S.A.}
 
@@ -141,9 +141,9 @@ $L^1 \subset \PGL(2,K)$,
 but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal
 representation of $\PGL_{2}(K)$, we need a character of $L^1$.
 To rectify the situation at hand, we can twist $\chi$ by a genuine character of
-$\Lx / \Nm_{L/K}(\Lx)$ in order to obtain a character of $L^1$.  This twist
-is exactly what appears in the work of Bushnell and Henniart, and is the
-central subject of their notion of a rectifier.
+$\Lx / \Nm_{L/K}(\Lx)$ in order to obtain a character of $L^1$.  The twist that gives
+the correct supercuspidal representation of $\PGL_2(K)$ is exactly what
+appears in the rectifier of Bushnell and Henniart.
 
 In this paper, we initiate a program to generalize Bushnell and Henniart's
 notion of a
@@ -151,14 +151,14 @@ rectifier to groups outside of $\GL_n(K)$.  In particular, we define the notion 
 unramified minisotropic tori.  We use a recent construction of Benedict
 Gross, called ``groups of type L'', in order to give us a framework that
 will allow us to define a rectifier.  This construction also allows us to define
-a new notion of admissible pair.   We will show that a rectifier exists and, assuming a technical
-condition about elliptic tori, is
+a new notion of admissible pair.   We will show that a rectifier exists and, assuming
+that $q$ is sufficiently large, is
 unique. We will then show that our rectifier is compatible
 with the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$.  In this setting, there is
 a canonical construction of supercuspidal representations of $\GL_{n}(K)$, and in
 particular, there is a canonical ``naive'' construction of the local Langlands correspondence.
-This means, in particular, that in the depth zero case, the rectifier is canonical.
+This means, in particular, that in this depth zero case, the rectifier is canonical.
 In the setting of positive depth supercuspidal representations of $\GL_{n}(K)$,
 there is no canonical construction of supercuspidal representations of $\GL_{n}(K)$,
 and therefore there is no canonical ``naive'' construction of the local Langlands correspondence.
@@ -172,10 +172,9 @@ representations in \cite{bushnellhenniart}, it does not make sense to compare ou
 to that of Bushnell and Henniart in this setting.  Indeed, our rectifiers differ in the
 positive depth setting, and this
 is most likely due to the constructions of supercuspidal representations being different.
-We remark that our rectifier agrees with that of \cite{moy} in the positive depth setting.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall}, we recall
-the notion of rectifier as in \cite{bushnellhenniart}, and we describe
+the notion of rectifier due to Bushnell and Henniart, and we describe
 the rectifier in the setting that we will need.  In \S\ref{section:padic_tori},
 we present some results about Tate cohomology of $p$-adic tori that will be used
 in the rest of the paper.  In \S\ref{section:groups_of_type_L}, we introduce
@@ -186,16 +185,14 @@ DeBacker-Reeder and Reeder.  In \S\ref{section:general_rectifiers}, we
 introduce our notion of rectifier, we state a conjecture, and then we
 state and prove the main theorem of this paper (see Theorem \ref{thm:unique_semisimple}).
 In \S\ref{section:BH_compat}, we show that our rectifier is compatible with
-the rectifier of \cite{bushnellhenniart} in the setting of depth zero
+the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_n(K)$.  Finally, in \S\ref{section:questions},
 we expound some natural questions that arise in our work.
 
 \subsection*{Acknowledgements}
 
-Part of this paper was heavily influenced by
-conversations with Gordan Savin.  We wish to thank him for these
-conversations.  We would also like to thank Jeffrey Adams and Geo Kam
-Fai for helpful conversations as well.
+This paper has benefited from conversations with Gordan Savin, Jeffrey Adams, 
+Geo Kam Fai, Andrew Fiori, and Guy Henniart.  We thank them all.
 
 \section{Notation and Preliminaries} \label{section:notation}
 
@@ -270,16 +267,16 @@ by Serre \cite[\S VI.6]{serre2}.
 
 \section{Rectifiers for $\GL_{n}(K)$} \label{section:BH_recall}
 
-In this section, we recall the notion of a rectifier,
-as in \cite{bushnellhenniart}, and describe the rectifier in the setting
+In this section, we recall the rectifier of Bushnell and Henniart,
+and we describe the rectifier in the setting
 that we will need.
 
-An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
-called \emph{essentially tame} if its restriction to wild inertia is a
-sum of characters.  Let us recall the construction of the
+We first recall the construction of the
 essentially tame local Langlands correspondence for $\GL_{n}(K)$, due to Bushnell
-and Henniart.  In the
-essentially tame case, there is a natural bijection
+and Henniart.  An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
+called \emph{essentially tame} if its restriction to wild inertia is a
+sum of characters.  In the
+essentially tame setting, there is a natural bijection
 $\varphi_{\xi} \leftrightarrow (L/K, \xi)$, between irreducible representations
 $\varphi_{\xi} : \Weil_K \rightarrow \GL_{n}(\mathbb{C})$, and
 \emph{admissible pairs} $(L/K, \xi)$.
@@ -301,7 +298,7 @@ construct a map (see \cite{bushnellhenniart})
 \end{array} \right\}
 \end{equation*}
 $$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
-The problem is that the obvious map, $$\varphi_{\xi} \mapsto \pi_{\xi},$$
+The problem is that the map $$\varphi_{\xi} \mapsto \pi_{\xi}$$
 is not the local Langlands
 correspondence because $\pi_{\xi}$ has the wrong central character.
 Instead, the local Langlands correspondence is given by
@@ -556,7 +553,7 @@ where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$
 (see \cite[\S 3]{debackerreeder}).
 Note that $\varphi$ has image in a group of
 type L.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
-\S\ref{section:groups_of_type_L}.
+\S\ref{section:groups_of_type_L}.  Note that $L/K$ is unramified.
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
@@ -665,6 +662,7 @@ parameter that factors through the normalizer of a maximal torus will
 factor through a group of type L for some torus.
 It is more
 convenient however, for our purposes, to begin by fixing the torus beforehand.
+
 As in \S\ref{section:groups_of_type_L}, one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
@@ -678,7 +676,7 @@ $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
 If $G$ happens to be $\GL_n$, one can compute that
-$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ (see \S\ref{section:BH_compat}), 
+$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ (see \S\ref{section:BH_compat}),
 so that
 $T(L)_{\Gamma} \cong T(K)$ can be identified with $\Lx$, and
 $(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
@@ -708,7 +706,7 @@ of admissible pairs in $G$.
 
 We note that this definition of admissible pair generalizes
 the notion of admissible pair of \cite{bushnellhenniart} in
-the case of unramified tori.  Indeed,
+the case of unramified elliptic tori.  Indeed,
 if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $L/K$, then one can show that
 $W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
@@ -745,8 +743,9 @@ $\mu_{\xi_1} = \mu_{\xi_2}$.
 
 We note that since we have assumed that $\HT{0}(\Gamma,T(L)) = 0$, the condition
 that $\xi \cdot \mu_{\xi}$ descends to $T(K)$ is possible, so
-condition (2) makes sense.  We believe that the assumption $\HT{0}(\Gamma,T(L)) = 0$
-is not necessary (see \S\ref{section:questions}).
+condition (2) makes sense.  We believe that Definition \ref{def:rectifier} may
+be modified to be applicable in the case that$\HT{0}(\Gamma,T(L)) \neq 0$
+(see \S\ref{section:questions}).
 
 \begin{conjecture} \label{conj:unique_rectifier}
   Let $T$ be as in Definition \ref{def:rectifier}.  If $q$ is sufficiently large, then $T$
@@ -754,10 +753,11 @@ is not necessary (see \S\ref{section:questions}).
   \mu_{\xi}$.
 \end{conjecture}
 
-We note that the elliptic torus in $SL_2(\mathbb{F}_3)$ presents an immediate obstruction to the 
+We note that the elliptic torus in $SL_2(\mathbb{Q}_3)$ presents an immediate obstruction to the
 conjecture's validity
-for arbitrary $q$.  The question of placing additional conditions on the definition of rectifier 
-that will guarantee uniqueness for all $q$ is the subject of 
+for arbitrary $q$, and the reason for this revolves around a curious property of $SL_2(\mathbb{F}_3)$.
+The question of placing additional conditions on the definition of rectifier
+that will guarantee uniqueness for all $q$ is the subject of
 future work.
 
 We also note that as the local Langlands correspondence is not known in general, we must restrict
@@ -795,24 +795,15 @@ which attaches,
 \end{enumerate}
 \end{definition}
 
-\begin{definition}
-Let $T$ be as in Definition \ref{def:rectifier}.  We say that $T$ satisfies
-condition $\star \star$ if the following holds: given any character $\alpha$
-of $T(k)$, there exists a regular character $\beta$ of $T(k)$ whose order
-is not divisible by the order of $\alpha$.
-\end{definition}
-
 \begin{theorem} \label{thm:unique_semisimple}
-Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there exists 
-a weak rectifier for $T$.  If $T$ satisfies
-condition $\star \star$, then
+Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there exists
+a weak rectifier for $T$.  If $q$ is sufficiently large, then
 this weak rectifier is the unique weak rectifier for $T$.
 \end{theorem}
 
 \proof
 We first prove existence.
-Let $G$ be an unramified connected reductive group.  If
-$T$ is an unramified torus in $G$, then $T$ can be defined
+First recall that $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We defined in
 \S\ref{section:gross_debacker_reeder}
 a Langlands parameter $\varphi_{\hat{w}} :\Weil _K \rightarrow {}^L G$ by
@@ -823,7 +814,7 @@ If $G$ is semisimple,
 we proved in Proposition \ref{existenceofrectifier}
 that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$$
 satisfies condition (2).  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
-$\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so this function also
+$\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
 satisfies condition (1).  Finally, $\xi_{\varphi_{\hat{w}}}$ only depends on $T$,
 and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
 We may therefore set
@@ -853,23 +844,16 @@ Write $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$.
 Reducing mod $\PL$, we conclude that there exists a character,
 $\lambda$, of $T(k)$, with the property that if $\xi$ is any
 $W(k)$-regular character of $T(k)$, then $\lambda \xi$ is
-$W(k)$-conjugate to $\xi$. Suppose the order of $\lambda$ is $n > 1$.
-Since $T$ satisfies $\star \star$, there exists
-a regular character $\chi$ of $T(k)$, whose order, say $m$, is not divisible by $n$.
+$W(k)$-conjugate to $\xi$. Therefore, by Lemma \ref{}, \MAxxx{FIll this in}
+${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$.
 
-We have $\lambda \chi = {}^{w_{\chi}} (\chi)$.  ${}^{w_{\chi}} (\chi)$
-also has order $m$.  Raising the equation $\lambda \chi = {}^{w_{\chi}} (\chi)$
-to the power $m$, we get $\lambda^{n-m} \equiv 1$.  Since $n$ does not divide $m$,
-we get $\lambda^r \equiv 1$, for some $0 < r < n$, contradicting the
-definition of $n$.  Therefore, $\lambda \equiv 1$.
-
-Therefore, ${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$.
-But we have already constructed
-a rectifier.  Therefore, we may reduce ourselves to showing that any other
+Recall now that we have already constructed
+a rectifier earlier in the current proof.
+Therefore, we may reduce ourselves to showing that any other
 rectifier agrees with our rectifier, so we may assume that
 $\mu_{\xi} = \xi_{\varphi_{\hat{w}}}^{-1}$.  This says that $\mu_{\xi}$
 is unramified, and so the equation
-${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} 1$
+${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$
 implies that $(\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} \equiv 1$.
 Finally, since $\mu_\xi \cdot \xi$ and $\mu'_\xi \cdot \xi$
 must descend to $T(K)$ by condition (2) of Definition
@@ -881,15 +865,16 @@ $\mu_\xi = \mu'_\xi$.
 
 We note that in the
 case that $G$ is semisimple, there was nothing special about
-$\varphi_{\hat{w}}$.  In fact, by the same arguments, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
+the canonical Tits group lift $\tilde{w}$ in the definition of $\varphi_{\hat{w}}$.
+In fact, by the same arguments, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
 for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
 We also note for emphasis that even though $ \mugen((T, \xi))$ is
-unramified for all pairs $(T, \xi) \in \Pgen(K)$, it will not be
-unramified for more general pairs $(T, \xi)$, as noted earlier.
+unramified for pairs $(T, \xi) \in \Pgen(K)$, it will not be
+unramified for all admissible pairs $(T, \xi) \in P_G(K)$, as noted earlier.
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
@@ -977,15 +962,17 @@ so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde
 
 Aside from Conjecture \ref{conj:unique_rectifier}, there are various obvious
 generalizations to the results in this paper.  We would like to loosen the requirement
-that $T$ be unramified, since not all supercuspidal representations can be derived
-from unramified tori.  Even in the Debacker-Reeder and Reeder contexts, tori in non-semisimple
+that $T$ be unramified, since not all supercuspidal $L$-packets can be derived
+from unramified tori.
+
+Moreover, even in the Debacker-Reeder and Reeder contexts, tori in non-semisimple
 groups don't always satisfy our condition that $\HT{0}(\Gamma, T(L)) = 0$.  In this case
 multiplying by a rectifier does not yield a character on all of $T(K)$.  Perhaps the recipe for
 the central character in \cite{grossreeder} can provide an extension in the general
 $K$-minisotropic case.
 
 Another set of questions arises from changing the group $G$ in which the torus embeds.
-If the same torus embeds into two different groups with the same Weyl groups does the
+If the same torus embeds into two different groups with the same Weyl groups, does the
 rectifier change?  Is there any functoriality for $G$ which would allow us to recover
 a rectifier for a general connected reductive group from the known rectifiers for $\GL_n$?
 
