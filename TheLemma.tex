@@ -46,8 +46,12 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PGL}{PGL}
 \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\PU}{PU}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Sp}{Sp}
 
-\newcommand{\stupid}{\ensuremath{\ \ \ \vert\ }}
+\newcommand{\st}{\ensuremath{\ \ \ \vert\ }}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\C}{\mathcal{C}}
 \newcommand{\CC}{\mathbb{C}}
@@ -101,12 +105,12 @@ Identify the set $Q_{\T}$ of $\alpha \in \hatT$ with the following property:
 
 \section{Facts}
 
-\begin{proposition}
+\begin{proposition} \label{pigeonhole}
 Suppose $\#\Threg > \# W \cdot \# \Thirr$.  Then $Q_{\T} = \{ 1 \}$.
 \end{proposition}
 \begin{proof}
 For $w \in W$, set
-$$S_w = \{\chi \in \Threg \stupid  \frac{\chi}{w(\chi)} = \alpha\}.$$
+$$S_w = \{\chi \in \Threg \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
 By the pigeonhole principle, there is a $w \in W$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
 $$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
 and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus 
@@ -123,6 +127,82 @@ We will write $\T$ for a general torus in the family and $r$ for the common dime
 $$\frac{\# \Treg}{\# \Tirr} = \frac{\# T - \sum_{1 \ne w \in W} \# \Z_T(w)}{\sum_{1 \ne w \in W} \# \Z_T(w)}$$
 grows without bound as $q$ does.  Applying this result to the dual torus $\hatT$ yields the corollary.
 \end{proof}
+
+\begin{proposition}
+The set $Q_{\T}$ is a subgroup of $\hatT$, contained within $\Thirr$ and stable under the action of $W$.
+\end{proposition}
+\begin{proof}
+If $\alpha \in \Threg \cap Q_{\T}$ then there is some $w \in W$ with $\frac{\alpha}{w(\alpha)} = \alpha$, so $\alpha = 1$ which is not regular.
+
+We now show that $Q_{\T}$ is a group.  Certainly $1 \in Q_{\T}$.  Suppose $\alpha, \alpha' \in Q_{\T}$ and $\chi \in \Threg$.  Then there are $w, w' \in W$ with
+\begin{align*}
+\frac{\chi}{w(\chi)} &= \alpha, \\
+\frac{w(\chi)}{w'(w(\chi))} &= \alpha'.
+\end{align*}
+Multiplying the two relations yields $\frac{\chi}{w'w(\chi)} = \alpha\alpha'$, so $\alpha\alpha' \in Q_{\T}$.  Since $Q_{\T}$ is finite and contained within $\hatT$ it is thus closed under inversion.
+
+Finally, suppose $\tau \in W$.  Given $\chi \in \Threg$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
+$$\tau(\alpha) = \frac{\tau(\chi)}{\tau w(\chi)} = \frac{\tau(\chi)}{w' \tau(\chi)}$$
+for some $w' \in W$.  Since $\tau$ permutes the regular characters we get that $\tau(\alpha) \in Q_{\T}$.
+\end{proof}
+
+\begin{proposition} \label{orderdiv}
+If $\alpha \in Q_{\T}$ has order $m$ and $\chi \in \Threg$ has order $k$ then $m$ divides $k$.
+\end{proposition}
+\begin{proof}
+There is a $w \in W$ with
+$$\frac{\chi}{w(\chi)} = \alpha.$$
+Since $w(\chi)$ also has order $k$, raising both sides to the $k$th power  yields $\alpha^k = 1$.
+\end{proof}
+
+\section{Rank 1 and 2 tori}
+
+Write $k_r$ for the degree $r$ extension of $k$, $\T_r$ for the restriction of scalars torus $\Res_{k_r/k} \Gm$ and $\T_r^s$ for $\{x \in \Res_{k_r/k} \Gm \st \Nm_{k_r/k_s} x = 1\}$.
+
+In rank one there are two tori:
+\begin{itemize}
+\item $\Gm$
+\item $\T_2^1$
+\end{itemize}
+
+In rank two there are 
+\begin{itemize}
+\item $\T_1 \times \T_1$
+\item $\T_1 \times \T_2^1$
+\item $\T_2^1 \times \T_2^1$
+\item $\T_2$
+\item $\T_3^1$
+\item $\T_4^2$
+\item $\T_6^3 \cap \T_6^2 \simeq \T_6^3 / \T_2^1$
+\end{itemize}
+
+There are two rank 1 semisimple groups over $k$: $\SL_2$ and $\PGL_2$.  In both cases, for both the split and anisotropic tori, the Weyl group acts as inversion, so the irregular characters are precisely those of order $1$ or $2$.  When $q = 2^k$ neither torus has any nontrivial irregular characters so $Q_{\T} = \{1\}$.  When $q = 3$ the split torus has no regular characters and thus $Q_{\T} = \Thirr$ has order $2$.  The anisotropic torus has $4$ elements, $2$ regular and $2$ irregular characters.  Again $Q_{\T}$ has order $2$ since the Weyl group exchanges the two regular characters and their quotient is the nontrivial irregular character.  For $q = 5$ the split torus has the same behavior as the anisotropic torus for $q = 3$: $Q_{\T}$ has order $2$.  The anisotropic torus has regular characters of order $3$ and $6$ so $Q_{\T} = \{1\}$ by Proposition \ref{orderdiv}; the same holds for the split torus when $q = 7$.  For the anisotropic torus ($q = 7$) and all larger $q$, $Q_{\T}$ is trivial by Proposition \ref{pigeonhole}.
+
+\begin{tabular}{l|l|l}
+Group & Torus & Weyl Group Action \\
+\hline && \\
+$\SL_3,$ & $\T_1 \times \T_1$ & Full $S_3$ action \\
+$\PGL_3$ & $\T_2$ & $\ZZ/2$: Galois action \\
+& $\T_3^1$ & $\ZZ/3$: Galois action \\
+\hline && \\
+$\SU_3$ & $\T_6^3 \cap \T_6^2$ & trivial Weyl group \\
+& $\T_2$ & $\ZZ/2$: Galois action \\
+$\PU_3$ & $\T_6^3 / \T_2^1$ & trivial Weyl group \\
+& $\T_2$ & $\ZZ/2$: Galois action \\
+\hline && \\
+$\SO_5,$ & $\T_1 \times \T_1$ & Full $D_8$ action \\
+$\Sp_4$ & $\T_1 \times T_2^1$ & $\ZZ/2 \times \ZZ/2$: inversion on each component \\
+& $\T_4^2$ & $\ZZ/4$: Galois action \\
+\hline && \\
+$\SO_4$ & $\T_1 \times \T_1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
+& $\T_1 \times \T_2^1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
+& $\T_2^1 \times \T_2^1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
+& $\T_4^2$ & $\ZZ / 2$: subgroup of Galois \\
+\hline && \\
+$\SL_2 \times \SL_2,$ & $\T_1 \times \T_1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
+$\SL_2 \times \PGL_2,$ & $\T_1 \times \T_2^1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
+$\PGL_2 \times \PGL_2$ & $\T_2^1 \times \T_2^1$& $\ZZ / 2 \times \ZZ / 2$: inversion on each component
+\end{tabular}
 
 \begin{thebibliography}{9}
 \bibitem{carter}
