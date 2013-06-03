@@ -83,7 +83,7 @@
 
 \begin{abstract}
 
-In this paper we initiate a program to generalize the 
+In this paper we initiate a program to generalize the
 rectifier occurring in the local Langlands correspondence for
 $\GL_{n}(K)$, to groups outside of $\GL_{n}(K)$.  Our generalization begins with unramified
 connected reductive
@@ -94,19 +94,6 @@ groups, and certain classes of Langlands parameters.
 \maketitle
 
 \section{Introduction} \label{section:intro}
-
-\MAxxx{Add to rectifier paper: For GL(n) : The condition
-$\phi(\chi) \mapsto \pi(\chi \mu_{\chi})$ doesn't determine $\mu_{\chi}$
-uniquely, because of $GL_2(F_3)$. So B/H make a definition of rectifier
-in order to prove uniqueness. However : generalizing this definition to
-unramified groups, you do not get uniqueness, because of $SL_2(F_3)$!
-So something else is needed. We do not explore this in this paper.
-(Wait If you don't get uniqueness for $SL_2(F_3)$, do you also not
-get uniqueness for $PGL_2(F_3)$ for similar reasons? That would be
-weird, because you should get uniqueness for $PGL_2(F_3)$, since you
-do for $GL_2(F_3)$.....right? SOmething's weird. Maybe we made a
-mistake for $SL_2(F_3)$?? Or maybe you don't get uniqueness for
-$PGL_2(F_3)$? Or maybe you do get uniqueness for $PGL_2(F_3)$?? )}
 
 Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.
 The local Langlands conjecture predicts the existence of a finite to one map,
@@ -126,7 +113,7 @@ this character.
 Some of the difficulty arises in the construction of the character of an elliptic
 torus.  The difficulty arises from the fact that a Langlands parameter
 $\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the
-$L$-group of a maximal torus that is dual to an elliptic torus.  
+$L$-group of a maximal torus that is dual to an elliptic torus.
 If it did, then the local Langlands correspondence
 for tori could give us a desired character of an elliptic torus.
 Instead, one has to rectify the
@@ -164,20 +151,20 @@ rectifier to groups outside of $\GL_n(K)$.  In particular, we define the notion 
 unramified minisotropic tori.  We use a recent construction of Benedict
 Gross, called ``groups of type L'', in order to give us a framework that
 will allow us to define a rectifier.  This construction also allows us to define
-a new notion of admissible pair.   We will show that a rectifier exists, and for $q$
-sufficiently large, is
+a new notion of admissible pair.   We will show that a rectifier exists and, assuming a technical
+condition about elliptic tori, is
 unique. We will then show that our rectifier is compatible
-with the rectifier of Bushnell and Henniart in the setting of depth zero 
+with the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$.  In this setting, there is
-a canonical construction of supercuspidal representations of $\GL_{n}(K)$, and in 
+a canonical construction of supercuspidal representations of $\GL_{n}(K)$, and in
 particular, there is a canonical ``naive'' construction of the local Langlands correspondence.
 This means, in particular, that in the depth zero case, the rectifier is canonical.
 In the setting of positive depth supercuspidal representations of $\GL_{n}(K)$,
 there is no canonical construction of supercuspidal representations of $\GL_{n}(K)$,
 and therefore there is no canonical ``naive'' construction of the local Langlands correspondence.
-Therefore, in the positive depth setting, a rectifier depends on the 
+Therefore, in the positive depth setting, a rectifier depends on the
 methods used to construct supercuspidal
-representations, and so there is no canonical rectifier.  
+representations, and so there is no canonical rectifier.
 Since we are using Adler's construction of supercuspidal representations
 (see \cite{adler}),
 which may be different than Bushnell and Henniart's construction of supercuspidal
@@ -267,7 +254,7 @@ t &\mapsto \prod_{\sigma \in \Gamma} \sigma(t)
 and for its restriction to $X_*(T)$.
 
 The following theorem, due to Lang \cite{lang}, underpins the facts in
-Section \ref{section:padic_tori} on tori over $p$-adic fields.
+\S\ref{section:padic_tori} on tori over $p$-adic fields.
 Let $H$ be a commutative connected algebraic group over a
 finite field $k$, and suppose $H$ splits over $k_n$.
 
@@ -350,7 +337,7 @@ tamely ramified, then $ \mu_{\xi_1} =  \mu_{\xi_2}$.
 Bushnell and Henniart then prove (see \cite{bushnellhenniart}):
 
 \begin{theorem}
-Any finite, tamely ramified, field extension $L/K$ admits a unique rectifier 
+Any finite, tamely ramified, field extension $L/K$ admits a unique rectifier
 $\bmu : (L/K, \xi) \mapsto \mu_{\xi}$.
 \end{theorem}
 
@@ -383,8 +370,7 @@ Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have the result.
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
-Let $T$ be a torus defined over $K$.    Let $K_n$ \MAxxx{Bad notation.  We already
-defined $K_n$ in the notation section.  Fix this for all bad $K_n$'s.}  be the maximal
+Let $T$ be a torus defined over $K$.    Let $n$ be such that $K_n$ is the maximal
 unramified subextension of the splitting field $L$, and set $I = \Gal(L/K_n)$.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
@@ -401,15 +387,13 @@ embedding $T$ into an induced torus and defining the filtration of
 $\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu}
 describes a different filtration, agreeing with that of Moy and Prasad
 in the case of tame tori but with nicer features in the presence of wild
-ramification.  Let $\TT_r$ \MAxxx{Why the notation with an $r$?  Doesn't $r$ usually
-have something to do with filtration?} be the integral model of $T$ defined in Yu's
-minimal congruent filtration \MAxxx{there is another integral model of $T$ other than
-the Neron model?}, and let $\{T(K)_r\}_{r \ge 0}$ and
+ramification.  Let $\TT_r$ be the integral models of $T$ defined in Yu's
+minimal congruent filtration, and let $\{T(K)_r\}_{r \ge 0}$ and
 $\{T(K_n)_r\}_{r \ge 0}$ be the corresponding filtrations of $T(K)$ and
 $T(K_n)$.
 
 Let $\C$ be the scheme of
-connected components of $\TT$ \MAxxx{should this be $\TT$ or $\TT_r$?}, 
+connected components of $\TT$,
 which we may identify with the
 components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
 is connected.  The structure of $\C$ is described by Xarles:
@@ -543,8 +527,8 @@ Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \end{align*}
 \end{proof}
 
-We will also need the following lemma, in order to define our notion of admissible pair 
-in section \ref{section:general_rectifiers}.
+We will also need the following lemma, in order to define our notion of admissible pair
+in \S\ref{section:general_rectifiers}.
 
 \begin{lemma} \label{lem:weyl_groups}
 Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
@@ -671,9 +655,6 @@ Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 
 \section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
 
-In this section, we introduce the notion of a rectifier for groups outside
-of $GL_n(K)$.
-
 Suppose that $G$ is a connected reductive group defined over a
 $p$-adic field $K$.  Fix a $K$-torus $T$, contained in $G$, and suppose
 that the splitting field of $T$ is $L$.
@@ -682,9 +663,8 @@ Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
 through a group of type L for $T$.  We note that every Langlands
 parameter that factors through the normalizer of a maximal torus will
 factor through a group of type L for some torus.
-\MAxxx{Is this really true?  I don't see it immediately.}  It is more
-convenient however, for our purposes, to begin by fixing a torus
-$T$, rather than a Langlands parameter.
+It is more
+convenient however, for our purposes, to begin by fixing the torus beforehand.
 As in \S\ref{section:groups_of_type_L}, one can canonically
 associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
 the group of coinvariants of $T(L)$ with respect
@@ -698,7 +678,8 @@ $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{debackerreeder}).
 If $G$ happens to be $\GL_n$, one can compute that
-$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$, so that
+$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ (see \S\ref{section:BH_compat}), 
+so that
 $T(L)_{\Gamma} \cong T(K)$ can be identified with $\Lx$, and
 $(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
 correspondence, one would then proceed (as in \S\ref{section:BH_recall}) to
@@ -725,7 +706,7 @@ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes
 of admissible pairs in $G$.
 \end{definition}
 
-We note that the definition of admissible pair above generalizes
+We note that this definition of admissible pair generalizes
 the notion of admissible pair of \cite{bushnellhenniart} in
 the case of unramified tori.  Indeed,
 if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
@@ -744,7 +725,7 @@ Recall that there is a notion of regularity for characters of $T(K)$
   that splits over an unramified
   extension $L$.  A \emph{rectifier} for $T$ is a function
   $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
-  which attaches, to each admissible pair $(T, \xi) \in P_G(K)$, a character $
+  which attaches to each admissible pair $(T, \xi) \in P_G(K)$, a character $
   \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
 
 \begin{enumerate}
@@ -768,13 +749,18 @@ condition (2) makes sense.  We believe that the assumption $\HT{0}(\Gamma,T(L)) 
 is not necessary (see \S\ref{section:questions}).
 
 \begin{conjecture} \label{conj:unique_rectifier}
-  Let $T$ be as in Definition \ref{def:rectifier}.  Then $T$
+  Let $T$ be as in Definition \ref{def:rectifier}.  If $q$ is sufficiently large, then $T$
   admits a unique rectifier $\bmu : (T, \xi) \mapsto
   \mu_{\xi}$.
-\end{conjecture}\MAxxx{We probably shouldn't state a conjecture which
-is false....right?}
+\end{conjecture}
 
-We note that as the local Langlands correspondence is not known in general, we must restrict
+We note that the elliptic torus in $SL_2(\mathbb{F}_3)$ presents an immediate obstruction to the 
+conjecture's validity
+for arbitrary $q$.  The question of placing additional conditions on the definition of rectifier 
+that will guarantee uniqueness for all $q$ is the subject of 
+future work.
+
+We also note that as the local Langlands correspondence is not known in general, we must restrict
 ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
@@ -783,7 +769,7 @@ happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
 in particular, that not all possible admissible pairs arise in the settings
 of \cite{debackerreeder} and \cite{reeder}.
 For example, if $G = \GL_n$, $\mu_{\xi}$ can be ramified,
-even if $T$ is unramified.  Since $L$-packets have not been constructed in the generality that
+even if $T$ is unramified.  Since supercuspidal $L$-packets have not been constructed in the generality that
 we need in order to prove this conjecture, we determine
 the rectifier in the situation where supercuspidal $L$-packets have been
 constructed.
@@ -810,16 +796,17 @@ which attaches,
 \end{definition}
 
 \begin{definition}
-Let $T$ be as in Definition \ref{def:rectifier}.  We say that $T$ satisfies 
-condition $\star \star$ if the following holds: given any character $\alpha$ 
-of $T(k)$, there exists a regular character $\beta$ of $T(k)$ whose order 
+Let $T$ be as in Definition \ref{def:rectifier}.  We say that $T$ satisfies
+condition $\star \star$ if the following holds: given any character $\alpha$
+of $T(k)$, there exists a regular character $\beta$ of $T(k)$ whose order
 is not divisible by the order of $\alpha$.
 \end{definition}
 
 \begin{theorem} \label{thm:unique_semisimple}
-Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}, satisfying
-condition $\star \star$.  Then
-there is a unique weak rectifier for $T$.
+Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there exists 
+a weak rectifier for $T$.  If $T$ satisfies
+condition $\star \star$, then
+this weak rectifier is the unique weak rectifier for $T$.
 \end{theorem}
 
 \proof
@@ -850,19 +837,19 @@ $T \subset G$.  By hypothesis, we have
 $$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
 By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$,
 depending on $\xi$, such that
-$$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi.$$
+$${}^{w_{\xi}} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi.$$
 Suppose that $\xi$ is not trivial on $T(\PL)_{\Gamma}$.
 Restricting the equation
-$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$
-to $T(\PL)_{\Gamma}$, we get that $\xi^{w_{\xi}} = \xi$,
+${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
+to $T(\PL)_{\Gamma}$, we get that ${}^{w_{\xi}} (\xi) = \xi$,
 by condition (1) of Definition \ref{def:rectifier}.
 This contradicts admissibility of $\xi$.
 
 Now suppose that $\xi$ is trivial on $T(\PL)_{\Gamma}$.
 Consider the restriction of the equation
-$(\mu_\xi \cdot \xi)^{w_\xi} = \mu'_\xi \cdot \xi$
+${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
 to $T(\OL)_{\Gamma} \cong T(\OK)$.
-Write $\lambda = ((\mu_\xi)^{w_\xi})^{-1} \cdot \mu'_\xi$.
+Write $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$.
 Reducing mod $\PL$, we conclude that there exists a character,
 $\lambda$, of $T(k)$, with the property that if $\xi$ is any
 $W(k)$-regular character of $T(k)$, then $\lambda \xi$ is
@@ -870,19 +857,19 @@ $W(k)$-conjugate to $\xi$. Suppose the order of $\lambda$ is $n > 1$.
 Since $T$ satisfies $\star \star$, there exists
 a regular character $\chi$ of $T(k)$, whose order, say $m$, is not divisible by $n$.
 
-We have $\lambda \chi = \chi^{w_{\chi}}$.  $\chi^{w_{\chi}}$
-also has order $m$.  Raising the equation $\lambda \chi = \chi^{w_{\chi}}$
+We have $\lambda \chi = {}^{w_{\chi}} (\chi)$.  ${}^{w_{\chi}} (\chi)$
+also has order $m$.  Raising the equation $\lambda \chi = {}^{w_{\chi}} (\chi)$
 to the power $m$, we get $\lambda^{n-m} \equiv 1$.  Since $n$ does not divide $m$,
 we get $\lambda^r \equiv 1$, for some $0 < r < n$, contradicting the
 definition of $n$.  Therefore, $\lambda \equiv 1$.
 
-Therefore, $(\mu_\xi)^{w_{\xi}}|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$.
+Therefore, ${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$.
 But we have already constructed
 a rectifier.  Therefore, we may reduce ourselves to showing that any other
 rectifier agrees with our rectifier, so we may assume that
 $\mu_{\xi} = \xi_{\varphi_{\hat{w}}}^{-1}$.  This says that $\mu_{\xi}$
 is unramified, and so the equation
-$(\mu_\xi)^{w_{\xi}}|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} 1$
+${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} 1$
 implies that $(\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} \equiv 1$.
 Finally, since $\mu_\xi \cdot \xi$ and $\mu'_\xi \cdot \xi$
 must descend to $T(K)$ by condition (2) of Definition
