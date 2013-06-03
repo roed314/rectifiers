@@ -106,12 +106,12 @@ Identify the set $Q_{\T}$ of $\alpha \in \hatT$ with the following property:
 \section{Facts}
 
 \begin{proposition} \label{pigeonhole}
-Suppose $\#\Threg > \# W \cdot \# \Thirr$.  Then $Q_{\T} = \{ 1 \}$.
+Suppose $\#\Threg > (\# W - 1) \cdot \# \Thirr$.  Then $Q_{\T} = \{ 1 \}$.
 \end{proposition}
 \begin{proof}
 For $w \in W$, set
 $$S_w = \{\chi \in \Threg \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
-By the pigeonhole principle, there is a $w \in W$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
+Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
 $$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
 and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus 
 $$\alpha = \frac{\chi}{\chi} = 1.$$
@@ -128,7 +128,7 @@ $$\frac{\# \Treg}{\# \Tirr} = \frac{\# T - \sum_{1 \ne w \in W} \# \Z_T(w)}{\sum
 grows without bound as $q$ does.  Applying this result to the dual torus $\hatT$ yields the corollary.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition} \label{irr-sub}
 The set $Q_{\T}$ is a subgroup of $\hatT$, contained within $\Thirr$ and stable under the action of $W$.
 \end{proposition}
 \begin{proof}
@@ -203,6 +203,13 @@ $\SL_2 \times \SL_2,$ & $\T_1 \times \T_1$ & $\ZZ / 2 \times \ZZ / 2$: inversion
 $\SL_2 \times \PGL_2,$ & $\T_1 \times \T_2^1$ & $\ZZ / 2 \times \ZZ / 2$: inversion on each component \\
 $\PGL_2 \times \PGL_2$ & $\T_2^1 \times \T_2^1$& $\ZZ / 2 \times \ZZ / 2$: inversion on each component
 \end{tabular}
+
+First note that $Q_{\T}$ is automatically trivial when the rational Weyl group is trivial.  For the tori with cyclic rational points of order $m$ where the Weyl group induces the Galois action, a character is irregular if and only if it maps into the $q-1$ roots of unity.
+\begin{itemize}
+\item In $\T_2$, $m=q^2 - 1$ and thus there are $q-1$ irregular characters and $q^2 - q$ regular characters; as long as $q \ge 3$ Proposition \ref{pigeonhole} implies $Q_{\T}$ is trivial; when $q = 2$ there are no irregular characters so Proposition \ref{irr-sub} does the job.
+\item In $\T_3^1$, $m = q^2 + q + 1 = (q - 1)(q + 2) + 3$ so there are $3$ irregular characters if $q \equiv 1 \pmod{3}$ and $1$ otherwise.  The first nontrivial $q$ at $q=4$ already has $18$ regular characters and $3$ irregular.
+\item In $\T_4^2$, $m = q^2 + 1 = (q-1)(q+1) + 2 = (q^2 - 1) + 2$ so there are $2$ irregular characters if $q$ is odd and $1$ otherwise (in both the $\SO_4$ and $\SO_5$ cases).  For $q = 3$ there are $8$ regular characters and $2$ irregular so Proposition \ref{pigeonhole} is applicable.
+\end{itemize}
 
 \begin{thebibliography}{9}
 \bibitem{carter}
