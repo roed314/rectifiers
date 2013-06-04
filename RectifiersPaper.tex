@@ -173,6 +173,30 @@ to that of Bushnell and Henniart in this setting.  Indeed, our rectifiers differ
 positive depth setting, and this
 is most likely due to the constructions of supercuspidal representations being different.
 
+The principle behind how to generalize the rectifier of Bushnell and Henniart can be seen as follows.
+Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
+$\GL_n(K)$ (see \S\ref{section:BH_recall}).  There is a canonical way to proceed.  Namely, apply
+the local Langlands correspondence for tori to $\varphi$ to obtain a character $\xi$
+of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  There is then a character
+$\mu_{\xi}$ of $L^{\times}$, such that $\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is
+the local Langlands correspondence for $\GL_n(K)$, where the association 
+$\chi \mapsto \pi_{\chi}$ is some previously fixed construction of supercuspidal representations of $\GL_n(K)$
+from \emph{admissible} characters of $L^{\times}$.  This is the idea behind the rectifier of Bushnell and Henniart.
+
+Suppose now that $\varphi : \Weil_K \rightarrow {}^L G$ is a ``supercuspidal'' Langlands parameter
+(see \S\ref{section:general_rectifiers}) that factors through the normalizer of a maximal
+torus.  There is again a canonical way to proceed, using the local Langlands for tori, as in 
+the case of $\GL_n(K)$.  Assuming a mild cohomological condition (see \S\ref{section:general_rectifiers}), one
+obtains (as in the case of $\PGL_2(K)$) from $\varphi$ a character of
+a cover of an elliptic torus.  There should then be a character, $\mu_{\xi}$ 
+of this cover, such that 
+$\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
+  is the local Langlands correspondence for $G(K)$, where the association
+$\chi \mapsto \Lpack(\xi \cdot \mu_{\xi})$ is some previously fixed construction 
+of supercuspidal $L$-packets of $G$
+from ``admissible'' characters of this cover.  This is the idea behind our rectifier, an extension 
+of Bushnell and Henniart's.
+
 We now present an outline of the paper.  In \S\ref{section:BH_recall}, we recall
 the notion of rectifier due to Bushnell and Henniart, and we describe
 the rectifier in the setting that we will need.  In \S\ref{section:padic_tori},
@@ -813,7 +837,7 @@ $\varphi_{\hat{w}}$ to be trivial on $I_K$.
 If $G$ is semisimple,
 we proved in Proposition \ref{existenceofrectifier}
 that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$$
-satisfies condition (2).  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
+satisfies condition (2) of Definition \ref{def:rectifier}..  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
 $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
 satisfies condition (1).  Finally, $\xi_{\varphi_{\hat{w}}}$ only depends on $T$,
 and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
@@ -875,6 +899,12 @@ consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 We also note for emphasis that even though $ \mugen((T, \xi))$ is
 unramified for pairs $(T, \xi) \in \Pgen(K)$, it will not be
 unramified for all admissible pairs $(T, \xi) \in P_G(K)$, as noted earlier.
+
+Finally, we note that nowhere in the proof of Theorem \ref{thm:unique_semisimple}
+did we use condition (3) of Definition \ref{def:rectifier}.  We have
+included this condition in Definition \ref{def:rectifier} since it appears in 
+Definition \ref{rectifierbushnellhenniart}.  We expect that this condition will
+be used when we consider more general tori and more general admissible pairs.
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
