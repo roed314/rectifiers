@@ -676,10 +676,42 @@ Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 
 \section{From characters to L-packets}
 
-For investigating the uniqueness of rectifiers, it will be necessary to determine whether different
+
+The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same L-packet.  Consider the following archetypical example.
-Let $K = \QQ_3$, $G = \SL_2$ and $T$ an unramified anisotropic torus.  There are four depth zero
-characters; the two regular ones are interchanged by the action of the Weyl group.
+Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
+characters: two regular and two irregular.  Since the two regular characters are interchanged
+by the action of the Weyl group, the corresponding L-packets are isomorphic \cite[\S10]{murnaghan}.
+In this section we investigate such phenomena for unramified tori.
+
+\begin{definition} \label{def:admissible}
+Let $T$ be a $K$-minisotropic torus, that splits over an unramified
+extension $L$ (see \cite[\S3]{reeder}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
+The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
+by any element of $W(K)$ (see Lemma \ref{lem:weyl_groups}). We say that
+two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there
+exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
+for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes
+of admissible pairs in $G$.
+\end{definition}
+
+We note that this definition of admissible pair generalizes
+the notion of admissible pair of \cite{bushnellhenniart} in
+the case of unramified elliptic tori.  Indeed,
+if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
+an unramified extension $L/K$, then one can show that
+$W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
+element of $W(K)$ is equivalent to $\xi$ not being fixed by
+any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
+not coming from the norms $\Nm_{L/M}$ for any proper subfield $M$ contained
+in $L$, containing $K$.
+
+For general $G$ we will call a character of $T(K)$ \emph{regular} if it is not fixed by any nontrivial element
+of the rational Weyl group $W(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
+Note that this notion is sometimes referred to as strongly regular, with the term regular
+reserved for characters fixed by a reflection.  The depth zero character of the split torus in $\SL_3(\QQ_7)$ inflated from
+$$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta_6^{2x + 4y}$$
+is fixed by an 3-cycle.
 
 \section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
 
@@ -722,32 +754,6 @@ $\Lpack(\chi)$ associated to characters $\chi$ of $T(K)$ (see
 have seen, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.
-
-\begin{definition} \label{def:admissible}
-Let $T$ be a $K$-minisotropic torus,
-that splits over an unramified
-  extension $L$ (see \cite[\S3]{reeder}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
-The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $W(K)$ (see Lemma \ref{lem:weyl_groups}). We say that
-two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there
-exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
-for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes
-of admissible pairs in $G$.
-\end{definition}
-
-We note that this definition of admissible pair generalizes
-the notion of admissible pair of \cite{bushnellhenniart} in
-the case of unramified elliptic tori.  Indeed,
-if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
-an unramified extension $L/K$, then one can show that
-$W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
-element of $W(K)$ is equivalent to $\xi$ not being fixed by
-any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
-not coming from the norms $\Nm_{L/M}$ for any proper subfield $M$ contained
-in $L$, containing $K$.
-
-Recall that there is a notion of regularity for characters of $T(K)$
-(see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
 
 \begin{definition} \label{def:rectifier}
   Let $T$ be a $K$-minisotropic torus in $G$,
