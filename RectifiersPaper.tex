@@ -39,6 +39,7 @@
 \DeclareMathOperator{\Fr}{Fr}
 \DeclareMathOperator{\Ind}{Ind}
 \DeclareMathOperator{\gen}{gen}
+\DeclareMathOperator{\Z}{Z}
 
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PGL}{PGL}
@@ -59,6 +60,8 @@
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\Gm}{\mathbb{G}_m}
 \newcommand{\Lx}{L^\times}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fqb}{\bar{\mathbb{F}}_q}
 
 \newcommand{\Weil}{\mathcal{W}}
 \newcommand{\WD}{\mathcal{W}'}
@@ -67,11 +70,16 @@
 \newcommand{\bmu}{\boldsymbol\mu}
 \newcommand{\mugen}{\bmu^{\gen}}
 
+\newcommand{\st}{\ensuremath{\ \ \ \vert\ }}
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 
 \newcommand{\invlim}[1]{\varprojlim_{#1}}
 \newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
+
+\newcommand{\Threg}{T^{\vee \operatorname{reg}}}
+\newcommand{\Thirr}{T^{\vee \operatorname{irr}}}
+\newcommand{\hatT}{T^{\vee}}
 
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence: the unramified case}
@@ -676,11 +684,10 @@ Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 
 \section{From characters to L-packets}
 
-
 The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same L-packet.  Consider the following archetypical example.
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
-characters: two regular and two irregular.  Since the two regular characters are interchanged
+characters: two admissible and two inadmissible.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding L-packets are isomorphic \cite[\S10]{murnaghan}.
 In this section we investigate such phenomena for unramified tori.
 
@@ -691,8 +698,7 @@ The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any element of $W(K)$ (see Lemma \ref{lem:weyl_groups}). We say that
 two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there
 exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
-for all $t \in T(K)$.  We denote by $P_G(K)$ the set of isomorphism classes
-of admissible pairs in $G$.
+for all $t \in T(K)$.  We denote by $P_G(K)$ the set of admissible pairs in $G$.
 \end{definition}
 
 We note that this definition of admissible pair generalizes
@@ -706,12 +712,88 @@ any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
 not coming from the norms $\Nm_{L/M}$ for any proper subfield $M$ contained
 in $L$, containing $K$.
 
-For general $G$ we will call a character of $T(K)$ \emph{regular} if it is not fixed by any nontrivial element
+As for characters of $T(L)_\Gamma$ we will call a character of $T(K)$ \emph{admissible}
+if it is not fixed by any nontrivial element
 of the rational Weyl group $W(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
-Note that this notion is sometimes referred to as strongly regular, with the term regular
-reserved for characters fixed by a reflection.  The depth zero character of the split torus in $\SL_3(\QQ_7)$ inflated from
+For example, the depth zero character of the split torus in $\SL_3(\QQ_7)$ inflated from
 $$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta_6^{2x + 4y}$$
-is fixed by an 3-cycle.
+is fixed by a 3-cycle and thus not admissible.  
+
+In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
+depth zero characters of $T(K)$, $\Threg$ for the set of depth zero admissible
+characters and $\Thirr$ for the set of inadmissible depth zero characters.  Each of these
+sets is finite since they may be identified with characters of $T(k)$.
+
+\begin{definition}
+Write $Q_T$ for the set of $\alpha \in \hatT$ with the following property:
+\begin{itemize}
+\item For every $\chi \in \Threg$ there is a $w \in W(K)$ with $\frac{\chi}{w(\chi)} = \alpha$.
+\end{itemize}
+\end{definition}
+
+The $\SL_2(\QQ_3)$ example above has $Q_T$ of order two, but $Q_T$ is trivial for most tori.
+We spend the rest of this section giving criteria constraining $Q_T$.
+
+\begin{proposition} \label{irr-sub}
+The set $Q_T$ is a subgroup of $\hatT$, contained within $\Thirr$ and stable under the action of $W(K)$.
+\end{proposition}
+\begin{proof}
+If $\alpha \in \Threg \cap Q_T$ then there is some $w \in W(K)$ with
+$\frac{\alpha}{w(\alpha)} = \alpha$, so $\alpha = 1$ which is not regular.
+
+We now show that $Q_T$ is a group.  Certainly $1 \in Q_T$.  Suppose
+$\alpha, \alpha' \in Q_T$ and $\chi \in \Threg$.  Then there are $w, w' \in W(K)$ with
+\begin{align*}
+\frac{\chi}{w(\chi)} &= \alpha, \\
+\frac{w(\chi)}{w'(w(\chi))} &= \alpha'.
+\end{align*}
+Multiplying the two relations yields $\frac{\chi}{w'w(\chi)} = \alpha\alpha'$, so
+$\alpha\alpha' \in Q_T$.  We finish by noting that $Q_T$ is finite and thus closed under inversion.
+
+Finally, suppose $\tau \in W(K)$.  Given $\chi \in \Threg$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
+$$\tau(\alpha) = \frac{\tau(\chi)}{\tau w(\chi)} = \frac{\tau(\chi)}{w' \tau(\chi)}$$
+for some $w' \in W(K)$.  Since $\tau$ permutes the regular characters we get that $\tau(\alpha) \in Q_T$.
+\end{proof}
+
+The condition on $\alpha \in Q_T$ is an extremely stringent one, and an abundance of regular
+characters will preclude a nontrivial $\alpha$.  We can make this statement precise:
+
+\begin{proposition} \label{pigeonhole}
+Suppose $\#\Threg > (\# W(K) - 1) \cdot \# \Thirr$.  Then $Q_T = \{ 1 \}$.
+\end{proposition}
+\begin{proof}
+For $w \in W(K)$, set
+$$S_w = \{\chi \in \Threg \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
+Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
+$$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
+and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus 
+$$\alpha = \frac{\chi}{\chi} = 1.$$
+\end{proof}
+
+Recall that Frobenius acts on $X^*(T)$ via an endomorphism $F = qF_0$, where $F_0$ is an automorphism of finite order \cite[p. 82]{carter}.  So it makes sense to vary $q$: we fix $F_0$ and consider the tori dual to the $\Gal(\Fqb/\Fq)$-modules with Frobenius acting through $qF_0$.  
+
+\begin{corollary}[{c.f. \cite[Lemma 8.4.2]{carter}}]
+Consider the family of tori $T_q$ with the same $F_0$.  Then for sufficiently large $q$, $Q_{T_q} = \{ 1 \}$ (regardless of the $G$ in which $T_q$ is embedded).
+\end{corollary}
+\begin{proof}
+We will write $T$ for a general torus in the family and $r$ for the common dimension.  Note that $\hatT$ is the set of $\Fq$ points of a dual torus, also of rank $r$ over $\Fq$.  For $w \in W(K)$ with $w \ne 1$ the centralizer $\Z_{\hatT}(w)$ is a proper $F$-stable subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite[3.3.5]{carter} $\# \hatT$ is a polynomial in $q$ of degree $r$ and $\# \Z_{\hatT}(w)$ is a polynomial in $q$ of degree at most $r-1$.  Thus the ratio
+$$\frac{\# \Threg}{\# \Thirr} = \frac{\# \hatT - \sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}{\sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}$$
+grows without bound as $q$ does.  There are finitely many possibilities for the absolute Weyl group of $T$, so Proposition \ref{pigeonhole} gives the desired result.
+\end{proof}
+
+In computing $Q_T$ for small $q$ the following result is useful
+
+\begin{proposition} \label{orderdiv}
+If $\alpha \in Q_T$ has order $d$ and $\chi \in \Threg$ has order $m$ then $d$ divides $m$.
+\end{proposition}
+\begin{proof}
+There is a $w \in W(K)$ with
+$$\frac{\chi}{w(\chi)} = \alpha.$$
+Since $w(\chi)$ also has order $m$, raising both sides to the $m$th power  yields $\alpha^m = 1$.
+\end{proof}
+
+Finally, we note that Lemma 8 of Bushnell-Henniart \cite[p. 511]{bushnellhenniart} is equivalent to
+the statement that $Q_T$ is trivial when $T$ is a $K$-minisotropic torus in $\GL_n$.
 
 \section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
 
@@ -756,12 +838,11 @@ provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.
 
 \begin{definition} \label{def:rectifier}
-  Let $T$ be a $K$-minisotropic torus in $G$,
-  that splits over an unramified
+  Let $T$ be a $K$-minisotropic torus in $G$, that splits over an unramified
   extension $L$.  A \emph{rectifier} for $T$ is a function
   $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
-  which attaches to each admissible pair $(T, \xi) \in P_G(K)$, a character $
-  \mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
+  which attaches to each $(T, \xi) \in P_G(K)$ a character
+  $\mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
 
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
@@ -775,19 +856,18 @@ and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
 $\xi_1^{-1} \xi_2$ is tamely ramified, then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
+We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
+if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for all admissible $(T, \xi)$.
 
 \end{definition}
 
-We note that since we have assumed that $\HT{0}(\Gamma,T(L)) = 0$, the condition
-that $\xi \cdot \mu_{\xi}$ descends to $T(K)$ is possible, so
-condition (2) makes sense.  We believe that Definition \ref{def:rectifier} may
-be modified to be applicable in the case that $\HT{0}(\Gamma,T(L)) \neq 0$
-(see \S\ref{section:questions}). \DRxxx{Fix phrasing}
+Since we have assumed $\HT{0}(\Gamma,T(L)) = 0$, the condition that $\xi \cdot \mu_\xi$
+descends to $T(K)$ is equivalent to it vanishing on $\HT{-1}(\Gamma, T(L))$.  Moreover, if
+$\bmu$ is a rectifier and $\alpha \in Q_T$ then $\alpha\bmu$ is a rectifier,
+justifying the definition of equivalence.
 
 \begin{conjecture} \label{conj:unique_rectifier}
-  Let $T$ be as in Definition \ref{def:rectifier}.  If $q$ is sufficiently large, then $T$
-  admits a unique rectifier $\bmu : (T, \xi) \mapsto
-  \mu_{\xi}$.
+For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
 \end{conjecture}
 
 We note that the elliptic torus in $SL_2(\mathbb{Q}_3)$ presents an immediate obstruction to the
@@ -826,16 +906,15 @@ of admissible pairs in $G$ in general position.
 \mugen : (T, \xi) \mapsto \mu_{\xi}
 \end{align*}
 which attaches,
-  to each admissible pair $(T, \xi) \in \Pgen(K)$, a character
+  to each $(T, \xi) \in \Pgen(K)$, a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3)
   of Definition \ref{def:rectifier}.
 \end{enumerate}
+We say that two weak rectifiers $\mugen$ and $(\mugen)'$ for $T$ are equivalent if there is an $\alpha \in Q_T$ with $(\mugen)' = \alpha\mugen$.
 \end{definition}
 
 \begin{theorem} \label{thm:unique_semisimple}
-Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there exists
-a weak rectifier for $T$.  If $q$ is sufficiently large, then
-this weak rectifier is the unique weak rectifier for $T$. \DRxxx{fix phrasing}
+For $G$ semisimple and $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique weak rectifier up to equivalence.
 \end{theorem}
 
 \proof
@@ -1020,7 +1099,7 @@ If the same torus embeds into two different groups with the same Weyl groups, do
 rectifier change?  Is there any functoriality for $G$ which would allow us to recover
 a rectifier for a general connected reductive group from the known rectifiers for $\GL_n$?
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 
 \bibitem{adler}
   Jeffrey Adler,
@@ -1053,6 +1132,10 @@ a rectifier for a general connected reductive group from the known rectifiers fo
 \bibitem{bushnellhenniart}
   Colin Bushnell, Guy Henniart,
   \emph{The essentially tame local Langlands correspondence, III: the general case}, Proc. Lond. Math. Soc. (3) 101 (2010), no. 2, 497–553.
+
+\bibitem{carter}
+  Roger Carter,
+  \emph{Finite Groups of Lie Type: Conjugacy Classes and Complex Characters}.  Wiley \& Sons, Chichester, 1985.
 
 \bibitem{debackerreeder}
   Stephen DeBacker and Mark Reeder,
