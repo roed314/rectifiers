@@ -63,9 +63,9 @@
 \newcommand{\Weil}{\mathcal{W}}
 \newcommand{\WD}{\mathcal{W}'}
 \newcommand{\Lpack}{\mathcal{L}}
-\newcommand{\Pgen}{P_G^{\gen}}
+\newcommand{\Pmin}{P_G^{\min}}
 \newcommand{\bmu}{\boldsymbol\mu}
-\newcommand{\mugen}{\bmu^{\gen}}
+\newcommand{\mumin}{\bmu^{\min}}
 
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
@@ -216,7 +216,7 @@ we expound some natural questions that arise in our work.
 \subsection*{Acknowledgements}
 
 This paper has benefited from conversations with Gordan Savin, Jeffrey Adams,
-Geo Kam Fai, Andrew Fiori, and Guy Henniart.  We thank them all.
+Geo Kam Fai, Andrew Fiori, Jeffrey Adler, Guy Henniart, and Colin Bushnell.  We thank them all.
 
 \section{Notation and Preliminaries} \label{section:notation}
 
@@ -801,12 +801,9 @@ We also note that as the local Langlands correspondence is not known in general,
 ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{debackerreeder} and \cite{reeder}.
-We will show that the characters $\mu_{\xi}$ that arise in this setting
-happen to be unramified (i.e. trivial on $T(\OL)_{\Gamma}$).  This implies,
-in particular, that not all possible admissible pairs arise in the settings
-of \cite{debackerreeder} and \cite{reeder}.
-For example, if $G = \GL_n$, $\mu_{\xi}$ can be ramified,
-even if $T$ is unramified.  Since supercuspidal $L$-packets have not been constructed in the generality that
+We note that not all possible admissible pairs arise in the settings
+of \cite{debackerreeder} and \cite{reeder}, as can be seen in the case of $\GL_n$.
+Since supercuspidal $L$-packets have not been constructed in the generality that
 we need in order to prove this conjecture, we determine
 the rectifier in the situation where supercuspidal $L$-packets have been
 constructed.
@@ -817,26 +814,25 @@ Suppose $(T, \xi) \in P_G(K)$.
 \item The \emph{depth} of $(T, \xi)$ is the integer $r$ so that $\xi$
 is trivial on $T(\PL^{r+1})_{\Gamma}$ but nontrivial on
 $T(\PL^{r})_{\Gamma}$
-\item An admissible pair of depth $r$ is in \emph{general position}
+\item An admissible pair of depth $r$ is \emph{minimal}
 if $\xi|_{T(\PL^{r})_{\Gamma}}$
-is not fixed by any element of $W(K)$.\MAxxx{In other words, this definition generalizes
-the definition of MINIMAL admissible pair of Bushnell/Henniart it seems.  HMMMMMM....this seems 
-interesting and weird.  We should say that an admissible pair satisfying 
-this condition here will be called a \emph{minimal admissible pair}.  Then, after the
-definition, we should say that this is an analogue of Bushnell and Henniart's
-minimal admissible pair.}  
-We denote by $\Pgen(K)$ the set
-of admissible pairs in $G$ in general position.
+is not fixed by any element of $W(K)$.
+We denote by $\Pmin(K)$ the set
+of minimal admissible pairs in $G$.
 \item A \emph{weak rectifier} for $T \subset G$ is a function
 \begin{align*}
-\mugen : (T, \xi) \mapsto \mu_{\xi}
+\mumin : (T, \xi) \mapsto \mu_{\xi}
 \end{align*}
 which attaches,
-  to each admissible pair $(T, \xi) \in \Pgen(K)$, a character
+  to each admissible pair $(T, \xi) \in \Pmin(K)$, a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3)
   of Definition \ref{def:rectifier}.
 \end{enumerate}
 \end{definition}
+
+We note that this definition of minimal admissible pair generalizes
+the definition of admissible pair of \cite{bushnellhenniart} in
+the case of unramified elliptic tori.
 
 \begin{theorem} \label{thm:unique_semisimple}
 Let $G$ be semisimple, and $T$ as in Definition \ref{def:rectifier}.  Then there exists
@@ -861,7 +857,7 @@ $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
 satisfies condition (1).  Finally, $\xi_{\varphi_{\hat{w}}}$ only depends on $T$,
 and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
 We may therefore set
-$\mugen(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
+$\mumin(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
 
 We now prove uniqueness.
 Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$
@@ -916,11 +912,7 @@ and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
-We also note for emphasis that even though $ \mugen((T, \xi))$ is
-unramified for pairs $(T, \xi) \in \Pgen(K)$, it will not be
-unramified for all admissible pairs $(T, \xi) \in P_G(K)$, as noted earlier.
-
-Finally, we note that nowhere in the proof of Theorem \ref{thm:unique_semisimple}
+We also note that nowhere in the proof of Theorem \ref{thm:unique_semisimple}
 did we use condition (3) of Definition \ref{def:rectifier}.  We have
 included this condition in Definition \ref{def:rectifier} since it appears in
 Definition \ref{rectifierbushnellhenniart}.  We expect that this condition will
@@ -928,7 +920,7 @@ be used when we consider more general tori and more general admissible pairs.
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
-In this section, we show that our function $\mugen$
+In this section, we show that our function $\mumin$
 agrees with the rectifier of Bushnell/Henniart in the depth
 zero setting.
 Let $L/K$ be the degree $n$ unramified extension of $K$.
@@ -992,7 +984,7 @@ unramified.
 
 \begin{theorem}
   If $G = \GL_{n}(K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$ agrees with
-  the rectifier of Bushnell/Henniart, when $(T,\xi) \in \Pgen(K)$ such that $\xi$ is trivial
+  the rectifier of Bushnell/Henniart, when $(T,\xi) \in \Pmin(K)$ such that $\xi$ is trivial
   on $T(\PL)_{\Gamma}$.
 \end{theorem}
 
