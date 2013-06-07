@@ -156,12 +156,12 @@ appears in the rectifier of Bushnell and Henniart (see \cite{bushnellhenniart2} 
 In this paper, we initiate a program to generalize Bushnell and Henniart's
 notion of a
 rectifier to groups outside of $\GL_n(K)$.  In particular, we define the notion of a rectifier for
-unramified minisotropic tori.  We use a recent construction of Benedict
+unramified minisotropic tori $T$ in an arbitrary unramified connected reductive group $G$.  
+We use a recent construction of Benedict
 Gross, called ``groups of type L'', in order to give us a framework that
 will allow us to define a rectifier.  This construction also allows us to define
-a new notion of admissible pair.   We will show that a rectifier exists and, assuming
-that $q$ is sufficiently large, is
-unique. We will then show that our rectifier is compatible
+a new notion of admissible pair.   We will show there exists a unique rectifier for $T$, up
+to equivalence. We will then show that our rectifier is compatible
 with the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$.  In this setting, there is
 a canonical construction of supercuspidal representations of $\GL_{n}(K)$, and in
@@ -170,7 +170,7 @@ This means, in particular, that in this depth zero case, the rectifier is canoni
 In the setting of positive depth supercuspidal representations of $\GL_{n}(K)$,
 there is no canonical construction of supercuspidal representations of $\GL_{n}(K)$,
 and therefore there is no canonical ``naive'' construction of the local Langlands correspondence.
-Therefore, in the positive depth setting, a rectifier depends on the
+In particular, in the positive depth setting, a rectifier depends on the
 methods used to construct supercuspidal
 representations, and so there is no canonical rectifier.
 Since we are using Adler's construction of supercuspidal representations
@@ -202,8 +202,9 @@ $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
   is the local Langlands correspondence for $G(K)$, where the association
 $\chi \mapsto \Lpack(\xi \cdot \mu_{\xi})$ is some previously fixed construction
 of supercuspidal $L$-packets of $G$
-from \emph{admissible} characters of this cover (see \S\ref{section:general_rectifiers}).  
-This is the idea behind our rectifier, an extension of Bushnell and Henniart's.
+from \emph{admissible} characters of this cover (see \S\ref{section:general_rectifiers}).
+This is the idea behind our rectifier, an extension of Bushnell and Henniart's. \MAxxx{I'm not sure if I like
+how this sentence sounds.}
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall}, we recall
 the notion of rectifier due to Bushnell and Henniart, and we describe
@@ -213,13 +214,14 @@ in the rest of the paper.  In \S\ref{section:groups_of_type_L}, we introduce
 the theory of ``groups of type L'', due to Benedict Gross.  In
 \S\ref{section:gross_debacker_reeder}, we describe the relationship between the
 construction of Gross, via groups of type L, and the constructions of
-DeBacker-Reeder and Reeder.  In \S\ref{section:general_rectifiers}, we
+DeBacker-Reeder and Reeder.  In \S\ref{Q_T}, we \MAxxx{What do we do?}
+In \S\ref{section:general_rectifiers}, we
 introduce our notion of rectifier, we state a conjecture, and then we
 state and prove the main theorem of this paper (see Theorem \ref{thm:unique_semisimple}).
 In \S\ref{section:BH_compat}, we show that our rectifier is compatible with
 the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_n(K)$.  Finally, in \S\ref{section:questions},
-we expound some natural questions that arise in our work.
+we expound some natural questions that arise in our work.\MAxxx{Delete this sentence?}
 
 \subsection*{Acknowledgements}
 
@@ -297,7 +299,7 @@ so it suffices to prove the result for $i=1$ and $i=2$, which is done
 by Serre \cite[\S VI.6]{serre2}.
 \end{proof}
 
-\section{Rectifiers for $\GL_{n}(K)$} \label{section:BH_recall}
+\section{Rectifier for $\GL_{n}(K)$} \label{section:BH_recall}
 
 In this section, we recall the rectifier of Bushnell and Henniart,
 and we describe the rectifier in the setting
@@ -682,7 +684,7 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-\section{From characters to L-packets}
+\section{From characters to L-packets}\label{Q_T}
 
 The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same L-packet.  Consider the following archetypical example.
@@ -712,17 +714,17 @@ any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
 not coming from the norms $\Nm_{L/M}$ for any proper subfield $M$ contained
 in $L$, containing $K$.
 
-As for characters of $T(L)_\Gamma$ we will call a character of $T(K)$ \emph{admissible}
+As for characters of $T(L)_\Gamma$ we will call a character of $T(K)$ \emph{admissible}\MAxxx{I'm puzzled....}
 if it is not fixed by any nontrivial element
 of the rational Weyl group $W(K)$ (see \cite[p. 802]{debackerreeder} and \cite[\S3]{reeder}).
 For example, the depth zero character of the split torus in $\SL_3(\QQ_7)$ inflated from
 $$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta_6^{2x + 4y}$$
-is fixed by a 3-cycle and thus not admissible.  
+is fixed by a 3-cycle and thus not admissible.
 
 In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
 depth zero characters of $T(K)$, $\Threg$ for the set of depth zero admissible
 characters and $\Thirr$ for the set of inadmissible depth zero characters.  Each of these
-sets is finite since they may be identified with characters of $T(k)$.
+sets is finite since they may be identified with characters of $T(k)$.\MAxxx{Not quite.  modulo $\hat{H}^{-1}$ they are finite.}
 
 \begin{definition}
 Write $Q_T$ for the set of $\alpha \in \hatT$ with the following property:
@@ -766,11 +768,11 @@ For $w \in W(K)$, set
 $$S_w = \{\chi \in \Threg \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
 Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
 $$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
-and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus 
+and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus
 $$\alpha = \frac{\chi}{\chi} = 1.$$
 \end{proof}
 
-Recall that Frobenius acts on $X^*(T)$ via an endomorphism $F = qF_0$, where $F_0$ is an automorphism of finite order \cite[p. 82]{carter}.  So it makes sense to vary $q$: we fix $F_0$ and consider the tori dual to the $\Gal(\Fqb/\Fq)$-modules with Frobenius acting through $qF_0$.  
+Recall that Frobenius acts on $X^*(T)$ via an endomorphism $F = qF_0$, where $F_0$ is an automorphism of finite order \cite[p. 82]{carter}.  So it makes sense to vary $q$: we fix $F_0$ and consider the tori dual to the $\Gal(\Fqb/\Fq)$-modules with Frobenius acting through $qF_0$.
 
 \begin{corollary}[{c.f. \cite[Lemma 8.4.2]{carter}}]
 Consider the family of tori $T_q$ with the same $F_0$.  Then for sufficiently large $q$, $Q_{T_q} = \{ 1 \}$ (regardless of the $G$ in which $T_q$ is embedded).
@@ -857,12 +859,16 @@ $\xi_1^{-1} \xi_2$ is tamely ramified, then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
 We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
-if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for all admissible $(T, \xi)$.
+if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for all admissible $(T, \xi)$.\MAxxx{Comment here why
+we have this notion of equivalence.  That if we just used the definition of rectifier above,
+it wouldn't be unique, because of $SL_2(\mathbb{Q}_3)$ for example.  Most of the time it would be unique
+(like for $q$ large, or when the other property holds at the end of section 7),
+but not always.  So we need to impose this notion of equivalence}
 
 \end{definition}
 
 Since we have assumed $\HT{0}(\Gamma,T(L)) = 0$, the condition that $\xi \cdot \mu_\xi$
-descends to $T(K)$ is equivalent to it vanishing on $\HT{-1}(\Gamma, T(L))$.  Moreover, if
+descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.  Moreover, if
 $\bmu$ is a rectifier and $\alpha \in Q_T$ then $\alpha\bmu$ is a rectifier,
 justifying the definition of equivalence.
 
@@ -952,7 +958,7 @@ Consider the restriction of the equation
 ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
 to $T(\OL)_{\Gamma} \cong T(\OK)$.
 Write $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$.
-Reducing mod $\PL$, we conclude that there exists a character,
+Reducing mod $\PL$, we conclude \MAxxx{By condition (3) of rectifier?} that there exists a character,
 $\lambda$, of $T(k)$, with the property that if $\xi$ is any
 $W(k)$-regular character of $T(k)$, then $\lambda \xi$ is
 $W(k)$-conjugate to $\xi$. Therefore, by Lemma \ref{}, \MAxxx{FIll this in}
@@ -1090,7 +1096,7 @@ rectifier change?  Is there any functoriality for $G$ which would allow us to re
 a rectifier for a general connected reductive group from the known rectifiers for $\GL_n$?
 \MAxxx{I can't think of a way, yet, of incorporating these questions in the paper.  For example,
 I don't like the sound of ``It would be interesting to see whether the rectifier of $G$ and $GL_n$
-are compatible via functoriality.''  The reason I don't like it is because someone might ask 
+are compatible via functoriality.''  The reason I don't like it is because someone might ask
 ``Well if it is interesting to you, why didn't you pursue it in this paper?''  Another way
 to incorporate could be ``We wonder how the rectifiers of $G$ and $GL_n$ are compatible
 via functoriality''.  But I don't like that either........}
