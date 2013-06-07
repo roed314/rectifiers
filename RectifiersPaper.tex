@@ -857,7 +857,8 @@ $\xi_1^{-1} \xi_2$ is tamely ramified, then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
 We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
-if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for all admissible $(T, \xi)$.
+if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for admissible depth zero $\xi$
+and $\mu_\xi' = \mu_\xi$ for positive depth $\xi$.
 
 \end{definition}
 
@@ -900,7 +901,7 @@ which attaches to each $(T, \xi) \in \Pmin(K)$ a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3)
   of Definition \ref{def:rectifier}.
 \end{enumerate}
-We say that two weak rectifiers $\mumin$ and $(\mumin)'$ for $T$ are equivalent if there is an $\alpha \in Q_T$ with $(\mumin)' = \alpha\mumin$.
+We define equivalence of weak rectifiers as in Definition \ref{def:rectifier}.
 \end{definition}
 
 We note that this definition of minimal admissible pair generalizes
@@ -911,7 +912,7 @@ the case of unramified elliptic tori (see \cite[\S2.2]{bushnellhenniart1}).
 For $G$ semisimple and $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique weak rectifier up to equivalence.
 \end{theorem}
 
-\proof
+\begin{proof}
 We first prove existence.
 First recall that $T$ can be defined
 via Galois twisting by a Weyl group element $w$.  We defined in
@@ -932,31 +933,29 @@ $\mumin(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
 
 We now prove uniqueness.
 Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$
-such that $(T, \xi) \in P_G^{Reg}(K)$, and let
-$\xi \mapsto \mu_{\xi}$ and $\xi \mapsto \mu'_{\xi}$ be rectifiers for
+such that $(T, \xi) \in \Pmin(K)$, and let
+$\bmu$ and $\bmu'$ be rectifiers for
 $T \subset G$.  By hypothesis, we have
 $$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
 By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$,
 depending on $\xi$, such that
 $${}^{w_{\xi}} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi.$$
-Suppose that $\xi$ is not trivial on $T(\PL)_{\Gamma}$.
+Suppose that $\xi$ has positive depth.
 Restricting the equation
 ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
 to $T(\PL)_{\Gamma}$, we get that ${}^{w_{\xi}} (\xi) = \xi$,
 by condition (1) of Definition \ref{def:rectifier}.
-Since $\xi$ is admissible, we get that $w_{\xi} = 1$, which implies
+Since $\xi$ is minimal, we get that $w_{\xi} = 1$, which implies
 that $\mu_{\xi} = \mu'_{\xi}$.
 
-Now suppose that $\xi$ is trivial on $T(\PL)_{\Gamma}$.
-Consider the restriction of the equation
-${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
-to $T(\OL)_{\Gamma} \cong T(\OK)$.
-Write $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$.
-Reducing mod $\PL$, we conclude that there exists a character,
-$\lambda$, of $T(k)$, with the property that if $\xi$ is any
-$W(k)$-regular character of $T(k)$, then $\lambda \xi$ is
-$W(k)$-conjugate to $\xi$. Therefore, by Lemma \ref{}, \MAxxx{FIll this in}
-${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$.
+Now suppose that $\xi$ has depth zero.
+Define $\lambda$ on $T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$,
+which is independent of $\xi$ by condition (3).
+Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to $T(K)$ by condition (2) of Definition \ref{def:rectifier},
+$\mu_\xi$ and $\mu_\xi'$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.
+Restricting the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
+to $T(\OL)_{\Gamma} \cong T(\OK)$, we conclude that $\lambda \in Q_T$.  Since $\hat{H}^{-1}(\Gamma, T(L))$ and
+$T(\OL)_\Gamma$ generate $T(L)_\Gamma$ we conclude that $\mu_\xi$ and thus $\bmu$ is equivalent to $\bmu'$.
 
 Recall now that we have already constructed
 a rectifier earlier in the current proof.
@@ -972,7 +971,7 @@ must descend to $T(K)$ by condition (2) of Definition
 $\mu'_\xi$ have the same restriction to
 $\hat{H}^{-1}(\Gamma, T(L))$.  Hence,
 $\mu_\xi = \mu'_\xi$.
-\qed
+\end{proof}
 
 We note that in the
 case that $G$ is semisimple, there was nothing special about
@@ -982,12 +981,6 @@ for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
 and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
-
-We also note that nowhere in the proof of Theorem \ref{thm:unique_semisimple}
-did we use condition (3) of Definition \ref{def:rectifier}.  We have
-included this condition in Definition \ref{def:rectifier} since it appears in
-Definition \ref{rectifierbushnellhenniart}.  We expect that this condition will
-be used when we consider more general tori and more general admissible pairs.
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
