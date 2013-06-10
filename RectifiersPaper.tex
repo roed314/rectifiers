@@ -145,7 +145,7 @@ where $L^1$ denotes the norm one elements in $L$, and where $\sigma$ is
 the nontrivial element of $\Gal(L/K)$.  We note that $L^1$
 is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus
-$L^1 \subset \PGL(2,K)$,
+$L^1 \subset \PGL_2(K)$,
 but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal
 representation of $\PGL_{2}(K)$, we need a character of $L^1$.
 To rectify the situation at hand, we can twist $\chi$ by a genuine character of
@@ -180,28 +180,27 @@ representations in \cite{bushnellhenniart}, it does not make sense to compare ou
 to that of Bushnell and Henniart in this setting.  Indeed, our rectifiers differ in the
 positive depth setting due to the different constructions of supercuspidal representations.
 
-Bushnell and Henniart define a rectifier as follows.
+Bushnell and Henniart motivate their rectifier as follows.
 Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
-$\GL_n(K)$ (see \S\ref{section:BH_recall}).  The local Langlands correspondence for tori yields a canonical character $\xi$
-of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  There is a character
-$\mu_{\xi}$ of $L^{\times}$, such that $\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is
+$\GL_n(K)$.  The local Langlands correspondence for tori then yields a canonical character $\xi$
+of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  The rectifier is a character
+$\mu_{\xi}$ of $L^{\times}$ such that $\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is
 the local Langlands correspondence for $\GL_n(K)$.  Here the association
 $\chi \mapsto \pi_{\chi}$ is some fixed construction of supercuspidal representations of $\GL_n(K)$
 from \emph{admissible} characters of $L^{\times}$.
 
-We generalize their notion of rectifier to other reductive groups $G$ by replacing $L^\times$ with various
-groups of points associated to tori in $G$.
+We generalize their notion of rectifier to other reductive groups $G$.
 Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a Langlands parameter
-that factors through the normalizer of a maximal torus (see \S\ref{section:general_rectifiers}).
+that factors through the normalizer of a maximal torus.
 The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
-cohomological condition (see \S\ref{section:general_rectifiers}), one
+cohomological condition, one
 obtains from $\varphi$ a character of a cover of an elliptic torus.
 The rectifier $\mu_{\xi}$ is then a character of this cover such that
 $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
  is the local Langlands correspondence for $G(K)$.  Again, we must fix an association
 $\chi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
 of supercuspidal $L$-packets of $G$
-to \emph{admissible} characters of this cover (see \S\ref{section:general_rectifiers}).
+to \emph{admissible} characters of this cover.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
 the notion of rectifier due to Bushnell and Henniart, and we describe
@@ -681,14 +680,15 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-\section{From characters to L-packets}\label{Q_T}
+\section{L-packets fixed under translation by a character}\label{Q_T}
 
 The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same L-packet.  Consider the following archetypical example.
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
 characters: two admissible and two inadmissible.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding L-packets are isomorphic \cite[\S10]{murnaghan}.
-In this section we investigate such phenomena for unramified tori.
+In this section we investigate characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
+$$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all regular $\chi$}.$$
 
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
@@ -967,6 +967,17 @@ and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
 However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
 consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
 
+Note that the condition $\HT{0}(\Gamma, T(L)) = 0$ was necessary in order to obtain a character on $T(K)$ rather
+than the image of the norm map $T(L) \mapsto T(K)$.  For non-semisimple groups where $\HT{0}(\Gamma, T(L))$
+is nontrivial we hope that the recipe for the central character in \cite{grossreeder} will provide an extension to all of $T(K)$.
+
+\begin{remark}
+The behavior of rectifiers under change of group is not yet clear to us.  Perhaps two embeddings of a torus into
+different reductive groups with isomorphic Weyl groups can yield the same rectifier.  Moreover, given an embedding
+$G \subset \GL_n$, a way of relating rectifiers for $G$ to those of $\GL_n$ would allow us to apply the results of
+\cite{bushnellhenniart} in this setting.
+\end{remark}
+
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
 In this section, we show that our function $\mumin$
@@ -1048,30 +1059,6 @@ $\xi_{\varphi'}(\varpi) = a$.  By Proposition \ref{prop:BH_result1}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the
 canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$,
 so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$.
-
-\section{Further Questions} \label{section:questions}
-
-Aside from Conjecture \ref{conj:unique_rectifier}, there are various obvious
-generalizations to the results in this paper.  We would like to loosen the requirement
-that $T$ be unramified, since not all supercuspidal $L$-packets can be derived
-from unramified tori.
-
-Moreover, even in the Debacker-Reeder and Reeder contexts, tori in non-semisimple
-groups don't always satisfy our condition that $\HT{0}(\Gamma, T(L)) = 0$.  In this case
-multiplying by a rectifier does not yield a character on all of $T(K)$.  Perhaps the recipe for
-the central character in \cite{grossreeder} can provide an extension in the general
-$K$-minisotropic case.
-
-Another set of questions arises from changing the group $G$ in which the torus embeds.
-If the same torus embeds into two different groups with the same Weyl groups, does the
-rectifier change?  Is there any functoriality for $G$ which would allow us to recover
-a rectifier for a general connected reductive group from the known rectifiers for $\GL_n$?
-\MAxxx{I can't think of a way, yet, of incorporating these questions in the paper.  For example,
-I don't like the sound of ``It would be interesting to see whether the rectifier of $G$ and $GL_n$
-are compatible via functoriality.''  The reason I don't like it is because someone might ask
-``Well if it is interesting to you, why didn't you pursue it in this paper?''  Another way
-to incorporate could be ``We wonder how the rectifiers of $G$ and $GL_n$ are compatible
-via functoriality''.  But I don't like that either........}
 
 \begin{thebibliography}{99}
 
