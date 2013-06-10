@@ -77,9 +77,9 @@
 \newcommand{\invlim}[1]{\varprojlim_{#1}}
 \newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
 
-\newcommand{\Threg}{T^{\vee \operatorname{reg}}}
-\newcommand{\Thirr}{T^{\vee \operatorname{irr}}}
-\newcommand{\hatT}{T^{\vee}}
+\newcommand{\Threg}{T^*_{\operatorname{reg}}}
+\newcommand{\Thirr}{T^*_{\operatorname{irr}}}
+\newcommand{\hatT}{T^*}
 
 \begin{document}
 \title{Rectifiers and the local Langlands Correspondence: the unramified case}
@@ -722,9 +722,9 @@ $$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta
 is fixed by a 3-cycle and thus not admissible.
 
 In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
-depth zero characters of $T(K)$, $\Threg$ for the set of depth zero admissible
-characters and $\Thirr$ for the set of inadmissible depth zero characters.  Each of these
-sets is finite since they may be identified with characters of $T(k)$.\MAxxx{Not quite.  modulo $\hat{H}^{-1}$ they are finite.}
+depth zero characters of $T(\OK)$, $\Threg$ for the admissible
+characters and $\Thirr$ for the inadmissible ones.  Each of these
+sets is finite since they may be identified with characters of $T(k)$.
 
 \begin{definition}
 Write $Q_T$ for the set of $\alpha \in \hatT$ with the following property:
@@ -859,19 +859,16 @@ $\xi_1^{-1} \xi_2$ is tamely ramified, then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
 We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
-if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for admissible depth zero $\xi$
-and $\mu_\xi' = \mu_\xi$ for positive depth $\xi$.  \MAxxx{Comment here why
-we have this notion of equivalence.  That if we just used the definition of rectifier above,
-it wouldn't be unique, because of $SL_2(\mathbb{Q}_3)$ for example.  Most of the time it would be unique
-(like for $q$ large, or when the other property holds at the end of section 7),
-but not always.  So we need to impose this notion of equivalence}
+if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for depth zero $\xi$
+and $\mu_\xi' = \mu_\xi$ for positive depth $\xi$.
 
 \end{definition}
 
 Since we have assumed $\HT{0}(\Gamma,T(L)) = 0$, the condition that $\xi \cdot \mu_\xi$
-descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.  Moreover, if
-$\bmu$ is a rectifier and $\alpha \in Q_T$ then $\alpha\bmu$ is a rectifier,
-justifying the definition of equivalence.
+descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.  The
+notion of equivalence is tailored for Theorem \ref{thm:unique_semisimple}; for some tori (such as the
+$\SL_2(\mathbb{Q}_3)$ example at the beginning of \S \ref{Q_T}) there are
+multiple equivalent rectifiers.
 
 \begin{conjecture} \label{conj:unique_rectifier}
 For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
@@ -940,7 +937,7 @@ $\mumin(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
 We now prove uniqueness.
 Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$
 such that $(T, \xi) \in \Pmin(K)$, and let
-$\bmu$ and $\bmu'$ be rectifiers for
+$\bmu$ and $\bmu'$ be weak rectifiers for
 $T \subset G$.  By hypothesis, we have
 $$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
 By \cite[\S10]{murnaghan}, there exists $w_{\xi} \in W(K)$,
@@ -956,27 +953,12 @@ that $\mu_{\xi} = \mu'_{\xi}$.
 
 Now suppose that $\xi$ has depth zero.
 Define $\lambda$ on $T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$,
-which is independent of $\xi$ by condition (3).
-Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to $T(K)$ by condition (2) of Definition \ref{def:rectifier},
-$\mu_\xi$ and $\mu_\xi'$ have the same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.
-Restricting the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
-to $T(\OL)_{\Gamma} \cong T(\OK)$, we conclude that $\lambda \in Q_T$.  Since $\hat{H}^{-1}(\Gamma, T(L))$ and
-$T(\OL)_\Gamma$ generate $T(L)_\Gamma$ we conclude that $\mu_\xi$ and thus $\bmu$ is equivalent to $\bmu'$.
-
-Recall now that we have already constructed
-a rectifier earlier in the current proof.
-Therefore, we may reduce ourselves to showing that any other
-rectifier agrees with our rectifier, so we may assume that
-$\mu_{\xi} = \xi_{\varphi_{\hat{w}}}^{-1}$.  This says that $\mu_{\xi}$
-is unramified, and so the equation
-${}^{w_{\xi}} (\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}}$
-implies that $(\mu_\xi)|_{T(\OL)_{\Gamma}} = \mu'_\xi|_{T(\OL)_{\Gamma}} \equiv 1$.
-Finally, since $\mu_\xi \cdot \xi$ and $\mu'_\xi \cdot \xi$
-must descend to $T(K)$ by condition (2) of Definition
-\ref{def:rectifier}, we have that $\mu_\xi$ and
-$\mu'_\xi$ have the same restriction to
-$\hat{H}^{-1}(\Gamma, T(L))$.  Hence,
-$\mu_\xi = \mu'_\xi$.
+which is independent of $\xi$ by condition (3). The equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
+implies that $\lambda \in Q_T$.  Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to
+$T(K)$ by condition (2) of Definition \ref{def:rectifier}, $\mu_\xi$ and $\mu_\xi'$ have the
+same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.  Since $G$ is semisimple we may pull $\lambda$ back to
+a character on $T(L)_\Gamma$, vanishing on $\HT{-1}(\Gamma, T(L))$.  We get that $\mu'_\xi = \lambda\mu_\xi$
+and thus $\bmu$ is equivalent to $\bmu'$.
 \end{proof}
 
 We note that in the
