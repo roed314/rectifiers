@@ -77,8 +77,8 @@
 \newcommand{\invlim}[1]{\varprojlim_{#1}}
 \newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
 
-\newcommand{\Threg}{T^*_{\operatorname{reg}}}
-\newcommand{\Thirr}{T^*_{\operatorname{irr}}}
+\newcommand{\Thadm}{T^*_{\operatorname{adm}}}
+\newcommand{\Thinadm}{T^*_{\operatorname{inadm}}}
 \newcommand{\hatT}{T^*}
 
 \begin{document}
@@ -92,7 +92,7 @@
 \begin{abstract}
 
 In this paper we initiate a program to generalize the
-rectifier occurring in the local Langlands correspondence for
+rectifier of Bushnell and Henniart, which occurs in the local Langlands correspondence for
 $\GL_{n}(K)$, to groups outside of $\GL_{n}(K)$.  Our generalization begins with unramified
 connected reductive
 groups, and certain classes of Langlands parameters.
@@ -183,7 +183,7 @@ positive depth setting due to the different constructions of supercuspidal repre
 Bushnell and Henniart motivate their rectifier as follows.
 Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
 $\GL_n(K)$.  The local Langlands correspondence for tori then yields a canonical character $\xi$
-of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  The rectifier is a character
+of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  The rectifier of $\xi$ is a character
 $\mu_{\xi}$ of $L^{\times}$ such that $\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is
 the local Langlands correspondence for $\GL_n(K)$.  Here the association
 $\chi \mapsto \pi_{\chi}$ is some fixed construction of supercuspidal representations of $\GL_n(K)$
@@ -194,8 +194,8 @@ Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a Langlands parameter
 that factors through the normalizer of a maximal torus.
 The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
 cohomological condition, one
-obtains from $\varphi$ a character of a cover of an elliptic torus.
-The rectifier $\mu_{\xi}$ is then a character of this cover such that
+obtains from $\varphi$ a character $\xi$ of a cover of an elliptic torus.
+The rectifier of $\xi$ is then a character $\mu_{\xi}$ of this cover such that
 $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
  is the local Langlands correspondence for $G(K)$.  Again, we must fix an association
 $\chi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
@@ -719,14 +719,14 @@ $$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta
 is fixed by a 3-cycle and thus not admissible.
 
 In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
-depth zero characters of $T(\OK)$, $\Threg$ for the admissible
-characters and $\Thirr$ for the inadmissible ones.  Each of these
+depth zero characters of $T(\OK)$, $\Thadm$ for the admissible
+characters and $\Thinadm$ for the inadmissible ones.  Each of these
 sets is finite since they may be identified with characters of $T(k)$.
 
 \begin{definition}
 Write $Q_T$ for the set of $\alpha \in \hatT$ with the following property:
 \begin{itemize}
-\item For every $\chi \in \Threg$ there is a $w \in W(K)$ with $\frac{\chi}{w(\chi)} = \alpha$.
+\item For every $\chi \in \Thadm$ there is a $w \in W(K)$ with $\frac{\chi}{w(\chi)} = \alpha$.
 \end{itemize}
 \end{definition}
 
@@ -734,14 +734,14 @@ The $\SL_2(\QQ_3)$ example above has $Q_T$ of order two, but $Q_T$ is trivial fo
 We spend the rest of this section giving criteria constraining $Q_T$.
 
 \begin{proposition} \label{irr-sub}
-The set $Q_T$ is a subgroup of $\hatT$, contained within $\Thirr$ and stable under the action of $W(K)$.
+The set $Q_T$ is a subgroup of $\hatT$, contained within $\Thinadm$ and stable under the action of $W(K)$.
 \end{proposition}
 \begin{proof}
-If $\alpha \in \Threg \cap Q_T$ then there is some $w \in W(K)$ with
+If $\alpha \in \Thadm \cap Q_T$ then there is some $w \in W(K)$ with
 $\frac{\alpha}{w(\alpha)} = \alpha$, so $\alpha = 1$ which is not regular.
 
 We now show that $Q_T$ is a group.  Certainly $1 \in Q_T$.  Suppose
-$\alpha, \alpha' \in Q_T$ and $\chi \in \Threg$.  Then there are $w, w' \in W(K)$ with
+$\alpha, \alpha' \in Q_T$ and $\chi \in \Thadm$.  Then there are $w, w' \in W(K)$ with
 \begin{align*}
 \frac{\chi}{w(\chi)} &= \alpha, \\
 \frac{w(\chi)}{w'(w(\chi))} &= \alpha'.
@@ -749,7 +749,7 @@ $\alpha, \alpha' \in Q_T$ and $\chi \in \Threg$.  Then there are $w, w' \in W(K)
 Multiplying the two relations yields $\frac{\chi}{w'w(\chi)} = \alpha\alpha'$, so
 $\alpha\alpha' \in Q_T$.  We finish by noting that $Q_T$ is finite and thus closed under inversion.
 
-Finally, suppose $\tau \in W(K)$.  Given $\chi \in \Threg$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
+Finally, suppose $\tau \in W(K)$.  Given $\chi \in \Thadm$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
 $$\tau(\alpha) = \frac{\tau(\chi)}{\tau w(\chi)} = \frac{\tau(\chi)}{w' \tau(\chi)}$$
 for some $w' \in W(K)$.  Since $\tau$ permutes the regular characters we get that $\tau(\alpha) \in Q_T$.
 \end{proof}
@@ -758,12 +758,12 @@ The condition on $\alpha \in Q_T$ is an extremely stringent one, and an abundanc
 characters will preclude a nontrivial $\alpha$.  We can make this statement precise:
 
 \begin{proposition} \label{pigeonhole}
-Suppose $\#\Threg > (\# W(K) - 1) \cdot \# \Thirr$.  Then $Q_T = \{ 1 \}$.
+Suppose $\#\Thadm > (\# W(K) - 1) \cdot \# \Thinadm$.  Then $Q_T = \{ 1 \}$.
 \end{proposition}
 \begin{proof}
 For $w \in W(K)$, set
-$$S_w = \{\chi \in \Threg \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
-Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thirr$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thirr$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
+$$S_w = \{\chi \in \Thadm \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
+Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thinadm$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thinadm$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
 $$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
 and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus
 $$\alpha = \frac{\chi}{\chi} = 1.$$
@@ -776,14 +776,14 @@ Consider the family of tori $T_q$ with the same $F_0$.  Then for sufficiently la
 \end{corollary}
 \begin{proof}
 We will write $T$ for a general torus in the family and $r$ for the common dimension.  Note that $\hatT$ is the set of $\Fq$ points of a dual torus, also of rank $r$ over $\Fq$.  For $w \in W(K)$ with $w \ne 1$ the centralizer $\Z_{\hatT}(w)$ is a proper $F$-stable subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite[3.3.5]{carter} $\# \hatT$ is a polynomial in $q$ of degree $r$ and $\# \Z_{\hatT}(w)$ is a polynomial in $q$ of degree at most $r-1$.  Thus the ratio
-$$\frac{\# \Threg}{\# \Thirr} = \frac{\# \hatT - \sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}{\sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}$$
+$$\frac{\# \Thadm}{\# \Thinadm} = \frac{\# \hatT - \sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}{\sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}$$
 grows without bound as $q$ does.  There are finitely many possibilities for the absolute Weyl group of $T$, so Proposition \ref{pigeonhole} gives the desired result.
 \end{proof}
 
 In computing $Q_T$ for small $q$ the following result is useful
 
 \begin{proposition} \label{orderdiv}
-If $\alpha \in Q_T$ has order $d$ and $\chi \in \Threg$ has order $m$ then $d$ divides $m$.
+If $\alpha \in Q_T$ has order $d$ and $\chi \in \Thadm$ has order $m$ then $d$ divides $m$.
 \end{proposition}
 \begin{proof}
 There is a $w \in W(K)$ with
