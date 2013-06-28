@@ -128,82 +128,67 @@ $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$.  The image of $\varphi$
 is contained in the normalizer of the dual torus $\hat{T}$, a non-split
 extension of $\Gal(L/K)$ by $\hat{T}$, but not in the $L$-group of any torus.
 
-Moreover, we have the exact sequence
-$$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1$$
-$$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ w \Nm_{L/K}(L^{\times}) \mapsto w / \sigma(w)$$
-where $L^1$ denotes the norm one elements in $L$, and where $\sigma$ is
-the nontrivial element of $\Gal(L/K)$.  We note that $L^1$
-is an elliptic torus in $\PGL_{2}(K)$.  In particular, the Langlands parameter
+The group $\Lx / \Nm_{L/K}(\Lx)$ appears as a cover of the elliptic torus $L^1$ of norm $1$ elements in $L$:
+\begin{align*}
+1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) &\rightarrow L^1 \rightarrow 1 \\
+x \Nm_{L/K}(L^{\times}) &\mapsto x / \sigma(x);
+\end{align*}
+here $\sigma$ generates $\Gal(L/K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus
 $L^1 \subset \PGL_2(K)$,
-but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  To construct a supercuspidal
-representation of $\PGL_{2}(K)$, we need a character of $L^1$.
-To rectify the situation at hand, we can twist $\chi$ by a genuine character of
-$\Lx / \Nm_{L/K}(\Lx)$ in order to obtain a character of $L^1$.  The twist that gives
-the correct supercuspidal representation of $\PGL_2(K)$ is exactly what
-appears in the rectifier of Bushnell and Henniart (see \cite{bushnellhenniart2} and \cite{bushnellhenniart}).
+but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  We can obtain a character of $L^1$
+by twisting $\chi$ by another character of
+$\Lx / \Nm_{L/K}(\Lx)$.  The twist giving the correct supercuspidal representation of $\PGL_2(K)$
+is precisely what appears in Bushnell and Henniart \cite{bushnellhenniart2,bushnellhenniart}.
 
-In this paper, we initiate a program to generalize Bushnell and Henniart's
-rectifier to groups outside of $\GL_n(K)$.  In particular, we define a rectifier for
-unramified minisotropic tori $T$ in an arbitrary unramified connected reductive group $G$.
-We use a recent construction of Benedict
-Gross, called ``groups of type L'', in order to give us a framework that
-will allow us to define a rectifier.  This construction also allows us to define
-a new notion of admissible pair.   We will show there exists a unique rectifier for $T$, up
-to equivalence. We will then show that our rectifier is compatible
-with the rectifier of Bushnell and Henniart in the setting of depth zero
-supercuspidal representations of $\GL_{n}(K)$.  In this setting, there is
-a canonical construction of supercuspidal representations of $\GL_{n}(K)$, and in
-particular, there is a canonical ``naive'' construction of the local Langlands correspondence.
-This means, in particular, that in this depth zero case, the rectifier is canonical.
-In the setting of positive depth supercuspidal representations of $\GL_{n}(K)$,
-there is no canonical construction of supercuspidal representations of $\GL_{n}(K)$,
-and therefore there is no canonical ``naive'' construction of the local Langlands correspondence.
-In particular, in the positive depth setting, a rectifier depends on the
-methods used to construct supercuspidal
-representations, and so there is no canonical rectifier.
-Since we will be using Adler's construction of supercuspidal representations
-in \cite{adler},
-which may be different than Bushnell and Henniart's construction of supercuspidal
-representations in \cite{bushnellhenniart}, it does not make sense to compare our rectifier
-to that of Bushnell and Henniart in this setting.  Indeed, our rectifiers differ in the
-positive depth setting due to the different constructions of supercuspidal representations.
+In this paper, we generalize Bushnell and Henniart's
+rectifier to groups other than $\GL_n(K)$.  In particular, we define rectifiers for
+unramified minisotropic tori $T$ in connected reductive groups $G$.
+Benedict Gross' recent construction of groups of type L provides a framework for
+us to define rectifier and admissible pairs in the general setting.
+We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
+and are unique up to equivalence. In the setting of depth zero
+supercuspidal representations of $\GL_{n}(K)$, Theorem \ref{thm:bh_agreement}
+gives the compatibility of our rectifier with that of Bushnell and Henniart.
+Note that there is an obstruction to proving compatibility in the positive depth case:
+in depth zero Deligne-Lusztig representations provide a canonical construction
+of supercuspidal representations but in positive depth there are many:
+Adler \cite{adler}, Howe, Bushnell-Henniart, Bushnell-Kutzko, Yu.
+In the positive depth setting the rectifier will depend on the methods
+used to construct representations from the character of $T(K)$, and
+our rectifier indeed differs from that of Bushnell and Henniart in positive depth.
 
 Bushnell and Henniart motivate their rectifier as follows.
 Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
-$\GL_n(K)$.  The local Langlands correspondence for tori then yields a canonical character $\xi$
-of $L^{\times}$, where $L/K$ is some degree $n$ separable extension.  The rectifier of $\xi$ is a character
-$\mu_{\xi}$ of $L^{\times}$ such that $\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is
-the local Langlands correspondence for $\GL_n(K)$.  Here the association
-$\chi \mapsto \pi_{\chi}$ is some fixed construction of supercuspidal representations of $\GL_n(K)$
-from \emph{admissible} characters of $L^{\times}$.
+$\GL_n(K)$.  The local Langlands correspondence for tori then yields a degree $n$ extension
+$L/K$ and a character $\xi$ of $L^{\times}$.  We now fix a construction $\chi \mapsto \pi_{\chi}$
+of supercuspidal representations of $\GL_n(K)$ from \emph{admissible} characters of $L^{\times}$.
+Then the rectifier of $\xi$ is a character $\mu_{\xi}$ of $L^{\times}$ such that
+$\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is the local Langlands correspondence for $\GL_n(K)$.
 
 We generalize their notion of rectifier to unramified connected reductive groups $G$.
-Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a Langlands parameter
+Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a supercuspidal Langlands parameter
 that factors through the normalizer of a maximal torus.
 The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
 cohomological condition, one
 obtains from $\varphi$ a character $\xi$ of a cover of an elliptic torus.
-The rectifier of $\xi$ is then a character $\mu_{\xi}$ of this cover such that
-$\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
- is the local Langlands correspondence for $G(K)$.  Again, we must fix an association
-$\chi \mapsto \Lpack(\chi)$
-of supercuspidal $L$-packets of $G$
-to \emph{admissible} characters of this cover.
+After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
+to \emph{admissible} characters of this cover, the rectifier of $\xi$ is a character
+$\mu_{\xi}$ of the cover such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
+is the local Langlands correspondence for $G(K)$.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
-the notion of rectifier due to Bushnell and Henniart, and we describe
+the notion of rectifier due to Bushnell and Henniart and describe
 the rectifier in the setting that we will need.  In \S\ref{section:padic_tori}
 we present some results about Tate cohomology of $p$-adic tori that will be used
-in the rest of the paper.  In \S\ref{section:groups_of_type_L} we introduce
-the theory of ``groups of type L'', due to Benedict Gross.  In
+in the rest of the paper.  In \S\ref{section:groups_of_type_L} we review
+the theory of ``groups of type L.''  In
 \S\ref{section:gross_debacker_reeder} we describe the relationship between the
 construction of Gross, via groups of type L, and the constructions of
 DeBacker-Reeder and Reeder.  In \S\ref{Q_T} we study how translation by a character affects
 the association $\chi \mapsto \Lpack(\xi \cdot \mu_\xi)$.
 In \S\ref{section:general_rectifiers} we
-introduce our notion of rectifier, we state a conjecture, and then we
-state and prove the main theorem of this paper (see Theorem \ref{thm:unique_semisimple}).
+introduce our notion of rectifier and prove our main result, Theorem \ref{thm:unique_semisimple}.
 Finally, in \S\ref{section:BH_compat} we show that our rectifier is compatible with
 the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_n(K)$.
@@ -218,7 +203,7 @@ Geo Kam Fai, Andrew Fiori, Jeffrey Adler, Guy Henniart, and Colin Bushnell.  We 
 Throughout, $k$ will denote a finite field, and
 $k_n$ will denote the degree $n$ extension of
 $k$.  $K$ will denote a nonarchimedean local field of
-charcteristic zero, $\OK$ its ring of integers,
+characteristic zero, $\OK$ its ring of integers,
 $\PK$ the maximal ideal in $\OK$,
 and $k$ will also denote the residue field of $K$.  Fix
 a uniformizer $\varpi$ of $K$.  Let $K^u$ denote the maximal
@@ -1031,7 +1016,7 @@ Finally, since $\varphi_{\hat{w}}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{\
 unramified.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem} \label{thm:bh_agreement}
   If $G = \GL_{n}(K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$ agrees with
   the rectifier of Bushnell/Henniart, when $(T,\xi) \in \Pmin(K)$ such that $\xi$ is trivial
   on $T(\PL)_{\Gamma}$.
