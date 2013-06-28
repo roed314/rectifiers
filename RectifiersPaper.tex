@@ -91,11 +91,10 @@
 
 \begin{abstract}
 
-In this paper we initiate a program to generalize the
-rectifier of Bushnell and Henniart, which occurs in the local Langlands correspondence for
-$\GL_{n}(K)$, to groups outside of $\GL_{n}(K)$.  Our generalization begins with unramified
-connected reductive
-groups, and certain classes of Langlands parameters.
+We generalize the rectifier of Bushnell and Henniart,
+which occurs in the local Langlands correspondence for
+$\GL_{n}(K)$, to certain Langlands parameters for
+unramified connected reductive groups.
 
 \end{abstract}
 
@@ -103,40 +102,31 @@ groups, and certain classes of Langlands parameters.
 
 \section{Introduction} \label{section:intro}
 
-Let $G$ be a connected reductive group, defined over a $p$-adic field $K$.
-The local Langlands conjecture predicts the existence of a finite to one map,
+Let $G$ be a connected reductive group defined over a $p$-adic field $K$.
+The local Langlands conjecture predicts the existence of a finite to one map
 from the set of isomorphism classes of irreducible admissible representations
-of $G(K)$, to the set of equivalence classes of admissible homomorphisms
-from the Weil-Deligne group $\WD_K$, to the $L$-group ${}^L G$.
+of $G(K)$ to the set of Langlands parameters.
 
-In the case of supercuspidal representations of $G(K)$, there has been a
-significant amount of progress in the local Langlands correspondence in
-recent years.  In the recent work of \cite{bushnellhenniart}, \cite{debackerreeder},
-\cite{kaletha}, and \cite{reeder}, the strategy of constructing a local Langlands
-correspondence is to first attach a character of an elliptic torus to a Langlands
-parameter $\Weil_K \rightarrow {}^L G$, where $\Weil_K$ is the Weil group of
-$K$, and then to construct a putative supercuspidal $L$-packet associated to
-this character.
+There has been a significant amount of progress in recent years
+focusing on supercuspidal representations of $G(K)$.  Bushnell-Henniart \cite{bushnellhenniart},
+DeBacker-Reeder \cite{debackerreeder}, Kaletha \cite{kaletha} and Reeder \cite{reeder}
+approach the task of constructing $L$-packets by first attaching
+a character of an elliptic torus to a Langlands parameter and
+then associating a collection of supercuspidal representations to this character.
+Their constructions all use the local Langlands correspondence for tori in some way,
+but the image of the Langlands parameter $\Weil_K \rightarrow {}^L G$ is not
+necessarily contained within the $L$-group of a maximal torus.  The different authors
+rectify this situation in various ways.
 
-Some of the difficulty arises in the construction of the character of an elliptic
-torus.  The difficulty arises from the fact that a Langlands parameter
-$\Weil_K \rightarrow {}^L G$ does not necessarily have image inside the
-$L$-group of a maximal torus that is dual to an elliptic torus.
-If it did, then the local Langlands correspondence
-for tori could give us a desired character of an elliptic torus.
-Instead, one has to rectify the
-situation in some way.
-
-The simplest example of this difficulty arising is in the case of supercuspidal
-representations of $\PGL_{2}(K)$.  Suppose that $p \neq 2$, and that
-$\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is a homomorphism that is
-irreducible as a representation.  Then $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$,
-where $L/K$ is a tamely ramified quadratic extension, for some character
-$\chi$ of $\Lx$ that is trivial on $\Nm_{L/K}(\Lx)$, where $\Nm_{L/K}$
-denotes the norm map from $L$ to $K$.  The image of $\varphi$
-is contained in the normalizer of the dual split torus $\hat{T}$.  This normalizer
-is a non-split extension of $\Gal(L/K)$ by $\hat{T}$.
-In particular, the image of $\varphi$ is not contained in the $L$-group of a torus.
+For an example where the image does not land in an $L$-group of a maximal torus,
+consider $G = \PGL_{2}(K)$.  Suppose that $p \neq 2$ and that
+$\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is an
+irreducible representation.  Then there is a tamely ramified quadratic
+extension $L/K$ and a character
+$\chi$ of $\Lx$, trivial on the norms $\Nm_{L/K}(\Lx)$, so that 
+$\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$.  The image of $\varphi$
+is contained in the normalizer of the dual torus $\hat{T}$, a non-split
+extension of $\Gal(L/K)$ by $\hat{T}$, but not in the $L$-group of any torus.
 
 Moreover, we have the exact sequence
 $$1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) \rightarrow L^1 \rightarrow 1$$
@@ -681,13 +671,13 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-\section{L-packets fixed under translation by a character}\label{Q_T}
+\section{$L$-packets fixed under translation by a character}\label{Q_T}
 
 The general definition of rectifier is complicated by the fact that different
-characters of a torus can yield the same L-packet.  Consider the following archetypical example.
+characters of a torus can yield the same $L$-packet.  Consider the following archetypical example.
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
 characters: two admissible and two inadmissible.  Since the two admissible characters are interchanged
-by the action of the Weyl group, the corresponding L-packets are isomorphic \cite[\S10]{murnaghan}.
+by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite[\S10]{murnaghan}.
 In this section we investigate characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
 $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all regular $\chi$}.$$
 
@@ -1131,7 +1121,7 @@ so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde
   \emph{Linear Algebraic Groups}, Graduate Texts in Mathematics, 21.  Springer-Verlag, New York, 1975.
 
 \bibitem{kaletha}
-  Tasho Kaletha, \emph{Simple Wild L-packets}, J. Inst. Math. Jussieu (2013) 12(1), 43-75.
+  Tasho Kaletha, \emph{Simple Wild $L$-packets}, J. Inst. Math. Jussieu (2013) 12(1), 43-75.
 
 \bibitem{lang}
   Serge Lang, \emph{Algebraic groups over finite fields},  Amer. J. Math. (1956) 78, 555Ð563.
