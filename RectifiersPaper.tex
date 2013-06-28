@@ -266,14 +266,21 @@ In this section we recall the rectifier of Bushnell and Henniart and their const
 essentially tame local Langlands correspondence for $\GL_{n}(K)$.
 An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
-sum of characters.  There is a natural bijection
-$\varphi_{\xi} \leftrightarrow (L/K, \xi)$ between essentially tame
+sum of characters.  
+\begin{definition}\label{admissiblepairhowe}
+Let $L/K$ be an extension of degree $n$, with $n$ coprime to $p$.  A character
+$\xi$ of $L^\times$ is \emph{admissible} if
+\begin{enumerate}
+\item $\xi$ doesn't come via the norm from a subfield of $L$ containing $K$,
+\item If $\xi|_{1 + \PL}$ comes via the norm from a subfield $L \supset E \supset K$, then
+$L/E$ is unramified.
+\end{enumerate}
+\end{definition}
+There is a natural bijection
+$\varphi_{\xi} \leftrightarrow (L/K, \xi)$ between irreducible smooth essentially tame 
 $\varphi_{\xi} : \Weil_K \rightarrow \GL_{n}(\mathbb{C})$ and
 \emph{admissible pairs} $(L/K, \xi)$.
-Here, $L/K$ is a degree $n$ separable extension
-and $\xi$ is a character (satisfying certain conditions) of $\Lx$.
-Note that one can view
-$L^{\times}$ as a maximal elliptic torus in $\GL_{n}(K)$.  Bushnell and Henniart
+Bushnell and Henniart
 construct a map (see \cite{bushnellhenniart})
 \begin{equation*}
 \left\{
@@ -351,7 +358,7 @@ is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
 \end{proposition}
 
 \begin{proof}
-It is clear that the set of jumps of $\xi$ over $F$ is empty.
+It is clear that the set of jumps of $\xi$ over $K$ is empty.
 Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have the result.
 \end{proof}
 
@@ -663,7 +670,7 @@ for all $t \in T(K)$.  We denote by $P_G(K)$ the set of admissible pairs in $G$.
 
 We note that this definition of admissible pair generalizes
 the notion of admissible pair of \cite{bushnellhenniart} in
-the case of unramified elliptic tori.  Indeed,
+the case of unramified elliptic tori (see Definition \ref{admissiblepairhowe}).  Indeed,
 if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $L/K$, then one can show that
 $W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
@@ -940,11 +947,11 @@ $H \subset G$, it would be interesting to know whether the rectifiers for tori i
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
-In this section, we show that our function $\mumin$
+In this section we show that our function $\mumin$
 agrees with the rectifier of Bushnell/Henniart in the depth
-zero setting.
+zero setting: see Theorem \ref{thm:bh_agreement}.
 Let $L/K$ be the degree $n$ unramified extension of $K$.
-Let $T = \Res_{L/K}(\Gm)$.
+Let $T = \Res_{L/K}(\Gm)$.  We first compute the Tate cohomology groups of $T$.
 
 \begin{proposition}
 $\HT{0}(\Gamma, X_*(T)) = 0$.
@@ -970,7 +977,7 @@ $\tau \in \Gamma$, since $\Gamma$ acts by cyclic shift.  Thus $\ker(\Nm) \subset
 
 The Tate cohomology exact sequence for $T$ therefore reduces to
 $$1 \rightarrow T(L)_{\Gamma} \xrightarrow{\sim} T(K) \rightarrow 1$$ by
-Corollary \ref{cor:cohom_tori}.
+Corollary \ref{cor:cohom_tori}.  We need a basic result about powers of lifts of Coxeter elements in $\GL_{n}(\CC)$.
 
 \begin{proposition}\label{prop:powers_of_lifts}
 Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the
@@ -982,13 +989,13 @@ denotes the identity element in $\GL_{n}(\CC)$.
 See \cite[\S3.1]{zaremsky}.
 \end{proof}
 
-By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin
-reciprocity map for $L$, so we obtain
+We can now describe the image of $\mumin$ in the setting of
+depth zero supercuspidal representations of $\GL_{n}(K)$.
 
-\begin{corollary} \label{cor:rectifier_agreement}
+\begin{proposition} \label{prop:rectifier_agreement}
 $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified and
 $\xi_{\varphi_{\hat{w}}}^{-1}(\varpi) = (-1)^{n-1}$.
-\end{corollary}
+\end{proposition}
 
 \begin{proof}
 Note that $T(L) \cong \Lx \times \Lx \times \cdots \times \Lx$, and
@@ -996,9 +1003,11 @@ that $$T(K) = \{(w, \sigma(w), \sigma^2(w), \cdots, \sigma^{n-1}(w)) : w \in \Lx
 $\sigma$ is a generator of $\Gal(L/K)$.  A uniformizer $\varpi$ in $\Lx$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
-The local Langlands correspondence for tori says now that
-$\xi_{\varphi_{\hat{w}}}(\varpi) = (-1)^{n-1}$, because of Proposition \ref{prop:powers_of_lifts}.
-Finally, since $\varphi_{\hat{w}}|_{I_F} \equiv 1$, we get that $\xi_{\varphi_{\hat{w}}}$ is
+
+By \cite[\S 2.4]{serre1}, $\varpi$ corresponds to $\Fr^n$ under the Artin
+reciprocity map for $L$.  This, Proposition \ref{prop:powers_of_lifts}, and the local Langlands correspondence for tori imply that
+$\xi_{\varphi_{\hat{w}}}(\varpi) = (-1)^{n-1}$.
+Finally, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$, we get that $\xi_{\varphi_{\hat{w}}}$ is
 unramified.
 \end{proof}
 
@@ -1009,7 +1018,7 @@ unramified.
 \end{theorem}
 
 \begin{proof}
-This follow from Corollary \ref{cor:rectifier_agreement} and Proposition \ref{prop:BH_result1}.
+This follow from Proposition \ref{prop:rectifier_agreement} and Proposition \ref{prop:BH_result1}.
 \end{proof}
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
@@ -1018,7 +1027,7 @@ $\varphi' : \Weil_K \rightarrow \GL_{n}(\CC)$ by $\varphi'|_{I_K} \equiv 1$ and
 $\varphi'(\Fr)$ to be a representative of an elliptic element $\hat{w}$ in $\hat{W}$.
 Then \cite[p. 824]{debackerreeder} and \cite[\S6]{reeder} imply that the characteristic
 polynomial of $\varphi'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that,
-by analogous arguments as in Corollary \ref{cor:rectifier_agreement},
+by analogous arguments as in Proposition \ref{prop:rectifier_agreement},
 $\xi_{\varphi'}(\varpi) = a$.  By Proposition \ref{prop:BH_result1}, we are
 forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument that the
 canonical lift $\tilde{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$,
