@@ -24,9 +24,9 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 
-\setlength{\oddsidemargin}{0.2in}
-\setlength{\evensidemargin}{0.2in}
-\setlength{\textwidth}{6.1in}
+%\setlength{\oddsidemargin}{0.2in}
+%\setlength{\evensidemargin}{0.2in}
+%\setlength{\textwidth}{6.1in}
 
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\val}{val}
@@ -354,10 +354,10 @@ is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
   $\mu_{\xi}(\varpi) = (-1)^{n-1}$.
 \end{proposition}
 
-\proof
+\begin{proof}
 It is clear that the set of jumps of $\xi$ over $F$ is empty.
 Therefore, by \cite[Proposition 21]{bushnellhenniart}, we have the result.
-\qed
+\end{proof}
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
@@ -600,7 +600,7 @@ $\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$, respectively.
 $\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
 \end{lemma}
 
-\proof
+\begin{proof}
 We have the exact sequence
 
 $$1 \rightarrow \HT{-1}(\Gamma, T(L)) \rightarrow T(L)_{\Gamma} \rightarrow T(K)
@@ -621,7 +621,7 @@ is an isomorphism, so
 $\xi_{\varphi}|_{T(\OL)_{\Gamma}}$ factors to a character of
 $T(\OK)$ via this isomorphism.  But this is exactly how the character
 $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{debackerreeder} and \cite{reeder}.
-\qed
+\end{proof}
 
 \begin{proposition}\label{existenceofrectifier}
 If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1} = \chi_{\varphi} \circ \Nm$.
@@ -1012,9 +1012,9 @@ unramified.
   on $T(\PL)_{\Gamma}$.
 \end{theorem}
 
-\proof
+\begin{proof}
 This follow from Corollary \ref{cor:rectifier_agreement} and Proposition \ref{prop:BH_result1}.
-\qed
+\end{proof}
 
 We end this section by explaining why the Tits group lift $\tilde{w}$ is forced upon us.
 Suppose we define
