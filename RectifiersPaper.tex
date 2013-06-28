@@ -231,7 +231,7 @@ are all $\Gamma$-modules.
 
 Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.
 We will write $\hat{T} \subset \hat{G}$ for the dual torus in the complex dual group of $G$ \cite[\S I.2]{borel}.
-We write $N$ for the normalizer $\Normalizer{T}{G}$ of $T$ in $G$ and define $W = N/T$;
+Let $N$ be the normalizer $\Normalizer{T}{G}$ of $T$ in $G$ and define $W = N/T$;
 set $\hat{N} = \Normalizer{\hat{T}}{\hat{G}}$ and
 $\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$
 yields a canonical anti-isomorphism between $W$ and $\hat{W}$.
@@ -247,7 +247,8 @@ and for its restriction to $X_*(T)$.
 The following theorem, due to Lang \cite{lang}, underpins the facts in
 \S\ref{section:padic_tori} on tori over $p$-adic fields.
 Let $H$ be a commutative connected algebraic group over a
-finite field $k$, and suppose $H$ splits over $k_n$.
+finite field $k$, and suppose $H$ splits over $k_n$.  Denote by $\HT{i}$ the $i^{\mathrm{th}}$
+Tate cohomology group.
 
 \begin{theorem} \label{thm:lang}
 $\HT{i}(\Gamma_n, H(k_n)) = 0$ for all $i$.
@@ -261,18 +262,13 @@ by Serre \cite[\S VI.6]{serre2}.
 
 \section{Rectifier for $\GL_{n}(K)$} \label{section:BH_recall}
 
-In this section, we recall the rectifier of Bushnell and Henniart,
-and we describe the rectifier in the setting
-that we will need.
-
-We first recall the construction of the
-essentially tame local Langlands correspondence for $\GL_{n}(K)$, due to Bushnell
-and Henniart.  An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
+In this section we recall the rectifier of Bushnell and Henniart and their construction of the
+essentially tame local Langlands correspondence for $\GL_{n}(K)$.
+An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
-sum of characters.  In the
-essentially tame setting, there is a natural bijection
-$\varphi_{\xi} \leftrightarrow (L/K, \xi)$, between irreducible representations
-$\varphi_{\xi} : \Weil_K \rightarrow \GL_{n}(\mathbb{C})$, and
+sum of characters.  There is a natural bijection
+$\varphi_{\xi} \leftrightarrow (L/K, \xi)$ between essentially tame
+$\varphi_{\xi} : \Weil_K \rightarrow \GL_{n}(\mathbb{C})$ and
 \emph{admissible pairs} $(L/K, \xi)$.
 Here, $L/K$ is a degree $n$ separable extension
 and $\xi$ is a character (satisfying certain conditions) of $\Lx$.
