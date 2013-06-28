@@ -179,7 +179,7 @@ the local Langlands correspondence for $\GL_n(K)$.  Here the association
 $\chi \mapsto \pi_{\chi}$ is some fixed construction of supercuspidal representations of $\GL_n(K)$
 from \emph{admissible} characters of $L^{\times}$.
 
-We generalize their notion of rectifier to other reductive groups $G$.
+We generalize their notion of rectifier to unramified connected reductive groups $G$.
 Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a Langlands parameter
 that factors through the normalizer of a maximal torus.
 The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
@@ -465,7 +465,7 @@ If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(L)) = 0$.
 \end{corollary}
 
 \begin{proof}
-Since $T$ is anisotropic, $X_*(T)^{\Gamma_n} = 0$, giving $\HT{0}(\Gamma_n, T(L)) = 0$ by Corollary 
+Since $T$ is anisotropic, $X_*(T)^{\Gamma_n} = 0$, giving $\HT{0}(\Gamma_n, T(L)) = 0$ by Corollary
 \ref{cor:cohom_tori}.
 \end{proof}
 
@@ -676,10 +676,10 @@ Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same $L$-packet.  Consider the following archetypical example.
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
-characters: two admissible and two inadmissible.  Since the two admissible characters are interchanged
+characters: two admissible and two inadmissible, notions defined below.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite[\S10]{murnaghan}.
-In this section we investigate characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
-$$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all regular $\chi$}.$$
+In this section we investigate depth zero characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
+$$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\chi$}.$$
 
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
@@ -711,7 +711,7 @@ is fixed by a 3-cycle and thus not admissible.
 
 In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
 depth zero characters of $T(\OK)$, $\Thadm$ for the admissible
-characters and $\Thinadm$ for the inadmissible ones.  Each of these
+ones and $\Thinadm$ for the inadmissible ones.  Each of these
 sets is finite since they may be identified with characters of $T(k)$.
 
 \begin{definition}
@@ -729,7 +729,7 @@ The set $Q_T$ is a subgroup of $\hatT$, contained within $\Thinadm$ and stable u
 \end{proposition}
 \begin{proof}
 If $\alpha \in \Thadm \cap Q_T$ then there is some $w \in W(K)$ with
-$\frac{\alpha}{w(\alpha)} = \alpha$, so $\alpha = 1$ which is not regular.
+$\frac{\alpha}{w(\alpha)} = \alpha$, so $\alpha = 1$ which is not admissible.
 
 We now show that $Q_T$ is a group.  Certainly $1 \in Q_T$.  Suppose
 $\alpha, \alpha' \in Q_T$ and $\chi \in \Thadm$.  Then there are $w, w' \in W(K)$ with
@@ -742,10 +742,10 @@ $\alpha\alpha' \in Q_T$.  We finish by noting that $Q_T$ is finite and thus clos
 
 Finally, suppose $\tau \in W(K)$.  Given $\chi \in \Thadm$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
 $$\tau(\alpha) = \frac{\tau(\chi)}{\tau w(\chi)} = \frac{\tau(\chi)}{w' \tau(\chi)}$$
-for some $w' \in W(K)$.  Since $\tau$ permutes the regular characters we get that $\tau(\alpha) \in Q_T$.
+for some $w' \in W(K)$.  Since $\tau$ permutes the admissible characters we get that $\tau(\alpha) \in Q_T$.
 \end{proof}
 
-The condition on $\alpha \in Q_T$ is an extremely stringent one, and an abundance of regular
+The condition on $\alpha \in Q_T$ is an extremely stringent one, and an abundance of admissible
 characters will preclude a nontrivial $\alpha$.  We can make this statement precise:
 
 \begin{proposition} \label{pigeonhole}
@@ -754,9 +754,9 @@ Suppose $\#\Thadm > (\# W(K) - 1) \cdot \# \Thinadm$.  Then $Q_T = \{ 1 \}$.
 \begin{proof}
 For $w \in W(K)$, set
 $$S_w = \{\chi \in \Thadm \st  \frac{\chi}{w(\chi)} = \alpha\}.$$
-Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thinadm$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thinadm$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ regular.  We now have
+Note that if $S_1$ is nonempty then we get $\alpha = 1$ immediately, so we may assume the contrary.  Then by the pigeonhole principle, there is a $w \in W(K)$ with $\# S_w > \# \Thinadm$.  Pick $\chi \in S_w$; since $\# S_w > \#\Thinadm$ there is some $\chi' \in S_w$ with $\frac{\chi}{\chi'}$ admissible.  We now have
 $$\frac{\chi}{w(\chi)} = \alpha = \frac{\chi'}{w(\chi')}$$
-and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is regular, we must have $w = 1$ and thus
+and therefore $\frac{\chi}{\chi'}$ is fixed by $w$.  Since $\frac{\chi}{\chi'}$ is admissible, we must have $w = 1$ and thus
 $$\alpha = \frac{\chi}{\chi} = 1.$$
 \end{proof}
 
@@ -838,7 +838,7 @@ $T(L)_{\Gamma}$.
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(\PL)_{\Gamma}$)
 
-\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is regular,
+\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is admissible,
 and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
   is the local Langlands correspondence.
 
@@ -896,7 +896,7 @@ We define equivalence of weak rectifiers as in Definition \ref{def:rectifier}.
 \end{definition}
 
 We note that this definition of minimal admissible pair generalizes
-the definition of admissible pair of Bushnell and Henniart in
+the definition of minimal admissible pair of Bushnell and Henniart in
 the case of unramified elliptic tori (see \cite[\S2.2]{bushnellhenniart1}).
 
 \begin{theorem} \label{thm:unique_semisimple}
@@ -965,8 +965,7 @@ is nontrivial we hope that the recipe for the central character in \cite{grossre
 \begin{remark}
 The behavior of rectifiers under change of group is not yet clear to us.  Perhaps two embeddings of a torus into
 different reductive groups with isomorphic Weyl groups can yield the same rectifier.  Moreover, given an embedding
-$G \subset \GL_n$, a way of relating rectifiers for $G$ to those of $\GL_n$ would allow us to apply the results of
-\cite{bushnellhenniart} in this setting.
+$H \subset G$, it would be interesting to know whether the rectifiers for tori in $H$ and $G$ are related.  In particular, if $G = \GL_n$, this would allow us to apply the results of \cite{bushnellhenniart} in this setting.
 \end{remark}
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
