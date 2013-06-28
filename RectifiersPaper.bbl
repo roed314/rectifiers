@@ -1,0 +1,154 @@
+\begin{thebibliography}{10}
+
+\bibitem{adler:98a}
+Jeffrey Adler.
+\newblock {Refined anisotropic $K$-types and supercuspidal representations}.
+\newblock {\em Pacific J. Math.}, pages 1--32, 1998.
+
+\bibitem{adrian:13a}
+Moshe Adrian.
+\newblock {A new realization of the Langlands correspondence for $PGL(2,F)$}.
+\newblock {\em Journal of Number Theory}, 133:446--474, 2013.
+
+\bibitem{adrian-lansky:ppa}
+Moshe Adrian and Joshua Lansky.
+\newblock {A real groups construction of the tame local Langlands
+  correspondence for $PGSp(4,F)$}.
+\newblock Preprint, arXiv:1209.6045, 2012.
+
+\bibitem{atiyah-wall:CohomologyGrps}
+Michael Atiyah and Charles Wall.
+\newblock Cohomology of groups.
+\newblock In John W.~S. Cassels and Albrecht Frohlich, editors, {\em {Algebraic
+  number theory}}, pages 84--115. Academic Press, London, 1967.
+
+\bibitem{borel:79a}
+Armand Borel.
+\newblock {Automorphic L-functions}.
+\newblock In {\em {Automorphic forms, representations and L-functions}}, number
+  33, part 2 in Proceedings of Symposia in Pure Mathematics, pages 27--61,
+  Providence R.I., 1979. American Math Society.
+
+\bibitem{bosch-lutkebohmert-reynaud:NeronModels}
+Siegfried Bosch, Werner L\"utkebohmert, and Michel Reynaud.
+\newblock {\em {N\'eron models}}.
+\newblock Springer-Verlag, Berlin, 1980.
+
+\bibitem{bushnell-henniart:05a}
+Colin Bushnell and Guy Henniart.
+\newblock {The essentially tame local Langlands correspondence, II: totally
+  ramified representations}.
+\newblock {\em Compositio Math.}, 141:979--1011, 2005.
+
+\bibitem{bushnell-henniart:06a}
+Colin Bushnell and Guy Henniart.
+\newblock {\em {The local Langlands conjecture for $GL(2)$}}.
+\newblock Springer-Verlag, Berlin, 2006.
+
+\bibitem{bushnell-henniart:10a}
+Colin Bushnell and Guy Henniart.
+\newblock {The essentially tame local Langlands correspondence, III: the
+  general case}.
+\newblock {\em Proc. Lond. Math. Soc.}, 101(2):497--553, 2010.
+
+\bibitem{bushnell-kutzko:AdmissibleDual}
+Colin Bushnell and Phil Kutzko.
+\newblock {\em {The admissible dual of $GL(n)$ via compact open subgroups}}.
+\newblock Ann. Math. Studies 129. Princeton U.P., 1993.
+
+\bibitem{carter:93a}
+Roger~W. Carter.
+\newblock {\em {Finite groups of Lie type: conjugacy classes and complex
+  characters}}.
+\newblock Wiley \& Sons, Chichester, 1993.
+
+\bibitem{reeder-debacker:09a}
+Stephen DeBacker and Mark Reeder.
+\newblock {Depth-zero supercuspidal L-packets and their stability}.
+\newblock {\em Annals of Math}, 169(3):795--901, 2009.
+
+\bibitem{gross-reeder:09a}
+Benedict~H. Gross and Mark Reeder.
+\newblock {Arithmetic invariants of discrete Langlands parameters}.
+\newblock {\em Duke Math Journal}, pages 431--508, 2010.
+
+\bibitem{howe:77a}
+Roger Howe.
+\newblock {Tamely ramified supercuspidal representations of $GL_n(F)$}.
+\newblock {\em Pacific J. Math.}, 73:437--460, 1997.
+
+\bibitem{humphreys:LinAlgGrps}
+James~E. Humphreys.
+\newblock {\em {Linear algebraic groups}}.
+\newblock Graduate Texts in Mathematics 21. Springer-Verlag, 1975.
+
+\bibitem{kaletha:13a}
+Tasho Kaletha.
+\newblock {Simple wild $L$-packets}.
+\newblock {\em J. Inst. Math. Jussieu}, 12(1):43--75, 2013.
+
+\bibitem{lang:56a}
+Serge Lang.
+\newblock Algebraic groups over finite fields.
+\newblock {\em Amer. J. Math.}, 78:555--563, 1956.
+
+\bibitem{moy-prasad:96a}
+Allen Moy and Gopal Prasad.
+\newblock {Jacquet functors and unrefined minimal $K$-types}.
+\newblock {\em Comment. Math. Helv.}, 71(1):98--121, 1996.
+
+\bibitem{murnaghan:11}
+Fiona Murnaghan.
+\newblock Parametrization of tame supercuspidal representations.
+\newblock In James Arthur, James~W. Cogdell, Stephen Gelbart, David Goldberg,
+  and Dinakar Ramakrishnan, editors, {\em On certain $L$-functions: a volume in
+  honor of Freydoon Shahidi on the occasion of his 60th birthday}, Clay Math
+  Proc. 13, pages 439--470, 2011.
+
+\bibitem{reeder:08a}
+Mark Reeder.
+\newblock {Supercuspidal $L$-packets of positive depth and twisted Coxeter
+  elements}.
+\newblock {\em J. Reine Angew. Math.}, 620:1--33, 2008.
+
+\bibitem{serre:LocalClassFieldThy}
+Jean-Pierre Serre.
+\newblock Local class field theory.
+\newblock In John W.~S. Cassels and Albrecht Frohlich, editors, {\em {Algebraic
+  number theory}}, pages 129--162. Academic Press, London, 1967.
+
+\bibitem{serre:AlgGrpsClassFields}
+Jean-Pierre Serre.
+\newblock {\em {Algebraic groups and class fields}}.
+\newblock Graduate Texts in Mathematics 117. Springer-Verlag, New York, 1988.
+
+\bibitem{tam:12a}
+Geo Kam-Fai Tam.
+\newblock {\em Transfer relations in essentially tame local Langlands
+  correspondence}.
+\newblock PhD thesis, University of Toronto, 2012.
+
+\bibitem{tits:66a}
+Jacques Tits.
+\newblock Normalisateurs de tores.
+\newblock {\em J. Algebra}, 4:96--116, 1966.
+
+\bibitem{xarles:93a}
+Xavier Xarles.
+\newblock {The scheme of connected components of the N\'eron model of an
+  algebraic torus}.
+\newblock {\em J. Reine Angew. Math.}, 437:167--180, 1993.
+
+\bibitem{yu:03a}
+Jiu-Kang Yu.
+\newblock {Smooth models associated to concave functions in Bruhat-Tits
+  theory}.
+\newblock Preprint, 2003.
+
+\bibitem{zaremsky:ppa}
+Matthew Zaremsky.
+\newblock {Representatives of elliptic Weyl group elements in algebraic
+  groups}.
+\newblock Preprint, arXiv:1109.5487, 2011.
+
+\end{thebibliography}
