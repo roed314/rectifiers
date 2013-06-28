@@ -128,7 +128,7 @@ $\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$.  The image of $\varphi$
 is contained in the normalizer of the dual torus $\hat{T}$, a non-split
 extension of $\Gal(L/K)$ by $\hat{T}$, but not in the $L$-group of any torus.
 
-The group $\Lx / \Nm_{L/K}(\Lx)$ appears as a cover of the elliptic torus $L^1$ of norm $1$ elements in $L$:
+The group $\Lx / \Nm_{L/K}(\Lx)$ is a cover of the elliptic torus $L^1$ of norm $1$ elements in $L$ as follows:
 \begin{align*}
 1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) &\rightarrow L^1 \rightarrow 1 \\
 x \Nm_{L/K}(L^{\times}) &\mapsto x / \sigma(x);
@@ -137,7 +137,7 @@ here $\sigma$ generates $\Gal(L/K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus
 $L^1 \subset \PGL_2(K)$,
 but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  We can obtain a character of $L^1$
-by twisting $\chi$ by another character of
+by twisting $\chi$ by a genuine character of
 $\Lx / \Nm_{L/K}(\Lx)$.  The twist giving the correct supercuspidal representation of $\PGL_2(K)$
 is precisely what appears in Bushnell and Henniart \cite{bushnellhenniart2,bushnellhenniart}.
 
@@ -145,16 +145,17 @@ In this paper, we generalize Bushnell and Henniart's
 rectifier to groups other than $\GL_n(K)$.  In particular, we define rectifiers for
 unramified minisotropic tori $T$ in connected reductive groups $G$.
 Benedict Gross' recent construction of groups of type L provides a framework for
-us to define rectifier and admissible pairs in the general setting.
+us to define rectifiers and admissible pairs in the general setting.
 We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
 and are unique up to equivalence. In the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$, Theorem \ref{thm:bh_agreement}
 gives the compatibility of our rectifier with that of Bushnell and Henniart.
-Note that there is an obstruction to proving compatibility in the positive depth case:
-in depth zero Deligne-Lusztig representations provide a canonical construction
-of supercuspidal representations but in positive depth there are many:
-Adler \cite{adler}, Howe, Bushnell-Henniart, Bushnell-Kutzko, Yu.
-In the positive depth setting the rectifier will depend on the methods
+We note that there is an obstruction to proving compatibility in the positive depth case.
+In the depth zero case, Deligne-Lusztig representations provide a canonical way of
+constructing supercuspidal representations. However, in positive depth there are many:
+Adler \cite{adler}, Howe \cite{howe}, Bushnell-Henniart \cite{bushnellhenniart}, 
+Bushnell-Kutzko \cite{bushnellkutzko}, and Yu \cite{yu}.
+In the positive depth setting, the rectifier will depend on the methods
 used to construct representations from the character of $T(K)$, and
 our rectifier indeed differs from that of Bushnell and Henniart in positive depth.
 
@@ -186,7 +187,7 @@ the theory of ``groups of type L.''  In
 \S\ref{section:gross_debacker_reeder} we describe the relationship between the
 construction of Gross, via groups of type L, and the constructions of
 DeBacker-Reeder and Reeder.  In \S\ref{Q_T} we study how translation by a character affects
-the association $\chi \mapsto \Lpack(\xi \cdot \mu_\xi)$.
+the association $\chi \mapsto \Lpack(\chi)$.
 In \S\ref{section:general_rectifiers} we
 introduce our notion of rectifier and prove our main result, Theorem \ref{thm:unique_semisimple}.
 Finally, in \S\ref{section:BH_compat} we show that our rectifier is compatible with
@@ -195,8 +196,7 @@ supercuspidal representations of $\GL_n(K)$.
 
 \subsection*{Acknowledgements}
 
-This paper has benefited from conversations with Gordan Savin, Jeffrey Adams,
-Geo Kam Fai, Andrew Fiori, Jeffrey Adler, Guy Henniart, and Colin Bushnell.  We thank them all.
+This paper has benefited from conversations with Jeffrey Adams, Jeffrey Adler, Colin Bushnell, Geo Kam Fai, Andrew Fiori, Guy Henniart, Gordan Savin.  We thank them all.
 
 \section{Notation and Preliminaries} \label{section:notation}
 
@@ -1080,6 +1080,10 @@ so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde
 \bibitem{bushnellhenniart}
   Colin Bushnell, Guy Henniart,
   \emph{The essentially tame local Langlands correspondence, III: the general case}, Proc. Lond. Math. Soc. (3) 101 (2010), no. 2, 497–553.
+
+\bibitem{bushnellkutzko}
+  Colin Bushnell, Phil Kutzko,
+  \emph{The admissible dual of $GL(n)$ via compact open subgroups.} Ann. Math. Studies 129. Princeton Univ. Press 1993.
 
 \bibitem{carter}
   Roger Carter,
