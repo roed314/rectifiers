@@ -286,29 +286,27 @@ construct a map (see \cite{bushnell-henniart:10a})
 \end{array} \right\}
 \end{equation*}
 $$\hspace{-.5in} (L/K, \xi) \mapsto \pi_{\xi}$$
-The problem is that the map $$\varphi_{\xi} \mapsto \pi_{\xi}$$
+However, the map $$\varphi_{\xi} \mapsto \pi_{\xi}$$
 is not the local Langlands
 correspondence because $\pi_{\xi}$ has the wrong central character.
 Instead, the local Langlands correspondence is given by
-
 \begin{equation}\label{llcgln}
 \varphi_{\xi} \mapsto \pi_{\xi \cdot {}_K \mu_{\xi}} \tag{$\star$}
 \end{equation}
-
 for some subtle finite order
 character ${}_K \mu_{\xi}$ of $\Lx$.  Since we will not be changing $K$
 in this paper we will write $\mu_\xi$ for ${}_K \mu_{\xi}$.
 
 The relation $\star$ does not determine $\mu_{\xi}$ uniquely.  As pointed out
 in \cite{bushnell-henniart:10a}, the obstruction to uniqueness revolves around the
-group $\GL_2(\mathbb{F}_3)$.  Bushnell and Henniart therefore make the following definition.
+group $\GL_2(\mathbb{F}_3)$.  Bushnell and Henniart therefore make the following definition \cite[Def. 1]{bushnell-henniart:10a}.
 
 \begin{definition}\label{rectifierbushnellhenniart}
-Let $L/K$ be a finite, tamely ramified field extension, of degree $n$.  A \emph{rectifier}
+Let $L/K$ be a finite, tamely ramified field extension of degree $n$.  A \emph{rectifier}
 for $L/K$ is a function
 $$\bmu : (L/K, \xi) \mapsto \mu_{\xi}$$
-which attaches to each admissible pair $(L/K, \xi)$, a character $\mu_{\xi}$ of $L^{\times}$
-satisfying the following conditions.
+which attaches to each admissible pair $(L/K, \xi)$ a character $\mu_{\xi}$ of $L^{\times}$
+satisfying the following conditions:
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified.
 \item Writing $\xi' = \xi \cdot \mu_{\xi}$, the pair $(L/K, \xi')$ is admissible and
@@ -319,7 +317,7 @@ tamely ramified, then $ \mu_{\xi_1} =  \mu_{\xi_2}$.
 \end{enumerate}
 \end{definition}
 
-Bushnell and Henniart then prove (see \cite{bushnell-henniart:10a}):
+Bushnell and Henniart then prove \cite[Thm. A]{bushnell-henniart:10a}:
 
 \begin{theorem}
 Any finite, tamely ramified, field extension $L/K$ admits a unique rectifier
@@ -328,17 +326,14 @@ $\bmu : (L/K, \xi) \mapsto \mu_{\xi}$.
 
 Both the description of and the
 intuition behind the rectifiers $\bmu$ have been
-studied (see \cite{bushnell-henniart:10a}, \cite{tam:12a}, \cite{adrian:13a}).  As stated in
-the introduction, the goal of this paper is to initiate a program to
-generalize this rectifier to groups outside of $\GL_n(K)$.
-
-We will need a description of the characters $\mu_{\xi}$ in certain cases.
+studied (see \cite{bushnell-henniart:10a}, \cite{tam:12a}, \cite{adrian:13a}).  In order to
+generalize rectifiers to groups other than $\GL_n(K)$ we
+will will need a description of the characters $\mu_{\xi}$ in certain cases.
 Let us recall some notions from \cite[\S8]{bushnell-henniart:10a}.
 
-Let $(L/K,\xi)$ be an admissible pair, and let $i \in \mathbb{Z}, i \geq 0$.
-Then there is a unique sub-extension $L_i/K$ of $L/K$ such that
-$\xi|_{1 + \PL^{i+1}}$ factors through the norm $\Nm_{L/L_i}$,
-and which is minimal for this property.  We say that $i \in \mathbb{Z}$
+Let $(L/K,\xi)$ be an admissible pair and let $i \in \ZZ_{\ge 0}$.
+There is a minimal sub-extension $L_i/K$ of $L/K$ such that
+$\xi|_{1 + \PL^{i+1}}$ factors through the norm $\Nm_{L/L_i}$.  We say that $i \in \mathbb{Z}$
 is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
 
 \begin{proposition}\label{prop:BH_result1}
@@ -355,11 +350,11 @@ Therefore, by \cite[Proposition 21]{bushnell-henniart:10a}, we have the result.
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
-Let $T$ be a torus defined over $K$.    Let $n$ be such that $K_n$ is the maximal
-unramified subextension of the splitting field $L$, and set $I = \Gal(L/K_n)$.
-
+Let $T$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
+unramified subextension $L/K$ and set $I = \Gal(L/K_n)$.
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
-over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.  As a consequence of the N\'eron mapping
+over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
+As a consequence of the N\'eron mapping
 property, we may identify $\TT(\OK)$ with $T(K)$.  The connected
 component of the identity, $\TT^\circ$, cuts out a subgroup
 $T(K)_0 = \TT^\circ(\OK)$ of $T(K)$; we also write $T(K_n)_0$ for
@@ -372,8 +367,8 @@ embedding $T$ into an induced torus and defining the filtration of
 $\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu:03a}
 describes a different filtration, agreeing with that of Moy and Prasad
 in the case of tame tori but with nicer features in the presence of wild
-ramification.  Let $\TT_r$ be the integral models of $T$ defined in Yu's
-minimal congruent filtration, and let $\{T(K)_r\}_{r \ge 0}$ and
+ramification.  Let $\{\TT_r\}_{r \ge 0}$ be the integral models of $T$ defined in Yu's
+minimal congruent filtration and let $\{T(K)_r\}_{r \ge 0}$ and
 $\{T(K_n)_r\}_{r \ge 0}$ be the corresponding filtrations of $T(K)$ and
 $T(K_n)$.
 
@@ -447,8 +442,8 @@ T(\PL^r) &= T(L)_r\qquad\,\,\mbox{for $r > 0$}.
 
 \section{Groups of type L} \label{section:groups_of_type_L}
 
-We now review the theory of ``groups of type L'' due to Benedict
-Gross.  For a torus $T$ over $K$, recall that the dual torus $\hat{T}$ is equipped with
+We now review the theory of groups of type L due to Benedict
+Gross.  For a torus $T$ over $K$ recall that the dual torus $\hat{T}$ is equipped with
 an action of $\Gamma$.
 
 \begin{definition}
@@ -458,42 +453,40 @@ A \emph{group of type L} is a group extension of $\Gamma$ by $\hat{T}$.
 For such a group $D$ we have by definition an exact sequence
 $$1 \rightarrow \hat{T} \rightarrow D \rightarrow \Gamma \rightarrow 1.$$
 
-We now describe how, given a Langlands parameter
-$$\varphi : \Weil_K \rightarrow D,$$
-where $D$ is a group of type L, we can naturally attach a character of the coinvariants
-$T(L)_{\Gamma}.$
+We now describe how we can naturally attach a character of the coinvariants
+$T(L)_{\Gamma}$ to a Langlands parameter
+$$\varphi : \Weil_K \rightarrow D$$
+with values in a group of type L.
 Restricting $\varphi$ to $\Weil_L$ we get a homomorphism
-$$\varphi|_{\Weil_L} : \Weil_L \rightarrow \hat{T}.$$
-By the Langlands correspondence for tori, this gives us a character
+$$\varphi|_{\Weil_L} : \Weil_L \rightarrow \hat{T},$$
+and by the Langlands correspondence for tori a character
 $\xi_{\varphi} : T(L) \rightarrow \CCx$.  Since $\varphi|_{\Weil_L}$ extends
-to $\varphi$, one can see that
+to $\varphi$ we have that
 $$\xi_{\varphi}(t^{\sigma}) = \xi_{\varphi}(t)\ \mbox{for all $\sigma \in \Gamma$.}$$
-Therefore, $\xi_{\varphi}(t^{\sigma - 1}) = 1$ for all $\sigma \in \Gamma$.
-Thus, $\xi_{\varphi}$ is trivial on the augmentation ideal $I_{\Gamma}(T(L))$
-and gives $$\xi_{\varphi} : T(L)_\Gamma \rightarrow \CCx$$ Invariants
+Thus $\xi_{\varphi}$ is trivial on the augmentation ideal $I_{\Gamma}(T(L))$
+and descends to $$\xi_{\varphi} : T(L)_\Gamma \rightarrow \CCx.$$
+
+Invariants
 and coinvariants are related by the norm map
-$$\Nm : T(L) \rightarrow T(K)$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t)$$
 in the Tate cohomology sequence
 $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
-  = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1$$
-(note that the norm map $\Nm$ factors to $T(L)_{\Gamma}$).
-We note that $T(L)_{\Gamma}$ is a cover of
-$\Nm(T(L)_{\Gamma})$, which is a subgroup of $T(K)$.  It is sometimes
-the case that $\Nm$ is surjective, in which case $\xi_{\varphi}$ is then a
-character of $T(L)_{\Gamma}$, which is a cover of $T(K)$.
+  = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1.$$
+We will assume in \S \ref{section:general_rectifiers} that $\HT{0}(\Gamma,T(L)) = 0$, in which case
+$\xi_\varphi$ is a character of a cover of $T(K)$.
 
 We will need the following structural result about Langlands
-parameters mapping to groups of type L later.  Suppose that $L/K$ is now unramified.
-Suppose $\varphi$ and $\varphi'$ are two Langlands parameters,
+parameters mapping to groups of type L for the proof of
+Proposition \ref{prop:existenceofrectifier}.  Suppose now that $L/K$ is unramified and that
+$\varphi$ and $\varphi'$ are two Langlands parameters
 with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
-Let $\xi_{\varphi}$ and $\xi_{\varphi'}$ be the associated characters of $T(L)_{\Gamma}$.
+Let $\xi$ and $\xi'$ be the associated characters of $T(L)_{\Gamma}$.
 
 \begin{lemma} \label{lem:toral_modification}
-$\xi_{\varphi}$ and $\xi_{\varphi'}$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
+$\xi$ and $\xi'$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 \end{lemma}
 
 \begin{proof}
-It suffices to prove that $\xi_{\varphi'} \cdot \xi_{\varphi}^{-1}$ vanishes on
+It suffices to prove that $\xi' \cdot \xi^{-1}$ vanishes on
 $\ker(\Nm : T(L) \rightarrow T(K))$.  Define $g \in D$ and $t \in \hat{T}$ by
 $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 \begin{align*}
@@ -507,13 +500,13 @@ $\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_i$ be the associated character
 of $T(L)$.  By \cite[Lem. 4.3.1]{reeder-debacker:09a}, $\xi_i = \xi_0 \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \begin{align*}
-\xi_{\varphi'}(x) \xi_{\varphi}(x)^{-1} &= \prod_{i=0}^{n-1} \xi_i(x) \\
+\xi'(x) \xi(x)^{-1} &= \prod_{i=0}^{n-1} \xi_i(x) \\
 &= \xi_0 \left(\prod_{i=0}^{n-1}\Fr^i(x)\right) \\
 &= 1.\\
 \end{align*}
 \end{proof}
 
-We will also need the following lemma, in order to define our notion of admissible pair
+We will also need the following lemma in order to define our notion of admissible pair
 in \S\ref{section:general_rectifiers}.
 
 \begin{lemma} \label{lem:weyl_groups}
@@ -522,8 +515,8 @@ $K$-torus of $G$.
 \begin{enumerate}
 \item $\Normalizer{T(K)}{G(L)} / T(L) \cong W(K)$.
 \item The standard action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
-well-defined actions of $\Normalizer{T(L)}{G(L)}^\Gamma / T(K)$ and $W(K)$
-on $T(L)$, which factor naturally to actions on $T(L)_\Gamma$.
+actions of $\Normalizer{T(L)}{G(L)}^\Gamma / T(K)$ and $W(K)$
+on $T(L)$ which factor naturally to actions on $T(L)_\Gamma$.
 \end{enumerate}
 \end{lemma}
 
@@ -546,8 +539,8 @@ type L.  Let $L,K,T,\hat{T}, \Gamma, \xi_{\varphi}$ be as in
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
-DeBacker--Reeder and Reeder (in \cite{reeder-debacker:09a}
-and \cite{reeder:08a}) associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
+DeBacker--Reeder \cite{reeder-debacker:09a} and Reeder \cite{reeder:08a}
+associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 
 Let us fix a splitting $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
 for the dual group $\hat{G}$.  Here $\{ X_{\alpha} \}$ is a set of root vectors
@@ -562,8 +555,8 @@ $\sigma_{\alpha} = \phi_{\alpha}\mat{0}{1}{-1}{0}$.
   generated by $\{\sigma_{\alpha} \}$ for $\alpha$ simple.
 \end{definition}
 
-For each simple root $\alpha$, let $m_{\alpha} = \sigma_{\alpha}^2 = \alpha^{\vee}(-1)$.
-Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
+For each simple root $\alpha$, let $m_{\alpha} = \sigma_{\alpha}^2 = \alpha^{\vee}(-1)$ and
+let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 
 \begin{theorem}{(\cite{tits:66a})}
 \begin{enumerate}
@@ -581,13 +574,13 @@ Let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 Given $\hat{u} \in \hat{W}$, let $\tilde{u}$ be its canonical lift to $\widetilde{W}$.
 We define a homomorphism $\varphi_{\hat{u}} : \Weil_K \rightarrow {}^L G$ by
 \begin{enumerate}
-\item $\varphi_{\hat{u}}|_{I_K} \equiv 1$
-\item $\varphi_{\hat{u}}(\Fr) = \hat{\theta} \tilde{u}$
+\item $\varphi_{\hat{u}}|_{I_K} \equiv 1$,
+\item $\varphi_{\hat{u}}(\Fr) = \hat{\theta} \tilde{u}$.
 \end{enumerate}
 \end{definition}
 
 By
-\S\ref{section:groups_of_type_L}, $\varphi$ and $\varphi_{\hat{w}}$ gives rise to characters
+\S\ref{section:groups_of_type_L}, $\varphi$ and $\varphi_{\hat{w}}$ give rise to characters
 $\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$, respectively.
 
 \begin{lemma} \label{lem:GDR_compat}
@@ -617,7 +610,7 @@ $T(\OK)$ via this isomorphism.  But this is exactly how the character
 $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
 \end{proof}
 
-\begin{proposition}\label{existenceofrectifier}
+\begin{proposition}\label{prop:existenceofrectifier}
 If $G$ is semisimple, then $\xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1} = \chi_{\varphi} \circ \Nm$.
 \end{proposition}
 
@@ -894,7 +887,7 @@ sending Frobenius to the canonical lift
 $\tilde{w} \in \widetilde{W}$ of $\hat{w} \in \hat{W}$, and by setting
 $\varphi_{\hat{w}}$ to be trivial on $I_K$.
 If $G$ is semisimple,
-we proved in Proposition \ref{existenceofrectifier}
+we proved in Proposition \ref{prop:existenceofrectifier}
 that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$$
 satisfies condition (2) of Definition \ref{def:rectifier}..  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
 $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
