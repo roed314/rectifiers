@@ -264,14 +264,21 @@ In this section we recall the rectifier of Bushnell and Henniart and their const
 essentially tame local Langlands correspondence for $\GL_{n}(K)$.
 An irreducible smooth representation of the Weil group $\Weil_K$ of $K$ is
 called \emph{essentially tame} if its restriction to wild inertia is a
-sum of characters.  There is a natural bijection
-$\varphi_{\xi} \leftrightarrow (L/K, \xi)$ between essentially tame
+sum of characters.
+\begin{definition}\label{admissiblepairhowe}
+Let $L/K$ be an extension of degree $n$, with $n$ coprime to $p$.  A character
+$\xi$ of $L^\times$ is \emph{admissible} if
+\begin{enumerate}
+\item $\xi$ doesn't come via the norm from a subfield of $L$ containing $K$,
+\item If $\xi|_{1 + \PL}$ comes via the norm from a subfield $L \supset E \supset K$, then
+$L/E$ is unramified.
+\end{enumerate}
+\end{definition}
+There is a natural bijection
+$\varphi_{\xi} \leftrightarrow (L/K, \xi)$ between irreducible smooth essentially tame
 $\varphi_{\xi} : \Weil_K \rightarrow \GL_{n}(\mathbb{C})$ and
 \emph{admissible pairs} $(L/K, \xi)$.
-Here, $L/K$ is a degree $n$ separable extension
-and $\xi$ is a character (satisfying certain conditions) of $\Lx$.
-Note that one can view
-$L^{\times}$ as a maximal elliptic torus in $\GL_{n}(K)$.  Bushnell and Henniart
+Bushnell and Henniart
 construct a map (see \cite{bushnell-henniart:10a})
 \begin{equation*}
 \left\{
@@ -344,7 +351,7 @@ is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
 \end{proposition}
 
 \begin{proof}
-It is clear that the set of jumps of $\xi$ over $F$ is empty.
+It is clear that the set of jumps of $\xi$ over $K$ is empty.
 Therefore, by \cite[Proposition 21]{bushnell-henniart:10a}, we have the result.
 \end{proof}
 
