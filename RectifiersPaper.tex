@@ -78,7 +78,7 @@
 \newcommand{\Normalizer}[2]{\operatorname{N}_{#2}(#1)}
 
 \newcommand{\Thadm}{T^*_{\operatorname{adm}}}
-\newcommand{\Thinadm}{T^*_{\operatorname{inadm}}}
+\newcommand{\Thinadm}{T^*_{\operatorname{in}}}
 \newcommand{\hatT}{T^*}
 
 \begin{document}
@@ -694,7 +694,7 @@ sets is finite since they may be identified with characters of $T(k)$.
 \begin{definition}
 Write $Q_T$ for the set of $\alpha \in \hatT$ with the following property:
 \begin{itemize}
-\item For every $\chi \in \Thadm$ there is a $w \in W(K)$ with $\frac{\chi}{w(\chi)} = \alpha$.
+\item For every $\chi \in \Thadm$ there is a $w \in W(K)$ with $\alpha = \frac{\chi}{w(\chi)}$.
 \end{itemize}
 \end{definition}
 
@@ -715,7 +715,8 @@ $\alpha, \alpha' \in Q_T$ and $\chi \in \Thadm$.  Then there are $w, w' \in W(K)
 \frac{w(\chi)}{w'(w(\chi))} &= \alpha'.
 \end{align*}
 Multiplying the two relations yields $\frac{\chi}{w'w(\chi)} = \alpha\alpha'$, so
-$\alpha\alpha' \in Q_T$.  We finish by noting that $Q_T$ is finite and thus closed under inversion.
+$\alpha\alpha' \in Q_T$.  We finish by noting that $Q_T$ is finite and thus closure under
+multiplication implies closure under inversion.
 
 Finally, suppose $\tau \in W(K)$.  Given $\chi \in \Thadm$ with $\alpha = \frac{\chi}{w(\chi)}$ we have
 $$\tau(\alpha) = \frac{\tau(\chi)}{\tau w(\chi)} = \frac{\tau(\chi)}{w' \tau(\chi)}$$
@@ -753,7 +754,7 @@ $Q_{T_q} = \{ 1 \}$ (regardless of the $G$ in which $T_q$ is embedded).
 We will write $T$ for a general torus in the family and $r$ for the common dimension.
 Note that $\hatT$ is the set of $\Fq$ points of a dual torus, also of rank $r$ over $\Fq$.
 For $w \in W(K)$ with $w \ne 1$ the centralizer $\Z_{\hatT}(w)$ is a proper $F$-stable
-subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite[3.3.5]{carter:93a}
+subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite[3.3.5]{carter:93a},
 $\# \hatT$ is a polynomial in $q$ of degree $r$ and $\# \Z_{\hatT}(w)$ is a polynomial
 in $q$ of degree at most $r-1$.  Thus the ratio
 $$\frac{\# \Thadm}{\# \Thinadm} = \frac{\# \hatT - \sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}{\sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}$$
@@ -761,7 +762,7 @@ grows without bound as $q$ does.  There are finitely many possibilities for the 
 Weyl group of $T$, so Proposition \ref{pigeonhole} gives the desired result.
 \end{proof}
 
-In computing $Q_T$ for small $q$ the following result is useful
+In computing $Q_T$ for small $q$ the following result is useful:
 
 \begin{proposition} \label{orderdiv}
 If $\alpha \in Q_T$ has order $d$ and $\chi \in \Thadm$ has order $m$ then $d$ divides $m$.
@@ -961,19 +962,19 @@ $H \subset G$, it would be interesting to know whether the rectifiers for tori i
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
 
 In this section we show that our function $\mumin$
-agrees with the rectifier of Bushnell/Henniart in the depth
+agrees with the rectifier of Bushnell-Henniart in the depth
 zero setting: see Theorem \ref{thm:bh_agreement}.
-Let $L/K$ be the degree $n$ unramified extension of $K$.
-Let $T = \Res_{L/K}(\Gm)$.  We first compute the Tate cohomology groups of $T$.
+Let $L = K_n$ and set 
+$T = \Res_{L/K}(\Gm)$.  We begin by computing the Tate cohomology groups of $T$.
 
 \begin{proposition}
 $\HT{0}(\Gamma, X_*(T)) = 0$.
 \end{proposition}
 
 \begin{proof}
-$\Gamma$ acts on $X_*(T)$ by cyclic shift.
-Therefore, $X_*(T)^{\Gamma} = \mathbb{Z}$, embedded diagonally in
-$\mathbb{Z}^n = X_*(T)$.  Note that $$\Nm(1,0,0,\cdots,0) = (1,1,\cdots,1),$$ so
+Since $\Gamma$ acts on $X_*(T)$ by permuting basis vectors,
+$X_*(T)^{\Gamma}$ is the copy of $\ZZ$ embedded diagonally in
+$X_*(T) = \mathbb{Z}^n$.  Note that $$\Nm(1,0,0,\cdots,0) = (1,1,\cdots,1),$$ so
 $X_*(T)^{\Gamma} \subset \Nm(X_*(T))$.
 \end{proof}
 
@@ -990,11 +991,11 @@ $\tau \in \Gamma$, since $\Gamma$ acts by cyclic shift.  Thus $\ker(\Nm) \subset
 
 The Tate cohomology exact sequence for $T$ therefore reduces to
 $$1 \rightarrow T(L)_{\Gamma} \xrightarrow{\sim} T(K) \rightarrow 1$$ by
-Corollary \ref{cor:cohom_tori}.  We need a basic result about powers of lifts
+Corollary \ref{cor:cohom_tori}.  We now need a basic result about powers of lifts
 of Coxeter elements in $\GL_{n}(\CC)$.
 
 \begin{proposition}\label{prop:powers_of_lifts}
-Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$.  Let $\tilde{w}$ be the
+Let $\hat{w}$ be a Coxeter element of $\GL_{n}(\CC)$, and let $\tilde{w}$ be the
 canonical lift of $\hat{w}$ to $\widetilde{W}$. Then $\tilde{w}^n = (-Id)^{n-1}$, where $Id$
 denotes the identity element in $\GL_{n}(\CC)$.
 \end{proposition}
@@ -1027,7 +1028,7 @@ unramified.
 
 \begin{theorem} \label{thm:bh_agreement}
   If $G = \GL_{n}(K)$, the function $(T,\xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$ agrees with
-  the rectifier of Bushnell/Henniart, when $(T,\xi) \in \Pmin(K)$ such that $\xi$ is trivial
+  the rectifier of Bushnell-Henniart, when $(T,\xi) \in \Pmin(K)$ such that $\xi$ is trivial
   on $T(\PL)_{\Gamma}$.
 \end{theorem}
 
