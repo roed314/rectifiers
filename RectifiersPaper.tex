@@ -655,12 +655,17 @@ $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
 extension $L$ (see \cite[\S3]{reeder:08a}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
-The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
-denote by $P_G(K)$ the set of admissible pairs in $G$. We call
-two admissible pairs $(T, \xi)$ and $(T', \xi')$ \emph{isomorphic} if there
+\begin{enumerate}
+\item The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
+by any nontrivial element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
+denote by $P_G(K)$ the set of admissible pairs in $G$.
+\item We call two admissible pairs $(T, \xi)$ and $(T', \xi')$ \emph{isomorphic} if there
 exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
 for all $t \in T(K)$.
+\end{enumerate}
+Similarly, we will call a character of $T(K)$ \emph{admissible} if
+it is not fixed by any nontrivial element of $W(K)$
+(c.f. \cite[p. 802]{reeder-debacker:09a} and \cite[\S3]{reeder:08a})
 \end{definition}
 
 Note that this definition of admissible pair generalizes
@@ -676,12 +681,10 @@ on a character $\xi$ of $T(K) = \Lx$:
 \item $\xi$ factors through the norm map $\Nm_{L/M}$ for some intermediate field $K \subseteq M \subset L$.
 \end{enumerate}
 
-As for characters of $T(L)_\Gamma$, we will call a character of $T(K)$ \emph{admissible}
-if it is not fixed by any nontrivial element
-of the rational Weyl group $W(K)$ (see \cite[p. 802]{reeder-debacker:09a} and \cite[\S3]{reeder:08a}).
+Note that for non-adjoint groups it is not sufficient to consider only reflections.
 For example, the depth zero character of the split torus in $\SL_3(\QQ_7)$ inflated from
 $$\begin{pmatrix} 3^x & & \\ & 3^y & \\ & & 3^{-x-y} \end{pmatrix} \mapsto \zeta_6^{2x + 4y}$$
-is fixed by a 3-cycle and thus not admissible.
+is fixed by a 3-cycle in the Weyl group and thus not admissible.
 
 In the next section we will be particularly interested in depth zero characters; write $\hatT$ for the set of
 depth zero characters of $T(\OK)$, $\Thadm$ for the admissible
