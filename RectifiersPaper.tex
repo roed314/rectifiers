@@ -640,7 +640,16 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
-We note that an unramified compact mod center torus might not have trivial $\HT{0}$, which is one reason why we assumed $G$ to be semisimple.
+We note that in the
+case that $G$ is semisimple, there was nothing special about
+the canonical Tits group lift $\tilde{w}$ in the definition of $\varphi_{\hat{w}}$.
+In fact, by Lemma \ref{lem:toral_modification}, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
+for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
+and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
+However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
+consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$ (see \S\ref{section:BH_compat}).
+
+We also note that an unramified compact mod center torus might not have trivial $\HT{0}$, which is one reason why we assumed $G$ to be semisimple in Proposition \ref{prop:existenceofrectifier}.
 
 \section{$L$-packets fixed under translation by a character}\label{Q_T}
 
@@ -887,7 +896,7 @@ We define equivalence of weak rectifiers as in Definition \ref{def:rectifier}.
 
 We note that this definition of minimal admissible pair generalizes
 the definition of minimal admissible pair of Bushnell and Henniart in
-the case of unramified elliptic tori (see \cite[\S2.2]{bushnell-henniart:05a}).
+the case of unramified tori (see \cite[\S2.2]{bushnell-henniart:05a}).
 
 \begin{theorem} \label{thm:unique_semisimple}
 For $G$ semisimple and $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique weak rectifier up to equivalence.
@@ -905,7 +914,7 @@ $\varphi_{\hat{w}}$ to be trivial on $I_K$.
 If $G$ is semisimple,
 we proved in Proposition \ref{prop:existenceofrectifier}
 that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$$
-satisfies condition (2) of Definition \ref{def:rectifier}..  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
+satisfies condition (2) of Definition \ref{def:rectifier}.  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
 $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
 satisfies condition (1).  Finally, $\xi_{\varphi_{\hat{w}}}$ only depends on $T$,
 and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
@@ -939,23 +948,16 @@ a character on $T(L)_\Gamma$, vanishing on $\HT{-1}(\Gamma, T(L))$.  We get that
 and thus $\bmu$ is equivalent to $\bmu'$.
 \end{proof}
 
-We note that in the
-case that $G$ is semisimple, there was nothing special about
-the canonical Tits group lift $\tilde{w}$ in the definition of $\varphi_{\hat{w}}$.
-In fact, by the same arguments, $\xi_{\varphi_{\hat{w}}} = \xi_{\varphi'}$
-for any Langlands parameter $\varphi'$ such that $\varphi'|_{I_K} \equiv 1$
-and $\varphi'(\Fr) = w'$, where $w'$ is any lift of $\hat{w}$ to $\hat{N}$.
-However, we will see that the canonical Tits group lift $\tilde{w}$ is forced upon us when we
-consider groups that are not necessarily semisimple, such as $\GL_{n}(K)$.
-
-Note that the condition $\HT{0}(\Gamma, T(L)) = 0$ was necessary in order to obtain a character on $T(K)$ rather
+\begin{remark}
+\begin{enumerate}
+\item The condition $\HT{0}(\Gamma, T(L)) = 0$ was necessary in order to obtain a character on $T(K)$ rather
 than the image of the norm map $T(L) \mapsto T(K)$.  For non-semisimple groups where $\HT{0}(\Gamma, T(L))$
 is nontrivial we hope that the recipe for the central character in \cite{gross-reeder:09a} will provide an extension to all of $T(K)$.
-
-\begin{remark}
-The behavior of rectifiers under change of group is not yet clear to us.  Perhaps two embeddings of a torus into
+\item The rectifier in our setting is a constant function.  We expect that for ramified tori, this will not be the case.
+\item The behavior of rectifiers under change of group is not yet clear to us.  Perhaps two embeddings of a torus into
 different reductive groups with isomorphic Weyl groups can yield the same rectifier.  Moreover, given an embedding
 $H \subset G$, it would be interesting to know whether the rectifiers for tori in $H$ and $G$ are related.  In particular, if $G = \GL_n$, this would allow us to apply the results of \cite{bushnell-henniart:10a} in this setting.
+\end{enumerate}
 \end{remark}
 
 \section{Compatibility with Bushnell-Henniart} \label{section:BH_compat}
