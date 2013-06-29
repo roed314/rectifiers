@@ -1,6 +1,7 @@
 \documentclass[11pt]{amsart}
 \usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
 \usepackage{mathtools}
+%\usepackage{hyperref}
 
 \theoremstyle{plain}
 \newtheorem{iassumption}{Assumption}
@@ -138,7 +139,7 @@ $L^1 \subset \PGL_2(K)$,
 but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  We can obtain a character of $L^1$
 by twisting $\chi$ by a genuine character of
 $\Lx / \Nm_{L/K}(\Lx)$.  The twist giving the correct supercuspidal representation of $\PGL_2(K)$
-is precisely what appears in Bushnell and Henniart \cite{bushnell-henniart:06a,bushnell-henniart:10a}.
+is precisely what appears in Bushnell and Henniart \cite{bushnell-henniart:06a, bushnell-henniart:10a}.
 
 In this paper, we generalize Bushnell and Henniart's
 rectifier to groups other than $\GL_n(K)$.  In particular, we define rectifiers for
@@ -790,20 +791,14 @@ the statement that $Q_T$ is trivial when $T$ is a $K$-minisotropic torus in $\GL
 \section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
 
 Suppose that $G$ is a connected reductive group defined over a
-$p$-adic field $K$.  Fix a $K$-torus $T$, contained in $G$, and suppose
-that the splitting field of $T$ is $L$.
+$p$-adic field $K$.  Fix an unramified $K$-torus $T \subset G$ with splitting field $L$.
 Let $\varphi : \Weil_K \rightarrow {}^L G$ be a
 Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
-through a group of type L for $T$.  We note that every Langlands
-parameter that factors through the normalizer of a maximal torus will
-factor through a group of type L for some torus.
-It is more
-convenient however, for our purposes, to begin by fixing the torus beforehand.
+through a group of type L for $T$.  Any Langlands parameter with image in the normalizer
+of a maximal torus will factor in this way for some $T$.
 
 As in \S\ref{section:groups_of_type_L}, one can canonically
-associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$,
-the group of coinvariants of $T(L)$ with respect
-to $\Gamma = \Gal(L/K)$.
+associate to $\varphi$ a character $\xi_{\varphi}$ of $T(L)_{\Gamma}$.
 Recall again the Tate cohomology sequence
 $$1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
 = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1.$$
@@ -812,20 +807,17 @@ $T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
 $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{reeder-debacker:09a}).
-If $G$ happens to be $\GL_n$, one can compute that
-$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ (see \S\ref{section:BH_compat}),
-so that
-$T(L)_{\Gamma} \cong T(K)$ can be identified with $\Lx$, and
-$(L/K, \xi_{\varphi})$ is an admissible pair.  To construct the local Langlands
-correspondence, one would then proceed (as in \S\ref{section:BH_recall}) to
-attach the supercuspidal representation $\pi_{\xi_{\varphi} \cdot
+When $G = \GL_n$ we show in \S\ref{section:BH_compat} that 
+$\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ and thus
+$T(L)_{\Gamma} \cong T(K) \cong \Lx$.  In this case
+$(L/K, \xi_{\varphi})$ is an admissible pair; to construct the local Langlands
+correspondence one proceeds as in \S\ref{section:BH_recall} by
+attaching the supercuspidal representation $\pi_{\xi_{\varphi} \cdot
   \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Bushnell and Henniart.
 
-If $G$ were arbitrary, then in analogy to the case of $\GL_{n}(K)$, there
-exist (in certain cases) constructions of supercuspidal $L$-packets
-$\Lpack(\chi)$ associated to characters $\chi$ of $T(K)$ (see
-\cite{reeder-debacker:09a}, \cite{kaletha:13a}, \cite{reeder:08a}).  However, as we
-have seen, a Langlands parameter $\varphi$ does not naturally
+For other groups $G$ there are some constructions of supercuspidal $L$-packets $\Lpack(\chi)$
+from characters $\chi$ of $T(K)$ \cite{reeder-debacker:09a, kaletha:13a, reeder:08a}.
+However, as we have seen, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.
 
@@ -838,19 +830,22 @@ $T(L)_{\Gamma}$.
 
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
-  $T(\PL)_{\Gamma}$)
+  $T(\PL)_{\Gamma}$),
 
 \item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is admissible,
 and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
-  is the local Langlands correspondence.
+  is the local Langlands correspondence,
 
-\item If $(T, \xi_i), i = 1,2$ are admissible pairs  such that
-$\xi_1^{-1} \xi_2$ is tamely ramified, then
+\item If $(T, \xi_1)$ and $(T, \xi_2)$ are admissible pairs such that
+$\xi_1^{-1} \xi_2$ is tamely ramified then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
 We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
-if there is some $\alpha \in Q_T$ with $\mu_\xi' = \alpha \mu_\xi$ for depth zero $\xi$
-and $\mu_\xi' = \mu_\xi$ for positive depth $\xi$.
+if there is some $\alpha \in Q_T$ so that
+\begin{align*}
+\mu_\xi' &= \alpha \mu_\xi \qquad \mbox{for depth zero $\xi$,} \\
+\mu_\xi' &= \mu_\xi \qquad\ \  \mbox{for positive depth $\xi$.}
+\end{align*}
 
 \end{definition}
 
@@ -864,16 +859,12 @@ multiple equivalent rectifiers.
 For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
 \end{conjecture}
 
-We note that as the local Langlands correspondence is not known in general, we must restrict
+We note that, as the local Langlands correspondence is not known in general, we must restrict
 ourselves to cases where supercuspidal $L$-packets have been constructed.
 Since we are in the present paper considering the situation when $T$ is unramified,
 we consider those $L$-packets constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
-We note that not all possible admissible pairs arise in the settings
-of \cite{reeder-debacker:09a} and \cite{reeder:08a}, as can be seen in the case of $\GL_n$.
-Since supercuspidal $L$-packets have not been constructed in the generality that
-we need in order to prove this conjecture, we determine
-the rectifier in the situation where supercuspidal $L$-packets have been
-constructed.
+In the setting of Reeder \cite{reeder:08a},
+we must further restrict our scope since his constructions do not apply to all admissible pairs.
 
 \begin{definition}\label{def:general_pair}
 Suppose $(T, \xi) \in P_G(K)$.
@@ -914,13 +905,14 @@ a Langlands parameter $\varphi_{\hat{w}} :\Weil _K \rightarrow {}^L G$ by
 sending Frobenius to the canonical lift
 $\tilde{w} \in \widetilde{W}$ of $\hat{w} \in \hat{W}$, and by setting
 $\varphi_{\hat{w}}$ to be trivial on $I_K$.
-If $G$ is semisimple,
+For semisimple $G$
 we proved in Proposition \ref{prop:existenceofrectifier}
 that the function $$(T, \xi) \mapsto \xi_{\varphi_{\hat{w}}}^{-1}$$
-satisfies condition (2) of Definition \ref{def:rectifier}.  Moreover, since $\varphi_{\hat{w}}|_{I_K} \equiv 1$,
-$\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified, so the function also
-satisfies condition (1).  Finally, $\xi_{\varphi_{\hat{w}}}$ only depends on $T$,
-and not on on $\xi$.  Therefore, condition (3) is automatically satisfied.
+satisfies condition (2) of Definition \ref{def:rectifier}.  Moreover, the function also
+satisfies condition (1): $\varphi_{\hat{w}}|_{I_K} \equiv 1$ and thus
+$\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified.
+Finally, $\xi_{\varphi_{\hat{w}}}$ is independent of $\xi$
+and thus condition (3) is automatically satisfied.
 We may therefore set
 $\mumin(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
 
@@ -956,10 +948,11 @@ and thus $\bmu$ is equivalent to $\bmu'$.
 \item The condition $\HT{0}(\Gamma, T(L)) = 0$ was necessary in order to obtain a character on $T(K)$ rather
 than the image of the norm map $T(L) \mapsto T(K)$.  For non-semisimple groups where $\HT{0}(\Gamma, T(L))$
 is nontrivial we hope that the recipe for the central character in \cite{gross-reeder:09a} will provide an extension to all of $T(K)$.
-\item The rectifier in our setting is a constant function.  We expect that for ramified tori, this will not be the case.
-\item The behavior of rectifiers under change of group is not yet clear to us.  Perhaps two embeddings of a torus into
-different reductive groups with isomorphic Weyl groups can yield the same rectifier.  Moreover, given an embedding
-$H \subset G$, it would be interesting to know whether the rectifiers for tori in $H$ and $G$ are related.  In particular, if $G = \GL_n$, this would allow us to apply the results of \cite{bushnell-henniart:10a} in this setting.
+\item The rectifier in our setting is constant as a function of $\xi$.  We expect a dependence on $\xi$ for ramified tori.
+\item The behavior of rectifiers under change of group is not yet clear to us.  There may be a natural relationship between
+rectifiers when a torus is embedded into two
+different reductive groups with isomorphic Weyl groups.  Similarly, when given an embedding
+$H \subset G$, a natural relationship between the rectifiers for tori in $H$ and $G$ would allow us to apply the results of \cite{bushnell-henniart:10a} to rectifiers for general groups.
 \end{enumerate}
 \end{remark}
 
