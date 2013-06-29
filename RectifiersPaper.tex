@@ -639,7 +639,7 @@ Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 
 The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same $L$-packet.  Consider the following archetypical example.
-Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus.  There are four depth zero
+Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus in $G$.  There are four depth zero
 characters: two admissible and two inadmissible, notions defined below.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite[\S10]{murnaghan:11}.
 In this section we investigate depth zero characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
@@ -649,22 +649,25 @@ $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
 extension $L$ (see \cite[\S3]{reeder:08a}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
-by any element of $W(K)$ (see Lemma \ref{lem:weyl_groups}). We say that
-two admissible pairs $(T, \xi)$ and $(T', \xi')$ are \emph{isomorphic} if there
+by any element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
+denote by $P_G(K)$ the set of admissible pairs in $G$. We call
+two admissible pairs $(T, \xi)$ and $(T', \xi')$ \emph{isomorphic} if there
 exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
-for all $t \in T(K)$.  We denote by $P_G(K)$ the set of admissible pairs in $G$.
+for all $t \in T(K)$.
 \end{definition}
 
-We note that this definition of admissible pair generalizes
-the notion of admissible pair of \cite{bushnell-henniart:10a} in
-the case of unramified elliptic tori.  Indeed,
+Note that this definition of admissible pair generalizes
+Bushnell-Henniart's notion of admissible pair \cite{bushnell-henniart:10a} in
+the case of unramified tori.  Indeed,
 if $G = \GL_n$, and $T$ is an elliptic torus in $G$ splitting over
 an unramified extension $L/K$, then one can show that
-$W(K) = \Gamma$.  Thus, for $\xi$ to not be fixed by any
-element of $W(K)$ is equivalent to $\xi$ not being fixed by
-any subgroup of $\Gamma$.  This can be seen to be equivalent to $\xi$
-not coming from the norms $\Nm_{L/M}$ for any proper subfield $M$ contained
-in $L$, containing $K$.
+$W(K) = \Gamma$.  In this case, the following are equivalent conditions
+on a character $\xi$ of $T(K) = \Lx$:
+\begin{enumerate}
+\item $\xi$ is fixed by a nontrivial element of $W(K)$,
+\item $\xi$ is fixed by a nontrivial subgroup of $\Gamma$,
+\item $\xi$ factors through the norm map $\Nm_{L/M}$ for some intermediate field $K \subseteq M \subset L$.
+\end{enumerate}
 
 As for characters of $T(L)_\Gamma$, we will call a character of $T(K)$ \emph{admissible}
 if it is not fixed by any nontrivial element
