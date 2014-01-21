@@ -178,11 +178,12 @@ Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a supercuspidal Langlands
 that factors through the normalizer of a maximal torus.
 The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
 cohomological condition, one
-obtains from $\varphi$ a character $\xi$ of a cover of an elliptic torus.
+obtains from $\varphi$ a character $\xi$ of a cover of an elliptic torus $T(K)$.
 After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
-to \emph{admissible} characters of this cover, the rectifier of $\xi$ is a character
+to \emph{admissible} characters of $T(K)$, the rectifier of $\xi$ is a character
 $\mu_{\xi}$ of the cover such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
-is the local Langlands correspondence for $G(K)$.
+is the local Langlands correspondence for $G(K)$.  In this paper, we consider the association 
+$\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} and \cite{reeder:08a}.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
 the notion of rectifier due to Bushnell and Henniart and describe
@@ -191,9 +192,9 @@ we present some results about Tate cohomology of $p$-adic tori that will be used
 in the rest of the paper.  In \S\ref{section:groups_of_type_L} we review
 the theory of ``groups of type L.''  In
 \S\ref{section:gross_debacker_reeder} we describe the relationship between the
-construction of Gross, via groups of type L, and the constructions of
-DeBacker-Reeder and Reeder.  In \S\ref{Q_T} we study how translation by a character affects
-the association $\chi \mapsto \Lpack(\chi)$.
+construction of Gross, via groups of type L, and the constructions $\chi \mapsto \Lpack(\chi)$ of
+\cite{reeder-debacker:09a} and \cite{reeder:08a}.  In \S\ref{Q_T} we study how translation by a character affects
+the map $\chi \mapsto \Lpack(\chi)$.
 In \S\ref{section:general_rectifiers} we
 introduce our notion of rectifier and prove our main result, Theorem \ref{thm:unique_semisimple}.
 Finally, in \S\ref{section:BH_compat} we show that our rectifier is compatible with
@@ -546,9 +547,11 @@ parameter for an unramified connected reductive group $G$
 Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$,
 where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$
 (see \cite[\S 3]{reeder-debacker:09a}).
-Note that $\varphi$ has image in a group of
-type L.  Let $L,K,T,\hat{T}, \Gamma$ and $\xi_{\varphi}$ be as in
-\S\ref{section:groups_of_type_L} and recall that we have assumed that $L/K$ is unramified.
+Then associated to $\varphi$ is a $K$-minisotropic torus $T$, splitting over an unramified extension $L$. 
+Let $\hat{T}, \Gamma$ and $\xi_{\varphi}$ be as in
+\S\ref{section:groups_of_type_L}. Then $\varphi$ has image inside a group of type L; precisely, inside an
+extension of $\Gamma$ by $\hat{T}$, where the action of $\Gamma$ on $\hat{T}$ is inherited from the corresponding
+Galois action of $\Gamma$ on $T$ (see \S\ref{section:groups of type L}).
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
@@ -565,7 +568,7 @@ by
 \phi_{\alpha}\begin{pmatrix}z & 0 \\ 0 & z^{-1}\end{pmatrix} &= \alpha^{\vee}(z) \\
 d \phi_{\alpha}\begin{pmatrix}0 & 1 \\ 0 & 0\end{pmatrix} &= X_{\alpha}.
 \end{align*}
-Let $\sigma_{\alpha} = \phi_{\alpha}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$.  
+Let $\sigma_{\alpha} = \phi_{\alpha}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$.
 
 \begin{definition}
   The Tits group $\widetilde{W}$ is the subgroup of $\hat{N}$
@@ -667,7 +670,7 @@ characters of a torus can yield the same $L$-packet.  Consider the following arc
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus in $G$.  There are four depth zero
 characters: two admissible and two inadmissible, notions defined below.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite[\S10]{murnaghan:11}.
-In this section we investigate depth zero characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ invariant upon translation:
+In this section we investigate depth zero characters of $T(K)$ that leave the association $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} invariant upon translation:
 $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\chi$}.$$
 
 \begin{definition} \label{def:admissible}
@@ -813,7 +816,7 @@ $T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
 $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
 conjecturally all supercuspidal (see \cite[\S 3.5]{reeder-debacker:09a}).
-When $G = \GL_n$ we show in \S\ref{section:BH_compat} that 
+When $G = \GL_n$ we show in \S\ref{section:BH_compat} that
 $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ and thus
 $T(L)_{\Gamma} \cong T(K) \cong \Lx$.  In this case
 $(L/K, \xi_{\varphi})$ is an admissible pair; to construct the local Langlands
@@ -825,7 +828,7 @@ For other groups $G$ there are some constructions of supercuspidal $L$-packets $
 from characters $\chi$ of $T(K)$ \cite{reeder-debacker:09a, kaletha:13a, reeder:08a}.
 However, as we have seen, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character of
-$T(L)_{\Gamma}$.
+$T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a, reeder:08a}.
 
 \begin{definition} \label{def:rectifier}
   Let $T$ be a $K$-minisotropic torus in $G$, that splits over an unramified
@@ -967,7 +970,7 @@ $H \subset G$, a natural relationship between the rectifiers for tori in $H$ and
 In this section we show that our function $\mumin$
 agrees with the rectifier of Bushnell-Henniart in the depth
 zero setting: see Theorem \ref{thm:bh_agreement}.
-Let $L = K_n$ and set 
+Let $L = K_n$ and set
 $T = \Res_{L/K}(\Gm)$.  We begin by computing the Tate cohomology groups of $T$.
 
 \begin{proposition}
