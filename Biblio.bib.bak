@@ -2,10 +2,10 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for David Roe at 2014-01-24 16:27:26 -0500
+%% Created for David Roe at 2014-01-24 16:27:26 -0500 
 
 
-%% Saved with string encoding Unicode (UTF-8)
+%% Saved with string encoding Unicode (UTF-8) 
 
 
 
@@ -163,18 +163,6 @@
 	Title = {{The essentially tame local Langlands correspondence, III: the general case}},
 	Volume = {101},
 	Year = {2010}}
-
-@article{adams-vogan:91,
-	Author = {Jeffrey Adams and David Vogan},
-	Date-Added = {2014-01-27 17:13:38 +0800},
-	Date-Modified = {2014-01-27 19:59:01 +0800},
-	Journal = {Amer. Journal of Math.},
-	Keywords = {realgroups},
-	Number = {2},
-	Pages = {45-138},
-	Title = {{L-Groups, Projective Representations, and the Langlands Classification}},
-	Volume = {113},
-	Year = {1991}}
 
 @article{bushnell-henniart:05a,
 	Author = {Colin Bushnell and Guy Henniart},
