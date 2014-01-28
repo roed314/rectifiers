@@ -7,6 +7,11 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{Hum75}
 
+\bibitem[AC13]{bertapelle-gonzalez:13b}
+{Alessandra Bertapelle} and {Cristian D. Gonz\'ales-Avil\'es}, \emph{On the
+  cohomology of tori over local fields with perfect residue field},
+  arXiv:1311.4841v3, November 2013.
+
 \bibitem[Adl98]{adler:98a}
 Jeffrey Adler, \emph{{Refined anisotropic $K$-types and supercuspidal
   representations}}, Pacific J. Math. (1998), 1--32.
@@ -114,10 +119,6 @@ Geo Kam-Fai Tam, \emph{Transfer relations in essentially tame local langlands
 \bibitem[Tit66]{tits:66a}
 Jacques Tits, \emph{Normalisateurs de tores}, J. Algebra \textbf{4} (1966),
   96--116.
-
-\bibitem[Xar93]{xarles:93a}
-Xavier Xarles, \emph{{The scheme of connected components of the N\'eron model
-  of an algebraic torus}}, J. Reine Angew. Math. \textbf{437} (1993), 167--180.
 
 \bibitem[Yu03]{yu:03a}
 Jiu-Kang Yu, \emph{{Smooth models associated to concave functions in

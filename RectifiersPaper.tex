@@ -390,17 +390,14 @@ Let $\C$ be the scheme of
 connected components of $\TT$,
 which we may identify with the
 components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
-is connected.  The structure of $\C$ is described by Xarles:
+is connected.  The structure of $\C$ is described by Bertapelle and Gonz\'alez-Avil\'es:
 
-\begin{proposition}[{\cite[Cor. 2.12]{xarles:93a}}]
-There is an exact sequence of $\Gamma_n$-modules
-$$0 \rightarrow \Hom_{\ZZ}(\HH^1(I, X^*(T)), \QQ/\ZZ) \rightarrow
-\C \rightarrow \Hom_{\ZZ}(X^*(T)^I, \ZZ) \rightarrow 0.$$
+\begin{proposition}[{\cite[Thm. 1.1]{bertapelle-gonzalez:13b}}]
+As $\Gal(\bar{k}/k)$-modules,
+\[
+\C \cong X_*(T)_I.
+\]
 \end{proposition}
-
-\begin{corollary}[{\cite[Thm. 1.1]{xarles:93a}}] \label{cor:unram_components}
-If $T$ is unramified, then $\C \cong X_*(T)$.
-\end{corollary}
 
 Using our filtration of $T(K_n)$, we may relate the cohomology of $T(K_n)$
 with that of $\C$.
@@ -417,24 +414,13 @@ is connected \cite[Prop. 5.2]{yu:03a} and thus has trivial cohomology by
 Theorem \ref{thm:lang}.
 \end{proof}
 
-\begin{corollary}
-$\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, \C)$.
+\begin{corollary} \label{cor:cohom_tori}
+$\HT{i}(\Gamma_n, T(K_n)) \cong \HT{i}(\Gamma_n, X_*(T)_I)$.
 \end{corollary}
 
 \begin{proof}
 This follows from the long exact sequence in cohomology associated to the sequence
 $$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow \C \rightarrow 0.$$
-\end{proof}
-
-Suppose now that $T$ is unramified with splitting field $L = K_n$.
-
-\begin{corollary} \label{cor:cohom_tori}
-If $T$ is unramified, then $\HT{i}(\Gamma_n, T(L)) \cong \HT{i}(\Gamma_n, X_*(T))$
-for all $i$.
-\end{corollary}
-
-\begin{proof}
-This follows from the previous corollary together with Corollary \ref{cor:unram_components}.
 \end{proof}
 
 \begin{corollary}\label{cor:vanishing_H0}
@@ -547,7 +533,8 @@ parameter for an unramified connected reductive group $G$
 Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$,
 where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$
 (see \cite[\S 3]{reeder-debacker:09a}).
-Since $\varphi$ is elliptic, its image is contained in a group of type $L$ for an unramified $K$-minisotropic torus $T$.  Let $\Gamma$ and $\xi_\varphi$ be as in Section \ref{section:groups_of_type_L}.
+Since $\varphi$ is elliptic, its image is contained in a group of type $L$ for an unramified $K$-minisotropic torus $T$.
+Let $L$ be the splitting field of $T$ and let $\Gamma = \Gal(L/K)$ and $\xi_\varphi$ be as in Section \ref{section:groups_of_type_L}.
 Then $\varphi(I_K) \subset \hat{T}$ and
 $\varphi(\Fr) = \hat{\theta} f$ for some $f \in \hat{N}$.  Let $\hat{w}$
 be the image of $f$ in $\hat{W}$.
