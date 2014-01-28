@@ -97,9 +97,9 @@
 
 \begin{abstract}
 
-We generalize the rectifier of Bushnell and Henniart,
+We initiate a program to generalize the rectifier of Bushnell and Henniart,
 which occurs in the local Langlands correspondence for
-$\GL_{n}(K)$, to certain Langlands parameters for
+$\GL_{n}(K)$, to regular elliptic Langlands parameters for
 unramified connected reductive groups.
 
 \end{abstract}
@@ -117,43 +117,50 @@ There has been a significant amount of progress in recent years
 focusing on supercuspidal representations of $G(K)$.  Bushnell-Henniart \cite{bushnell-henniart:10a},
 DeBacker-Reeder \cite{reeder-debacker:09a}, Kaletha \cite{kaletha:13a} and Reeder \cite{reeder:08a}
 approach the task of constructing $L$-packets by first attaching
-a character of an elliptic torus to a Langlands parameter and
+a character of an elliptic torus to a Langlands parameter, and
 then associating a collection of supercuspidal representations to this character.
-Their constructions all use the local Langlands correspondence for tori in some way,
-but the image of the Langlands parameter $\Weil_K \rightarrow {}^L G$ is not
-necessarily contained within the $L$-group of a maximal torus.  The different authors
-remedy this situation in various ways.
+Their constructions all use the local Langlands correspondence for tori in some way.  However,
+since the image of the Langlands parameter $\Weil_K \rightarrow {}^L G$ is not
+necessarily contained within the $L$-group of a maximal torus, they need to make certain adjustments in order to produce a character of an elliptic torus.  The different authors remedy this situation in various ways.
 
-For an example where the image does not land in an $L$-group of a maximal torus,
-consider $G = \PGL_{2}(K)$.  Suppose that $p \neq 2$ and that
+For example, consider the group $G = \PGL_{2}(K)$, and suppose that
 $\varphi : \Weil_K \rightarrow \SL_{2}(\CC)$ is an
-irreducible representation.  Then there is a tamely ramified quadratic
-extension $L/K$ and a character
-$\chi$ of $\Lx$, trivial on the norms $\Nm_{L/K}(\Lx)$, so that
-$\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$.  The image of $\varphi$
+irreducible representation.  Then $\varphi$ is a Langlands parameter corresponding to a supercuspidal representation of $\PGL_2(K)$.  Moreover, the image of $\varphi$
 is contained in the normalizer of the dual torus $\hat{T}$, a non-split
 extension of $\Gal(L/K)$ by $\hat{T}$, but not in the $L$-group of any torus.
 
-The group $\Lx / \Nm_{L/K}(\Lx)$ appears as a cover of the elliptic torus $L^1$ of norm $1$ elements in $L$:
+If $p \neq 2$, then there is a tamely ramified quadratic
+extension $L/K$ and a character
+$\chi$ of $\Lx$ that is trivial on the norms $\Nm_{L/K}(\Lx)$ and nontrivial on $\Kx$, so that
+$\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$ \cite{bushnell-henniart:06a}.  In particular, $\chi$ is a character of the group $\Lx / \Nm_{L/K}(\Lx)$.
+By Hilbert's theorem 90, the group $\Lx / \Nm_{L/K}(\Lx)$ appears as a covering group of the elliptic torus $L^1$ of norm $1$ elements in $L$:
 \begin{align*}
 1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) &\rightarrow L^1 \rightarrow 1 \\
 x \Nm_{L/K}(L^{\times}) &\mapsto x / \sigma(x);
 \end{align*}
 here $\sigma$ generates $\Gal(L/K)$.  In particular, the Langlands parameter
 $\varphi$ naturally provides a character $\chi$, not of the elliptic torus
-$L^1 \subset \PGL_2(K)$,
-but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  We can obtain a character of $L^1$
-by twisting $\chi$ by a genuine character of
-$\Lx / \Nm_{L/K}(\Lx)$.  The twist giving the correct supercuspidal representation of $\PGL_2(K)$
-is precisely what appears in Bushnell and Henniart \cite{bushnell-henniart:06a, bushnell-henniart:10a}.
+$L^1 \subset \PGL_2(K)$ (since $\chi$ is nontrivial on $\Kx$),
+but of the two-fold cover $\Lx / \Nm_{L/K}(\Lx)$.  We can obtain a character $\chi'$ of $L^1$
+by tensoring $\chi$ by another character of
+$\Lx / \Nm_{L/K}(\Lx)$ that is nontrivial on $\Kx$.  One can then attach a supercuspidal representation of $\PGL_2(K)$ to $\chi'$ via the construction of Bushnell and Kutzko \cite{bushnell-kutzko:AdmissibleDual}. The tensoring character that gives the correct supercuspidal representation of $\PGL_2(K)$
+is precisely what appears in Bushnell and Henniart's rectifier.  In \cite{bushnell-henniart:10a}, Bushnell and Henniart compute this rectifier in the \emph{essentially tame} setting of $\GL_n(K)$.
+
+Bushnell and Henniart motivate their rectifier as follows.
+Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
+$\GL_n(K)$.  The local Langlands correspondence for tori then yields a degree $n$ extension
+$L/K$ and a character $\xi$ of $L^{\times}$.  We now fix a construction $\chi \mapsto \pi_{\chi}$
+of supercuspidal representations of $\GL_n(K)$ from \emph{admissible} characters of $L^{\times}$.
+Then the rectifier of $\xi$ is a character $\mu_{\xi}$ of $L^{\times}$ such that
+$\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is the local Langlands correspondence for $\GL_n(K)$.  In the specific case of supercuspidal representations of $\GL_2(K)$ with trivial central character (i.e. supercuspidal representations of $\PGL_2(K)$), one computes that the character $\mu_{\xi}$ is, as discussed above, a character of $\Lx / \Nm_{L/K}(\Lx)$ that is nontrivial on $\Kx$.
 
 In this paper, we initiate a program to generalize Bushnell and Henniart's
 rectifier to groups other than $\GL_n(K)$.  In particular, we define rectifiers for
-unramified minisotropic tori $T$ in connected reductive groups $G$.
+unramified minisotropic tori $T$ in connected reductive groups $G$ whose zeroth Tate cohomology is trivial (see \S\ref{section:groups_of_type_L}).
 Benedict Gross' recent construction of groups of type L provides a framework for
-us to define rectifiers and admissible pairs in the general setting.
+us to define the rectifier in this setting.
 We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
-and are unique up to equivalence. In the setting of depth zero
+and are unique up to a notion of equivalence. In the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$, Theorem \ref{thm:bh_agreement}
 gives the compatibility of our rectifier with that of Bushnell and Henniart.
 We note that there is an obstruction to proving compatibility in the positive depth case.
@@ -165,25 +172,18 @@ In the positive depth setting, the rectifier will depend on the methods
 used to construct representations from the character of $T(K)$, and
 our rectifier indeed differs from that of Bushnell and Henniart in positive depth.
 
-Bushnell and Henniart motivate their rectifier as follows.
-Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
-$\GL_n(K)$.  The local Langlands correspondence for tori then yields a degree $n$ extension
-$L/K$ and a character $\xi$ of $L^{\times}$.  We now fix a construction $\chi \mapsto \pi_{\chi}$
-of supercuspidal representations of $\GL_n(K)$ from \emph{admissible} characters of $L^{\times}$.
-Then the rectifier of $\xi$ is a character $\mu_{\xi}$ of $L^{\times}$ such that
-$\varphi \mapsto \pi_{\xi \cdot \mu_{\xi}}$ is the local Langlands correspondence for $\GL_n(K)$.
-
-We generalize their notion of rectifier to unramified connected reductive groups $G$.
-Suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a supercuspidal Langlands parameter
+To describe our construction in more detail, suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a supercuspidal Langlands parameter
 that factors through the normalizer of a maximal torus.
-The local Langlands for tori again provides a canonical way to proceed.  Assuming a mild
+The local Langlands correspondence for tori, as in the case of $\GL_n(K)$, provides a canonical way to proceed.  Assuming a mild
 cohomological condition, one
 obtains from $\varphi$ a character $\xi$ of a cover of an elliptic torus $T(K)$.
 After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
 to \emph{admissible} characters of $T(K)$, the rectifier of $\xi$ is a character
 $\mu_{\xi}$ of the cover such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
-is the local Langlands correspondence for $G(K)$.  In this paper, we consider the association 
+is the local Langlands correspondence for $G(K)$.  In this paper, we consider the association
 $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} and \cite{reeder:08a}.
+
+We would like to remark that the notion of a covering group of a torus occuring in the local Langlands correspondence is an old one, dating back at least to work of Adams and Vogan \cite{adams-vogan:91} in the setting of real groups.  In the theory of real groups, an admissible homomorphism $W_{\mathbb{R}} \rightarrow {}^L G$ automatically has image inside the normalizer of a torus in ${}^L G$.  As such, it naturally produces a genuine character $\chi$ of the \emph{$\rho$-cover of $T(\mathbb{R})$}, denoted $T(\mathbb{R})_{\rho}$, a certain double cover of $T(\mathbb{R})$.  To $\chi$, one attaches a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
 the notion of rectifier due to Bushnell and Henniart and describe
