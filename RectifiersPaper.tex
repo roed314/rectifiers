@@ -365,7 +365,17 @@ Therefore, by \cite[Proposition 21]{bushnell-henniart:10a}, we have the result.
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
 Let $T$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
-unramified subextension $L/K$ and set $I = \Gal(L/K_n)$.
+unramified subextension $L/K$, set $\Gamma = \Gal(L/K)$ and $I = \Gal(L/K_n)$.
+In studying rectifiers for groups other than $\GL_n$, the following exact sequence
+in Tate cohomology plays a crucial role:
+
+\begin{equation} \label{eq:tate4}
+1 \rightarrow \HT{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{\Nm} T(K)
+  = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1.
+\end{equation}
+
+\noindent In this section we 
+
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
 over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
 As a consequence of the N\'eron mapping
