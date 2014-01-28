@@ -14,3 +14,4 @@ mathoverflow.tex
 *.tex.bak
 *.blg
 *.tex.sav
+*.out
