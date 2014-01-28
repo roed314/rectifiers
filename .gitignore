@@ -8,6 +8,7 @@
 _*.tex
 *.toc
 *.synctex.gz
+*.synctex
 tori5.tex
 mathoverflow.tex
 *~
