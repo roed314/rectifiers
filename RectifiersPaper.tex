@@ -100,7 +100,7 @@
 We initiate a program to generalize the rectifier of Bushnell and Henniart,
 which occurs in the local Langlands correspondence for
 $\GL_{n}(K)$, to regular elliptic Langlands parameters for
-unramified connected reductive groups.
+unramified connected reductive groups. %WRITE
 
 \end{abstract}
 
@@ -182,7 +182,7 @@ $\mu_{\xi}$ of the cover such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
 is the local Langlands correspondence for $G(K)$.  In this paper, we consider the association
 $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} and \cite{reeder:08a}.
 
-We would like to remark that the notion of a covering group of a torus occuring in the local Langlands correspondence is an old one, dating back at least to work of Adams and Vogan \cite{adams-vogan:91} in the setting of real groups.  In the theory of real groups, an admissible homomorphism $W_{\mathbb{R}} \rightarrow {}^L G$ automatically has image inside the normalizer of a torus in ${}^L G$.  As such, it naturally produces a genuine character $\chi$ of the \emph{$\rho$-cover of $T(\mathbb{R})$}, denoted $T(\mathbb{R})_{\rho}$, a certain double cover of $T(\mathbb{R})$.  To $\chi$, one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.  Over $p$-adic fields, there is no such construction of representations using characters of covering groups.
+We would like to remark that the notion of a covering group of a torus occuring in the local Langlands correspondence is an old one, dating back at least to work of Adams and Vogan \cite{adams-vogan:91} in the setting of real groups.  In the theory of real groups, an admissible homomorphism $W_{\mathbb{R}} \rightarrow {}^L G$ automatically has image inside the normalizer of a torus in ${}^L G$.  As such, it naturally produces a genuine character $\chi$ of the \emph{$\rho$-cover of $T(\mathbb{R})$}, denoted $T(\mathbb{R})_{\rho}$, a certain double cover of $T(\mathbb{R})$.  To $\chi$, one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
 the notion of rectifier due to Bushnell and Henniart and describe
@@ -363,7 +363,7 @@ Therefore, by \cite[Proposition 21]{bushnell-henniart:10a}, we have the result.
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
 
-Let $T$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
+Let $T \subset G$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
 unramified subextension $L/K$, set $\Gamma = \Gal(L/K)$ and $I = \Gal(L/K_n)$.
 In studying rectifiers for groups other than $\GL_n$, the following exact sequence
 in Tate cohomology plays a crucial role:
@@ -373,7 +373,18 @@ in Tate cohomology plays a crucial role:
   = T(L)^{\Gamma} \rightarrow \HT{0}(\Gamma,T(L)) \rightarrow 1.
 \end{equation}
 
-\noindent In this section we
+\noindent We make the following definition as a matter of notational convenience, since
+it will serve as a running hypothesis on $T$ for most of the rest of the paper.
+
+\begin{definition} \label{def:coverable}
+We say $T$ is \emph{coverable} if it is minisotropic and $\HT{0}(\Gamma, T(L)) = 0$.
+\end{definition}
+
+We require that $T$ be minisotropic in order to be able to use the local Langlands correspondence
+given by Reeder \cite{reeder:08a} and Debacker-Reeder \cite{reeder-debacker:09a}; the condition
+on $\HT{0}(\Gamma, T(L))$ will allow us to define characters of $T(K)$ from characters of
+$T(L)_\Gamma$.  Note that not all minisotropic tori are coverable.  Consider the torus
+$\Gm \times 
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
 over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
@@ -453,7 +464,7 @@ T(\PL^r) &= T(L)_r\qquad\,\,\mbox{for $r > 0$}.
 
 We now review the theory of groups of type L due to Benedict
 Gross.  For a torus $T$ over $K$ recall that the dual torus $\hat{T}$ is equipped with
-an action of $\Gamma$.
+an action of $\Gamma$.  %ADD REFERENCE TO THESIS
 
 \begin{definition}
 A \emph{group of type L} is a group extension of $\Gamma$ by $\hat{T}$.
@@ -503,7 +514,7 @@ $\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
 &= \prod_{i=0}^{n-1} g^i t g^{-i} \\
 &= \prod_{i=0}^{n-1} \Fr^i(t)
 \end{align*}
-since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon \Weil_L \rightarrow \hat{T}$
+since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon \Weil_L \rightarrow \hat{T}$ % SAY WHERE i RANGES
 by $\varphi_i(z) = 1$ for $z \in I_L$ and
 $\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_i$ be the associated character
 of $T(L)$.  By \cite[Lem. 4.3.1]{reeder-debacker:09a}, $\xi_i = \xi_0 \circ \Fr^i.$
