@@ -45,6 +45,7 @@
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PGL}{PGL}
 \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GSp}{GSp}
 
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\C}{\mathcal{C}}
@@ -383,8 +384,8 @@ We say $T$ is \emph{coverable} if it is minisotropic and $\HT{0}(\Gamma, T(L)) =
 We require that $T$ be minisotropic in order to be able to use the local Langlands correspondence
 given by Reeder \cite{reeder:08a} and Debacker-Reeder \cite{reeder-debacker:09a}; the condition
 on $\HT{0}(\Gamma, T(L))$ will allow us to define characters of $T(K)$ from characters of
-$T(L)_\Gamma$.  Note that not all minisotropic tori are coverable.  Consider the torus
-$\Gm \times 
+$T(L)_\Gamma$.  In the remainder of this section recall some tools for computing Tate cohomology
+groups over tori and give examples of coverable and non-coverable tori.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
 over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
@@ -443,12 +444,26 @@ This follows from the long exact sequence in cohomology associated to the sequen
 $$0 \rightarrow \TT^0 \rightarrow \TT \rightarrow \C \rightarrow 0.$$
 \end{proof}
 
+Using this corollary, we can give examples of coverable and non-coverable tori.
+
+\begin{example}
+\begin{enumerate}
+\item Each minisotropic torus in $\GL_n$ is of the form $\Res_{L/K} \Gm$ for a degree $n$ extension $L$ of $K$.
+
+\item Let $T$ be a torus in $\GSp_4$ \cite{morris:91a}*{Prop. 1.3}, split over a quartic unramified extension $L/K$ with $\Gal(L/K) = \langle \tau \rangle$, with cocharacter lattice
+\begin{align*}
+X_*(T) = &\{(a,b,c,d) \in \ZZ^4 \: : \: a + d = b + c\} \\
+& \tau(a,b,c,d) = (c,a,d,b).
+\end{align*}
+\end{enumerate}
+\end{example}
+
 \begin{corollary}\label{cor:vanishing_H0}
-If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma_n, T(L)) = 0$.
+If $T$ is unramified and anisotropic, then $\HT{0}(\Gamma, T(L)) = 0$.
 \end{corollary}
 
 \begin{proof}
-Since $T$ is anisotropic, $X_*(T)^{\Gamma_n} = 0$, giving $\HT{0}(\Gamma_n, T(L)) = 0$ by Corollary
+Since $T$ is anisotropic, $X_*(T)^{\Gamma} = 0$, giving $\HT{0}(\Gamma, T(L)) = 0$ by Corollary
 \ref{cor:cohom_tori}.
 \end{proof}
 
@@ -507,17 +522,36 @@ $\xi$ and $\xi'$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 
 \begin{proof}
 It suffices to prove that $\xi' \cdot \xi^{-1}$ vanishes on
-$\ker(\Nm : T(L) \rightarrow T(K))$.  Define $g \in D$ and $t \in \hat{T}$ by
-$\varphi(\Fr) = g$, $\varphi'(\Fr) = tg$.  Then
+$\ker(\Nm : T(L) \rightarrow T(K))$.  We do so by expressing the quotient
+$\phi' \phi^{-1}$ as a product
+\begin{equation}
+\label{eq:prod_phii}
+\prod_i=0^{n-1} \phi_i,
+\end{equation}
+where the $\phi_i$ satisfy 
+\begin{equation}
+\label{eq:Fr_phii}
+\phi_i(\gamma) = \Fr^i(\phi_0(\gamma))
+\end{equation}
+for all $\gamma \in \Gal(\bar{L}/L)$. The quotient $\xi' \xi^{-1}$ will then break up
+analogously, allowing the computation of its value on $x \in T(L)$ given $\Nm(x)$.
+
+We define $\phi_i$ separately on inertia and on $\Fr^n$.
+Set $t = \phi'(\Fr)\phi(\Fr)^{-1} \in \hat{T}$ and set $\phi_i(\Fr^n) = \Fr^i(t)$.
+The restriction of $\phi' \phi^{-1}$ to inertia is a map $\chi : \I \to \hat{T}$.
+Let $\chi_0$ be an arbitrary $(1+q+\cdots+q^{n-1})$-th root of $\chi$, and define
+$\phi_i$ on $\I$ to be $\Fr^i \circ \chi_0$.  The $\phi_i$ satisfy \eqref{eq:Fr_phii}
+by definition.  They satisfy \eqref{prod_phii} by the definition of $\chi_0$, and on
+$\Fr^n$ by the following computation.  If $g = \varphi(\Fr) \in D$, then
 \begin{align*}
 \varphi'(\Fr^n) \varphi(\Fr^n)^{-1} &= (tg)^n g^{-n} \\
 &= \prod_{i=0}^{n-1} g^i t g^{-i} \\
 &= \prod_{i=0}^{n-1} \Fr^i(t)
 \end{align*}
-since $g$ projects to $\Fr \in \Gamma$.  Define $\varphi_i \colon \Weil_L \rightarrow \hat{T}$ % SAY WHERE i RANGES
-by $\varphi_i(z) = 1$ for $z \in I_L$ and
-$\varphi_i(\Fr^n) = \Fr^i(t)$; let $\xi_i$ be the associated character
-of $T(L)$.  By \cite[Lem. 4.3.1]{reeder-debacker:09a}, $\xi_i = \xi_0 \circ \Fr^i.$
+since $g$ projects to $\Fr \in \Gamma$.
+
+Now let $\xi_i$ be the character of $T(L)$ associated to $\phi_i$.
+By \cite[Lem. 4.3.1]{reeder-debacker:09a}, $\xi_i = \xi_0 \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \begin{align*}
 \xi'(x) \xi(x)^{-1} &= \prod_{i=0}^{n-1} \xi_i(x) \\
