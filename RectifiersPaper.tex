@@ -24,6 +24,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
 
 %\setlength{\oddsidemargin}{0.2in}
 %\setlength{\evensidemargin}{0.2in}
@@ -527,7 +528,7 @@ $\ker(\Nm : T(L) \rightarrow T(K))$.  We do so by expressing the quotient
 $\phi' \phi^{-1}$ as a product
 \begin{equation}
 \label{eq:prod_phii}
-\prod_i=0^{n-1} \phi_i,
+\prod_{i=0}^{n-1} \phi_i,
 \end{equation}
 where the $\phi_i$ satisfy 
 \begin{equation}
@@ -542,7 +543,7 @@ Set $t = \phi'(\Fr)\phi(\Fr)^{-1} \in \hat{T}$ and set $\phi_i(\Fr^n) = \Fr^i(t)
 The restriction of $\phi' \phi^{-1}$ to inertia is a map $\chi : \I \to \hat{T}$.
 Let $\chi_0$ be an arbitrary $(1+q+\cdots+q^{n-1})$-th root of $\chi$, and define
 $\phi_i$ on $\I$ to be $\Fr^i \circ \chi_0$.  The $\phi_i$ satisfy \eqref{eq:Fr_phii}
-by definition.  They satisfy \eqref{prod_phii} by the definition of $\chi_0$, and on
+by definition.  They satisfy \eqref{eq:prod_phii} by the definition of $\chi_0$, and on
 $\Fr^n$ by the following computation.  If $g = \varphi(\Fr) \in D$, then
 \begin{align*}
 \varphi'(\Fr^n) \varphi(\Fr^n)^{-1} &= (tg)^n g^{-n} \\
