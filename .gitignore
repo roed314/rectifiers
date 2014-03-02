@@ -14,5 +14,6 @@ mathoverflow.tex
 *~
 *.tex.bak
 *.blg
+*.bbl
 *.tex.sav
 *.out
