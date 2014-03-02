@@ -1,0 +1,3 @@
+[submodule "roebib"]
+	path = roebib
+	url = git@github.com:roed314/bibliography.git
