@@ -1,5 +1,6 @@
 \documentclass{compositio}
 \usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
+\usepackage{amsrefs}
 \usepackage{mathtools}
 \usepackage{color}
 %\usepackage{hyperref}
@@ -96,7 +97,6 @@
 \classification{22E50}
 \keywords{Langlands, rectifiers}
 \thanks{The second author was supported by the Pacific Institute for the Mathematical Sciences}
-%\address{Department of Mathematics, University of Utah, Salt Lake City, UT 84112, U.S.A.}
 
 
 \begin{abstract}
@@ -138,7 +138,7 @@ extension of $\Gal(L/K)$ by $\hat{T}$, but not in the $L$-group of any torus.
 If $p \neq 2$, then there is a tamely ramified quadratic
 extension $L/K$ and a character
 $\chi$ of $\Lx$ that is trivial on the norms $\Nm_{L/K}(\Lx)$ and nontrivial on $\Kx$, so that
-$\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$ \cite[Section 34]{bushnell-henniart:06a}.  In particular, $\chi$ is a character of the group $\Lx / \Nm_{L/K}(\Lx)$.
+$\varphi = \Ind_{\Weil_L}^{\Weil_K}(\chi)$ \cite{bushnell-henniart:06a}*{\S 34}.  In particular, $\chi$ is a character of the group $\Lx / \Nm_{L/K}(\Lx)$.
 By Hilbert's theorem 90, the group $\Lx / \Nm_{L/K}(\Lx)$ appears as a covering group of the elliptic torus $L^1$ of norm $1$ elements in $L$:
 \begin{align*}
 1 \rightarrow \mathbb{Z} / 2 \mathbb{Z} \rightarrow \Lx / \Nm_{L/K}(\Lx) &\rightarrow L^1 \rightarrow 1 \\
@@ -235,7 +235,7 @@ and set $\Gamma_n = \Gal(K_n/K) = \Gal(k_n/k)$.
 A geometric Frobenius is an element of $\Gal(\bar{K}/K)$
 inducing the automorphism $x \mapsto x^{1/p}$ of $\bar{k}$.  Under the
 Artin reciprocity map of local class field theory the choice of $\varpi$
-determines a geometric Frobenius $\Fr$ \cite[\S 2]{serre:LocalClassFieldThy}.
+determines a geometric Frobenius $\Fr$ \cite{serre:LocalClassFieldThy}*{\S 2}.
 
 If $\chi : K^{\times} \rightarrow \mathbb{C}^{\times}$ is a character, we define
 the \emph{depth} of $\chi$ to be the smallest integer $r$ such that
@@ -244,7 +244,7 @@ $\chi|_{1 + \PK^{r}} \not\equiv 1$.
 
 If $T$ is a torus defined over $K$ we write $X^*(T)$
 for the character lattice $\Hom_{\bar{K}}(T, \Gm)$ and $X_*(T)$ for the
-cocharacter lattice $\Hom_{\bar{K}}(\Gm, T)$ \cite[\S 16.2]{humphreys:LinAlgGrps}.
+cocharacter lattice $\Hom_{\bar{K}}(\Gm, T)$ \cite{humphreys:LinAlgGrps}*{\S 16.2}.
 $T$ will split over an extension
 $L$ of $K$ if and only if $\Gal(\bar{K}/L)$ acts trivially on $X^*(T)$.
 We may thus define \emph{the} splitting field $L$ of $T$ as the
@@ -253,7 +253,7 @@ Galois over $K$.  Write $\Gamma$ for $\Gal(L/K)$; $X_*(T)$, $X^*(T)$ and $T(L)$
 are all $\Gamma$-modules.
 
 Suppose now that $T \subset G$ for a connected reductive group $G$ over $K$.
-We will write $\hat{T} \subset \hat{G}$ for the dual torus in the complex dual group of $G$ \cite[\S I.2]{borel:79a}.
+We will write $\hat{T} \subset \hat{G}$ for the dual torus in the complex dual group of $G$ \cite{borel:79a}*{\S I.2}.
 Let $N$ be the normalizer $\Normalizer{T}{G}$ of $T$ in $G$ and define $W = N/T$;
 set $\hat{N} = \Normalizer{\hat{T}}{\hat{G}}$ and
 $\hat{W} = \hat{N}/\hat{T}$.  The identification of $X^*(T)$ and $X_*(\hat{T})$
@@ -278,9 +278,9 @@ $\HT{i}(\Gamma_n, H(k_n)) = 0$ for all $i$.
 \end{theorem}
 \begin{proof}
 Since $\Gamma_n$ is cyclic,
-$\HT{i}(\Gamma_n, H(k_n)) \cong \HT{i+2}(\Gamma_n, H(k_n))$ \cite[Thm. 5]{atiyah-wall:CohomologyGrps},
+$\HT{i}(\Gamma_n, H(k_n)) \cong \HT{i+2}(\Gamma_n, H(k_n))$ \cite{atiyah-wall:CohomologyGrps}*{Thm. 5},
 so it suffices to prove the result for $i=1$ and $i=2$, which is done
-by Serre \cite[\S VI.6]{serre:AlgGrpsClassFields}.
+by Serre \cite{serre:AlgGrpsClassFields}*{\S VI.6}.
 \end{proof}
 
 \section{Rectifier for $\GL_{n}(K)$} \label{section:BH_recall}
@@ -331,7 +331,7 @@ in this paper we will write $\mu_\xi$ for ${}_K \mu_{\xi}$.
 
 The relation $\star$ does not determine $\mu_{\xi}$ uniquely.  As pointed out
 in \cite{bushnell-henniart:10a}, the obstruction to uniqueness revolves around the
-group $\GL_2(\mathbb{F}_3)$.  Bushnell and Henniart therefore make the following definition \cite[Def. 1]{bushnell-henniart:10a}.
+group $\GL_2(\mathbb{F}_3)$.  Bushnell and Henniart therefore make the following definition \cite{bushnell-henniart:10a}*{Def. 1}.
 
 \begin{definition}\label{rectifierbushnellhenniart}
 Let $L/K$ be a finite, tamely ramified field extension of degree $n$.  A \emph{rectifier}
@@ -349,7 +349,7 @@ tamely ramified, then $ \mu_{\xi_1} =  \mu_{\xi_2}$.
 \end{enumerate}
 \end{definition}
 
-Bushnell and Henniart then prove \cite[Thm. A]{bushnell-henniart:10a}:
+Bushnell and Henniart then prove \cite{bushnell-henniart:10a}*{Thm. A}:
 
 \begin{theorem}
 Any finite, tamely ramified, field extension $L/K$ admits a unique rectifier
@@ -361,7 +361,7 @@ intuition behind the rectifiers $\bmu$ have been
 studied (see \cite{bushnell-henniart:10a}, \cite{tam:12a}, \cite{adrian:13a}).  In order to
 generalize rectifiers to groups other than $\GL_n(K)$ we
 will will need a description of the characters $\mu_{\xi}$ in certain cases.
-Let us recall some notions from \cite[\S8]{bushnell-henniart:10a}.
+Let us recall some notions from \cite{bushnell-henniart:10a}*{\S 8}.
 
 Let $(L/K,\xi)$ be an admissible pair and let $i \in \ZZ_{\ge 0}$.
 There is a minimal sub-extension $L_i/K$ of $L/K$ such that
@@ -377,7 +377,7 @@ is a \emph{jump of} $\xi$ \emph{over} $K$ if $i \geq 1$ and $L_{i-1} \neq L_i$.
 
 \begin{proof}
 It is clear that the set of jumps of $\xi$ over $K$ is empty.
-Therefore, by \cite[Proposition 21]{bushnell-henniart:10a}, we have the result.
+Therefore, by \cite{bushnell-henniart:10a}*{Prop. 21}, we have the result.
 \end{proof}
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
@@ -406,7 +406,7 @@ $T(L)_\Gamma$.  In the remainder of this section recall some tools for computing
 groups over tori and give examples of coverable and non-coverable tori.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
-over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
+over $\OK$ \cite{bosch-lutkebohmert-reynaud:NeronModels}{Ch. 10}.
 As a consequence of the N\'eron mapping
 property, we may identify $\TT(\OK)$ with $T(K)$.  The connected
 component of the identity, $\TT^\circ$, cuts out a subgroup
@@ -417,7 +417,7 @@ In fact, this subgroup of $T(K)$ is the first in a decreasing filtration.
 Moy and Prasad \cite{moy-prasad:96a}
 define one such filtration by
 embedding $T$ into an induced torus and defining the filtration of
-$\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite[\S 5]{yu:03a}
+$\Res_{L/K} \Gm$ in terms of the valuation on $L$.  Yu \cite{yu:03a}*{\S 5}
 describes a different filtration, agreeing with that of Moy and Prasad
 in the case of tame tori but with nicer features in the presence of wild
 ramification.  Let $\{\TT_r\}_{r \ge 0}$ be the integral models of $T$ defined in Yu's
@@ -431,7 +431,7 @@ which we may identify with the
 components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
 is connected.  The structure of $\C$ is described by Bertapelle and Gonz\'alez-Avil\'es:
 
-\begin{proposition}[{\cite[Thm. 1.1]{bertapelle-gonzalez:13b}}]
+\begin{proposition}[{\cite{bertapelle-gonzalez:13b}*{Thm. 1.1}}]
 As $\Gal(\bar{k}/k)$-modules,
 \[
 \C \cong X_*(T)_I.
@@ -447,9 +447,9 @@ $\HT{i}(\Gamma_n, T(K_n)_0) = 0$ for all $i$.
 \begin{proof}
 Note that
 $$T(K_n)_0 = \invlim{r} T(K_n)_0 / T(K_n)_r.$$
-So by a result of Serre \cite[Lem. 3]{serre:LocalClassFieldThy}, it suffices to prove that
+So by a result of Serre \cite{serre:LocalClassFieldThy}*{Lem. 3}, it suffices to prove that
 \\ $\HT{i}(\Gamma_n, T(K_n)_r / T(K_n)_{r+}) = 0$ for all $i$.  But $T(K_n)_r / T(K_n)_{r+}$
-is connected \cite[Prop. 5.2]{yu:03a} and thus has trivial cohomology by
+is connected \cite{yu:03a}*{Prop. 5.2} and thus has trivial cohomology by
 Theorem \ref{thm:lang}.
 \end{proof}
 
@@ -496,7 +496,7 @@ T(\PL^r) &= T(L)_r\qquad\,\,\mbox{for $r > 0$}.
 
 \section{Groups of type L} \label{section:groups_of_type_L}
 
-We now review the theory of groups of type L \cite{}*{\S 7}.
+We now review the theory of groups of type L \cite{roe:13a}*{\S 7}.
 For a torus $T$ over $K$ recall that the dual torus $\hat{T}$ is equipped with
 an action of $\Gamma$.
 
@@ -572,7 +572,7 @@ $\Fr^n$ by the following computation.  If $g = \varphi(\Fr) \in D$, then
 since $g$ projects to $\Fr \in \Gamma$.
 
 Now let $\xi_i$ be the character of $T(L)$ associated to $\varphi_i$.
-By \cite[Lem. 4.3.1]{reeder-debacker:09a}, $\xi_i = \xi_0 \circ \Fr^i.$
+By \cite{reeder-debacker:09a}*{Lem. 4.3.1}, $\xi_i = \xi_0 \circ \Fr^i.$
 Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
 \begin{align*}
 \xi'(x) \xi(x)^{-1} &= \textstyle{\prod_{i=0}^{n-1} \xi_i(x)} \\
@@ -589,14 +589,14 @@ Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$.
 \begin{enumerate}
 \item $\Normalizer{T(K)}{G(L)} / T(L) \cong W(K)$.
-\item The standard action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
+\item The action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
 actions of $\Normalizer{T(L)}{G(L)}^\Gamma / T(K)$ and $W(K)$
 on $T(L)$ which factor naturally to actions on $T(L)_\Gamma$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-See \cite[Lem. 9.1]{adrian-lansky:ppa}.
+See \cite{adrian-lansky:ppa}*{Lem. 9.1}.
 \end{proof}
 
 \section{The relationship between the Gross construction and the DeBacker--Reeder and Reeder construction}
@@ -607,7 +607,7 @@ parameter for an unramified connected reductive group $G$
 (see \cite{reeder-debacker:09a} and \cite{reeder:08a}).
 Here, ${}^L G = \langle \hat{\theta} \rangle \ltimes \hat{G}$,
 where $\hat{\theta}$ is the dual Frobenius automorphism on $\hat{G}$
-(see \cite[\S 3]{reeder-debacker:09a}).
+(see \cite{reeder-debacker:09a}*{\S 3}).
 Since $\varphi$ is elliptic, its image is contained in a group of type $L$ for an unramified $K$-minisotropic torus $T$.
 Let $L$ be the splitting field of $T$ and let $\Gamma = \Gal(L/K)$ and $\xi_\varphi$ be as in Section \ref{section:groups_of_type_L}.
 Then $\varphi(I_K) \subset \hat{T}$ and
@@ -619,7 +619,7 @@ associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 We now recall the definition of
 the Tits group and some of its properties.  Choose a set $\{ X_{\alpha} \}$ of root vectors
 indexed by the set of simple roots of $\hat{T}$ in $\hat{B}$; $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
-is a pinning as in \cite[\S 3.1]{reeder:10a}.
+is a pinning as in \cite{reeder:10a}*{\S 3.1}.
 For each simple root $\alpha$, define $\phi_{\alpha} : \SL_2 \rightarrow \hat{G}$
 by
 \begin{align*}
@@ -728,14 +728,14 @@ The general definition of rectifier is complicated by the fact that different
 characters of a torus can yield the same $L$-packet.  Consider the following archetypical example.
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus in $G$.  There are four depth zero
 characters: two admissible and two inadmissible, notions defined below.  Since the two admissible characters are interchanged
-by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite[\S10]{murnaghan:11}.
+by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite{murnaghan:11}*{\S10}.
 In this section we investigate depth zero characters of $T(K)$ that leave the association
 $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} invariant upon translation:
 $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\chi$}.$$
 
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
-extension $L$ (see \cite[\S3]{reeder:08a}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
+extension $L$ (see \cite{reeder:08a}*{\S3}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 \begin{enumerate}
 \item The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any nontrivial element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
@@ -746,7 +746,7 @@ for all $t \in T(K)$.
 \end{enumerate}
 Similarly, we will call a character of $T(K)$ \emph{admissible} if
 it is not fixed by any nontrivial element of $W(K)$
-(c.f. \cite[p. 802]{reeder-debacker:09a} and \cite[\S3]{reeder:08a})
+(c.f. \cite{reeder-debacker:09a}*{p. 802} and \cite{reeder:08a}*{\S3})
 \end{definition}
 
 Note that this definition of admissible pair generalizes
@@ -823,11 +823,11 @@ $$\alpha = \frac{\chi}{\chi} = 1.$$
 \end{proof}
 
 Recall that Frobenius acts on $X^*(T)$ via an endomorphism $F = qF_0$, where
-$F_0$ is an automorphism of finite order \cite[p. 82]{carter:93a}.  So it makes sense
+$F_0$ is an automorphism of finite order \cite{carter:93a}*{p. 82}.  So it makes sense
 to vary $q$: we fix $F_0$ and consider the tori dual to the $\Gal(\Fqb/\Fq)$-modules
 with Frobenius acting through $qF_0$.
 
-\begin{corollary}[{c.f. \cite[Lemma 8.4.2]{carter:93a}}]
+\begin{corollary}[{c.f. \cite{carter:93a}*{Lem. 8.4.2}}]
 Consider the family of tori $T_q$ with the same $F_0$.  Then for sufficiently large $q$,
 $Q_{T_q} = \{ 1 \}$ (regardless of the $G$ in which $T_q$ is embedded).
 \end{corollary}
@@ -835,7 +835,7 @@ $Q_{T_q} = \{ 1 \}$ (regardless of the $G$ in which $T_q$ is embedded).
 We will write $T$ for a general torus in the family and $r$ for the common dimension.
 Note that $\hatT$ is the set of $\Fq$ points of a dual torus, also of rank $r$ over $\Fq$.
 For $w \in W(K)$ with $w \ne 1$ the centralizer $\Z_{\hatT}(w)$ is a proper $F$-stable
-subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite[3.3.5]{carter:93a},
+subgroup of $\hatT$, and thus $\dim(\Z_{\hatT}(w)) \le r - 1$.  By \cite{carter:93a}*{3.3.5},
 $\# \hatT$ is a polynomial in $q$ of degree $r$ and $\# \Z_{\hatT}(w)$ is a polynomial
 in $q$ of degree at most $r-1$.  Thus the ratio
 $$\frac{\# \Thadm}{\# \Thinadm} = \frac{\# \hatT - \sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}{\sum_{1 \ne w \in W} \# \Z_{\hatT}(w)}$$
@@ -854,7 +854,7 @@ $$\frac{\chi}{w(\chi)} = \alpha.$$
 Since $w(\chi)$ also has order $m$, raising both sides to the $m$th power  yields $\alpha^m = 1$.
 \end{proof}
 
-Finally, we note that Lemma 8 of Bushnell-Henniart \cite[p. 511]{bushnell-henniart:10a} is equivalent to
+Finally, we note that Lemma 8 of Bushnell-Henniart \cite{bushnell-henniart:10a}*{p. 511} is equivalent to
 the statement that $Q_T$ is trivial when $T$ is a $K$-minisotropic torus in $\GL_n$.
 
 \section{Rectifiers for general reductive groups} \label{section:general_rectifiers}
@@ -875,7 +875,7 @@ Suppose that $\HT{0}(\Gamma, T(L)) = 0$, in which case
 $T(L)_{\Gamma}$ surjects onto $T(K)$.  Let us also suppose that
 $\varphi$ does not factor through a proper Levi subgroup, so that the
 representations in the $L$-packet associated to $\varphi$ are
-conjecturally all supercuspidal (see \cite[\S 3.5]{reeder-debacker:09a}).
+conjecturally all supercuspidal (see \cite{reeder-debacker:09a}*{\S 3.5}).
 When $G = \GL_n$ we show in \S\ref{section:BH_compat} that
 $\HT{0}(\Gamma, T(L)) = \HT{-1}(\Gamma, T(L)) = 0$ and thus
 $T(L)_{\Gamma} \cong T(K) \cong \Lx$.  In this case
@@ -885,10 +885,10 @@ attaching the supercuspidal representation $\pi_{\xi_{\varphi} \cdot
   \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Bushnell and Henniart.
 
 For other groups $G$ there are some constructions of supercuspidal $L$-packets $\Lpack(\chi)$
-from characters $\chi$ of $T(K)$ \cite{reeder-debacker:09a, kaletha:13a, reeder:08a}.
+from characters $\chi$ of $T(K)$ \cites{reeder-debacker:09a, kaletha:13a, reeder:08a}.
 However, as we have seen, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character of
-$T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a, reeder:08a}.
+$T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cites{reeder-debacker:09a, reeder:08a}.
 
 \begin{definition} \label{def:rectifier}
   Let $T$ be a $K$-minisotropic torus in $G$, that splits over an unramified
@@ -959,7 +959,7 @@ We define equivalence of weak rectifiers as in Definition \ref{def:rectifier}.
 
 We note that this definition of minimal admissible pair generalizes
 the definition of minimal admissible pair of Bushnell and Henniart in
-the case of unramified tori (see \cite[\S2.2]{bushnell-henniart:05a}).
+the case of unramified tori (see \cite{bushnell-henniart:05a}*{\S2.2}).
 
 \begin{theorem} \label{thm:unique_semisimple}
 For $G$ semisimple and $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique weak rectifier up to equivalence.
@@ -991,7 +991,7 @@ such that $(T, \xi) \in \Pmin(K)$, and let
 $\bmu$ and $\bmu'$ be weak rectifiers for
 $T \subset G$.  By hypothesis, we have
 $$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
-By \cite[\S10]{murnaghan:11}, there exists $w_{\xi} \in W(K)$,
+By \cite{murnaghan:11}*{\S10}, there exists $w_{\xi} \in W(K)$,
 depending on $\xi$, such that
 $${}^{w_{\xi}} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi.$$
 Suppose that $\xi$ has positive depth.
@@ -1068,7 +1068,7 @@ as scalar matrix in $\GL_{n}(\CC)$.
 \end{proposition}
 
 \begin{proof}
-See \cite[\S3.1]{zaremsky:ppa}.
+See \cite{zaremsky:ppa}*{\S3.1}.
 \end{proof}
 
 We can now describe the image of $\mumin$ in the setting of
@@ -1086,7 +1086,7 @@ $$T(K) = \{(x, \sigma(x), \sigma^2(x), \cdots, \sigma^{n-1}(x)) : x \in \Lx \} \
 A uniformizer $\varpi$ in $\Kx \subset \Lx$
 therefore corresponds to $(\varpi, \varpi, \cdots, \varpi) \in T(K)$, whose
 preimage under $\Nm$ is the class of $(\varpi, 1, 1, \cdots, 1)$ in $T(L)_{\Gamma}$.
-By \cite[\S 2.4]{serre:LocalClassFieldThy}, $\varpi$ corresponds to $\Fr^n$ under the Artin
+By \cite{serre:LocalClassFieldThy}*{\S 2.4}, $\varpi$ corresponds to $\Fr^n$ under the Artin
 reciprocity map for $L$.  Now by Proposition \ref{prop:powers_of_lifts}
 and the local Langlands correspondence for tori we get
 $\mu(\varpi) = (-1)^{n-1}$.
@@ -1107,7 +1107,7 @@ We end this section by explaining why the Tits group lift $\tilde{w}$ is forced 
 Suppose we define
 $\varphi' : \Weil_K \rightarrow \GL_{n}(\CC)$ by $\varphi'|_{I_K} \equiv 1$ and
 $\varphi'(\Fr)$ to be a lift of an elliptic element $\hat{w}$ in $\hat{W}$.
-Then \cite[p. 824]{reeder-debacker:09a} and \cite[\S6]{reeder:08a} imply that the characteristic
+Then \cite{reeder-debacker:09a}*{p. 824} and \cite{reeder:08a}*{\S6} imply that the characteristic
 polynomial of $\varphi'(\Fr)$ is $X^n - a$, for some $a \in \CCx$.  One can see that,
 by arguments analogous to those in Proposition \ref{prop:rectifier_agreement},
 $\xi_{\varphi'}(\varpi) = a$.  By Proposition \ref{prop:BH_result1}, we are
