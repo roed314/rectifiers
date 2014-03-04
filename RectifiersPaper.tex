@@ -469,11 +469,14 @@ Using this corollary, we can give examples of coverable and non-coverable tori.
 \item Each minisotropic torus in $\GL_n$ is of the form $\Res_{L/K} \Gm$ for a degree $n$ extension $L$ of $K$.
 
 \item Let $T$ be a torus in $\GSp_4$ \cite{morris:91a}*{Prop. 1.3}, split over a quartic unramified extension
-$L/K$ with $\Gal(L/K) = \langle \tau \rangle$, with cocharacter lattice
+$L/K$ with $\Gamma = \Gal(L/K) = \langle \tau \rangle$, with cocharacter lattice
 \begin{align*}
 X_*(T) = &\{(a,b,c,d) \in \ZZ^4 \: : \: a + d = b + c\} \\
 & \tau(a,b,c,d) = (c,a,d,b).
 \end{align*}
+Then $T$ is minisotropic but has $\HT{0}(\Gamma, T(L)) \cong \ZZ/2\ZZ$ by Corollary \ref{cor:cohom_tori}:
+$X_*(T)^\Gamma$ is spanned by $(1,1,1,1)$ while the image of the norm map $(a,b,c,d) \mapsto (a+b+c+d,\ldots,a+b+c+d)$
+is spanned by $(2,2,2,2)$.  A similar computation shows that $\HT{-1}(\Gamma, T(L)) = 0$.
 \end{enumerate}
 \end{example}
 
