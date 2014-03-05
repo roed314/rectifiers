@@ -533,7 +533,7 @@ $\xi_\varphi$ is a character of a cover of $T(K)$.
 
 We will need the following structural result about Langlands
 parameters mapping to groups of type L for the proof of
-Proposition \ref{prop:existenceofrectifier}.  Suppose now that $L/K$ is unramified and that
+Proposition \ref{prop:existenceofrectifier}.  Suppose now that $L/K$ is unramified of degree $n$ and that
 $\varphi$ and $\varphi'$ are two Langlands parameters
 with $\varphi'(\Fr) \varphi(\Fr)^{-1} \in \hat{T}$.
 Let $\xi$ and $\xi'$ be the associated characters of $T(L)_{\Gamma}$.
@@ -543,45 +543,16 @@ $\xi$ and $\xi'$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 \end{lemma}
 
 \begin{proof}
-It suffices to prove that $\xi' \cdot \xi^{-1}$ vanishes on
-$\ker(\Nm : T(L) \rightarrow T(K))$.  We do so by expressing the quotient
-$\varphi' \cdot \varphi^{-1}$ as a product
-\begin{equation}
-\label{eq:prod_phii}
-\textstyle{\prod_{i=0}^{n-1} \varphi_i,}
-\end{equation}
-where the $\varphi_i$ satisfy 
-\begin{equation}
-\label{eq:Fr_phii}
-\varphi_i(\gamma) = \Fr^i(\varphi_0(\gamma))
-\end{equation}
-for all $\gamma \in \Gal(\bar{L}/L)$. The quotient $\xi' \cdot \xi^{-1}$ will then break up
-analogously, allowing the computation of its value on $x \in T(L)$ given $\Nm(x)$.
+Suppose $\varphi(\Fr) = y$, where $y$ is an element of $D$.  By our assumptions on $T$, we have that $\hat{H}^{-1}(\Gamma, T(L)) = \hat{H}^{-1}(\Gamma, X_*(T))$ (see \ref{cor:cohom_tori}).
 
-We define $\varphi_i$ separately on inertia and on $\Fr^n$.
-Set $t = \varphi'(\Fr)\varphi(\Fr)^{-1} \in \hat{T}$ and set $\varphi_i(\Fr^n) = \Fr^i(t)$.
-The restriction of $\varphi' \cdot \varphi^{-1}$ to inertia is a map $\chi : \I \to \hat{T}$.
-Let $\chi_0$ be an arbitrary $(1+q+\cdots+q^{n-1})$-th root of $\chi$
-\textcolor{red}{(such a $\chi_0$ can only exist if the exponent of the image of $\chi$ is relatively prime to 
-$(1+q+\cdots+q^{n-1})$-th root.  The tame part of the inertia can divide $q-1$)}, and define
-$\varphi_i$ on $\I$ to be $\Fr^i \circ \chi_0$.  The $\varphi_i$ satisfy \eqref{eq:Fr_phii}
-by definition.  They satisfy \eqref{eq:prod_phii} by the definition of $\chi_0$, and on
-$\Fr^n$ by the following computation.  If $g = \varphi(\Fr) \in D$, then
-\begin{align*}
-\varphi'(\Fr^n) \varphi(\Fr^n)^{-1} &= (tg)^n g^{-n} \\
-&= \textstyle{\prod_{i=0}^{n-1} g^i t g^{-i}} \\
-&= \textstyle{\prod_{i=0}^{n-1} \Fr^i(t)}
-\end{align*}
-since $g$ projects to $\Fr \in \Gamma$.
+Let $\lambda \in ker(\Nm : X_*(T) \rightarrow X_*(T))$.  We wish to show that $\xi(\lambda) = \xi'(\lambda)$.  Via the canonical identification $X_*(T) \cong X^*(\hat{T})$, we regard $\lambda$ as an element of $X^*(\hat{T})$.  Assume without loss of generality that we may write $y^n = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and $z \in \mathbb{C}^{\times}$ (note that $y^n \in \hat{T}$).  By the local Langlands correspondence for tori, we obtain $\xi(\lambda) = z^{\langle \mu, \lambda \rangle}$, where $\langle , \rangle$ denotes the canonical pairing on $X_*(\hat{T}) \times X^*(\hat{T})$.
 
-Now let $\xi_i$ be the character of $T(L)$ associated to $\varphi_i$.
-By \cite{reeder-debacker:09a}*{Lem. 4.3.1}, $\xi_i = \xi_0 \circ \Fr^i.$
-Suppose that $x \in T(L)$ with $\Nm(x) = 1$.  Then
-\begin{align*}
-\xi'(x) \xi(x)^{-1} &= \textstyle{\prod_{i=0}^{n-1} \xi_i(x)} \\
-&= \textstyle{\xi_0 \left(\prod_{i=0}^{n-1}\Fr^i(x)\right)} \\
-&= 1.\\
-\end{align*}
+By definition of $\varphi'$, we have that $\varphi'(\Fr) = ty$, for some element $t \in \hat{T}$.  Let $w$ be the Weyl group element associated to $y$. Without loss of generality let us assume $t = \mu' \otimes z'$, where $\mu' \in X_*(\hat{T})$ and $z' \in \mathbb{C}^{\times}$.  Then
+$$(ty)^n = t yty^{-1} y^2 t y^{-2} \cdots y^{n-1} t y^{1-n} y^n$$
+$$= t w(t) w^2(t) \cdots w^{n-1}(t) y^n =(\Nm(\mu' ) \otimes z') \cdot (\mu \otimes z),$$ where here $\Nm$ denotes norm map on $\hat{T}$ corresponding to the given Galois action on $\hat{T}$.
+
+We conclude again by the local Langlands correspondence for tori that $$\xi'(\lambda) = z^{\langle \mu, \lambda \rangle} (z' )^{\langle \Nm(\mu'), \lambda \rangle}.$$  Since $\langle , \rangle$ is Galois equivariant, $\langle \Nm(\mu'), \lambda \rangle = \langle\mu', \Nm(\lambda)\rangle$.
+But $\lambda \in ker(\Nm : X_*(T) \rightarrow X_*(T))$, so $\langle\mu', \Nm(\lambda)\rangle = 0$.  Therefore, $\xi'(\lambda) = z^{\langle\mu, \lambda\rangle} = \xi(\lambda)$.
 \end{proof}
 
 We will also need the following lemma in order to define our notion of admissible pair
