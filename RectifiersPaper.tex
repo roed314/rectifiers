@@ -543,20 +543,18 @@ $\xi$ and $\xi'$ have the same restriction to $\HT{-1}(\Gamma, T(L))$.
 \end{lemma}
 
 \begin{proof}
-Suppose $\varphi(\Fr) = y$, where $y$ is an element of $D$.  By our assumptions
-on $T$, we have that $\HT{-1}(\Gamma, T(L)) = \HT{-1}(\Gamma, X_*(T))$ (see \ref{cor:cohom_tori}).
+Set $y = \varphi(\Fr) \in D$.  By Corollary \ref{cor:cohom_tori},
+$\HT{-1}(\Gamma, T(L)) = \HT{-1}(\Gamma, X_*(T))$.
+If suffices to show that $\xi(\lambda) = \xi'(\lambda)$ for any $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.
 
-Let $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$.  We wish to show that
-$\xi(\lambda) = \xi'(\lambda)$.  Via the canonical identification $X_*(T) \cong X^*(\hat{T})$,
-we regard $\lambda$ as an element of $X^*(\hat{T})$.  Assume without loss of generality
-that we may write $y^n = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
-$z \in \mathbb{C}^{\times}$ (note that $y^n \in \hat{T}$).  By the local Langlands
-correspondence for tori, we obtain $\xi(\lambda) = z^{\langle \mu, \lambda \rangle}$,
-where $\langle , \rangle$ denotes the canonical pairing on $X_*(\hat{T}) \times X^*(\hat{T})$.
+Via the canonical identification $X_*(T) \cong X^*(\hat{T})$,
+we regard $\lambda$ as an element of $X^*(\hat{T})$.  Note that $y^n \in \hat{T} \cong X_*(\hat{T}) \otimes \CC^\times$;
+assume without loss of generality that we may write $y^n = \mu \otimes z$, for some $\mu \in X_*(\hat{T})$ and
+$z \in \CC^{\times}$.  Write $\langle , \rangle$ for the canonical pairing $X_*(\hat{T}) \times X^*(\hat{T}) \to \ZZ$.  The local Langlands
+correspondence for tori implies that $\xi(\lambda) = z^{\langle \mu, \lambda \rangle}$.
 
-By definition of $\varphi'$, we have that $\varphi'(\Fr) = ty$, for some element
-$t \in \hat{T}$.  Let $w$ be the Weyl group element associated to $y$. Without
-loss of generality let us assume $t = \mu' \otimes z'$, where $\mu' \in X_*(\hat{T})$
+Let $t = \varphi'(\Fr)\varphi(\Fr)^{-1} \in \hat{T}$, and let $w$ be the image of $y$ in the Weyl group. Without
+loss of generality we may write $t = \mu' \otimes z'$ for $\mu' \in X_*(\hat{T})$
 and $z' \in \mathbb{C}^{\times}$.  Then
 \begin{align*}
 (ty)^n &= t yty^{-1} y^2 t y^{-2} \cdots y^{n-1} t y^{1-n} y^n \\
@@ -571,7 +569,7 @@ We conclude again by the local Langlands correspondence for tori that
 \]
 Since $\langle , \rangle$ is Galois equivariant, $\langle \Nm(\mu'), \lambda \rangle = \langle\mu', \Nm(\lambda)\rangle$.
 But $\lambda \in \ker(\Nm : X_*(T) \rightarrow X_*(T))$, so $\langle\mu', \Nm(\lambda)\rangle = 0$.
-Therefore, $\xi'(\lambda) = z^{\langle\mu, \lambda\rangle} = \xi(\lambda)$.
+Therefore $\xi'(\lambda) = z^{\langle\mu, \lambda\rangle} = \xi(\lambda)$.
 \end{proof}
 
 We will also need the following lemma in order to define our notion of admissible pair
