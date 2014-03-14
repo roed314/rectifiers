@@ -102,10 +102,12 @@
 \begin{abstract}
 
 Bushnell and Henniart define rectifiers, which provide a correction term
-in the local Langlands correspondence for $\GL_n(K)$, bridging a
-natural bijection between essentially tame supercuspidal Langlands parameters
-and characters of minisotropic tori, and a natural bijection between characters
-of minisotropic tori and supercuspidal representations of $\GL_n(K)$.
+in the local Langlands correspondence for $\GL_n(K)$.  They give a natural bijection
+between essentially tame supercuspidal Langlands parameters
+and characters of minisotropic tori, and a second bijection between characters
+of minisotropic tori and supercuspidal representations of $\GL_n(K)$.  Rectifiers
+bridge the gap, adding an intermediate step so that the composition agrees 
+with the local Langlands correspondence.
 In this paper, we begin the process of generalizing rectifiers to other
 connected reductive groups, focusing on the case of an unramified minisotropic
 torus.
@@ -483,7 +485,9 @@ Similarly, the kernel of the norm map consists
 of $\sum_C \alpha_C e_C$ with $\sum_C \alpha_C = 0$.  This kernel coincides with the span of $e_C - e_D$ for cosets
 $C$ and $D$, and since $\Gamma$ permutes the $e_C$ transitively we have $\HT{-1}(\Gamma, T(L)) = 0$.
 
-\item Let $T$ be a torus in $\GSp_4$ \cite{morris:91a}*{Prop. 1.3}, split over a quartic unramified extension
+Note that every unramified extension is Galois, so if $N/K$ is unramified then $L=N$ and $\HT{-1}(\Gamma, T(L)) = \HT{0}(\Gamma, T(L)) = 0$.
+
+\item For an example of an unramified torus with nontrivial cohomology, let $T$ be a torus in $\GSp_4$ \cite{morris:91a}*{Prop. 1.3}, split over a quartic unramified extension
 $L/K$ with $\Gamma = \Gal(L/K) = \langle \tau \rangle$, with cocharacter lattice
 \begin{align*}
 X_*(T) = &\{(a,b,c,d) \in \ZZ^4 \: : \: a + d = b + c\} \\
