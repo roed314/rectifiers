@@ -472,20 +472,15 @@ Using this corollary, we can give examples of coverable and non-coverable tori.
 
 \begin{example} $ $
 \begin{enumerate}
-\item Each minisotropic torus in $\GL_n$ is of the form $T = \Res_{N/K} \Gm$ for a degree $n$ extension $N$ of $K$.
-Writing $L$ for the Galois closure of $N$ in $\Gamma=\Gal(L/K)$, we may take a basis $\{e_C\}$ for $X_*(T)$
-indexed by left cosets $C$ of $\Gal(L/N)$ in $\Gamma$, with $\Gamma$ permuting the basis through left multiplication.
-Then $X_*(T)^\Gamma$ is spanned by $\sum_C e_C$ while the image of the norm map is spanned by
-$[L:N] \sum_C e_C$.  Thus 
+\item Each minisotropic torus in $\GL_m$ is of the form $T = \Res_{N/K} \Gm$ for a degree $m$ extension $N$ of $K$.
+Write $L$ for the Galois closure of $N$ and $H = \Gal(L/N)$.  As usual, set $\Gamma=\Gal(L/K)$, let $K_n$ be the
+maximal unramified subextension of $N$ and choose a Frobenius lift $\Fr \in \Gamma$.
+We may take a basis $\{e_C\}$ for $X_*(T)$ indexed by left cosets $C$ of $H$ in $\Gamma$, with $\Gamma$
+permuting the basis through left multiplication on the index.  Then $X_*(T)_I$ is spanned by the classes of
+$e_{\Fr^i H}$ for $0 \le i < m$, permuted cyclically.  An easy computation using Corollary \ref{cor:cohom_tori} now shows that 
 \[
-\HT{0}(\Gamma, T(L)) \cong \ZZ/[L:N] \ZZ.
+\HT{-1}(\Gamma_n, T(K_n)) = \HT{0}(\Gamma_n, T(K_n)) = 0.
 \]
-
-Similarly, the kernel of the norm map consists
-of $\sum_C \alpha_C e_C$ with $\sum_C \alpha_C = 0$.  This kernel coincides with the span of $e_C - e_D$ for cosets
-$C$ and $D$, and since $\Gamma$ permutes the $e_C$ transitively we have $\HT{-1}(\Gamma, T(L)) = 0$.
-
-Note that every unramified extension is Galois, so if $N/K$ is unramified then $L=N$ and $\HT{-1}(\Gamma, T(L)) = \HT{0}(\Gamma, T(L)) = 0$.
 
 \item For an example of an unramified torus with nontrivial cohomology, let $T$ be a torus in $\GSp_4$ \cite{morris:91a}*{Prop. 1.3}, split over a quartic unramified extension
 $L/K$ with $\Gamma = \Gal(L/K) = \langle \tau \rangle$, with cocharacter lattice
