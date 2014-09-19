@@ -173,32 +173,52 @@ In the specific case of supercuspidal representations of $\GL_2(K)$ with trivial
 as discussed above, a character of $\Lx / \Nm_{L/K}(\Lx)$ that is nontrivial on $\Kx$.
 
 In this paper, we initiate a program to generalize Bushnell and Henniart's
-rectifier to groups other than $\GL_n(K)$.  In particular, we define rectifiers for
-unramified minisotropic tori $T$ whose zeroth Tate cohomology is trivial (see \S\ref{section:groups_of_type_L}).
-Benedict Gross' recent construction of groups of type L provides a framework for
-us to define the rectifier in this setting.
+rectifier to groups other than $\GL_n(K)$. Suppose that $G$ is a connected reductive group defined over $K$.
+Let $\varphi : \Weil_K \rightarrow {}^L G$ be a
+Langlands parameter for $G(K)$, and suppose that $\varphi$ factors
+through the normalizer of a maximal torus in the dual group.
+Very recently, Benedict Gross, using his theory of ``groups of type $L$'', has shown that if one considers such a Langlands parameter, then one obtains something close to a
+character of a covering group of a maximal torus, as follows (and for more details, see \S\ref{section:groups_of_type_L}).  To $\varphi$, one can associate a maximal $K$-torus $T$ in $G$, unique up to
+stable conjugacy.  Suppose that $T$
+splits over the extension $L$ of $K$.  Then $L$ is necessarily Galois over $K$,
+and we set $\Gamma = \Gal(L/K)$.  Restricting $\varphi$ to $\Weil_L$, then by the local Langlands correspondence for tori, one can associate to $\varphi|_{\Weil_L}$ a character $\xi$ of $T(L)$.  In fact (see \S\ref{section:groups_of_type_L}), $\xi$ factors to a character of $T(L)_{\Gamma}$,
+the group of coinvariants of $T(L)$ with respect to $\Gamma$.
+Moreover, invariants and coinvariants are related by the norm map $$N : T(L) \rightarrow T(K),$$ $$t \mapsto \displaystyle\prod_{\sigma \in \Gamma} \sigma(t),$$ in the cohomology sequence
+$$1 \rightarrow \hat{H}^{-1}(\Gamma,T(L)) \rightarrow T(L)_{\Gamma} \xrightarrow{N} T(K) = T(L)^{\Gamma} \rightarrow \hat{H}^0(\Gamma,T(L)) \rightarrow 1,$$ where $\hat{H}$ denotes Tate cohomology.  Gross's theory therefore constructs out of $\varphi$ a character $\xi$ of $T(L)_{\Gamma}$, which is in general a covering group of a subgroup of $T(K)$.  Generalizing the rectifier of $GL(n,K)$, we would like to ``correct'' or ``twist'' $\xi$ in order to obtain a character of $T(K)$ with which we can use an existing construction of $L$-packets to produce a Langlands correspondence.  One immediate obstruction to producing a character of $T(K)$ from $\xi$ is the fact that $\hat{H}^0(\Gamma, T(L))$ does not necessarily vanish (i.e. the norm map $N$ is not necessarily surjective).
+
+We will therefore assume that $\hat{H}^{0}(\Gamma, T(L)) = 0$.  We will also assume that
+$\varphi$ does not factor through a proper Levi subgroup.  The condition on $\varphi$ puts us in the setting of supercuspidal $L$-packets (conjecturally).  If $T$ is anisotropic and unramified, then $\hat{H}^{0}(\Gamma, T(L)) = 0$, so the condition on $\hat{H}^0$ is not so strong at least when trying to understand supercuspidal $L$-packets of unramified groups.
+If $G$ happens to be $GL(n,K)$, one can compute that
+$\hat{H}^{0}(\Gamma, T(L)) = \hat{H}^{-1}(\Gamma, T(L)) = 0$, so that
+$T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$.  To construct the local Langlands
+correspondence for $GL(n,K)$, one would then proceed to
+attach the supercuspidal representation $\pi_{\xi \cdot
+  \mu_{\xi}}$ to $\xi$, via the construction of Bushnell and Henniart.
+
+If $G$ were arbitrary, then in analogy to the case of $GL(n,K)$, there
+exist (in certain cases) constructions of supercuspidal $L$-packets
+$\Lpack(\chi)$ associated to characters $\chi$ of elliptic tori $T(K)$.  However, as we
+have seen, a Langlands parameter $\varphi$ does not naturally
+provide a character of $T(K)$, but rather a character $\xi$ of
+$T(L)_{\Gamma}$.  After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
+to \emph{admissible} characters of $T(K)$ (for example, the association of \cite{reeder-debacker:09a}, \cite{kaletha:13a}, or \cite{reeder:08a}), the \emph{rectifier} will be a character
+$\mu_{\xi}$ of the covering group $T(L)_{\Gamma}$ such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
+is the local Langlands correspondence for $G(K)$ (or rather, agrees with existing constructions of a local Langlands correspondence), just as in the case of $GL(n,K)$.  This is our idea of a rectifier for a general connected reductive group, and it merely mimics the rectifier for $GL(n,K)$.  We note that if $G(K) = PGL(2,K)$ and if $\varphi$ is supercuspidal, then the Tate cohomology sequence above is exactly the $2$-fold cover $\Lx / \Nm_{L/K}(\Lx)$ of $L^1$ described earlier.
+
+The constructions $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets that we will consider are those of DeBacker/Reeder and Reeder. We define rectifiers for
+unramified minisotropic tori $T$ whose zeroth Tate cohomology is trivial.
 We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
-and are unique up to a notion of equivalence. In the setting of depth zero
-supercuspidal representations of $\GL_{n}(K)$, Theorem \ref{thm:bh_agreement}
-gives the compatibility of our rectifier with that of Bushnell and Henniart.
+and are unique up to a notion of equivalence.  In fact, the rectifier that we construct is canonical; it is a character of $T(L)_{\Gamma}$ that is constructed from
+a canonical Langlands parameter (see Definition \ref{def:phiu}).  We show that the rectifier $\mu_{\xi}$ that we construct produces the correspondence of DeBacker/Reeder and Reeder.  We also show that our rectifier agrees with that of Bushnell/Henniart in the setting of depth zero
+supercuspidal representations of $\GL_{n}(K)$ (see Theorem \ref{thm:bh_agreement}).
 We note that there is an obstruction to proving compatibility in the positive depth case.
 In the depth zero case, Deligne-Lusztig representations provide a canonical way of
-constructing supercuspidal representations. However, in positive depth there are many:
+constructing supercuspidal representations (which is why the parameter of Definition \ref{def:phiu} is also canonical). However, in positive depth there are many:
 Adler \cite{adler:98a}, Howe \cite{howe:77a}, Bushnell-Henniart \cite{bushnell-henniart:10a},
 Bushnell-Kutzko \cite{bushnell-kutzko:AdmissibleDual}, and Yu \cite{yu:03a}.
 In the positive depth setting, the rectifier will depend on the methods
 used to construct representations from the character of $T(K)$, and
 our rectifier indeed differs from that of Bushnell and Henniart in positive depth.
-
-To describe our construction in more detail, suppose that $\varphi : \Weil_K \rightarrow {}^L G$ is a supercuspidal Langlands parameter
-that factors through the normalizer of a maximal torus.
-The local Langlands correspondence for tori, as in the case of $\GL_n(K)$, provides a canonical way to proceed.  For $T$ as above, one
-obtains from $\varphi$ a character $\xi$ of a cover of $T(K)$.
-After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
-to \emph{admissible} characters of $T(K)$, the rectifier of $\xi$ is a character
-$\mu_{\xi}$ of the cover such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
-is the local Langlands correspondence for $G(K)$.  In this paper, we consider the association
-$\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} and \cite{reeder:08a}.
 
 We would like to remark that the notion of a covering group of a torus occurring in the local Langlands
 correspondence is an old one, dating back at least to work of Adams and Vogan \cite{adams-vogan:91}
@@ -206,7 +226,8 @@ in the setting of real groups.  In the theory of real groups, an admissible homo
 $W_{\mathbb{R}} \rightarrow {}^L G$ automatically has image inside the normalizer of a torus in ${}^L G$.
 As such, it naturally produces a genuine character $\chi$ of the \emph{$\rho$-cover of $T(\mathbb{R})$},
 denoted $T(\mathbb{R})_{\rho}$, a certain double cover of $T(\mathbb{R})$.  To $\chi$,
-one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.
+one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.  Finally, it is
+worth noting that the Langlands parameter of Definition \ref{def:phiu} has a special meaning in the theory of real groups as a so-called ``base point''.
 
 We now present an outline of the paper.  In \S\ref{section:BH_recall} we recall
 the notion of rectifier due to Bushnell and Henniart and describe
