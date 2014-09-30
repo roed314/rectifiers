@@ -1,5 +1,5 @@
-\documentclass{compositio}
-\usepackage{amsmath,amscd,amssymb,latexsym, amsfonts}
+\documentclass{amsart}
+\usepackage{amsmath,amscd,amssymb,latexsym,amsthm,amsfonts}
 \usepackage{amsrefs}
 \usepackage{mathtools}
 \usepackage{color}
@@ -90,11 +90,11 @@
 \title[Rectifiers and the local Langlands Correspondence]{Rectifiers and the local Langlands Correspondence: the unramified case}
 \author{Moshe Adrian}
 \email{madrian@math.utah.edu}
-\address{Department of Mathematics, University of Utah, Salt Lake City, UT 84112, U.S.A.}
+\address{Department of Mathematics, University of Toronto, Toronto, ON M5S 2E4, Canada}
 \author{David Roe}
 \email{roed.math@gmail.com}
-\address{Department of Mathematics, University of Calgary, Calgary, AB T2N 1N4, Canada}
-\classification{22E50}
+\address{Department of Mathematics, University of British Columbia, Vancouver, BC V6K 1Z2, Canada}
+\subjclass[2010]{22E50}
 \keywords{Langlands, rectifiers}
 \thanks{The second author was supported by the Pacific Institute for the Mathematical Sciences}
 
@@ -159,10 +159,10 @@ $\Lx / \Nm_{L/K}(\Lx)$ that is nontrivial on $\Kx$.  One can then attach a super
 of $\PGL_2(K)$ to $\chi'$ via the construction of Bushnell and Kutzko \cite{bushnell-kutzko:AdmissibleDual}.
 The tensoring character that gives the correct supercuspidal representation of $\PGL_2(K)$
 is precisely what appears in Bushnell and Henniart's rectifier.  In \cite{bushnell-henniart:10a},
-Bushnell and Henniart compute this rectifier in the \emph{essentially tame} setting of $\GL_n(K)$.
+Bushnell and Henniart compute this rectifier in the \emph{essentially tame} setting for $\GL_n(K)$.
 
 Bushnell and Henniart motivate their rectifier as follows.
-Suppose that $\varphi$ is an \emph{essentially tame} supercuspidal Langlands parameter for
+Suppose that $\varphi$ is an essentially tame supercuspidal Langlands parameter for
 $\GL_n(K)$.  The local Langlands correspondence for tori then yields a degree $n$ extension
 $L/K$ and a character $\xi$ of $L^{\times}$.  We now fix a construction $\chi \mapsto \pi_{\chi}$
 of supercuspidal representations of $\GL_n(K)$ from \emph{admissible} characters of $L^{\times}$.
@@ -192,30 +192,30 @@ in the cohomology sequence
 \end{equation}
 where $\HT{}$ denotes Tate cohomology.  We have attached to each $\varphi$ a character $\xi$ of $T(L)_{\Gamma}$, which is in general a covering group of a finite-index subgroup of $T(K)$.  In order to use existing constructions of representations of $G(K)$, we need a character of $T(K)$ itself.  The outer terms in \eqref{eq:coinv_seq} provide an obstruction in shifting to a character of $T(K)$.
 
-In this paper, we sidestep half of the problem by assuming that $\HT{0}(\Gamma, T(L)) = 0$.  This condition holds for unramified minisotropic tori in $\GL_n$
+In this paper, we sidestep half of the problem by assuming that $\HT{0}(\Gamma, T(L)) = 0$.  This condition holds for unramified minisotropic tori in both $\GL_n$
 and in semisimple groups.  Such tori arise for discrete parameters, where $\varphi$ does not factor through a proper Levi subgroup,
 which conjecturally yield supercuspidal $L$-packets.  In the case of $\GL_n$, we also have $\HT{-1}(\Gamma, T(L)) = 0$
 for any unramified minisotropic torus, so $T(L)_{\Gamma} \cong T(K)$ can be identified with $L^{\times}$.  To construct the local Langlands
 correspondence for $\GL_n(K)$, one would then proceed to
 attach the supercuspidal representation $\pi_{\xi \cdot \mu_{\xi}}$ to $\xi$, via the construction of Bushnell and Henniart.
 
-For many $G$ other than $\GL_n$, % what are the conditions on G and the characters?
+For many $G$,
 there are constructions of supercuspidal $L$-packets
-$\Lpack(\chi)$ associated to characters $\chi$ of elliptic tori $T(K)$.  However, a Langlands parameter $\varphi$ does not naturally
+$\Lpack(\chi)$ associated to characters $\chi$ of elliptic tori $T(K) \subset G(K)$.  However, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character $\xi$ of
 $T(L)_{\Gamma}$.  After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
 to \emph{admissible} characters of $T(K)$ (for example, the association of \cite{reeder-debacker:09a}, \cite{kaletha:13a}, or \cite{reeder:08a}), the \emph{rectifier} will be a character
 $\mu_{\xi}$ of the covering group $T(L)_{\Gamma}$ such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
 agrees with existing constructions of the local Langlands correspondence for $G(K)$, just as in the case of $\GL_n(K)$.  We note that if $G(K) = \PGL_2(K)$ and if $\varphi$ is supercuspidal, then the Tate cohomology sequence above is exactly the $2$-fold cover $\Lx / \Nm_{L/K}(\Lx)$ of $L^1$ described earlier.
 
-The constructions $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets we use are those of DeBacker-Reeder and Reeder. We define rectifiers for
+The associations $\chi \mapsto \Lpack(\chi)$ that we use in our definition of rectifiers are those of DeBacker-Reeder and Reeder. We define rectifiers for
 unramified minisotropic tori $T$ whose zeroth Tate cohomology is trivial.
 We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
 and are unique up to equivalence.  In fact, the rectifier that we construct is canonical: it is a character of $T(L)_{\Gamma}$ that is constructed from
 a canonical Langlands parameter (see Definition \ref{def:phiu}).  We show that our rectifier $\mu_{\xi}$ produces the correspondence of DeBacker-Reeder and Reeder.  We also show that our rectifier agrees with that of Bushnell-Henniart in the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$ (see Theorem \ref{thm:bh_agreement}).
 
-Note that there is an obstruction to proving compatibility in the positive depth case.
+Note that there is an obstruction to proving the compatibility of our rectifier with Bushnell-Henniart's in the positive depth case.
 In the depth zero case, Deligne-Lusztig representations provide a canonical way of
 attaching supercuspidal representations to characters. However, in positive depth there are many:
 Adler \cite{adler:98a}, Howe \cite{howe:77a}, Bushnell-Henniart \cite{bushnell-henniart:10a},
@@ -230,8 +230,7 @@ in the setting of real groups.  In the theory of real groups, an admissible homo
 $W_{\mathbb{R}} \rightarrow {}^L G$ automatically has image inside the normalizer of a torus in ${}^L G$.
 As such, it naturally produces a genuine character $\chi$ of the \emph{$\rho$-cover of $T(\mathbb{R})$},
 denoted $T(\mathbb{R})_{\rho}$, a certain double cover of $T(\mathbb{R})$.  To $\chi$,
-one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.  Finally, it is
-worth noting that the Langlands parameter of Definition \ref{def:phiu} has a special meaning in the theory of real groups as a so-called ``base point''.
+one can naturally attach a collection of representations of $G(\mathbb{R})$ to construct an $L$-packet.
 
 We emphasize that our results do not extend the scope of DeBacker and Reeder's constructions to a broader class of parameters.
 Instead, we aim to translate Bushnell and Henniart's notion of rectifier in such a way that it can be applied
@@ -700,6 +699,7 @@ We define a homomorphism $\varphi_{\hat{u}} : \Weil_K \rightarrow {}^L G$ by
 By
 \S\ref{section:groups_of_type_L}, $\varphi$ and $\varphi_{\hat{w}}$ give rise to characters
 $\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$ respectively.
+%Note that $\varphi_{\hat{u}}$ arises in the theory of real groups as a ``base point.''
 
 \begin{lemma} \label{lem:GDR_compat}
 $\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
@@ -1152,7 +1152,7 @@ forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument 
 canonical lift $\tilde{w}$ of $\hat{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$,
 so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$ up to conjugacy.
 
-\bibliographystyle{amsalpha}
+%\bibliography{Biblio}
 \bibliography{roebib/Biblio,extras}
 
 \end{document}
