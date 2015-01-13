@@ -404,8 +404,13 @@ will will need a description of the characters $\mu_{\xi}$ in certain cases.  Th
 \end{proposition}
 
 \section{Tori over $p$-adic fields} \label{section:padic_tori}
+We first recall the definition of a minisotropic torus.
 
-Let $T \subset G$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
+\begin{definition}[{\cite{reeder:08a}*{\S3.1}}]\label{minisotropictorus}
+If $T$ is an unramified maximal $K$-torus in $G$, we say that $T$ is $K$-\emph{minisotropic} if $T(K)/Z(K)$ is compact.
+\end{definition}
+
+Now let $T \subset G$ be a torus defined over $K$ with splitting field $L$, let $K_n$ be the maximal
 unramified subextension $L/K$, set $\Gamma = \Gal(L/K)$ and $I = \Gal(L/K_n)$.
 In studying rectifiers for groups other than $\GL_n$, the following exact sequence
 in Tate cohomology plays a crucial role:
@@ -418,12 +423,8 @@ in Tate cohomology plays a crucial role:
 \noindent We make the following definition as a matter of notational convenience, since
 it will serve as a running hypothesis on $T$ for most of the rest of the paper.
 
-\begin{definition}[{\cite{reeder:08a}*{\S3.1}}]\label{minisotropictorus}
-If $T$ is a $\bar{K}$-split maximal $K$-torus in $G$, we say that $T$ is $K$-\emph{minisotropic} if $T(K)/Z(K)$ is compact.
-\end{definition}
-
 \begin{definition} \label{def:coverable}
-We say $T$ is \emph{coverable} if it is minisotropic and $\HT{0}(\Gamma, T(L)) = 0$.
+We say that $T$ is \emph{coverable} if it is $K$-minisotropic and $\HT{0}(\Gamma, T(L)) = 0$.
 \end{definition}
 
 We require that $T$ be minisotropic in order to be able to use the local Langlands correspondence
@@ -646,7 +647,7 @@ associate a character $\chi_{\varphi}$ of $T(K)$ to $\varphi$.
 
 We now recall the definition of
 the Tits group and some of its properties.  Choose a set $\{ X_{\alpha} \}$ of root vectors
-indexed by the set of simple roots of $\hat{T}$ in $\hat{B}$; $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
+indexed by the set of simple roots of $\hat{T}$ in $\hat{B}$.  Then $(\hat{T}, \hat{B}, \{X_{\alpha} \})$
 is a pinning as in \cite{reeder:10a}*{\S 3.1}.
 For each simple root $\alpha$, define $\phi_{\alpha} : \SL_2 \rightarrow \hat{G}$
 by
@@ -693,6 +694,9 @@ By
 $\xi_{\varphi}$ and $\xi_{\varphi_{\hat{w}}}$ of $T(L)_{\Gamma}$ respectively.
 %Note that $\varphi_{\hat{u}}$ arises in the theory of real groups as a ``base point.''
 
+The following proposition relates the character $\xi_\varphi$ defined through groups of type $L$
+to the character $\chi_\varphi$ constructed by DeBacker--Reeder and Reeder.
+
 \begin{lemma} \label{lem:GDR_compat}
 $\xi_{\varphi}$ and $\chi_{\varphi} \circ \Nm$ have the same restriction to $T(\OL)_{\Gamma}$.
 \end{lemma}
@@ -716,8 +720,7 @@ $T(\OK)$ via this isomorphism.  But this is exactly how the character
 $\chi_{\varphi}|_{T(\OK)}$ is constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
 \end{proof}
 
-The following proposition relates the character $\xi_\varphi$ defined through groups of type $L$
-to the character $\chi_\varphi$ constructed by DeBacker--Reeder and Reeder.
+In the case that $G$ is semisimple, we can say even more.
 
 \begin{proposition}\label{prop:existenceofrectifier}
 If $G$ is semisimple, then $\chi_{\varphi} \circ \Nm = \xi_{\varphi} \otimes \xi_{\varphi_{\hat{w}}}^{-1}$.
@@ -920,8 +923,7 @@ provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cites{reeder-debacker:09a, reeder:08a}.
 
 \begin{definition} \label{def:rectifier}
-  Let $T$ be a $K$-minisotropic torus in $G$, that splits over an unramified
-  extension $L$.  A \emph{rectifier} for $T$ is a function
+  Let $T$ be a coverable torus in $G$, with unramified splitting field $L$.  A \emph{rectifier} for $T$ is a function
   $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
   which attaches to each $(T, \xi) \in P_G(K)$ a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
