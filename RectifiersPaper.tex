@@ -1033,9 +1033,18 @@ by condition (1) of Definition \ref{def:rectifier}.
 Since $\xi$ is minimal, we get that $w_{\xi} = 1$, which implies
 that $\mu_{\xi} = \mu'_{\xi}$.
 
-Now suppose that $\xi$ has depth zero.
-Define $\lambda$ on $T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = ({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi$,
-which is independent of $\xi$ by condition (3). The equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
+Now suppose that $\xi$ has depth zero, and suppose without loss of generality that $\bmu = \mumin$. Define $\lambda$ on $T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = (({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi)|_{T(\OL)_{\Gamma}}$.  We claim that $\lambda$ is independent of $\xi$.  To see this, let $\xi_1, \xi_2$ be depth zero characters.  We wish to show that
+\begin{equation}\label{equivalencedepthzero}
+(({}^{w_{\xi_1}} (\mu_{\xi_1}))^{-1} \cdot \mu'_{\xi_1})|_{T(\OL)_{\Gamma}} =
+(({}^{w_{\xi_2}} (\mu_{\xi_2}))^{-1} \cdot \mu'_{\xi_2})|_{T(\OL)_{\Gamma}}.
+\end{equation}
+But since $\xi_1, \xi_2$ are depth zero, we have that $\xi_1 \xi_2^{-1}$ is also of depth zero, and so condition (3) implies that $\mu'_{\xi_1} = \mu'_{\xi_2}$. Therefore, \eqref{equivalencedepthzero} is equivalent to 
+\begin{equation}\label{equivalencedepthzero2}
+({}^{w_{\xi_1}} (\mu_{\xi_1}))|_{T(\OL)_{\Gamma}} = ({}^{w_{\xi_2}} (\mu_{\xi_2}))|_{T(\OL)_{\Gamma}}.
+\end{equation}
+Since $\bmu = \mumin$, we have that $\mu_{\xi_1}|_{T(\OL)_{\Gamma}} \equiv \mu_{\xi_2}|_{T(\OL)_{\Gamma}} \equiv 1$. Finally, since $W(K)$ preserves $T(\OL)_{\Gamma}$, \eqref{equivalencedepthzero2} is proven since both sides of the equality are the trivial character.  
+
+Since $\lambda$ is seen to be independent of $\xi$, the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
 implies that $\lambda \in Q_T$.  Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to
 $T(K)$ by condition (2) of Definition \ref{def:rectifier}, $\mu_\xi$ and $\mu_\xi'$ have the
 same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.  Since $G$ is semisimple we may pull $\lambda$ back to
