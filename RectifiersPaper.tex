@@ -1038,17 +1038,21 @@ Now suppose that $\xi$ has depth zero, and suppose without loss of generality th
 (({}^{w_{\xi_1}} (\mu_{\xi_1}))^{-1} \cdot \mu'_{\xi_1})|_{T(\OL)_{\Gamma}} =
 (({}^{w_{\xi_2}} (\mu_{\xi_2}))^{-1} \cdot \mu'_{\xi_2})|_{T(\OL)_{\Gamma}}.
 \end{equation}
-But since $\xi_1, \xi_2$ are depth zero, we have that $\xi_1 \xi_2^{-1}$ is also of depth zero, and so condition (3) implies that $\mu'_{\xi_1} = \mu'_{\xi_2}$. Therefore, \eqref{equivalencedepthzero} is equivalent to 
+But since $\xi_1, \xi_2$ are depth zero, we have that $\xi_1 \xi_2^{-1}$ is also of depth zero, and so condition (3) implies that $\mu'_{\xi_1} = \mu'_{\xi_2}$. Therefore, \eqref{equivalencedepthzero} is equivalent to
 \begin{equation}\label{equivalencedepthzero2}
 ({}^{w_{\xi_1}} (\mu_{\xi_1}))|_{T(\OL)_{\Gamma}} = ({}^{w_{\xi_2}} (\mu_{\xi_2}))|_{T(\OL)_{\Gamma}}.
 \end{equation}
-Since $\bmu = \mumin$, we have that $\mu_{\xi_1}|_{T(\OL)_{\Gamma}} \equiv \mu_{\xi_2}|_{T(\OL)_{\Gamma}} \equiv 1$. Finally, since $W(K)$ preserves $T(\OL)_{\Gamma}$, \eqref{equivalencedepthzero2} is proven since both sides of the equality are the trivial character.  
+Since $\bmu = \mumin$, we have that $\mu_{\xi_1}|_{T(\OL)_{\Gamma}} \equiv \mu_{\xi_2}|_{T(\OL)_{\Gamma}} \equiv 1$. Finally, since $W(K)$ preserves $T(\OL)_{\Gamma}$, \eqref{equivalencedepthzero2} is proven since both sides of the equality are the trivial character.
 
 Since $\lambda$ is seen to be independent of $\xi$, the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
 implies that $\lambda \in Q_T$.  Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to
 $T(K)$ by condition (2) of Definition \ref{def:rectifier}, $\mu_\xi$ and $\mu_\xi'$ have the
 same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.  Since $G$ is semisimple we may pull $\lambda$ back to
-a character on $T(L)_\Gamma$, vanishing on $\HT{-1}(\Gamma, T(L))$.  We get that $\mu'_\xi = \lambda\mu_\xi$
+a character on $T(L)_\Gamma$, vanishing on $\HT{-1}(\Gamma, T(L))$.  Note also that 
+\[
+\mu_{\xi}'|_{T(\OL)_{\Gamma}} \equiv (\lambda \mu_{\xi})|_{T(\OL)_{\Gamma}}.
+\]
+by definition of $\lambda$ and the fact that $\mu_\xi|_{T(\OL)_{\Gamma}} \equiv 1$ and that $W(K)$ preserves $T(\OL)_{\Gamma}$.  Therefore, we finally obtain that $\mu'_\xi = \lambda\mu_\xi$ on all of $T(L)_{\Gamma}$
 and thus $\bmu$ is equivalent to $\bmu'$.
 \end{proof}
 
