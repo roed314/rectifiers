@@ -1,4 +1,11 @@
-\documentclass{amsart}
+\documentclass{mrlart7}
+\def\volno{18}
+\def\yrno{2011}
+\def\issueno{00}
+\setcounter{page}{10001}
+\def\lpageno{10019} %temporary numbers
+\overfullrule=5pt 
+
 \usepackage{amsmath,amscd,amssymb,latexsym,amsthm,amsfonts}
 \usepackage{amsrefs}
 \usepackage{mathtools}
@@ -19,8 +26,6 @@
 \newtheorem{statement}[theorem]{Statement}
 \newtheorem{example}[theorem]{Example}
 
-\newcommand{\MAxxx}[1]{$\clubsuit$\footnote{#1}}
-\newcommand{\DRxxx}[1]{$\spadesuit$\footnote{#1}}
 \newcommand{\HT}[1]{\hat{\HH}{}^{#1}}
 
 \theoremstyle{definition}
@@ -71,9 +76,6 @@
 \newcommand{\I}{\mathcal{I}}
 \newcommand{\WD}{\mathcal{W}'}
 \newcommand{\Lpack}{\mathcal{L}}
-\newcommand{\Adm}{\Pi}
-\newcommand{\LP}{\mathcal{P}}
-\DeclareMathOperator{\Sup}{Sup}
 \newcommand{\Pmin}{P_G^{\min}}
 \newcommand{\bmu}{\boldsymbol\mu}
 \newcommand{\mumin}{\bmu^{\min}}
@@ -93,10 +95,10 @@
 \title[Rectifiers and the local Langlands Correspondence]{Rectifiers and the local Langlands Correspondence: the unramified case}
 \author{Moshe Adrian}
 \email{madrian@math.utah.edu}
-\address{Department of Mathematics, University of Toronto, Toronto, ON M5S 2E4, Canada}
+\address{Department of Mathematics \\ University of Toronto \\ Toronto, ON M5S 2E4, Canada}
 \author{David Roe}
 \email{roed.math@gmail.com}
-\address{Department of Mathematics, University of British Columbia, Vancouver, BC V6K 1Z2, Canada}
+\address{Department of Mathematics \\ University of British Columbia \\ Vancouver, BC V6K 1Z2, Canada}
 \subjclass[2010]{22E50}
 \keywords{Langlands, rectifiers}
 \thanks{The second author was supported by the Pacific Institute for the Mathematical Sciences}
@@ -203,18 +205,18 @@ attach the supercuspidal representation $\pi_{\xi \cdot \mu_{\xi}}$ to $\xi$, vi
 
 For many $G$,
 there are constructions of supercuspidal $L$-packets
-$\Lpack(\chi)$ associated to characters $\chi$ of elliptic tori $T(K) \subset G(K)$.  However, a Langlands parameter $\varphi$ does not naturally
+$\Pi(\chi)$ associated to characters $\chi$ of elliptic tori $T(K) \subset G(K)$.  However, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character $\xi$ of
-$T(L)_{\Gamma}$.  After fixing an association $\chi \mapsto \Lpack(\chi)$ of supercuspidal $L$-packets of $G$
+$T(L)_{\Gamma}$.  After fixing an association $\chi \mapsto \Pi(\chi)$ of supercuspidal $L$-packets of $G$
 to \emph{admissible} characters of $T(K)$ (for example, the association of \cite{reeder-debacker:09a}, \cite{kaletha:13a}, or \cite{reeder:08a}), the \emph{rectifier} will be a character
-$\mu_{\xi}$ of the covering group $T(L)_{\Gamma}$ such that $\varphi \mapsto \Lpack(\xi \cdot \mu_{\xi})$
+$\mu_{\xi}$ of the covering group $T(L)_{\Gamma}$ such that $\varphi \mapsto \Pi(\xi \cdot \mu_{\xi})$
 agrees with existing constructions of the local Langlands correspondence for $G(K)$, just as in the case of $\GL_n(K)$.  We note that if $G(K) = \PGL_2(K)$ and if $\varphi$ is supercuspidal, then the Tate cohomology sequence above is exactly the $2$-fold cover $\Lx / \Nm_{L/K}(\Lx)$ of $L^1$ described earlier.
 
-The associations $\chi \mapsto \Lpack(\chi)$ that we use in our definition of rectifiers are those of DeBacker--Reeder and Reeder. We define rectifiers for
+The associations $\chi \mapsto \Pi(\chi)$ that we use in our definition of rectifiers are those of DeBacker--Reeder and Reeder. We define rectifiers for
 unramified minisotropic tori $T$ whose zeroth Tate cohomology is trivial.
 We show in Theorem \ref{thm:unique_semisimple} that rectifiers for semisimple $G$ exist
 and are unique up to equivalence.  In fact, the rectifier that we construct is canonical: it is a character of $T(L)_{\Gamma}$ that is constructed from
-a canonical Langlands parameter (see Definition \ref{def:phiu}).  We show that our rectifier $\mu_{\xi}$ produces the correspondence of DeBacker--Reeder and Reeder.  We also show that our rectifier agrees with that of Bushnell--Henniart in the setting of depth zero
+a canonical Langlands parameter (see Definition \ref{def:phiu}).  We show that our rectifier agrees with that of Bushnell--Henniart in the setting of depth zero
 supercuspidal representations of $\GL_{n}(K)$ (see Theorem \ref{thm:bh_agreement}).
 
 Note that there is an obstruction to proving the compatibility of our rectifier with Bushnell--Henniart's in the positive depth case.
@@ -246,19 +248,14 @@ we present some results about Tate cohomology of $p$-adic tori that will be used
 in the rest of the paper.  In \S\ref{section:groups_of_type_L} we review
 the theory of groups of type L.  In
 \S\ref{section:gross_debacker_reeder} we describe the relationship between the
-construction of Gross, via groups of type L, and the constructions $\chi \mapsto \Lpack(\chi)$ of
+construction of Gross, via groups of type L, and the constructions $\chi \mapsto \Pi(\chi)$ of
 \cite{reeder-debacker:09a} and \cite{reeder:08a}.  In \S\ref{Q_T} we study how translation by a character affects
-the map $\chi \mapsto \Lpack(\chi)$.
+the map $\chi \mapsto \Pi(\chi)$.
 In \S\ref{section:general_rectifiers} we
 introduce our notion of rectifier and prove our main result, Theorem \ref{thm:unique_semisimple}.
 Finally, in \S\ref{section:BH_compat} we show that our rectifier is compatible with
 the rectifier of Bushnell and Henniart in the setting of depth zero
 supercuspidal representations of $\GL_n(K)$.
-
-\subsection*{Acknowledgements}
-
-This paper has benefited from conversations with Jeffrey Adams, Jeffrey Adler, Colin Bushnell,
-Andrew Fiori, Guy Henniart, Gordan Savin, and Geo Kam-Fai Tam.  We thank them all.
 
 \section{Notation and Preliminaries} \label{section:notation}
 
@@ -436,7 +433,7 @@ $T(L)_\Gamma$.  In the remainder of this section recall some tools for computing
 groups over tori and give examples of coverable and non-coverable tori.
 
 Let $\TT$ be the N\'eron model of $T$, a canonical model of $T$
-over $\OK$ \cite[Ch. 10]{bosch-lutkebohmert-reynaud:NeronModels}.
+over $\OK$ \cite{bosch-lutkebohmert-reynaud:NeronModels}*{Ch. 10}.
 As a consequence of the N\'eron mapping
 property, we may identify $\TT(\OK)$ with $T(K)$.  The connected
 component of the identity, $\TT^\circ$, cuts out a subgroup
@@ -461,7 +458,7 @@ which we may identify with the
 components of $\TT \times \Spec(k)$ since $T = \TT \times \Spec(K)$
 is connected.  The structure of $\C$ is described by Bertapelle and Gonz\'alez-Avil\'es:
 
-\begin{proposition}[{\cite{bertapelle-gonzalez:13b}*{Thm. 1.1}}]
+\begin{proposition}[{\cite{bertrapelle-gonzales:13b}*{Thm. 1.1}}]
 As $\Gal(\bar{k}/k)$-modules,
 \[
 \C \cong X_*(T)_I.
@@ -618,9 +615,9 @@ Let $G$ be a connected reductive $K$-group and let $T$ be a maximal
 $K$-torus of $G$ that has splitting field $L$.
 \begin{enumerate}
 \item $\Normalizer{T(K)}{G(L)} / T(L) \cong W(K)$.
-\item The action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
+\item The conjugation action of $\Normalizer{T(L)}{G(L)} / T(L)$ on $T(L)$ determines
 actions of $\Normalizer{T(L)}{G(L)}^\Gamma / T(K)$ and $W(K)$
-on $T(L)$ which factor naturally to actions on $T(L)_\Gamma$.
+on $T(L)$ which factor to actions on $T(L)_\Gamma$.
 \end{enumerate}
 \end{lemma}
 
@@ -665,7 +662,7 @@ Let $\sigma_{\alpha} = \phi_{\alpha}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$
 For each simple root $\alpha$, let $m_{\alpha} = \sigma_{\alpha}^2 = \alpha^{\vee}(-1)$ and
 let $\hat{T}_2$ be the subgroup of $\hat{T}$ generated by the $m_{\alpha}$.
 
-\begin{theorem}{\cite[Proposition 5.2]{adams-vogan:12}}
+\begin{theorem}{\cite{adams-vogan:12}*{Prop. 5.2}}
 \begin{enumerate}
 
 \item The kernel of the natural map $\widetilde{W} \rightarrow \hat{W}$
@@ -744,6 +741,10 @@ $T(\OL)_{\Gamma}$ so Lemma
 Equality on $\HT{-1}(\Gamma,T(L))$ is Lemma \ref{lem:toral_modification}.
 \end{proof}
 
+The character $\xi_{\varphi_{\hat{w}}}^{-1}$ is the key ingredient in the rectifier that we construct
+(see the proof of Theorem \ref{thm:unique_semisimple}).  It is canonical in the sense that the
+Langlands parameter $\varphi_{\hat{w}}$ is a canonical Langlands parameter.
+
 We note that for semisimple $G$ we may replace $\tilde{w}$ by another
 lift $w'$ of $\hat{w}$ to $\hat{N}$ in the definition of $\varphi_{\hat{w}}$.
 In fact, if we define $\varphi'$ by
@@ -761,18 +762,17 @@ characters of a torus can yield the same $L$-packet.  Consider the following arc
 Let $K = \QQ_3$, $G = \SL_2$ and $T$ be an unramified anisotropic torus in $G$.  There are four depth zero
 characters: two admissible and two inadmissible, notions defined below.  Since the two admissible characters are interchanged
 by the action of the Weyl group, the corresponding $L$-packets are isomorphic \cite{murnaghan:11}*{\S10}.
-In this section we investigate depth zero characters of $T(K)$ that leave the association
-$\chi \mapsto \Lpack(\chi)$ of \cite{reeder-debacker:09a} invariant upon translation:
-$$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\chi$}.$$
+In this section we investigate nontrivial depth zero characters $\alpha$ of $T(K)$ that leave the association
+$\chi \mapsto \Pi(\chi)$ of \cite{reeder-debacker:09a} invariant upon translation:
+$$\Pi(\chi) = \Pi(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\chi$}.$$
 
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
-extension $L$ (see \cite{reeder:08a}*{\S3}).  Suppose $\xi$ is a character of $T(L)_\Gamma$.
+extension $L$ (see \cite{reeder:08a}*{\S3}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
 \begin{enumerate}
 \item The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any nontrivial element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
-denote by $P_G(K)$ the set of admissible pairs in $G$ and write $P_{G,T}(K)$ for
-the set of characters $\xi$ of $T(L)_\Gamma$ so that $(T, \xi)$ is admissible.
+denote by $P_G(K)$ the set of admissible pairs in $G$.
 \item We call two admissible pairs $(T, \xi)$ and $(T', \xi')$ \emph{isomorphic} if there
 exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
 for all $t \in T(K)$.
@@ -887,6 +887,17 @@ $$\frac{\chi}{w(\chi)} = \alpha.$$
 Since $w(\chi)$ also has order $m$, raising both sides to the $m$th power  yields $\alpha^m = 1$.
 \end{proof}
 
+We would like to make a remark about associations $\chi \mapsto \Pi(\chi)$ of \emph{positive depth}
+supercuspidal $L$-packets to characters of minisotropic tori.  In particular, we would like
+to remark that there cannot generally be such an association that could be left invariant by a
+depth zero character $\alpha$. To see this, suppose that
+$$\Pi(\chi) = \Pi(\alpha\cdot\chi) \mbox{ for all admissible $\chi$ of positive depth $r$}.$$
+Then for each such $\chi$, there exists $w(\chi)$ such that 
+$${}^{w(\chi)} (\alpha \cdot \chi) = \chi.$$
+Restricting this equation to $T(\PK)$ yields $({}^{w(\chi)} \chi)|_{T(\PK)} \equiv \chi|_{T(\PK)}$,
+since $\alpha$ is depth zero.  As long as one can find a $\chi$ of depth $r$ that is \emph{minimal}
+(see Definition \ref{def:general_pair}), we get a contradiction.
+
 Finally, we note that Lemma 8 of Bushnell--Henniart \cite{bushnell-henniart:10a}*{p. 511} is equivalent to
 the statement that $Q_T$ is trivial when $T$ is a $K$-minisotropic torus in $\GL_n$.
 
@@ -917,32 +928,46 @@ correspondence one proceeds as in \S\ref{section:BH_recall} by
 attaching the supercuspidal representation $\pi_{\xi_{\varphi} \cdot
   \mu_{\xi_{\varphi}}}$ to $\xi_{\varphi}$, via the construction of Bushnell and Henniart.
 
-For other groups $G$ there are some constructions of supercuspidal $L$-packets $\Lpack(\chi)$
+For other groups $G$ there are some constructions of supercuspidal $L$-packets $\Pi(\chi)$
 from characters $\chi$ of $T(K)$ \cites{reeder-debacker:09a, kaletha:13a, reeder:08a}.
-However, as we have seen, a Langlands parameter $\varphi$ does not naturally
+These constructions depend on a particular construction of supercuspidal representations.
+In the case of \cites{kaletha:13a, reeder:08a}, the choice of construction is Adler's \cite{adler:98a}.
+As we have seen, a Langlands parameter $\varphi$ does not naturally
 provide a character of $T(K)$, but rather a character of
-$T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cites{reeder-debacker:09a, reeder:08a}.
+$T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Pi(\chi)$ of \cites{reeder-debacker:09a, reeder:08a}.
+
+Moreover, for general groups $G$ there are some constructions of correspondences from Langlands
+parameters to $L$-packets of $G$ \cites{reeder-debacker:09a, kaletha:13a, reeder:08a}.
+More specifically, in the mentioned work, a map
+\begin{equation}\label{langlandsmap}
+\Lpack: \Phi_{\Lpack}(G, T) \rightarrow \Pi(G)
+\end{equation}
+is constructed, where $\Phi_{\Lpack}(G, T)$ is some subset of Langlands parameters that
+factor through a group of type $L$, and $\Pi(G)$ is the set of $L$-packets of $G$.
+We denote by $\Lpack_{DR}$ the map coming from either \cite{reeder-debacker:09a} or \cite{reeder:08a}.
+
+Let $\Lpack$ be any map of the form \eqref{langlandsmap}, and set
+$P_{G, \Lpack}(K) = \{ (T, \xi_{\varphi}) \in P_G(K) | \varphi \in \Phi_{\Lpack}(G, T) \}$.
 
 \begin{definition} \label{def:rectifier}
-  Let $T$ be a coverable torus in $G$ with unramified splitting field $L$.  Let $\Adm: P_G(K) \to \Sup(G)$ be a construction of supercuspidal representations from admissible pairs.  Let $\LP_T$ be a set of Langlands parameters for $G$ that factor through the normalizer of $\hat{T} \subset {}^LG$, and let $\varphi \mapsto \Lpack(\varphi)$ be an association of supercuspidal L-packets $\Lpack(\varphi) \subset \Sup(G)$ to $\varphi \in \LP_T$.  Then a \emph{rectifier} for $T$ is a function
-  \[
-   \bmu_{T, \Adm, \Lpack} : \xi \mapsto \mu_{\xi}
-  \]
-  which attaches to each $\xi \in P_{G,T}(K)$ a character
+  Let $T$ be a coverable torus in $G$, with unramified splitting field $L$.  An $\Lpack$-\emph{rectifier} for $T$ is a function
+  $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
+  which attaches to each $(T, \xi) \in P_{G, \Lpack}(K)$ a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
 
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(\PL)_{\Gamma}$),
 
-\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$ and $\xi \cdot \mu_{\xi} \in P_{G,T}(K)$.
-\item For all $\varphi \in \LP$ we have $\Adm(T, \xi_{\varphi} \cdot \mu_{\xi_{\varphi}}) \in \Lpack(\varphi)$,
+\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is admissible,
+and $\varphi \mapsto \Pi(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
+  agrees with the correspondence $\Lpack$,
 
-\item If $\xi_1, \xi_2 \in P_{G,T}(K)$ with
-$\xi_1^{-1} \xi_2$ tamely ramified then
+\item If $(T, \xi_1)$ and $(T, \xi_2)$ are admissible pairs such that
+$\xi_1^{-1} \xi_2$ is tamely ramified then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
-We say that two rectifiers $\bmu_{T, \Adm, \Lpack}$ and $\bmu_{T, \Adm, \Lpack}'$ are \emph{equivalent}
+We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
 if there is some $\alpha \in Q_T$ so that
 \begin{align*}
 \mu_\xi' &= \alpha \mu_\xi \qquad \mbox{for depth zero $\xi$,} \\
@@ -951,25 +976,25 @@ if there is some $\alpha \in Q_T$ so that
 
 \end{definition}
 
-Since $T$ is coverable, the condition that $\xi \cdot \mu_\xi$
-descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.  The
-notion of equivalence is tailored for Theorem \ref{thm:unique_semisimple}; for some tori (such as the
-$\SL_2(\mathbb{Q}_3)$ example at the beginning of \S \ref{Q_T}) there are
-multiple equivalent rectifiers.
+This notion of equivalence is made in order to prove uniqueness of a $\mathcal{L}_{DR}$-rectifier
+(see Theorem \ref{thm:unique_semisimple}).  More specifically, this notion is needed because
+of the very rare phenomenon that we described in \S\ref{Q_T} whereby all supercuspidal
+$L$-packets could be left invariant by a depth zero character $\alpha$.
 
-We first apply this notion of rectifier to the setting of DeBacker--Reeder \cite{reeder-debacker:09a} and Reeder \cite{reeder:08a}.
-For an unramified coverable torus $T$, let $
+Since we have assumed $\HT{0}(\Gamma,T(L)) = 0$, the condition (in Definition \ref{def:rectifier}) that $\xi \cdot \mu_\xi$
+descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.
 
-%\begin{conjecture} \label{conj:unique_rectifier}
-%For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
-%\end{conjecture}
+\begin{conjecture} \label{conj:unique_rectifier}
+For $T$ as in Definition \ref{def:rectifier} and $\Lpack$ any map of the form \eqref{langlandsmap},
+$T$ admits a unique $\Lpack$-rectifier up to equivalence.
+\end{conjecture}
 
-%We note that, as the local Langlands correspondence is not known in general, we must restrict
-%ourselves to cases where supercuspidal $L$-packets have been constructed.
-%Since we are in the present paper considering the situation when $T$ is unramified,
-%we consider those $L$-packets constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
-%In the setting of Reeder \cite{reeder:08a},
-%we must further restrict our scope since his constructions do not apply to all admissible pairs.
+We note that, as the local Langlands correspondence is not known in general, we must restrict
+ourselves to cases where supercuspidal $L$-packets have been constructed.
+Since we are in the present paper considering the situation when $T$ is unramified,
+we consider those $L$-packets constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
+We also note that an $\Lpack$-rectifier implicitly depends on a construction of supercuspidal
+representations, as it does in the work of Bushnell and Henniart.
 
 \begin{definition}\label{def:general_pair}
 Suppose $(T, \xi) \in P_G(K)$.
@@ -980,25 +1005,18 @@ $T(\PL^{r})_{\Gamma}$
 \item An admissible pair of depth $r$ is \emph{minimal}
 if $\xi|_{T(\PL^{r})_{\Gamma}}$
 is not fixed by any element of $W(K)$.
-We denote by $\Pmin(K)$ the set
-of minimal admissible pairs in $G$.
-\item A \emph{weak rectifier} for $T \subset G$ is a function
-\begin{align*}
-\mumin : (T, \xi) \mapsto \mu_{\xi}
-\end{align*}
-which attaches to each $(T, \xi) \in \Pmin(K)$ a character
-  $\mu_{\xi}$ of $T(L)_{\Gamma}$, satisfying conditions (1)-(3)
-  of Definition \ref{def:rectifier}.
 \end{enumerate}
-We define equivalence of weak rectifiers as in Definition \ref{def:rectifier}.
 \end{definition}
 
 We note that this definition of minimal admissible pair generalizes
 the definition of minimal admissible pair of Bushnell and Henniart in
-the case of unramified tori (see \cite{bushnell-henniart:05a}*{\S2.2}).  We also note that the character of a minisotropic torus that is produced from a Langlands parameter considered in \cite{reeder:08a} can be seen to automatically be minimal.
+the case of unramified tori (see \cite{bushnell-henniart:05a}*{\S2.2}).  We also note that the
+character of a minisotropic torus that is produced from a Langlands parameter considered
+in \cite{reeder:08a} can be seen to automatically be minimal.
 
 \begin{theorem} \label{thm:unique_semisimple}
-For $G$ unramified and semisimple, and $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique weak rectifier up to equivalence.
+For $G$ unramified and semisimple, and $T$ as in Definition \ref{def:rectifier},
+$T$ admits a unique $\Lpack_{DR}$-rectifier up to equivalence.
 \end{theorem}
 
 \begin{proof}
@@ -1017,46 +1035,53 @@ $\xi_{\varphi_{\hat{w}}}^{-1}$ is unramified.
 Finally, $\xi_{\varphi_{\hat{w}}}$ is independent of $\xi$
 and thus condition (3) is automatically satisfied.
 We may therefore set
-$\mumin(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$.
+$\bmu(T,\xi) = \xi_{\varphi_{\hat{w}}}^{-1}$, proving existence.
 
 We now prove uniqueness.
 Let $\xi$ range over the set of characters of $T(L)_{\Gamma}$
-such that $(T, \xi) \in \Pmin(K)$, and let
-$\bmu$ and $\bmu'$ be weak rectifiers for
+such that $(T, \xi) \in P_{G, \Lpack_{DR}}(K)$, and let
+$\bmu'$ and $\bmu''$ be rectifiers for
 $T \subset G$.  By hypothesis, we have
-$$\Lpack(\mu_{\xi} \cdot \xi) = \Lpack(\mu'_{\xi} \cdot \xi).$$
-By \cite[Proposition 10.8]{murnaghan:11}, there exists $w_{\xi} \in W(K)$,
+$$\Pi(\mu'_{\xi} \cdot \xi) = \Pi(\mu''_{\xi} \cdot \xi).$$
+By \cite{murnaghan:11}*{Prop. 10.8}, there exists $w_{\xi} \in W(K)$,
 depending on $\xi$, such that
-$${}^{w_{\xi}} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi.$$
+$${}^{w_{\xi}} (\mu'_\xi \cdot \xi) = \mu''_\xi \cdot \xi.$$
 Suppose that $\xi$ has positive depth.
 Restricting the equation
-${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
+${}^{w_\xi} (\mu'_\xi \cdot \xi) = \mu''_\xi \cdot \xi$
 to $T(\PL)_{\Gamma}$, we get that ${}^{w_{\xi}} (\xi) = \xi$,
 by condition (1) of Definition \ref{def:rectifier}.
 Since $\xi$ is minimal, we get that $w_{\xi} = 1$, which implies
-that $\mu_{\xi} = \mu'_{\xi}$.
+that $\mu'_{\xi} = \mu''_{\xi}$.
 
-Now suppose that $\xi$ has depth zero, and suppose without loss of generality that $\bmu = \mumin$. Define $\lambda$ on $T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = (({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu'_\xi)|_{T(\OL)_{\Gamma}}$.  We claim that $\lambda$ is independent of $\xi$.  To see this, let $\xi_1, \xi_2$ be depth zero characters.  We wish to show that
+Now suppose that $\xi$ has depth zero, and suppose without loss of generality that $\bmu' = \bmu$,
+so that we will now prove that $\bmu''$ is equivalent to $\bmu$.  Define $\lambda$ on
+$T(\OL)_{\Gamma} \cong T(\OK)$ by $\lambda = (({}^{w_\xi} (\mu_\xi))^{-1} \cdot \mu''_\xi)|_{T(\OL)_{\Gamma}}$.
+We claim that $\lambda$ is independent of $\xi$.  To see this, let $\xi_1, \xi_2$ be depth zero characters.  We wish to show that
 \begin{equation}\label{equivalencedepthzero}
-(({}^{w_{\xi_1}} (\mu_{\xi_1}))^{-1} \cdot \mu'_{\xi_1})|_{T(\OL)_{\Gamma}} =
-(({}^{w_{\xi_2}} (\mu_{\xi_2}))^{-1} \cdot \mu'_{\xi_2})|_{T(\OL)_{\Gamma}}.
+(({}^{w_{\xi_1}} (\mu_{\xi_1}))^{-1} \cdot \mu''_{\xi_1})|_{T(\OL)_{\Gamma}} =
+(({}^{w_{\xi_2}} (\mu_{\xi_2}))^{-1} \cdot \mu''_{\xi_2})|_{T(\OL)_{\Gamma}}.
 \end{equation}
-But since $\xi_1, \xi_2$ are depth zero, we have that $\xi_1 \xi_2^{-1}$ is also of depth zero, and so condition (3) implies that $\mu'_{\xi_1} = \mu'_{\xi_2}$. Therefore, \eqref{equivalencedepthzero} is equivalent to
+But since $\xi_1, \xi_2$ are depth zero, we have that $\xi_1 \xi_2^{-1}$ is also of depth zero,
+and so condition (3) implies that $\mu''_{\xi_1} = \mu''_{\xi_2}$. Therefore, \eqref{equivalencedepthzero} is equivalent to
 \begin{equation}\label{equivalencedepthzero2}
 ({}^{w_{\xi_1}} (\mu_{\xi_1}))|_{T(\OL)_{\Gamma}} = ({}^{w_{\xi_2}} (\mu_{\xi_2}))|_{T(\OL)_{\Gamma}}.
 \end{equation}
-Since $\bmu = \mumin$, we have that $\mu_{\xi_1}|_{T(\OL)_{\Gamma}} \equiv \mu_{\xi_2}|_{T(\OL)_{\Gamma}} \equiv 1$. Finally, since $W(K)$ preserves $T(\OL)_{\Gamma}$, \eqref{equivalencedepthzero2} is proven since both sides of the equality are the trivial character.
+But by definition of $\bmu$, we have that $\mu_{\xi_1}|_{T(\OL)_{\Gamma}} \equiv \mu_{\xi_2}|_{T(\OL)_{\Gamma}} \equiv 1$.
+Finally, since $W(K)$ preserves $T(\OL)_{\Gamma}$, \eqref{equivalencedepthzero2}
+is proven since both sides of the equality are the trivial character.
 
-Since $\lambda$ is seen to be independent of $\xi$, the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu'_\xi \cdot \xi$
-implies that $\lambda \in Q_T$.  Since $\mu_\xi \cdot \xi$ and $\mu_\xi' \cdot \xi$ descend to
-$T(K)$ by condition (2) of Definition \ref{def:rectifier}, $\mu_\xi$ and $\mu_\xi'$ have the
+Since $\lambda$ is seen to be independent of $\xi$, the equation ${}^{w_\xi} (\mu_\xi \cdot \xi) = \mu''_\xi \cdot \xi$
+implies that $\lambda \in Q_T$.  Since $\mu_\xi \cdot \xi$ and $\mu_\xi'' \cdot \xi$ descend to
+$T(K)$ by condition (2) of Definition \ref{def:rectifier}, $\mu_\xi$ and $\mu_\xi''$ have the
 same restriction to $\hat{H}^{-1}(\Gamma, T(L))$.  Since $G$ is semisimple we may pull $\lambda$ back to
 a character on $T(L)_\Gamma$, vanishing on $\HT{-1}(\Gamma, T(L))$.  Note also that
 \[
-\mu_{\xi}'|_{T(\OL)_{\Gamma}} \equiv (\lambda \mu_{\xi})|_{T(\OL)_{\Gamma}}.
+\mu_{\xi}''|_{T(\OL)_{\Gamma}} \equiv (\lambda \mu_{\xi})|_{T(\OL)_{\Gamma}}.
 \]
-by definition of $\lambda$ and the fact that $\mu_\xi|_{T(\OL)_{\Gamma}} \equiv 1$ and that $W(K)$ preserves $T(\OL)_{\Gamma}$.  Therefore, we finally obtain that $\mu'_\xi = \lambda\mu_\xi$ on all of $T(L)_{\Gamma}$
-and thus $\bmu$ is equivalent to $\bmu'$.
+by definition of $\lambda$, by the fact that $\mu_\xi|_{T(\OL)_{\Gamma}} \equiv 1$,
+and since $W(K)$ preserves $T(\OL)_{\Gamma}$.  Therefore, we finally obtain that
+$\mu''_\xi = \lambda\mu_\xi$ on all of $T(L)_{\Gamma}$ and thus $\bmu$ is equivalent to $\bmu''$.
 \end{proof}
 
 \begin{remark} $ $
@@ -1162,7 +1187,13 @@ forced to set $a = (-1)^{n-1}$.  Finally, one can show by an inductive argument 
 canonical lift $\tilde{w}$ of $\hat{w}$ to $\widetilde{W}$ has characteristic polynomial $X^n - (-1)^{n-1}$,
 so that $\varphi'(\Fr)$ is indeed the canonical lift of $\hat{w}$ to $\widetilde{W}$ up to conjugacy.
 
+\section*{Acknowledgements}
+
+This paper has benefited from conversations with Jeffrey Adams, Jeffrey Adler, Colin Bushnell,
+Andrew Fiori, Guy Henniart, Gordan Savin, and Geo Kam-Fai Tam.  We thank them all.
+
 %\bibliography{Biblio}
+\bibliographystyle{mrl}
 \bibliography{roebib/Biblio,extras}
 
 \end{document}
