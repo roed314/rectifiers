@@ -71,6 +71,9 @@
 \newcommand{\I}{\mathcal{I}}
 \newcommand{\WD}{\mathcal{W}'}
 \newcommand{\Lpack}{\mathcal{L}}
+\newcommand{\Adm}{\Pi}
+\newcommand{\LP}{\mathcal{P}}
+\DeclareMathOperator{\Sup}{Sup}
 \newcommand{\Pmin}{P_G^{\min}}
 \newcommand{\bmu}{\boldsymbol\mu}
 \newcommand{\mumin}{\bmu^{\min}}
@@ -764,11 +767,12 @@ $$\Lpack(\chi) = \Lpack(\alpha\cdot\chi) \mbox{ for all depth zero admissible $\
 
 \begin{definition} \label{def:admissible}
 Let $T$ be a $K$-minisotropic torus, that splits over an unramified
-extension $L$ (see \cite{reeder:08a}*{\S3}).  Suppose $\xi$ is a character of $T(L)_{\Gamma}$.
+extension $L$ (see \cite{reeder:08a}*{\S3}).  Suppose $\xi$ is a character of $T(L)_\Gamma$.
 \begin{enumerate}
 \item The pair $(T, \xi)$ is called \emph{admissible} if $\xi$ is not fixed
 by any nontrivial element of $W(K)$ (c.f. Lemma \ref{lem:weyl_groups}); we
-denote by $P_G(K)$ the set of admissible pairs in $G$.
+denote by $P_G(K)$ the set of admissible pairs in $G$ and write $P_{G,T}(K)$ for
+the set of characters $\xi$ of $T(L)_\Gamma$ so that $(T, \xi)$ is admissible.
 \item We call two admissible pairs $(T, \xi)$ and $(T', \xi')$ \emph{isomorphic} if there
 exists a $g \in G(K)$ such that $gT(K)g^{-1} = T'(K)$ and $\xi(t) = \xi'(gtg^{-1})$
 for all $t \in T(K)$.
@@ -920,24 +924,25 @@ provide a character of $T(K)$, but rather a character of
 $T(L)_{\Gamma}$.  We consider here the maps $\chi \mapsto \Lpack(\chi)$ of \cites{reeder-debacker:09a, reeder:08a}.
 
 \begin{definition} \label{def:rectifier}
-  Let $T$ be a coverable torus in $G$, with unramified splitting field $L$.  A \emph{rectifier} for $T$ is a function
-  $$\bmu : (T, \xi) \mapsto \mu_{\xi}$$
-  which attaches to each $(T, \xi) \in P_G(K)$ a character
+  Let $T$ be a coverable torus in $G$ with unramified splitting field $L$.  Let $\Adm: P_G(K) \to \Sup(G)$ be a construction of supercuspidal representations from admissible pairs.  Let $\LP_T$ be a set of Langlands parameters for $G$ that factor through the normalizer of $\hat{T} \subset {}^LG$, and let $\varphi \mapsto \Lpack(\varphi)$ be an association of supercuspidal L-packets $\Lpack(\varphi) \subset \Sup(G)$ to $\varphi \in \LP_T$.  Then a \emph{rectifier} for $T$ is a function
+  \[
+   \bmu_{T, \Adm, \Lpack} : \xi \mapsto \mu_{\xi}
+  \]
+  which attaches to each $\xi \in P_{G,T}(K)$ a character
   $\mu_{\xi}$ of $T(L)_{\Gamma}$ satisfying the following conditions:
 
 \begin{enumerate}
 \item The character $\mu_{\xi}$ is tamely ramified (i.e. trivial on
   $T(\PL)_{\Gamma}$),
 
-\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$, is admissible,
-and $\varphi \mapsto \Lpack(\xi_{\varphi} \cdot \mu_{\xi_{\varphi}})$
-  is the local Langlands correspondence,
+\item The character $\xi \cdot \mu_{\xi}$ descends to $T(K)$ and $\xi \cdot \mu_{\xi} \in P_{G,T}(K)$.
+\item For all $\varphi \in \LP$ we have $\Adm(T, \xi_{\varphi} \cdot \mu_{\xi_{\varphi}}) \in \Lpack(\varphi)$,
 
-\item If $(T, \xi_1)$ and $(T, \xi_2)$ are admissible pairs such that
-$\xi_1^{-1} \xi_2$ is tamely ramified then
+\item If $\xi_1, \xi_2 \in P_{G,T}(K)$ with
+$\xi_1^{-1} \xi_2$ tamely ramified then
 $\mu_{\xi_1} = \mu_{\xi_2}$.
 \end{enumerate}
-We say that two rectifiers $\bmu$ and $\bmu'$ for $T$ are \emph{equivalent}
+We say that two rectifiers $\bmu_{T, \Adm, \Lpack}$ and $\bmu_{T, \Adm, \Lpack}'$ are \emph{equivalent}
 if there is some $\alpha \in Q_T$ so that
 \begin{align*}
 \mu_\xi' &= \alpha \mu_\xi \qquad \mbox{for depth zero $\xi$,} \\
@@ -946,22 +951,25 @@ if there is some $\alpha \in Q_T$ so that
 
 \end{definition}
 
-Since we have assumed $\HT{0}(\Gamma,T(L)) = 0$, the condition that $\xi \cdot \mu_\xi$
+Since $T$ is coverable, the condition that $\xi \cdot \mu_\xi$
 descends to $T(K)$ is equivalent to $\xi \cdot \mu_\xi$ vanishing on $\HT{-1}(\Gamma, T(L))$.  The
 notion of equivalence is tailored for Theorem \ref{thm:unique_semisimple}; for some tori (such as the
 $\SL_2(\mathbb{Q}_3)$ example at the beginning of \S \ref{Q_T}) there are
 multiple equivalent rectifiers.
 
-\begin{conjecture} \label{conj:unique_rectifier}
-For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
-\end{conjecture}
+We first apply this notion of rectifier to the setting of DeBacker--Reeder \cite{reeder-debacker:09a} and Reeder \cite{reeder:08a}.
+For an unramified coverable torus $T$, let $
 
-We note that, as the local Langlands correspondence is not known in general, we must restrict
-ourselves to cases where supercuspidal $L$-packets have been constructed.
-Since we are in the present paper considering the situation when $T$ is unramified,
-we consider those $L$-packets constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
-In the setting of Reeder \cite{reeder:08a},
-we must further restrict our scope since his constructions do not apply to all admissible pairs.
+%\begin{conjecture} \label{conj:unique_rectifier}
+%For $T$ as in Definition \ref{def:rectifier}, $T$ admits a unique rectifier up to equivalence.
+%\end{conjecture}
+
+%We note that, as the local Langlands correspondence is not known in general, we must restrict
+%ourselves to cases where supercuspidal $L$-packets have been constructed.
+%Since we are in the present paper considering the situation when $T$ is unramified,
+%we consider those $L$-packets constructed in \cite{reeder-debacker:09a} and \cite{reeder:08a}.
+%In the setting of Reeder \cite{reeder:08a},
+%we must further restrict our scope since his constructions do not apply to all admissible pairs.
 
 \begin{definition}\label{def:general_pair}
 Suppose $(T, \xi) \in P_G(K)$.
